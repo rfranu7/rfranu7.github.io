@@ -41,9 +41,12 @@ footer {
 }
 
 #portraitImage {
-    max-width: 7%;
+    max-width: 100%;
     height: auto;
     float: right; 
+    margin-right: 1.5em;
+    margin-top: -2.5em;
+    margin-left: 1em;
     border-radius: 50%;
 }
 
