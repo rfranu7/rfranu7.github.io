@@ -3,5 +3,7 @@
     #portraitImage {
         float: right;
         margin-left: 1em;
+        margin-top: 2em;
+        margin-right: 1.5em;
     }
 }
