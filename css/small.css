@@ -8,6 +8,7 @@ body {
 }
 
 header {
+    margin: auto;
     background-color: #05386B;
     color: white; 
     padding-top: 15px; 
@@ -49,7 +50,8 @@ footer {
 #portraitImage {
     max-width: 100%;
     height: auto;
-    margin: auto;
+    margin-top: 2em;
+    margin-right: 1.5em;
     border-radius: 50%;
 }
 
