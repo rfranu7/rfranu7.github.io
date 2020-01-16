@@ -1,0 +1,45 @@
+@media only screen and (min-width: 32.5em){
+
+    header {
+        margin-bottom: 1em;
+        font-size: 1em;
+    }
+    
+    footer {
+        font-size: 1em;
+    }
+   
+    main {
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 1em;
+    }
+    
+    main p {
+        font-size: 1em;
+    }
+    
+    main a {
+        margin: 1em 0;
+        font-size: 1em;
+    }
+    
+    main a:link {
+        padding: 14px 25px;
+    }
+    
+    main a:hover {
+        padding: 14px 25px;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+    
+    h3 {
+        font-size: 1.17em;
+    }
+
+    .size {
+        margin-bottom: 1em;
+    }
+}
