@@ -112,6 +112,10 @@ main section {
     left: 3rem;
 }
 
+.forecast {
+    display: none;
+}
+
 .imgContainer {
     padding-top: 0.5rem;
     text-align: center;
