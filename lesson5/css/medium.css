@@ -1,0 +1,54 @@
+@media only screen and (min-width: 32.5em){
+
+    header img {
+        width: 15%;
+        vertical-align: middle;
+    }
+
+    .persona-flex{
+        margin: 0;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .persona-child {
+        padding: 0.5em;
+        margin: 0;
+        width: 50%;
+    }
+
+    #hero-ph {
+        position: relative;
+    }
+    
+    #hero-ph img {
+        margin: auto;
+        max-width: 100%;
+    }
+    
+    #overlay {
+        position: absolute;
+        background-color: rgba(232, 193, 70, 95%);
+        padding: 0.5rem 1em;
+        top: 2rem;
+        left: 3rem;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .left {
+        display: block;
+    }
+
+    .imgContainer {
+        padding-top: 0.5rem;
+        text-align: center;
+    }
+    
+    .responsiveImg {
+        max-width: 85%;
+    }
+}

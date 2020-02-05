@@ -1,0 +1,169 @@
+body {
+    font-family: 'Open Sans', 'sans-serif';
+    max-width: 960px;
+    margin: auto;
+}
+
+#popup {
+    background-color: #E8C146;
+    color: #111A62;
+    margin: 0;
+    padding: 0.5rem;
+    text-align: center;
+    border: 2px solid #667DFF;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+header {
+    background-color: #111a62;
+    color: #FFF;
+    text-align: center;
+    padding: 1em;
+}
+
+header img {
+    width: 20%;
+    vertical-align: middle;
+}
+
+header h1 {
+    margin: 0;
+    color: #FFF;
+    display: inline;
+    vertical-align: middle;
+}
+
+nav ul{
+    background-color: #111a62;
+    margin: 0;
+    padding: 0;
+    display: block;
+    list-style: none;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.navBar li:first-child {
+    display: block;
+}
+
+nav li {
+    display: none;
+    flex: 1 1 100%;
+}
+
+nav li a {
+    display: block;
+    padding: 1em;
+    color: #FFF;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #667DFF;
+}
+
+.active {
+    background-color: #E8C146;
+    color: #111a62;
+    font-weight: bold;
+}
+
+.responsive li {
+	display: block;
+}
+
+main {
+    margin: 2% 0;
+}
+
+main section {
+    margin: 0 3% 0 3%;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 10%);
+    padding: 0.5em;
+    margin-bottom: 0.4em;
+}
+
+#hero-ph {
+    position: relative;
+    margin-bottom: 0.4em;
+}
+
+#hero-ph img {
+    margin: auto;
+    max-width: 100%;
+}
+
+#overlay {
+    position: absolute;
+    background-color: rgba(232, 193, 70, 95%);
+    padding: 0.5rem 1em;
+    top: 2rem;
+    left: 3rem;
+}
+
+.imgContainer {
+    padding-top: 0.5rem;
+    text-align: center;
+}
+
+.responsiveImg {
+    max-width: 95%;
+}
+
+.inlne {
+    display: inline;
+}
+
+.left {
+    display: none;
+}
+
+footer {
+    background-color: #111a62;
+    color: #FFF;
+    text-align: center;
+    margin: 0;
+    padding: 1em;
+}
+
+footer a {
+    color: #FFF;
+}
+
+.textCenter {
+    text-align: center;
+}
+
+#lastModif {
+    margin-bottom: 0;
+    margin-top: 0.5em;
+}
+
+#typeOpen {
+    font-family: 'Open Sans', sans-serif;
+}
+
+#typeMont {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    color: #111A62;
+}
+
+.yellowLine {
+    padding: 0.1em;
+    background-color: #E8C146;
+}
