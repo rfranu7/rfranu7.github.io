@@ -12,14 +12,15 @@ if(today == 5) {
 	document.getElementById("popup").className = "show";
 }
 
-//const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 
 let date = new Date();
 let year = date.getFullYear();
-let lastModify = document.lastModified;
+// let lastModify = document.lastModified;
 
-// let lastModify = new Date(document.lastModified);
-// let formattedDate = month[lastModify.getMonth()]+ " " + lastModify.getDate() + ", " + lastModify.getFullYear() + " " + lastModify.getHours() + ":" + lastModify.getMinutes();
+let lastModify = new Date(document.lastModified);
+let formattedDate = week[lastModify.getDay()] + ", " + lastModify.getDate() + " " + month[lastModify.getMonth()]+ " " + lastModify.getFullYear();
 
 document.getElementById("currentYear").textContent = year;
-document.getElementById("lastModif").textContent = lastModify;
+document.getElementById("lastModif").textContent = formattedDate;
