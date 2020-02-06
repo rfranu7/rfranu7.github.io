@@ -9,8 +9,7 @@ var day = new Date();
 var today = day.getDay();
 
 if(today == 5) {
-	document.getElementById("popup").classList.remove("hide");
-	document.getElementById("popup").classList.add("show");
+	document.getElementById("popup").className = "show";
 }
 
 //const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];

@@ -102,14 +102,35 @@ main section {
 #hero-ph img {
     margin: auto;
     max-width: 100%;
+    margin-bottom: 3rem;
 }
 
 #overlay {
     position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 0.25rem;
+    height: 120px;
+    width: 150px;
+    text-align: center;
     background-color: rgba(232, 193, 70, 95%);
     padding: 0.5rem 1em;
-    top: 2rem;
-    left: 3rem;
+    top: 1rem;
+    left: 1rem;
+    box-shadow: 0 0 20px #333;
+}
+
+#overlay h3 {
+    grid-row: 1;
+    grid-column: 1/3;
+    margin: 0;
+    margin-top: 0.2rem;
+    font-size: 0.8em;
+}
+
+#overlay p {
+    margin: 0;
+    font-size: 0.6rem;
 }
 
 .forecast {
@@ -117,7 +138,7 @@ main section {
 }
 
 .imgContainer {
-    padding-top: 0.5rem;
+    padding-top: 1rem;
     text-align: center;
 }
 
@@ -131,6 +152,11 @@ main section {
 
 .left {
     display: none;
+}
+
+.icons {
+    max-width: 10%;
+    margin-right: 0.2em;
 }
 
 footer {
