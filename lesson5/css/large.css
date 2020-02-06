@@ -108,4 +108,9 @@
     .responsiveImg {
         max-width: 95%;
     }
+
+    .icons {
+        max-width: 10%;
+        margin-right: 0.2em;
+    }
 }
