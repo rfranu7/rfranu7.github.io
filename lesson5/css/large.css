@@ -98,8 +98,8 @@
         flex-basis: 50%;
     }
 
-    .left {
-        display: block;
+    .right {
+        margin-left: 2%;
     }
 
     .imgContainer {

@@ -159,8 +159,12 @@ main section {
     display: none;
 }
 
+.contact {
+    text-align: center;
+}
+
 .icons {
-    max-width: 10%;
+    max-width: 12%;
     margin-right: 0.2em;
 }
 
