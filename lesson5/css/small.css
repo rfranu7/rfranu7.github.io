@@ -22,22 +22,27 @@ body {
 }
 
 header {
+    display: flex;
     background-color: #111a62;
     color: #FFF;
     text-align: center;
     padding: 1em;
+    align-items: center;
+    justify-content: center;
 }
 
 header img {
     width: 20%;
-    vertical-align: middle;
 }
 
-header h1 {
-    margin: 0;
+header h1{
     color: #FFF;
-    display: inline;
-    vertical-align: middle;
+    margin: 0;
+    margin-left: 1rem;
+}
+
+#tagline {
+    margin: 0;
 }
 
 nav ul{
@@ -90,7 +95,7 @@ main section {
 
 .container {
     background-color: rgba(0, 0, 0, 10%);
-    padding: 0.5em;
+    padding: 1em;
     margin-bottom: 0.4em;
 }
 
