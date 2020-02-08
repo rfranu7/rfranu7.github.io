@@ -1,6 +1,5 @@
 body {
     font-family: 'Open Sans', 'sans-serif';
-    max-width: 960px;
     margin: auto;
 }
 
@@ -22,6 +21,7 @@ body {
 }
 
 header {
+    max-width: ;
     display: flex;
     background-color: #111a62;
     color: #FFF;
@@ -86,7 +86,8 @@ nav a:hover {
 }
 
 main {
-    margin: 2% 0;
+    margin: auto;
+    max-width: 960px;
 }
 
 main section {
@@ -96,7 +97,7 @@ main section {
 .container {
     background-color: rgba(0, 0, 0, 10%);
     padding: 1em;
-    margin-bottom: 0.4em;
+    margin-bottom: 1.5em;
 }
 
 #hero-ph {
