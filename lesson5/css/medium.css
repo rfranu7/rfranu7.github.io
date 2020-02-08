@@ -68,16 +68,29 @@
         background-color: #111A62;
         color: #FFF;
         padding: 0.4em;
-        border: 1px solid #E8C146;
+        border-top: 2px solid #E8C146;
+        border-bottom: 1px solid #E8C146;
+        border-left: 2px solid #E8C146;
     }
     
     .DayContent {
-        border: 1px solid #E8C146;
+        border-top: 1px solid #E8C146;
+        border-bottom: 2px solid #E8C146;
+        border-left: 2px solid #E8C146;
         padding-top: 1em;
+    }
+
+    .DayContent p {
+        padding-bottom: 1em;
+        margin-bottom: 0;
     }
     
     .DayContent img{
         max-width: 50%;
+    }
+
+    #forecastTable:last-child{
+        border-right: 2px solid #E8C146;
     }
 
     .left {
