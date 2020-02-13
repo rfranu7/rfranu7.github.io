@@ -7,7 +7,6 @@
         <title>Hello Storm</title>
         <meta name="author" content="Randeep Singh Ranu">
         <meta name="description" content="A weather site used to check current information on storms in the Philippines">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/normalize.css">
         <link rel="stylesheet" type="text/css" href="css/small.css">
         <link rel="stylesheet" type="text/css" href="css/medium.css">
@@ -49,10 +48,9 @@
 
             <section id="hero-ph">
                 <picture>
-                    <img src="assets/hero-large.jpg" alt="Preston Town" 
-                    srcset="assets/hero-small.jpg 300w,
-                    assets/hero-medium.jpg 500w,
-                    assets/hero-large.jpg 800w,">
+                    <source media="(max-width: 400px)" srcset="assets/hero-small.jpg">
+                    <source media="(max-width: 700px)" srcset="assets/hero-medium.jpg">
+                    <img src="assets/hero-large.jpg" alt="Preston Town">
 
                 </picture>
                 <div id="overlay">
@@ -162,6 +160,17 @@
             <p id="lastModif"></p>
         </footer>
         <section class="yellowLine"></section>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+        <script>    
+            WebFont.load({
+                google: {
+                families: [
+                    'Montserrat'
+                ]
+                }
+            });
+          </script>
 
         <script src="js/mainScript.js"></script>
         <script src="js/windchill.js"></script>
