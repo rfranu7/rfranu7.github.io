@@ -1,21 +1,19 @@
 //----------------- Wind Chill Calculator -----------------
 
-var tempC = document.getElementById("valHigh").textContent;
-var speed = document.getElementById("valWind").textContent;
+var tempC = parseFloat(document.getElementById("valHigh").textContent);
+var speed = parseFloat(document.getElementById("valWind").textContent);
 
-// Convert Celsius to Fahrenheit
-
-var tempF = (tempC * 9 /5) + 32;
-
-// Calculate Wind chill
-
-var chill = windChill(tempF, speed);
-
-// Convert back to Celsius
-
-var chillC = (chill - 32) * 5/9;
-        
+if(tempC < 11 && speed < 4){
+var tempF = (tempC * 9 /5) + 32; // Convert Celsius to Fahrenheit
+var chill = windChill(tempF, speed); // Calculate Wind chill
+var chillC = (chill - 32) * 5/9; // Convert back to Celsius
 document.getElementById('valChill').textContent = chillC.toFixed(1);
+}
+
+else {
+	document.getElementById('valChill').textContent = "N/A";
+	document.getElementById('windUnit').textContent = "";
+}
 
 function windChill (TempF, speed) {
 	var speedPower = Math.pow(speed, 0.16);
