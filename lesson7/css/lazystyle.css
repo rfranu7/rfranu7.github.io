@@ -1,0 +1,18 @@
+body {
+    font-family: 'Montserrat', 'sans-serif';
+    margin: auto;
+    text-align: center;
+}
+
+picture {
+    display: block;
+    text-align: center;
+    margin: 1rem;
+}
+
+img {
+    background-color: skyblue;
+    border: 2px solid black;
+    min-width: 300px;
+    min-height: 400px;
+}
