@@ -15,4 +15,10 @@ img {
     border: 2px solid black;
     min-width: 300px;
     min-height: 400px;
+    filter: blur(0em);
+    transition: filter 0.5s;
+}
+
+img[data-src] {
+    filter: blur(0.2em);
 }
