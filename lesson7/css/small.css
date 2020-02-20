@@ -93,92 +93,46 @@ main section {
     margin: 0 3% 0 3%;
 }
 
-.container {
-    background-color: rgba(0, 0, 0, 10%);
-    padding: 1em;
-    margin-bottom: 1.5em;
+main h2 {
+    margin-left: 1rem;
 }
 
-#hero-ph {
-    position: relative;
-    margin-bottom: 0.4em;
-}
-
-#hero-ph img {
-    margin: auto;
-    max-width: 100%;
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 1rem;
 }
 
-#overlay {
-    position: absolute;
-    display: grid;
-    grid-template-columns: 2.5fr 1fr 1fr;
-    grid-column-gap: 0.3em;
-    height: 130px;
-    width: 150px;
-    background-color: rgba(232, 193, 70, 95%);
-    padding: 0.5rem 1em;
-    top: 1rem;
-    left: 1rem;
-    box-shadow: 0 0 20px #333;
-}
-
-#overlay h3 {
+figure {
     text-align: center;
-    grid-row: 1;
-    grid-column: 1 / -1;
-    margin: 0;
-    margin-top: 0.2rem;
-    font-size: 0.95em;
+    box-shadow: 0 0 5px #323232;
 }
 
-#overlay .row1 {
-    grid-column: 1;
+figcaption {
+    padding: 0.5rem;
+    text-align: left;
+    font-size: 0.9rem;
+    font-style: italic;
 }
 
-#overlay .row1-1 {
-    grid-column: 2 / -1;
+figure img {
+    min-width: 300px;
+    filter: blur(0em);
+    transition: filter 0.5s;
 }
 
-#overlay span {
-    margin: 0;
-    padding: 0.1rem;
-    font-size: 0.8rem;
-}
-
-.forecast {
-    display: none;
-}
-
-.imgContainer {
-    padding-top: 1rem;
-    text-align: center;
+figure img[data-src] {
+    filter: blur(0.2em);
 }
 
 .responsiveImg {
-    max-width: 95%;
-}
-
-.inlne {
-    display: inline;
-}
-
-.left {
-    display: none;
-}
-
-.contact {
-    text-align: center;
-}
-
-.icons {
-    max-width: 12%;
-    margin-right: 0.2em;
+    max-width: 100%;
 }
 
 footer {
-    background-color: #111a62;
+    background-color: #111A62;
     color: #FFF;
     text-align: center;
     margin: 0;
