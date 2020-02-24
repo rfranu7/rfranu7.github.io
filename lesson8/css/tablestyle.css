@@ -19,6 +19,10 @@ table, th, td{
     border-collapse: collapse;
 }
 
+table {
+    box-shadow: 8px 8px 10px #628ca6 ;
+}
+
 thead {
     font-size: 1.8rem;
     background-color: #7fb9c2;
