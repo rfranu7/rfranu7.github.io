@@ -4,37 +4,44 @@
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="style.css">
+        
         <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/0d15e97dda.js" crossorigin="anonymous"></script>
     </head>
 
     <body style="font-family: 'Montserrat', sans-serif; margin: 0;">
-        <main class="grid" style="max-width: 550px; display: grid; grid-template-columns: 5px 1fr 40px;">
-            <section class="left" style="background-color: #459AEE; padding: 0.1em;"></section>
-            <section class="cont" style="display: grid; grid-template-columns: 145px 1fr; align-items: center;">
-                <div class="pic" style="text-align: center;">
-                    <img src="pic.jpg" alt="Harry R Singh" style="border-radius: 50%; max-width: 75%;">
-                </div>
-                <div class="item" style="padding: 0.25rem;">
-                    <h3 style="margin-bottom: 0.3rem; margin-top: 0.5em; color: #459AEE;">Harry R. Singh</h3>
-                    <p style="font-style: italic; font-size: 0.8rem; margin: 0.1em;">Chief Executive Officer | Kultur Group</p>
-                    <p style="font-style: italic; font-size: 0.8rem; margin: 0.1em;">Business Growth Consultant</p>
-                    <p style="font-style: italic; font-size: 0.8rem; margin: 0.1em;">Self-Growth Coach</p>
-                    <br>
-                    <p style="font-style: italic; font-size: 0.8rem; margin: 0.1em;"><i class="fas fa-mobile-alt" style="color: #459AEE;"></i> +63 916 820 9910</p>
-                    <p style="font-style: italic; font-size: 0.8rem; margin: 0.1em;"><i class="fas fa-envelope" style="color: #459AEE;"></i> harry.singh@gmail.com</p>
-                </div>
-                
-                <div class="last item" style="grid-column: 1 / span 2; text-align: center; border-top: 1px solid #333; margin: 0.2em 0.5em; padding: 0.25rem;">
-                    <p style="font-style: italic; margin: 0.1em; font-size: 0.75rem;">"I help service-based entrepreneurs fast-track personal and business growth."</p>
-                </div>
-            </section>
-            <section class="link" style="background-color: #ECC96F; padding: 0.1em; text-align: left;">
-                <img src="LI.png" style="margin: 0.25rem;">
-                <img src="FB.png" style="margin: 0.25rem;">
-                <img src="Kultur.png" style="margin: 0.25rem;">
-            </section>
+        <main class="grid" style="max-width: 550px; display: block;">
+            <table>
+                <tr>
+                    <td rowspan="2" style="width: 2px; background-color: #459AEE;"></td>
+                    <td style="text-align: center;">
+                        <div class="pic" style="display: inline; text-align: center;">
+                            <img src="pic.jpg" style="border-radius: 50%; max-width: 75%;">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="item" style="display:inline; padding: 0.25rem;">
+                            <h3 style="margin-bottom: 0.3rem; margin-top: 0.5em; color: #459AEE;">Harry R. Singh</h3>
+                            <p style="font-style: italic; font-size: 0.8rem; margin: 0.1em;">Chief Executive Officer | Kultur Group</p>
+                            <p style="font-style: italic; font-size: 0.8rem; margin: 0.1em;">Business Growth Consultant</p>
+                            <p style="font-style: italic; font-size: 0.8rem; margin: 0.1em;">Self-Growth Coach</p>
+                            <br>
+                            <a href="tel:+639168209910" style=" text-decoration: none; color:#000"><p style="font-style: italic; font-size: 0.8rem; margin: 0.1em;"><img src="phone.png" width="16px" style="vertical-align:text-bottom;"> +63 916 820 9910</p></a>
+                            <a href="mailto:hardeepsingh.work@gmail.com" target="_blank" style=" text-decoration: none; color:#000"><p style="font-style: italic; font-size: 0.8rem; margin: 0.1em;"><img src="mail.png" width="16px" style="vertical-align: text-bottom;"> harry.singh@gmail.com</p></a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div class="last item" style="grid-column: 1 / span 2; text-align: center; border-top: 1px solid #333; margin: 0.2em 0.5em; padding: 0.25rem;">
+                            <p style="font-style: italic; margin: 0.1em; font-size: 0.75rem;">"I help service-based entrepreneurs fast-track personal and business growth."</p>
+                        </div>
+                    </td>
+            </table>
+
+            <a href="https://www.linkedin.com/in/harry-r-singh-741b54143/" target="_blank" style=" text-decoration: none; color:#000"><img src="LI.png" style="margin: .5rem 0.25rem;"></a>
+                    <a href="https://www.facebook.com/ninjaprenuer" target="_blank" style=" text-decoration: none; color:#000"><img src="FB.png" style="margin: .5rem 0.25rem;"></a>
+                    <img src="Kultur.png" style="margin: .5rem 0.25rem;"></a>
         </main>
     </body>
 </html>
