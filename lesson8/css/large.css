@@ -1,0 +1,45 @@
+@media only screen and (min-width: 64em){
+
+    header img {
+        width: 7%;
+        vertical-align: middle;
+    }
+
+    nav ul{
+        background-color: #111a62;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        list-style: none;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .navBar li:first-child {
+		display: none;
+	}
+
+    nav li {
+        display: block;
+        flex: 1 1 100%;
+    }
+
+    nav li a {
+        display: block;
+        padding: 1em;
+        color: #FFF;
+        text-decoration: none;
+    }
+
+    nav a:hover {
+        background-color: #667DFF;
+    }
+
+    main {
+        max-width: 1260px;
+    }
+
+    form label.top input, textarea, select, .submitBtn {
+        max-width: 50%;
+    }
+}
