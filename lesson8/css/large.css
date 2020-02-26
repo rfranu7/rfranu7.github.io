@@ -42,4 +42,8 @@
     form label.top input, textarea, select, .submitBtn {
         max-width: 50%;
     }
+
+    .submitBtn {
+        margin: 0 0 1rem .75rem;
+    }
 }
