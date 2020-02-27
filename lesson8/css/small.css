@@ -133,6 +133,10 @@ textarea {
     height: 150px;
 }
 
+.app {
+    -webkit-appearance: none;
+}
+
 .submitBtn {
     padding: 1rem;
     width: 90%;
