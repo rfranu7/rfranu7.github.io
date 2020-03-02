@@ -1,0 +1,47 @@
+body {
+    font-family: 'Open Sans', 'sans-serif';
+    margin: auto;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', 'sans-serif';
+    color: #111A62;
+}
+
+header, main {
+    text-align: center;
+}
+
+main div {
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr;
+}
+
+section {
+    background-color: #f4f4f4;
+    border: 1px solid #111A62;
+    margin: .35rem;
+}
+
+section img {
+    margin: 1rem;
+    box-shadow: 0 0 20px #434343;
+    max-width: 70%;
+}
+
+section p {
+    font-size: 1.1rem;
+}
+
+@media only screen and (min-width: 32.5em) {
+    main div {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (min-width: 64em) {
+    main div {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
