@@ -34,6 +34,12 @@ section p {
     font-size: 1.1rem;
 }
 
+footer {
+    text-align: center;
+    color: #111A62;
+    margin: 1rem;
+}
+
 @media only screen and (min-width: 32.5em) {
     main div {
         grid-template-columns: 1fr 1fr;
