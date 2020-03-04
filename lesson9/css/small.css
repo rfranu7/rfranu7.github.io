@@ -144,6 +144,12 @@ main section {
     margin-bottom: 1.5em;
 }
 
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+}
+
 .imgContainer {
     padding-top: 1rem;
     text-align: center;

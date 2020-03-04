@@ -4,26 +4,8 @@
         width: 14%;
     }
 
-    .persona-flex{
-        margin: 0;
-        display: flex;
-        flex-direction: row;
-    }
-    
-    .persona-child {
-        padding: 0.5em;
-        margin: 0;
-        width: 50%;
-    }
-
-    #hero-ph {
-        position: relative;
-    }
-    
-    #hero-ph img {
-        margin: auto;
-        max-width: 100%;
-        margin-bottom: 2rem;
+    .cards {
+        margin: 1rem 2%;
     }
 
     .cards section{
@@ -40,6 +22,14 @@
         padding: 1rem;
     }
 
+    .grid {
+        grid-template-columns: 45% 55%;
+    }
+    
+    .right {
+        margin-left: 2%;
+    }
+
     .left {
         display: block;
     }
@@ -50,7 +40,7 @@
     }
 
     .icons {
-        max-width: 5%;
+        max-width: 10%;
         margin-right: 0.2em;
     }
 

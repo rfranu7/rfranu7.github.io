@@ -35,27 +35,6 @@
         background-color: #667DFF;
     }
 
-    .persona-flex{
-        margin: 0;
-        display: flex;
-        flex-direction: row;
-    }
-    
-    .persona-child {
-        padding: 0.5em;
-        margin: 0;
-        width: 50%;
-    }
-
-    #hero-ph {
-        position: relative;
-    }
-    
-    #hero-ph img {
-        margin: auto;
-        max-width: 100%;
-    }
-
     .cards {
         grid-template-columns: 1fr 1fr 1fr;
         margin: 1.25rem;
@@ -79,30 +58,17 @@
         padding: 1rem;
     }
 
+    .container {
+        margin-bottom: 1.75em;
+    }
+
     .grid {
-        display: flex;
-        flex-direction: row;
-        flex: 1 1 100%;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 1rem;
-    }
-
-    .item {
-        flex-basis: 50%;
-    }
-
-    .right {
-        margin-left: 2%;
+        grid-template-columns: 1fr 1fr;
     }
 
     .imgContainer {
         padding-top: 0;
         text-align: center;
-    }
-    
-    .responsiveImg {
-        max-width: 95%;
     }
 
     .icons {
