@@ -14,8 +14,17 @@
         margin: .5rem;
     }
 
+    .col-2 {
+        order: 1;
+        padding-top: 0;
+    }
+
     .cards section:nth-child(2) .col-2 {
         order: -1;
+    }
+
+    .cards img {
+        max-width: 100%;
     }
 
     .col-1, .col-2 {

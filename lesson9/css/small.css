@@ -133,8 +133,13 @@ main section {
     font-size: .8rem;
 }
 
+.col-2 {
+    order: -1;
+    padding-top: 1rem;
+}
+
 .cards img {
-    max-width: 100%;
+    max-width: 90%;
 }
 
 /* Article Section */
@@ -152,7 +157,6 @@ main section {
 }
 
 .imgContainer {
-    padding-top: 1rem;
     text-align: center;
 }
 
