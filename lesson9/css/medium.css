@@ -25,59 +25,19 @@
         max-width: 100%;
         margin-bottom: 2rem;
     }
-    
-    #overlay {
-        height: 180px;
-        width: 180px;
-        top: 1.5rem;
-        left: 2rem;
-    }
-    
-    #overlay h3 {
-        font-size: 1.1em;
-    }
-    
-    #overlay span {
-        margin: 0;
-        font-size: 0.9rem;
+
+    .cards section{
+        grid-template-columns: 1fr 1fr;
+        padding: 0;
+        margin: .5rem;
     }
 
-    .forecast {
-        display: block;
-        text-align: center;
-        margin-bottom: 2rem;
-    }
-    
-    #forecastTable {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        text-align: center;
-        border-right: 2px solid #E8C146;
-    }
-    
-    .Day {
-        background-color: #111A62;
-        color: #FFF;
-        padding: 0.4em;
-        border-top: 2px solid #E8C146;
-        border-bottom: 1px solid #E8C146;
-        border-left: 2px solid #E8C146;
-    }
-    
-    .DayContent {
-        border-top: 1px solid #E8C146;
-        border-bottom: 2px solid #E8C146;
-        border-left: 2px solid #E8C146;
-        padding-top: 1em;
+    .cards section:nth-child(2) .col-2 {
+        order: -1;
     }
 
-    .DayContent p {
-        padding-bottom: 1em;
-        margin-bottom: 0;
-    }
-    
-    .DayContent img{
-        max-width: 50%;
+    .col-1, .col-2 {
+        padding: 1rem;
     }
 
     .left {
