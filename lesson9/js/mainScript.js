@@ -34,7 +34,6 @@ fetch(requestURL)
             div2.classList.add("col-2");
             image.setAttribute('src', "assets/" + towns[i].photo);
             image.setAttribute('alt', towns[i].name);
-            image.classList.add("altImg")
             
             card.appendChild(div);
             card.appendChild(div2);
