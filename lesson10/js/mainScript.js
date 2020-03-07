@@ -29,7 +29,7 @@ fetch(apiURL)
 	const weatherAPI = jsObject;
 
     document.getElementById('valCurrent').textContent = weatherAPI.weather[0].main;
-    document.getElementById('valHigh').textContent = weatherAPI.main.temp_max;
+    document.getElementById('valHigh').textContent = weatherAPI.main.temp_max.toFixed(1);
     document.getElementById('valHumid').textContent = weatherAPI.main.humidity;
 	document.getElementById('valWind').textContent = weatherAPI.wind.speed;
 	
@@ -82,7 +82,7 @@ fetch(apiForecastURL)
 			head.textContent = dayOfWeek[new Date(forecastAPI.dt_txt).getDay()];
 			image.setAttribute('src', imgSource);
 			image.setAttribute('alt', forecastAPI.weather[0].description);
-			temp.innerHTML = forecastAPI.main.temp + " &#8457;";
+			temp.innerHTML = forecastAPI.main.temp.toFixed(1) + " &#8457;";
 
 			div1.appendChild(div2);
 			div2.classList.add("Day");
