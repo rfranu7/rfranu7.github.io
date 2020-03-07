@@ -1,10 +1,31 @@
+@media only screen and (min-width: 55em){
+
+    /* Hero Section */
+
+    #overlay {
+        height: 200px;
+        width: 200px;
+        top: 2rem;
+        left: 3rem;
+    }
+    
+    #overlay h3 {
+        font-size: 1.2em;
+    }
+    
+    #overlay span {
+        margin: 0;
+        font-size: 1rem;
+    }
+}
+
 @media only screen and (min-width: 64em){
 
     header img {
         width: 7%;
         vertical-align: middle;
     }
-    
+
     /* Nav Section */
 
     nav ul{
@@ -36,32 +57,18 @@
     nav a:hover {
         background-color: #667DFF;
     }
-    
-    /* Cards Section */
 
-    .cards {
-        grid-template-columns: 1fr 1fr 1fr;
-        margin: 1.25rem;
-    }
+    /* Hero Section */
 
-    .cards section{
-        grid-template-columns: 1fr;
-        padding: 0;
-        margin: .5rem;
-    }
-
-    .cards section:nth-child(2) .col-2 {
-        order: 1;
-    }
-
-    .col-1 {
-        padding: 0;
-    }
-
-    .col-2 {
-        padding: 1rem;
+    #hero-ph {
+        position: relative;
     }
     
+    #hero-ph img {
+        margin: auto;
+        max-width: 100%;
+    }
+
     /* Article Section */
 
     .container {

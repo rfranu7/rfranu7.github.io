@@ -1,0 +1,168 @@
+body {
+    max-width: 1920px;
+    margin: auto;
+}
+
+/* NAV SECTION */
+nav ul{
+    background-color: #111a62;
+    margin: 0;
+    padding: 0;
+    display: block;
+    list-style: none;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.navBar li:first-child {
+    display: block;
+}
+
+nav li {
+    display: none;
+    flex: 1 1 100%;
+}
+
+nav li a {
+    display: block;
+    padding: 1em;
+    color: #FFF;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #667DFF;
+}
+
+.active {
+    background-color: #E8C146;
+    color: #111a62;
+    font-weight: bold;
+}
+
+.responsive li {
+	display: block;
+}
+
+/* HEADER SECTION */
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+header img {
+    max-width: 100%;
+}
+
+header div {
+    margin: 1rem 1rem 1rem 3%;
+    background-color: #FFF;
+    order: -1;
+}
+
+/* MAIN SECTION */
+
+main {
+    margin: auto;
+}
+
+main div {
+    margin: 2% 3% 3% 3%;
+}
+
+/* SERVICE SECTION */
+
+main .service {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.services {
+    background-color: rgba(0, 0, 0, 10%);
+    margin: .5rem;
+    padding: 1.5rem;
+}
+
+/* TESTIMONIAL SECTION */
+
+.testimonial h1 {
+    margin: 0 3% 1rem 0;
+}
+
+main .testi {
+    max-width: 1080px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.testimonials {
+    background-color: rgba(0, 0, 0, 10%);
+    margin: .5rem;
+    padding: 1.5rem;
+}
+
+/* ABOUT SECTION */
+
+main .aboutme h1 {
+    margin: 0 3% 1rem 0;
+}
+
+main .aboutme {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.aboutme img {
+    max-width: 150%;
+}
+
+.story {
+    max-width: 1080px;
+    margin: auto;
+    text-align: left;
+}
+
+/* CONTACT SECTION */
+
+.contact {
+    max-width: 960px;
+    margin: auto;
+}
+
+form {
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 10%);
+}
+
+input, textarea{
+    margin: .5rem 0;
+    padding: .6rem;
+}
+
+input[name="name"], input[name="phone"] {
+    width: 35.5%;
+}
+
+input[name="email"], textarea {
+    display: block;
+    width: 95%;
+}
+
+label:nth-child(3) {
+    margin-left: .5rem;
+}
+
+label:nth-child(4) {
+    display: block;
+}
