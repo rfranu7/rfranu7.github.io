@@ -5,7 +5,7 @@ body {
 
 /* NAV SECTION */
 nav ul{
-    background-color: #111a62;
+    background-color: #459aee;
     margin: 0;
     padding: 0;
     display: block;
@@ -31,12 +31,12 @@ nav li a {
 }
 
 nav a:hover {
-    background-color: #667DFF;
+    background-color: #ECC96f;
 }
 
 .active {
-    background-color: #E8C146;
-    color: #111a62;
+    background-color: #ECC96f;
+    color: #2a2a2a;
     font-weight: bold;
 }
 
@@ -46,7 +46,7 @@ nav a:hover {
 
 /* HEADER SECTION */
 
-header {
+/* header {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -59,6 +59,28 @@ header div {
     margin: 1rem 1rem 1rem 3%;
     background-color: #FFF;
     order: -1;
+} */
+
+header img {
+    max-height: 100vh;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    Left: 10%;
+}
+
+.overlay p, .overlay h1, .overlay em {
+    color: #FFF;
+}
+
+.overlay h1 {
+    font-size: 2rem;
+}
+
+.overlay em, p {
+    font-size: 1.4rem;
 }
 
 /* MAIN SECTION */
@@ -67,9 +89,6 @@ main {
     margin: auto;
 }
 
-main div {
-    margin: 2% 3% 3% 3%;
-}
 
 /* SERVICE SECTION */
 
@@ -82,7 +101,7 @@ main .service {
 }
 
 .services {
-    background-color: rgba(0, 0, 0, 10%);
+    background-color: #ECC96f;
     margin: .5rem;
     padding: 1.5rem;
 }
@@ -90,11 +109,14 @@ main .service {
 /* TESTIMONIAL SECTION */
 
 .testimonial h1 {
-    margin: 0 3% 1rem 0;
+    margin: 1rem 3%;
+    color: #459aee;
+    font-size: 2.5rem;
+    text-align: center;
 }
 
 main .testi {
-    max-width: 1080px;
+    max-width: 1800px;
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -104,33 +126,37 @@ main .testi {
 }
 
 .testimonials {
-    background-color: rgba(0, 0, 0, 10%);
     margin: .5rem;
     padding: 1.5rem;
 }
 
 /* ABOUT SECTION */
 
-main .aboutme h1 {
-    margin: 0 3% 1rem 0;
+main .about h1 {
+    margin: 1rem 3%;
+    color: #459aee;
+    font-size: 2.5rem;
+    text-align: center;
 }
 
 main .aboutme {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     justify-content: center;
     align-items: center;
     text-align: center;
+    background-color: #459aee;
+    color: #FFF;
 }
 
 .aboutme img {
-    max-width: 150%;
+    max-width: 100%;
 }
 
 .story {
-    max-width: 1080px;
-    margin: auto;
+    margin: 1rem;
     text-align: left;
+    order: -1;
 }
 
 /* CONTACT SECTION */
