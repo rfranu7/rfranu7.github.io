@@ -62,7 +62,8 @@ header div {
 } */
 
 header img {
-    max-height: 100vh;
+    max-height: 95vh;
+    width: 100%;
 }
 
 .overlay {
@@ -164,6 +165,16 @@ main .aboutme {
 .contact {
     max-width: 960px;
     margin: auto;
+}
+
+.messageForm img {
+    background-image: url("https://rfranu7.github.io/others/contactimg.jpg");
+}
+
+.TheForm {
+    position: relative;
+    top: 50%;
+    max-width: 1080px;
 }
 
 form {
