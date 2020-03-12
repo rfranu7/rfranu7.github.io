@@ -3,7 +3,7 @@
     /* Nav Section */
 
     nav ul{
-        background-color: #111a62;
+        background-color: #459aee;
         margin: 0;
         padding: 0;
         display: flex;
@@ -38,5 +38,5 @@
     }
 
     nav a:hover {
-        background-color: #667DFF;
+        background-color: #ecc96f;
     }
