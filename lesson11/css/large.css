@@ -1,0 +1,86 @@
+@media only screen and (min-width: 55em){
+
+    /* Hero Section */
+
+    #overlay {
+        height: 200px;
+        width: 200px;
+        top: 2rem;
+        left: 3rem;
+    }
+    
+    #overlay h3 {
+        font-size: 1.2em;
+    }
+    
+    #overlay span {
+        margin: 0;
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (min-width: 64em){
+
+    header img {
+        width: 7%;
+        vertical-align: middle;
+    }
+
+    /* Nav Section */
+
+    nav ul{
+        background-color: #111a62;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        list-style: none;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .navBar li:first-child {
+		display: none;
+	}
+
+    nav li {
+        display: block;
+        flex: 1 1 100%;
+    }
+
+    nav li a {
+        display: block;
+        padding: 1em;
+        color: #FFF;
+        text-decoration: none;
+    }
+
+    nav a:hover {
+        background-color: #667DFF;
+    }
+
+    /* Hero Section */
+
+    #hero-ph {
+        position: relative;
+    }
+    
+    #hero-ph img {
+        margin: auto;
+        max-width: 100%;
+    }
+
+    /* Article Section */
+
+    .container {
+        margin-bottom: 1.75em;
+    }
+
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .imgContainer {
+        padding-top: 0;
+        text-align: center;
+    }
+}
