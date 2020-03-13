@@ -23,7 +23,7 @@ function removeImg(img){ //removes the data-src attribute so the blue effect in 
 }
 
 const ImgOptions = {
-    rootMargin: "0px 0px 100px 0px" 
+    rootMargin: "0px 0px -100px 0px" 
 };
 
 const ImgObserver = new IntersectionObserver((entries, ImgObserver) => {
