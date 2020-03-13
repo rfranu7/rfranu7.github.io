@@ -9,13 +9,17 @@
         <meta name="description" content="A weather site used to check current information on storms in the Philippines">
         <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="css/normalize.css">
-        <link rel="stylesheet" type="text/css" href="../lesson9/css/small.css">
-        <link rel="stylesheet" type="text/css" href="../lesson9/css/css/medium.css">
-        <link rel="stylesheet" type="text/css" href="../lesson9/css/css/large.css">
+        <link rel="stylesheet" type="text/css" href="css/small.css">
+        <link rel="stylesheet" type="text/css" href="css/medium.css">
+        <link rel="stylesheet" type="text/css" href="css/large.css">
                 
     </head>
     
     <body>
+
+        <section id="popup" class="hide">
+            <p><strong>Saturday</strong> = Soda Springs Pancakes in the Park!  9:00 a.m. Saturday at the city park pavilion.</p>
+        </section>
 
         <header>
             <img id="logo" src="assets/HelloStorm.png" alt="Hello Storm logo">
@@ -29,9 +33,9 @@
             <section class="yellowLine"></section>
             <ul id="navParent" class="navBar">
                 <li><a class="hamburger" href="#">&#9776; Menu</a></li>
-                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="preston-11.html">Preston</a></li>
-                <li><a href="sodasprings-11.html">Soda Springs</a></li>
+                <li><a class="active" href="sodasprings-11.html">Soda Springs</a></li>
                 <li><a href="fishhaven-11.html">Fish Haven</a></li>
                 <li><a href="stormcenter-11.html">Storm Center</a></li>
                 <li><a href="gallery-11.html">Gallery</a></li>
@@ -39,20 +43,34 @@
             <section class="yellowLine"></section>
         </nav>
 
-        <section class="hero">
-            <picture>
-                <source media="(max-width: 480px)" srcset="assets/hero-small.jpg">
-                <source media="(max-width: 960px)" srcset="assets/hero-med.jpg">
-                <img src="assets/hero.jpg" alt="Image Banner">
-            </picture>
-        </section>
-
         <main>
 
-            <div class="cards">
-                
-                
-            </div>
+            <h2 class="textCenter textBold">Soda Springs Idaho</h2>
+
+            <section id="hero-ph">
+                <picture>
+                    <source media="(max-width: 400px)" srcset="assets/hero-small.jpg">
+                    <source media="(max-width: 700px)" srcset="assets/hero-medium.jpg">
+                    <img src="assets/hero-large.jpg" alt="Soda Springs Town">
+
+                </picture>
+                <div id="overlay">
+                    <h3 id="headline">Weather Summary</h3>
+                    <span class="row1">Currently: </span><span class="row1-1" id="valCurrent"></span>
+                    <span class="row1">High: </span><div class="row1-1"><span id="valHigh"></span><span> &#8457;</span></div>
+                    <span class="row1">Wind Chill: </span><div class="row1-1"><span id="valChill"></span><span id="windUnit"> &#8457;</span></div>
+                    <span class="row1">Humidity: </span><div class="row1-1"><span id="valHumid"></span><span>%</span></div>
+                    <span class="row1">Wind Speed: </span><div class="row1-1"><span id="valWind"></span><span>mph</span></div>
+                </div>
+            </section>
+
+            <section class="forecast">
+                <h3>5-Day Forecast</h3>
+                <div class="forecastTable">
+                    
+                </div>
+            </section>
+
             <section class="grid container">
                 <div class="imgContainer">
                     <picture>
@@ -75,15 +93,15 @@
             <section class="container">
                 <div class="grid">
                     <div class="left imgContainer item">
-                        <img class="responsiveImg" src="assets/map.jpg" alt="map of Preston">
+                        <img class="responsiveImg" src="assets/map.jpg" alt="map of Soda Springs">
                     </div>
                     <div class="contact item">
                         <h3>Hello Storm</h3>
-                        <p>2921  Modoc Alley</p>
-                        <p>Preston, ID 83263</p>
+                        <p>691  Bates Brothers Road</p>
+                        <p>Soda Springs, ID 83276</p>
                         <br>
-                        <p>&#9743; 208-840-3714</p>
-                        <p>&#9743; 208-851-4606</p>
+                        <p>&#9743; 614-297-3388</p>
+                        <p>&#9743; 208-530-3621</p>
                         <p>
                             <a href="#" class="iconsLink"><img class="icons" src="assets/icon-fb.jpg" alt="Hello Storm's Facebook page"></a>
                             <a href="#" class="iconsLink"><img class="icons" src="assets/icon-ig.jpg" alt="Hello Storm's Instagram"></a>
@@ -96,10 +114,11 @@
 
         <section class="yellowLine"></section>
         <footer>
-            <span>&copy; </span><span id="currentYear"></span><span> Hello Storm | Randeep Singh Ranu </span>
+            <span>&copy; </span><span id="currentYear"></span><span> Hello Storm | Randeep Singh Ranu | Weather data from OpenWeatherMap</span>
             <p id="lastModif"></p>
         </footer>
         <section class="yellowLine"></section>
-        <script src="js/mainScript.js"></script>
+
+        <script src="js/townScript.js"></script>
     </body>
 </html>

@@ -93,15 +93,6 @@ fetch(requestURL)
     }
   });
 
-//----------------- Popup Script -----------------
-
-var day = new Date();
-var today = day.getDay();
-
-if(today == 5) {
-	document.getElementById("popup").className = "show";
-}
-
 //-----------------Footer Script-----------------
 
 const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
