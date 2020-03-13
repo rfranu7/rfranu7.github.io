@@ -71,8 +71,6 @@ function windChill (TempF, speed) {
 	return windChillFactor;
 }
 
-
-
 //-----------------Weather Data------------------
 
 const apiURL = "https://api.openweathermap.org/data/2.5/weather?id=5604473&units=imperial&APPID=35b12c8d999fdda2699d5d2204b76ea4";
@@ -152,6 +150,46 @@ fetch(apiForecastURL)
 
 		}
 	}
+  });
+
+//-----------------Town Data---------------------
+
+const requestURL = 'https://byui-cit230.github.io/weather/data/towndata.json';
+
+fetch(requestURL)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (jsonObject) {
+    console.table(jsonObject);  // temporary checking for valid response and data parsing
+
+    const towns = jsonObject['towns'];
+
+    for (let i = 0; i < towns.length; i++ ) {
+
+        if (towns[i].name == "Preston"){       
+			
+            let h2 = document.createElement('h2');
+            let event1 = document.createElement('p');
+            let event2 = document.createElement('p');
+            let event3 = document.createElement('p');
+            let image = document.createElement('img');
+
+            
+			h2.textContent = towns[i].name + " Idaho Upcoming Events";
+			event1.textContent = towns[i].events[0];
+			event2.textContent = towns[i].events[1];
+			event3.textContent = towns[i].events[2];
+            image.setAttribute('src', "assets/" + towns[i].photo);
+            image.setAttribute('alt', towns[i].name);
+
+            document.querySelector('div.events').appendChild(h2);
+            document.querySelector('div.events').appendChild(event1);
+            document.querySelector('div.events').appendChild(event2);
+            document.querySelector('div.events').appendChild(event3);
+            document.querySelector('div.events').appendChild(image);
+        }
+    }
   });
 
 //-----------------Footer Script-----------------
