@@ -69,6 +69,12 @@
         max-width: 100%;
     }
 
+    /* Events Section */
+
+    .grids {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    
     /* Article Section */
 
     .container {

@@ -73,7 +73,7 @@ function windChill (TempF, speed) {
 
 //-----------------Weather Data------------------
 
-const apiURL = "https://api.openweathermap.org/data/2.5/weather?id=5604473&units=imperial&APPID=35b12c8d999fdda2699d5d2204b76ea4";
+const apiURL = "https://api.openweathermap.org/data/2.5/weather?id=5585010&units=imperial&APPID=35b12c8d999fdda2699d5d2204b76ea4";
 
 fetch(apiURL)
   .then((response) => response.json())
@@ -91,7 +91,7 @@ fetch(apiURL)
 
 //-----------------Forecast Data------------------
 
-const apiForecastURL = "https://api.openweathermap.org/data/2.5/forecast?id=5604473&units=imperial&APPID=35b12c8d999fdda2699d5d2204b76ea4";
+const apiForecastURL = "https://api.openweathermap.org/data/2.5/forecast?id=5585010&units=imperial&APPID=35b12c8d999fdda2699d5d2204b76ea4";
 
 fetch(apiForecastURL)
   .then((response) => response.json())
@@ -167,27 +167,28 @@ fetch(requestURL)
 
     for (let i = 0; i < towns.length; i++ ) {
 
-        if (towns[i].name == "Preston"){       
+        if (towns[i].name == "Fish Haven"){       
 			
-            let h2 = document.createElement('h2');
-            let event1 = document.createElement('p');
-            let event2 = document.createElement('p');
-            let event3 = document.createElement('p');
-            let image = document.createElement('img');
+			const town = towns[i];
 
-            
-			h2.textContent = towns[i].name + " Idaho Upcoming Events";
-			event1.textContent = towns[i].events[0];
-			event2.textContent = towns[i].events[1];
-			event3.textContent = towns[i].events[2];
-            image.setAttribute('src', "assets/" + towns[i].photo);
-            image.setAttribute('alt', towns[i].name);
+			for (let x = 0; x < town.events.length; x++){
 
-            document.querySelector('section.events').appendChild(h2);
-            document.querySelector('section.events').appendChild(event1);
-            document.querySelector('section.events').appendChild(event2);
-            document.querySelector('section.events').appendChild(event3);
-            document.querySelector('section.events').appendChild(image);
+				const images = ["event1.jpg", "event2.jpg", "event3.jpg", "event4.jpg"]
+
+				let div = document.createElement('div');
+				let event = document.createElement('p');
+				let image = document.createElement('img');
+
+				div.appendChild(event);
+				div.appendChild(image);
+
+				event.textContent = town.events[x];
+            	image.setAttribute('src', "assets/fishhaven-" + images[x]);
+				image.setAttribute('alt', town.events[x] + ", " + town.name + ", Idaho");
+				
+				document.querySelector('div.events').appendChild(div);
+			}
+
         }
     }
   });
