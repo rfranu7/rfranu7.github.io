@@ -183,11 +183,11 @@ fetch(requestURL)
             image.setAttribute('src', "assets/" + towns[i].photo);
             image.setAttribute('alt', towns[i].name);
 
-            document.querySelector('div.events').appendChild(h2);
-            document.querySelector('div.events').appendChild(event1);
-            document.querySelector('div.events').appendChild(event2);
-            document.querySelector('div.events').appendChild(event3);
-            document.querySelector('div.events').appendChild(image);
+            document.querySelector('section.events').appendChild(h2);
+            document.querySelector('section.events').appendChild(event1);
+            document.querySelector('section.events').appendChild(event2);
+            document.querySelector('section.events').appendChild(event3);
+            document.querySelector('section.events').appendChild(image);
         }
     }
   });
