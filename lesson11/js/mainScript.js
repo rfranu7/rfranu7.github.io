@@ -57,7 +57,9 @@ fetch(requestURL)
 
     for (let i = 0; i < towns.length; i++ ) {
 
-        if (towns[i].name == "Fish Haven" || towns[i].name == "Preston" || towns[i].name == "Soda Springs"){       
+        if (towns[i].name == "Fish Haven" || towns[i].name == "Preston" || towns[i].name == "Soda Springs"){    
+            
+            var town = towns[i];
 
             let card = document.createElement('section');
             let div = document.createElement('div');
@@ -68,6 +70,10 @@ fetch(requestURL)
             let population = document.createElement('p');
             let rainfall = document.createElement('p');
             let image = document.createElement('img');
+            let div3 = document.createElement('div');
+            let h3 = document.createElement('h3');
+            let hr = document.createElement('hr');
+            let div4 = document.createElement('div');
 
             div.classList.add("col-1");
             h2.textContent = towns[i].name;
@@ -78,15 +84,30 @@ fetch(requestURL)
             div2.classList.add("col-2");
             image.setAttribute('src', "assets/" + towns[i].photo);
             image.setAttribute('alt', towns[i].name);
+
+            h3.textContent = "Upcoming Events";
+            for (let x = 0; x < town.events.length; x++){
+
+                let event = document.createElement('p');
+                event.textContent = town.events[x];
+
+                div4.appendChild(event);
+            }
             
             card.appendChild(div);
             card.appendChild(div2);
+            card.appendChild(div3);
+
             div.appendChild(h2);
             div.appendChild(motto);
             div.appendChild(yearFound);
             div.appendChild(population);
             div.appendChild(rainfall);
             div2.appendChild(image);
+
+            div3.appendChild(h3);
+            div3.appendChild(hr);
+            div3.appendChild(div4);
 
             document.querySelector('div.cards').appendChild(card);
         }
