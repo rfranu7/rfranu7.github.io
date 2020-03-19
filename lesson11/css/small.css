@@ -125,8 +125,8 @@ main section {
     display: grid;
     grid-template-columns: 2.5fr 1fr 1fr;
     grid-column-gap: 0.3em;
-    height: 130px;
-    width: 150px;
+    height: 150px;
+    width: 160px;
     background-color: rgba(232, 193, 70, 95%);
     padding: 0.5rem 1em;
     top: 1rem;
