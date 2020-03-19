@@ -1,10 +1,5 @@
 @media only screen and (min-width: 64em){
 
-    header img {
-        width: 7%;
-        vertical-align: middle;
-    }
-
     nav ul{
         background-color: #111a62;
         margin: 0;

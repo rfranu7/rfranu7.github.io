@@ -1,7 +1,7 @@
 @media only screen and (min-width: 32.5em){
 
-    header img {
-        width: 14%;
+    header section {
+        max-width: 360px;
     }
 
     /* Hero Section */
