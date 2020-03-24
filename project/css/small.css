@@ -1,0 +1,129 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: auto;
+    background-color: #F3F7F5;
+}
+
+/* Header Section */
+
+nav {
+    background-color: #034687;
+}
+
+.logo img {
+    width: 50px;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    display: block;
+    list-style: none;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.navBar li:first-child {
+    display: block;
+}
+
+nav li {
+    display: none;
+    flex: 1 1 100%;
+}
+
+nav li a {
+    display: inline;
+    padding: 1em;
+    color: #FFF;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    background-color: #E10032;
+}
+
+.active {
+    background-color: #E8C146;
+    color: #034687;
+    font-weight: bold;
+}
+
+.responsive li {
+	display: block;
+}
+
+.social {
+    text-align: right;
+    padding-right: 5%;
+}
+
+.social img{
+    max-width: 10%;
+    border-radius: 50%;
+}
+
+/* Main Section */
+
+main section {
+    max-width: 1850px;
+    margin: 2rem auto;
+}
+
+/* Hero Section */
+
+.hero img {
+    max-width: 100%;
+}
+
+/* Blog Section */
+
+.blog {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.blog img {
+    max-width: 100%;
+}
+
+/* River Section */
+
+.river {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.river div:nth-child(1) {
+    text-align: center;
+}
+
+.river img {
+    max-width: 100%;
+}
+
+/* Newsletter Section */
+
+.newsletter {
+    background-color: #034687;
+    color: #FFF;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+/* Footer Section */
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+    text-align: center;
+}

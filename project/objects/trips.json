@@ -1,0 +1,24 @@
+{
+    "trips": [
+      {
+        "name": "One Day Trips",
+        "photo": "400-250.jpg",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      },
+      {
+        "name": "Multi Day Trips",
+        "photo": "400-250.jpg",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      },
+      {
+        "name": "One Day Trips",
+        "photo": "400-250.jpg",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      },
+      {
+        "name": "Multi Day Trips",
+        "photo": "400-250.jpg",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      }
+    ]
+  }
