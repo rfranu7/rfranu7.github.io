@@ -1,0 +1,78 @@
+@media only screen and (min-width: 64em){
+
+    /* Nav Section */
+
+    nav {
+        grid-template-columns: .75fr 2fr .5fr;
+    }
+
+    nav ul{
+        display: flex;
+        font-size: 1rem;
+    }
+
+    .navBar li:nth-child(1) {
+        display: none;
+    }
+
+    nav li {
+        display: block;
+    }
+
+    .social {
+        display: inline;
+    }
+
+    .social img{
+        max-width: 15%;
+    }
+
+    /* Weather Section */
+
+    .weather {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    .weather-data:nth-child(1) {
+        grid-column: 1;
+    }
+
+    .weather-data:nth-child(2), .weather-data:nth-child(3), .weather-data:nth-child(4) {
+        border-right: 1px solid #333;
+        border-top: none;
+    }
+    
+    .weather-data:nth-child(5) {
+        border-top: none;
+    }
+
+    /* Blog Section */
+
+    .blog {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* River Section */
+
+    .river {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Trips Section */
+
+    .trips {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    /* Newsletter Section */
+
+    .newsletter {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Footer Section */
+
+    footer .social img{
+        max-width: 7%;
+    }
+}

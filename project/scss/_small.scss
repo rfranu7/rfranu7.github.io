@@ -94,7 +94,6 @@ main section {
     justify-content: center;
     text-align: center;
     border: 1px solid #333;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 10%);
 }
 
 .weather img {
@@ -117,11 +116,23 @@ main section {
     border-right: none;
 }
 
-.weather-data:nth-child(3), .weather-data:nth-child(5) {
-    border-right: none;
+.weather-data:nth-child(2) {
+    border-right: 1px solid #333;
+    border-top: 1px solid #333;
 }
 
-.weather-data:nth-child(2), .weather-data:nth-child(3), .weather-data:nth-child(4), .weather-data:nth-child(5) {
+.weather-data:nth-child(3) {
+    border-right: none;
+    border-top: 1px solid #333;
+}
+
+.weather-data:nth-child(4) {
+    border-right: 1px solid #333;
+    border-top: 1px solid #333;
+}
+
+.weather-data:nth-child(5) {
+    border-right: none;
     border-top: 1px solid #333;
 }
 
@@ -170,7 +181,6 @@ main section {
 
 .river {
     border: 1px solid #333;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 10%);
     display: grid;
     grid-template-columns: 1fr;
     justify-content: center;
@@ -207,7 +217,6 @@ main section {
 
 .trip-data {
     border: 1px solid #333;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 10%);
     margin: 1rem 2%;
     text-align: center;
     max-width: 400px;

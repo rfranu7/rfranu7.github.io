@@ -102,7 +102,13 @@ fetch(apiForecastURL)
   .then((jsObject) => {
     console.log(jsObject);
     
-    var today = new Date();
+    var today = new Date();var today = new Date();
+    var tomorrow = new Date(today);
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    var nextDay = new Date(tomorrow)
+    nextDay.setDate(nextDay.getDate() + 1);
+
+    const dayOfWeek = ["SUNDAY", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"];
 
 	for (let i = 0; i < jsObject.list.length; i++ ){
 
@@ -166,28 +172,12 @@ fetch(apiForecastURL)
             document.querySelector('section.weather').appendChild(todayTitle);
 
 		}
-	}
-  });
-//-----------------Forecast - 2 - Data------------------
-
-const apiForecastURL2 = "https://api.openweathermap.org/data/2.5/forecast?id=4092267&units=imperial&APPID=35b12c8d999fdda2699d5d2204b76ea4";
-
-fetch(apiForecastURL2)
-  .then((response) => response.json())
-  .then((jsObject) => {
-	console.log(jsObject);
-
-	var today = new Date();
-
-	for (let i = 0; i < jsObject.list.length; i++ ){
-
-        var weatherDate = new Date(jsObject.list[i].dt_txt);
-
-		if (weatherDate.getHours() == 18 && weatherDate.getDate() == today.getDate()) {
+        
+        else if (weatherDate.getHours() == 18 && weatherDate.getDate() == today.getDate()) {
 
 			var forecastAPI = jsObject.list[i];
 			
-            let tonight = document.createElement('div');
+            let todayTitle = document.createElement('div');
 
             let div = document.createElement('div');
             let h4 = document.createElement('h4');
@@ -220,10 +210,10 @@ fetch(apiForecastURL2)
 				var imgSource = "assets/mist.png"
 			}
 
-            tonight.appendChild(div);
-            tonight.appendChild(div2);
-            tonight.appendChild(div3);
-            tonight.classList.add("weather-data");
+            todayTitle.appendChild(div);
+            todayTitle.appendChild(div2);
+            todayTitle.appendChild(div3);
+            todayTitle.classList.add("weather-data");
 
             h4.textContent = "TONIGHT";
             weather.textContent = forecastAPI.weather[0].main;
@@ -235,37 +225,18 @@ fetch(apiForecastURL2)
             div2.appendChild(image);
             
             max.textContent = "MIN"
-            high.innerHTML = forecastAPI.main.temp_max.toFixed(0) + "&#8457;";
+            high.innerHTML = forecastAPI.main.temp_min.toFixed(0) + "&#8457;";
             div3.appendChild(high);
 
-            document.querySelector('section.weather').appendChild(tonight);
+            document.querySelector('section.weather').appendChild(todayTitle);
 
-		}
-	}
-  });
-//-----------------Forecast - 3 - Data------------------
-
-const apiForecastURL3 = "https://api.openweathermap.org/data/2.5/forecast?id=4092267&units=imperial&APPID=35b12c8d999fdda2699d5d2204b76ea4";
-
-fetch(apiForecastURL3)
-  .then((response) => response.json())
-  .then((jsObject) => {
-	console.log(jsObject);
-	
-    const dayOfWeek = ["SUNDAY", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"];
-    var today = new Date();
-    var tomorrow = new Date(today);
-    tomorrow.setDate(tomorrow.getDate() + 1);
-
-	for (let i = 0; i < jsObject.list.length; i++ ){
-
-        var weatherDate = new Date(jsObject.list[i].dt_txt);
-
-		if (weatherDate.getHours() == 12 && weatherDate.getDate() == tomorrow.getDate()) {
+        }
+        
+        else if (weatherDate.getHours() == 12 && weatherDate.getDate() == tomorrow.getDate()) {
 
 			var forecastAPI = jsObject.list[i];
 			
-            let tom = document.createElement('div');
+            let todayTitle = document.createElement('div');
 
             let div = document.createElement('div');
             let h4 = document.createElement('h4');
@@ -298,10 +269,10 @@ fetch(apiForecastURL3)
 				var imgSource = "assets/mist.png"
 			}
 
-            tom.appendChild(div);
-            tom.appendChild(div2);
-            tom.appendChild(div3);
-            tom.classList.add("weather-data");
+            todayTitle.appendChild(div);
+            todayTitle.appendChild(div2);
+            todayTitle.appendChild(div3);
+            todayTitle.classList.add("weather-data");
 
             h4.textContent = dayOfWeek[new Date(forecastAPI.dt_txt).getDay()];
             weather.textContent = forecastAPI.weather[0].main;
@@ -316,36 +287,15 @@ fetch(apiForecastURL3)
             high.innerHTML = forecastAPI.main.temp_max.toFixed(0) + "&#8457;";
             div3.appendChild(high);
 
-            document.querySelector('section.weather').appendChild(tom);
+            document.querySelector('section.weather').appendChild(todayTitle);
 
-		}
-	}
-  });
-
-
-//-----------------Forecast - 4 - Data------------------
-
-const apiForecastURL4 = "https://api.openweathermap.org/data/2.5/forecast?id=4092267&units=imperial&APPID=35b12c8d999fdda2699d5d2204b76ea4";
-
-fetch(apiForecastURL4)
-  .then((response) => response.json())
-  .then((jsObject) => {
-	console.log(jsObject);
-	
-    const dayOfWeek = ["SUNDAY", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"];
-    var today = new Date();
-    var tomorrow = new Date(today);
-    tomorrow.setDate(tomorrow.getDate() + 1);
-
-	for (let i = 0; i < jsObject.list.length; i++ ){
-
-        var weatherDate = new Date(jsObject.list[i].dt_txt);
-
-		if (weatherDate.getHours() == 18 && weatherDate.getDate() == tomorrow.getDate()) {
+        }
+        
+        else if (weatherDate.getHours() == 18 && weatherDate.getDate() == tomorrow.getDate()) {
 
 			var forecastAPI = jsObject.list[i];
 			
-            let tomnight = document.createElement('div');
+            let todayTitle = document.createElement('div');
 
             let div = document.createElement('div');
             let h4 = document.createElement('h4');
@@ -378,10 +328,10 @@ fetch(apiForecastURL4)
 				var imgSource = "assets/mist.png"
 			}
 
-            tomnight.appendChild(div);
-            tomnight.appendChild(div2);
-            tomnight.appendChild(div3);
-            tomnight.classList.add("weather-data");
+            todayTitle.appendChild(div);
+            todayTitle.appendChild(div2);
+            todayTitle.appendChild(div3);
+            todayTitle.classList.add("weather-data");
 
             h4.textContent = dayOfWeek[new Date(forecastAPI.dt_txt).getDay()] + " NIGHT";
             weather.textContent = forecastAPI.weather[0].main;
@@ -396,13 +346,70 @@ fetch(apiForecastURL4)
             high.innerHTML = forecastAPI.main.temp_max.toFixed(0) + "&#8457;";
             div3.appendChild(high);
 
-            document.querySelector('section.weather').appendChild(tomnight);
+            document.querySelector('section.weather').appendChild(todayTitle);
+
+        }
+        
+        else if (weatherDate.getHours() == 12 && weatherDate.getDate() == nextDay.getDate()) {
+
+			var forecastAPI = jsObject.list[i];
+			
+            let todayTitle = document.createElement('div');
+
+            let div = document.createElement('div');
+            let h4 = document.createElement('h4');
+            let weather = document.createElement('p');
+
+			let image = document.createElement('img');
+            let div2 = document.createElement('div');
+
+            let div3 = document.createElement('div');
+            let max = document.createElement('p');
+            let high = document.createElement('strong');
+
+			const imageidentifier = forecastAPI.weather[0].main;
+			if (imageidentifier == "Clear"){
+				var imgSource = "assets/sunny.png";
+			} 
+			else if (imageidentifier == "Clouds"){
+				var imgSource = "assets/cloud.png";
+			}
+			else if (imageidentifier == "Snow"){
+				var imgSource = "assets/snow.png";
+			}
+			else if (imageidentifier == "Rain" || imageidentifier == "Drizzle"){
+				var imgSource = "assets/rain.png";
+			}
+			else if (imageidentifier == "Thunderstorm"){
+				var imgSource = "assets/thunderstorm.png";
+			}
+			else {
+				var imgSource = "assets/mist.png"
+			}
+
+            todayTitle.appendChild(div);
+            todayTitle.appendChild(div2);
+            todayTitle.appendChild(div3);
+            todayTitle.classList.add("weather-data");
+
+            h4.textContent = dayOfWeek[new Date(forecastAPI.dt_txt).getDay()];
+            weather.textContent = forecastAPI.weather[0].main;
+            div.appendChild(h4);
+            div.appendChild(weather);
+
+			image.setAttribute('src', imgSource);
+			image.setAttribute('alt', forecastAPI.weather[0].description);
+            div2.appendChild(image);
+            
+            max.textContent = "MAX"
+            high.innerHTML = forecastAPI.main.temp_max.toFixed(0) + "&#8457;";
+            div3.appendChild(high);
+
+            document.querySelector('section.weather').appendChild(todayTitle);
 
 		}
 	}
-  });
-
-  
+});
 
 //-----------------Trips Data---------------------
 
