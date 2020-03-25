@@ -1,0 +1,18 @@
+@media only screen and (min-width: 112.5em){
+
+    /* Nav Section */
+
+    nav {
+        grid-template-columns: .65fr 2fr  .5fr;
+    }
+
+    .social img{
+        max-width: 10%;
+    }
+    
+    /* Footer Section */
+
+    footer .social img{
+        max-width: 5%;
+    }
+}

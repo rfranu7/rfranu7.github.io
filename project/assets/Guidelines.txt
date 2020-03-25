@@ -1,0 +1,20 @@
+1920-400 - Large Hero
+960-300 - Med Hero
+480-300 - Small Hero
+
+910-600 - Wide Main Article
+475-330 - Large Main Article
+720-480 - Med Article
+310-205 - Small Articles
+
+900-295 - Wide Sub Article
+475-165  - Large Sub Article
+240-240 - Med Sub Article
+
+910-400 - Wide River
+480-260 - Large River
+720-300 - Med River
+310 - 205 - Small River
+
+400-250 - Large Trips
+300-190 - Small Trips

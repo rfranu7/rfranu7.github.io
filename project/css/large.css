@@ -3,38 +3,119 @@
     /* Nav Section */
 
     nav {
-        display: grid;
-        grid-template-columns: .25fr 2fr  .5fr;
-        justify-content: space-around;
-        align-items: center;
-        text-align: center;
+        grid-template-columns: .75fr 2fr .5fr;
     }
 
     nav ul{
-        margin: 0;
-        padding: 0;
         display: flex;
-        list-style: none;
-        text-align: center;
         font-size: 1rem;
     }
 
     .navBar li:nth-child(1) {
-		display: none;
-	}
+        display: none;
+    }
 
     nav li {
         display: block;
     }
 
-    nav li a {
-        display: block;
-        padding: 1em;
-        color: #FFF;
-        text-decoration: none;
+    .social {
+        display: inline;
     }
 
-    nav li a:hover {
-        background-color: #E10032;
+    .social img{
+        max-width: 15%;
+    }
+
+    /* Weather Section */
+
+    .weather {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        justify-content: center;
+        text-align: center;
+        border: 1px solid #333;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 10%);
+    }
+
+    .weather img {
+        max-width: 100%;
+    }
+
+    .weather-data {
+        text-align: center;
+        justify-content: center;
+        border-right: 1px solid #333;
+        padding: 1rem
+    }
+
+    .weather-data h4 {
+        margin-bottom: 0;
+    }
+
+    .weather-data:nth-child(1) {
+        grid-column: 1;
+    }
+
+    .weather-data:nth-child(2), .weather-data:nth-child(3), .weather-data:nth-child(4), .weather-data:nth-child(5) {
+        border: none;
+    }
+
+    .weather-data:nth-child(2), .weather-data:nth-child(3), .weather-data:nth-child(4) {
+        border-right: 1px solid #333;;
+    }
+
+    .weather-data:nth-child(1) div:nth-child(1) {
+        margin-bottom: 1.33rem;
+    }
+
+    .weather-data:nth-child(1) div:nth-child(2), .weather-data:nth-child(1) div:nth-child(3) {
+        text-align: left;
+    }
+
+    .weather-data div strong {
+        font-size: 2rem;
+    }
+
+    .weather-data div:nth-child(2) p {
+        margin-top: 0;
+    }
+
+    .weather-data:nth-child(1) div:nth-child(3) p {
+        margin: 0;
+    }
+
+    .weather-data div:nth-child(1) p {
+        margin-top: 0;
+    }
+
+    /* Blog Section */
+
+    .blog {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* River Section */
+
+    .river {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Trips Section */
+
+    .trips {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    /* Newsletter Section */
+
+    .newsletter {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Footer Section */
+
+    footer .social img{
+        max-width: 7%;
     }
 }

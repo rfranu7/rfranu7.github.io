@@ -11,7 +11,8 @@
         <link rel="stylesheet" type="text/css" href="css/normalize.css">
         <link rel="stylesheet" type="text/css" href="css/small.css">
         <link rel="stylesheet" type="text/css" href="css/medium.css">
-        <link rel="stylesheet" type="text/css" href="css/large.css">
+        <link rel="stylesheet" type="text/css" href="css/large.css">>
+        <link rel="stylesheet" type="text/css" href="css/wide.css">
 
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
                 
@@ -46,31 +47,65 @@
 
         <main>
             <div class="hero">
-                <img src="assets/1920-400.jpg" alt="River Rafting">
+                <!-- <img class="responsiveImg" src="assets/lightning-3-20.jpg" data-src="assets/lightning-3.jpg" alt="Lightning by the city"> -->
+                <picture>
+                    <source media="(max-width: 520px)" srcset="assets/hero-small.jpg">
+                    <source media="(max-width: 1020px)" srcset="assets/hero-med.jpg">
+                    <img src="assets/hero-large.jpg" alt="River Rafting">
+                </picture>
             </div>
 
             <section class="weather"></section>
 
             <section class="blog">
                 <div class="main-article">
-                    <img src="assets/900-600.jpg" alt="article-title">
+                    <div>
+                        <picture>
+                            <source media="(max-width: 520px)" srcset="assets/small-main-article.jpg">
+                            <source media="(max-width: 1024px)" srcset="assets/med-main-article.jpg">
+                            <source media="(max-width: 1600px)" srcset="assets/large-main-article.jpg">
+                            <img src="assets/wide-main-article.jpg" alt="article-title">
+                        </picture>
+                    </div>
                 </div>
                 <div class="sub-article">
-                    <img src="assets/900-300.jpg" alt="article-title">
-                    <img src="assets/900-300.jpg" alt="article-title">
+                    <div>
+                        <picture>
+                            <source media="(max-width: 520px)" srcset="assets/small-main-article.jpg">
+                            <source media="(max-width: 1024px)" srcset="assets/med-sub-article.jpg">
+                            <source media="(max-width: 1600px)" srcset="assets/large-sub-article.png">
+                            <img src="assets/wide-sub-article.png" alt="article-title">
+                        </picture>
+                    </div>
+                    <div>
+                        <picture>
+                            <source media="(max-width: 520px)" srcset="assets/small-main-article.jpg">
+                            <source media="(max-width: 1024px)" srcset="assets/med-sub-article.jpg">
+                            <source media="(max-width: 1600px)" srcset="assets/large-sub-article.png">
+                            <img src="assets/wide-sub-article.png" alt="article-title">
+                        </picture>
+                    </div>
                 </div>
             </section>
             
             <section class="river">
                 <div>
-                    <img src="assets/900-600.jpg" alt="The Salmon River">
+                    <picture>
+                        <source media="(max-width: 520px)" srcset="assets/small-river.png">
+                        <source media="(max-width: 1024px)" srcset="assets/med-river.png">
+                        <source media="(max-width: 1160px)" srcset="assets/med-2-river.png">
+                        <source media="(max-width: 1400px)" srcset="assets/large-river.png">
+                        <source media="(max-width: 1600px)" srcset="assets/x-large-river.png">
+                        <img src="assets/wide-river.png" alt="The Salmon River">
+                    </picture>
                 </div>
                 <div>
                     <h2>The Salmon River</h2>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. In aliquet dictum velit id eleifend. 
                         Aenean facilisis placerat velit. In lectus ligula, placerat vitae nulla in, blandit ultrices velit.
-
+                    </p>
+                    <p>
                         Mauris eu arcu eget massa pretium varius. Quisque ultrices aliquet tortor, non ultrices urna dictum 
                         nec. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. 
                         Vivamus in fringilla lectus.
@@ -89,17 +124,21 @@
 
                 <div>
                     <form>
-                        <label>
-                            First Name
-                            <input type="text">
-                        </label>
-                        
-                        <label>
-                            Email Address
-                            <input type="type">
-                        </label>
-
-                        <input type="submit" class="btn" value="SUBSCRIBE">
+                        <div>
+                            <label>
+                                First Name
+                                <input type="text">
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                Email Address
+                                <input type="email">
+                            </label>
+                        </div>
+                        <div>
+                            <input type="submit" class="btn" value="SUBSCRIBE">
+                        </div>
                     </form>
                 </div>
             </div>
@@ -108,8 +147,7 @@
 
         <footer>
             <div>
-                <span>&copy; </span><span id="currentYear"></span><span> | Randeep Singh Ranu | Philippines | <a href="https://www.byui.edu/online" class="linkDecor">BYUI Online Learning</a></span>
-                <p id="lastModif"></p>
+                <span>&copy; </span><span id="currentYear"></span><span> Salmon River Adventures. All rights reserved.</span>
             </div>
 
             <div class="social">
