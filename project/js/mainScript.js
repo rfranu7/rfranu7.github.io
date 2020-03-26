@@ -403,6 +403,7 @@ fetch(requestURL)
             let div2 = document.createElement('div');
             let h3 = document.createElement('h3');
             let desc = document.createElement('p');
+            let link = document.createElement('a');
             let btn = document.createElement('button');
 
             image.setAttribute("src", "assets/" + trip[i].photo);
@@ -421,9 +422,11 @@ fetch(requestURL)
 
             div2.appendChild(h3);
             div2.appendChild(desc);
-            div2.appendChild(btn);
+            div2.appendChild(link);
 
+            link.appendChild(btn);
             btn.classList.add("book-btn");
+            link.setAttribute("href", "adventures" +[i]+ ".html")
             
             document.querySelector('section.trips').appendChild(div);
         }

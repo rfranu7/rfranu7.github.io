@@ -24,7 +24,7 @@
             </div>
 
             <ul id="navParent" class="navBar">
-               <!--  <li><a href="index.html"><img src="assets/salmon-river-adventures-logo.png" alt="Salmon River Adventures Logo"></a></li> -->
+
                 <li><a class="hamburger" href="#">&#9776; Menu</a></li>
                 <li><a href="index.html">Home</a></li>
                 <li><a class="active" href="adventures.html">Adventures</a></li>
@@ -46,13 +46,13 @@
 
             <div class="hero">
                 <picture>
-                    <source media="(max-width: 520px)" srcset="assets/hero-small.jpg">
-                    <source media="(max-width: 1020px)" srcset="assets/hero-med.jpg">
-                    <img src="assets/hero-large.jpg" alt="River Rafting">
+                    <source id="hero0" media="(max-width: 520px)" srcset="assets/hero-small.jpg">
+                    <source id="hero1" media="(max-width: 1020px)" srcset="assets/hero-med.jpg">
+                    <img id="hero2" src="assets/hero-large.jpg" alt="River Rafting">
                 </picture>
             </div>
 
-            <section class="trips"></section>
+            <section id="trip0" class="trip-summary"></section>
 
         </main>
 
@@ -69,6 +69,6 @@
             </div>
         </footer>
 
-        <script src="js/mainScript.js"></script>
+        <script src="js/adventure.js"></script>
     </body>
 </html>
