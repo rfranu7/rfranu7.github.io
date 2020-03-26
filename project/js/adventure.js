@@ -66,9 +66,9 @@ fetch(requestURL)
   .then(function (jsonObject) {
     console.table(jsonObject);  // temporary checking for valid response and data parsing
 
-    const trip = jsonObject['full-trips'];
+    const tripz = jsonObject['full-trips'];
 
-    for (let i = 0; i < trip.length; i++ ) {
+    for (let i = 0; i < tripz.length; i++ ) {
 
       let div = document.createElement('div');
 
@@ -90,17 +90,17 @@ fetch(requestURL)
       let itineraryItem = document.createElement('li');
 
 
-      image.setAttribute("src", "assets/" + trip[i].big-img);
-      image.setAttribute("alt", trip[i].name);
+      image.setAttribute("src", "assets/" + tripz[i].big-img);
+      image.setAttribute("alt", tripz[i].name);
 
-      h3.textContent = trip[i].name;
-      desc.textContent = trip[i].desc;
+      h3.textContent = tripz[i].name;
+      desc.textContent = tripz[i].desc;
 
       highlightTitle.textContent = "HIGHLIGHTS";
-      for (let x = 0; x < trip.highlight.length; x++){highlightItem.textContent = trip.highlight[x];}
+      for (let x = 0; x < trip.highlight.length; x++){highlightItem.textContent = tripz.highlight[x];}
       
       itineraryTitle.textContent = "ITINERARY";
-      for (let x = 0; x < trip.itinerary.length; x++){itineraryItem.textContent = trip.itinerary[x];}
+      for (let x = 0; x < trip.itinerary.length; x++){itineraryItem.textContent = tripz.itinerary[x];}
 
       div.appendChild(divImg);
       div.appendChild(div2);
@@ -120,7 +120,7 @@ fetch(requestURL)
       div5.appendChild(itinerary);
       itinerary.appendChild(itineraryItem);
 
-      document.querySelector('section.trips').appendChild(div);
+      document.querySelector('section.trip-summary').appendChild(div);
     }
   }
 );
