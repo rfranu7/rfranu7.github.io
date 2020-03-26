@@ -59,7 +59,7 @@ fetch(requestURL)
 
   const requestURL2 = 'https://rfranu7.github.io/project/objects/fulltrips.json';
 
-fetch(requestURL)
+fetch(requestURL2)
   .then(function (response) {
     return response.json();
   })
