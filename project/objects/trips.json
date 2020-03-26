@@ -3,147 +3,23 @@
       {
         "name": "Middle Fork of the Salmon Rafting",
         "photo": "400-250.jpg",
-        "desc": "One of the most beautiful stretches of river in the West, the Middle Fork guarantees a wild ride with over a 100 rapids, natural hot springs and complete wilderness immersion",
-        "big-img": "900-600.jpg",
-        "length": [ "3-Day Trip", "6-Day Trip"],
-        "dates": [ "June 15", "June 24", "July 2", "July 10", "July 18", "July 26", "August 3", "August 11" ],
-        "cost": [ "2099", "3049"],
-        "skill": "Class IV rapids; cold water with moderate to high flip/swim potential during peak flows (late-May to late-June); moderate hiking",
-        "river-rate": "Class III - IV",
-        "min-age": "12 (15 during high water)",
-        "accomodation": "Camping",
-        "highlight": [ 
-          "Scenic flight from Stanley to our put-in as required", 
-          "Pristine alpine scenery, dramatic gorges, rolling hills and waterfalls", 
-          "Multiple hot springs, Native American pictographs & abundant wildlife",
-          "100 rapids in 100 miles & exciting Class III-IV whitewater",
-          "Crystal-clear water & world-class trout fishing"
-        ],
-        "itinerary": [
-          "Scenic flight from Stanley, Idaho to our put-in at Indian Creek (Boundary Creek if water levels allow)",
-          "Fantastic alpine scenery, deep green forests, dramatic mountains and crystal clear creeks",
-          "Soak in a steaming natural hot spring after braving Velvet Falls and Ramshorn rapids",
-          "Feast on a picnic lunch, take a swim and a short hike",
-          "Try your hand at a paddleboat or inflatable kayak",
-          "Music, stories and jokes, the popping of the fire",
-          "Watch the scenery change from high mountains to rolling hills",
-          "Forests give way to miles of open grassland dotted with cool glades of pine",
-          "Run huge rapids like Powerhouse and Pistol Creek",
-          "Another soak in a hot spring, caves decorated with Sheepeater Indian pictographs",
-          "Hike to the magnificent Veil Falls plummeting into a natural amphitheatre",
-          "Impassable Canyon, Redside, Rubber and Hancock rapids",
-          "Reach the confluence of the Main Salmon and head back to civilization"
-        ]
+        "desc": "One of the most beautiful stretches of river in the West, the Middle Fork guarantees a wild ride with over a 100 rapids, natural hot springs and complete wilderness immersion"
       },
 
       {
         "name": "Middle Fork | Main Salmon River Rafting Combo",
         "photo": "400-250.jpg",
-        "desc": "Experience two of the most beloved segments of the Salmon River as you’re treated to beautiful scenery, fragrant pine forests and abundant wildlife on this epic Idaho rafting trip",
-        "big-img": "900-600.jpg",
-        "length": [ "11-Day Trip", "12-Day Trip"],
-        "dates": [ "June 24", "July 18", "August 11" ],
-        "cost": [ "4249", "4349"],
-        "skill": "Class IV rapids; cold water with moderate to high flip/swim potential during peak flows (late-May to late-June); moderate hiking",
-        "river-rate": "Class III - IV",
-        "min-age": "12 (15 during high water)",
-        "accomodation": "Camping",
-        "highlight":[
-          "Pristine alpine scenery, dramatic gorges, rolling hills and waterfalls",
-          "Exciting Class III - IV rapids and a wide selection of boat types",
-          "Multiple hot springs, historic sites & abundant wildlife",
-          "Exciting Class III rapids and a wide selection of boat types",
-          "Crystal-clear water & world-class trout fishing"
-        ],
-        "itinerary":[
-          "Board a scenic flight to the put-in, where boats, crew and river await for the beginning of our Middle Fork - Main Salmon River Rafting adventure",
-          "Enjoy fantastic alpine scenery, deep green forests, dramatic mountains, and crystal clear creeks that flow out of the woods and into the river",
-          "Soak in a steaming natural hot spring after braving Velvet Falls and Ramshorn rapids",
-          "Watch the scenery change from high mountains to gently rolling hills as the forests give way to miles of open grassland dotted with cool glades of pine",
-          "Run huge rapids like Powerhouse and Pistol Creek, maybe in an inflatable kayak or paddle boat",
-          "After another soak in a hot spring, explore caves decorated with Sheepeater Indian pictographs",
-          "Hike to the magnificent Veil Falls, and view it plummeting into a natural amphitheatre",
-          "Challenge some of the most high-intensity and continuous whitewater of the trip through Impassable Canyon; paddle through Redside, Rubber and Hancock rapids before reaching the confluence of the Main Salmon River",
-          "Enter the Frank Church River of No Return Wilderness and embark on the second portion of the journey on the Main Salmon through a heavily forested canyon with towering pines and early season blankets of vibrant wildflowers",
-          "Experience rapids like Salmon Falls, Big Mallard and Growler, historical sites such as Buckskin Bill’s homestead and prospector Jim Moore’s place (maybe find the fortune he buried in the hillside!), and the much anticipated Barth Hot Springs.",
-          "Embark on a challenging climb to Rabbit Point and enjoy the beautiful view",
-          "Our Middle Fork - Main Salmon River Rafting adventure concludes with a shuttle to the town of McCall. Spend the night, or even a few days, here to enjoy its beautiful natural setting on the shores of Payette Lake and authentic small-town Idaho charm"
-        ]
+        "desc": "Experience two of the most beloved segments of the Salmon River as you’re treated to beautiful scenery, fragrant pine forests and abundant wildlife on this epic Idaho rafting trip"
       },
       {
         "name": "Main Salmon | Lower Salmon River Rafting Combo",
         "photo": "400-250.jpg",
-        "desc": "This Idaho whitewater rafting adventure on the Main and Lower Salmon rivers offers stunning scenery along with the entire OARS fleet of water craft",
-        "big-img": "900-600.jpg",
-        "length": [ "11-Day Trip", "12-Day Trip"],
-        "dates": [ "June 29", "July 23", "August 16" ],
-        "cost": [ "3149", "3299"],
-        "skill": "Class III rapids; cold water with moderate flip/swim potential during peak flows (early-June to early July); moderate hiking",
-        "river-rate": "Class III",
-        "min-age": "7 (12 during high water)",
-        "accomodation": "Camping",
-        "highlight":[
-          "Exciting Class III rapids and a wide selection of boat types",
-          "Natural hot spring and sandy beaches",
-          "Native American rock art",
-          "Warm water perfect for swimming & water fights",
-          "Riverside camping on giant sandy beaches",
-          "Abundant wildlife including river otters and big horn sheep"
-        ],
-        "itinerary":[
-          "Scenic flight from McCall to Salmon, Idaho where we transfer to the put-in at Corn Creek",
-          "Soak in the scenery of the mesmerizing Salmon River canyon – the second deepest gorge in North America",
-          "Experience the 2.3-million-acre Frank Church “River of No Return” Wilderness",
-          "Enjoy splashy, exhilarating rapids like Black Creek, Big Mallard and Growler",
-          "Explore Buckskin Bill’s homestead and Jim Moore’s place where legend says there is a fortune buried in the hillside",
-          "Soak in Barth Hot Springs, hike to Rabbit Point, fish for trout, swim in the warm waters or bask in the sun on a sandy beach",
-          "Challenge Rollercoaster, Green Canyon, Wright Way Drop, Demons Drop and Pine Bar rapids",
-          "Journey through Cougar and Snow Hole Canyons—each offering a uniquely different perspective on this wild river corridor",
-          "Visit remnants of ancient Indian cultures and the remains of Chinese stone houses",
-          "Slide Rapid marks the entrance to Blue Canyon, the most spectacular of the four gorges",
-          "Go on an impressive hike to a vista point, join the Snake River and swim a rapid",
-          "Pass the confluence with the Grande Ronde and arrive at Heller Bar for shuttle to Lewiston"
-        ]
+        "desc": "This Idaho whitewater rafting adventure on the Main and Lower Salmon rivers offers stunning scenery along with the entire OARS fleet of water craft"
       },
       {
         "name": "Ultimate Salmon River Experience",
         "photo": "400-250.jpg",
-        "desc": "Stunning scenery, thrilling whitewater, sandy beaches, hot springsand waterfalls await on this epic 300-mile journey down the three forks of Idaho’s Salmon River",
-        "big-img": "900-600.jpg",
-        "length": [ "16-Day Trip", "17-Day Trip"],
-        "dates": [ "June 24", "July 18", "August 11" ],
-        "cost": [ "4899", "4999"],
-        "skill": "Class IV rapids; cold water with moderate to high flip/swim potential during peak flows (late-May to late-June); moderate hiking",
-        "river-rate": "Class III - IV",
-        "min-age": "12 (15 during high water)",
-        "accomodation": "Camping",
-        "highlight":[
-          "Raft over 300 miles on the longest un-dammed river in the lower 48!",
-          "Exciting Class III-IV Idaho whitewater rafting on the Middle Fork, Main & Lower Salmon",
-          "World-class fishing, hiking & comfortable catered camping",
-          "Experience a dory, paddle raft, inflatable kayak or even a SUP",
-          "Pristine alpine scenery, dramatic gorges, sandy beaches, rolling hills & waterfalls",
-          "Multiple hot springs, historic sites & abundant wildlife"
-        ],
-        "itinerary":[
-          "Board a scenic flight to the put-in of your Ultimate Salmon River Rafting Experience, where boats, crew and river await",
-          "Enjoy fantastic alpine scenery, deep green forests, dramatic mountains, and crystal clear creeks that flow out of the woods and into the river",
-          "Soak in a steaming natural hot spring after braving Velvet Falls and Ramshorn rapids",
-          "Watch the scenery change from high mountains to gently rolling hills as the forests give way to miles of open grassland dotted with cool glades of pine",
-          "Run huge rapids like Powerhouse and Pistol Creek, maybe in an inflatable kayak or paddle boat",
-          "After another soak in a hot spring, explore caves decorated with Sheepeater Indian pictographs",
-          "Hike to the magnificent Veil Falls, and view it plummeting into a natural amphitheatre",
-          "Challenge some of the most high-intensity and continuous whitewater of the trip through Impassable Canyon; paddle through Redside, Rubber and Hancock rapids before reaching the confluence with the Main Salmon River",
-          "Enter the Frank Church River of No Return Wilderness and embark on the second portion of the journey on the Main Salmon through a heavily forested canyon with towering pines and early season blankets of vibrant wildflowers.",
-          "Experience rapids like Salmon Falls, Big Mallard and Growler, historical sites such as Buckskin Bill’s homestead and prospector Jim Moore’s place (maybe find the fortune he buried in the hillside!), and the much anticipated Barth Hot Springs.",
-          "Enjoy a challenging climb to Rabbit Point, soak in another hot spring, and challenge some of the river’s best rapids, including Ruby and Lake Creek Bridge.",
-          "The Lower Salmon, which flows through dry, golden canyons, marks the beginning of the trip’s third portion, as the river takes its guests through yet another change in landscape",
-          "Swim through Roller Coaster rapid which marks the entrance to Green Canyon",
-          "Visit ancient pictographs before continuing the whitewater adventure through Wright-way, Demon's Drop and Pine Bar rapids",
-          "Snow Hole Canyon provides some of the biggest, most exciting whitewater of the Lower Salmon: Half & Half, Snow Hole and China Bar rapids",
-          "Climb to a vista point for an impressive bird’s-eye view of the river winding through the steep and slender canyon",
-          "After an epic 17-day Full Salmon River Rafting Experience of 308 miles, arrive at Heller Bar take-out and board shuttle for return to civilization."
-        ]
+        "desc": "Stunning scenery, thrilling whitewater, sandy beaches, hot springsand waterfalls await on this epic 300-mile journey down the three forks of Idaho’s Salmon River"
       }
     ]
   }
