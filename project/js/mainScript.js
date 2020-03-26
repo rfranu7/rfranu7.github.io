@@ -7,40 +7,6 @@ function toggleMenu() {
 	document.getElementsByClassName("navBar")[0].classList.toggle("responsive");
 };
 
-//-----------------Lazy Loading------------------
-
-const images = document.querySelectorAll("[data-src]");
-
-function preloadImage(img){ //substitutes the images
-    const src = img.getAttribute("data-src");
-    if (!src) { return; }
-    img.src = src;
-}
-
-function removeImg(img){ //removes the data-src attribute so the blue effect in CSS will be removed
-    img.removeAttribute("data-src");
-}
-
-const ImgOptions = {
-    rootMargin: "0px 0px -100px 0px" 
-};
-
-const ImgObserver = new IntersectionObserver((entries, ImgObserver) => {
-    entries.forEach(entry => {
-        if (!entry.isIntersecting) {
-            return;
-        } else {
-            preloadImage(entry.target);
-            ImgObserver.unobserve(entry.target);
-            removeImg(entry.target);
-        }
-    });
-}, ImgOptions);
-
-images.forEach(image => {
-    ImgObserver.observe(image);
-})
-
 //-----------------Current Weather Data---------------------
 
 const apiURL = "https://api.openweathermap.org/data/2.5/weather?id=4092267&units=imperial&APPID=35b12c8d999fdda2699d5d2204b76ea4";
@@ -350,7 +316,9 @@ fetch(apiForecastURL)
 
         }
         
-        else if (weatherDate.getHours() == 12 && weatherDate.getDate() == nextDay.getDate()) {
+        else if (weatherDate.getHours() != 12 && weatherDate.getDate() != today.getDate()) {
+        
+        if (weatherDate.getHours() == 12 && weatherDate.getDate() == nextDay.getDate()) {
 
 			var forecastAPI = jsObject.list[i];
 			
@@ -407,7 +375,8 @@ fetch(apiForecastURL)
 
             document.querySelector('section.weather').appendChild(todayTitle);
 
-		}
+        }
+        }
 	}
 });
 
@@ -441,7 +410,7 @@ fetch(requestURL)
 
             h3.textContent = trip[i].name;
             desc.textContent = trip[i].desc;
-            btn.textContent = "BOOK NOW";
+            btn.textContent = "LEARN MORE";
 
 
             div.appendChild(divImg);
@@ -460,6 +429,44 @@ fetch(requestURL)
         }
     }
   );
+
+  //-----------------Lazy Loading------------------
+
+const images = document.querySelectorAll("[data-src]");
+
+function preloadImage(img){ //substitutes the images
+    const src = img.getAttribute("data-src");
+    const srcset = img.getAttribute("data-srcset");
+    if (!src) { return; }
+    img.src = src;
+    if (!srcset) { return; }
+    img.srcset = srcset;
+}
+
+function removeImg(img){ //removes the data-src attribute so the blue effect in CSS will be removed
+    img.removeAttribute("data-src");
+    img.removeAttribute("data-srcset");
+}
+
+const ImgOptions = {
+    rootMargin: "0px 0px -100px 0px" 
+};
+
+const ImgObserver = new IntersectionObserver((entries, ImgObserver) => {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+            return;
+        } else {
+            preloadImage(entry.target);
+            ImgObserver.unobserve(entry.target);
+            removeImg(entry.target);
+        }
+    });
+}, ImgOptions);
+
+images.forEach(image => {
+    ImgObserver.observe(image);
+})
   
   //-----------------Footer Script-----------------
 
