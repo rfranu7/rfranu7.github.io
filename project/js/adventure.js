@@ -90,7 +90,7 @@ fetch(requestURL2)
       let itineraryItem = document.createElement('li');
 
 
-      image.setAttribute("src", "assets/" + tripz[i].big-img);
+      image.setAttribute("src", "assets/" + tripz[i].bigImg);
       image.setAttribute("alt", tripz[i].name);
 
       h3.textContent = tripz[i].name;
