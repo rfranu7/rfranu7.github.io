@@ -66,7 +66,7 @@ fetch(requestURL)
   .then(function (jsonObject) {
     console.table(jsonObject);  // temporary checking for valid response and data parsing
 
-    const tripz = jsonObject['full-trips'];
+    const tripz = jsonObject['tripData'];
 
     for (let i = 0; i < tripz.length; i++ ) {
 
