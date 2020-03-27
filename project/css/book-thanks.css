@@ -1,0 +1,62 @@
+.card {
+    max-width: 70%;
+    padding: 2rem;
+    background-color: #EEE;
+    text-align: center;
+    margin: 1rem auto;
+}
+
+.card img {
+    max-width: 90%;
+}
+
+.card button {
+    padding: 1rem;
+    width: 70%;
+    margin: 0.5rem;
+    border-radius: 5px;
+}
+
+.blue-btn {
+    background-color: #034687;
+}
+
+.red-btn:hover {
+    background-color: #034687;
+    font-weight: bold;
+}
+
+.blue-btn:hover {
+    background-color: #E10032;
+}
+
+.card button a {
+    text-decoration: none;
+    color: #FFF;
+    font-weight: bold;
+}
+
+@media only screen and (min-width: 32.5em){
+
+    .card {
+        max-width: 60%;
+        margin: 2rem auto;
+    }
+    
+    .card button {
+        width: 50%;
+    }
+
+}
+
+@media only screen and (min-width: 64em){
+
+    .card {
+        max-width: 50%;
+        margin: 2rem auto;
+    }
+    
+    .card button {
+        width: 30%;
+    }
+}

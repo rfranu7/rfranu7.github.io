@@ -66,8 +66,14 @@ fetch(requestURL)
       divOther.appendChild(otherContainer)
 
       for (let x = 0; x < tripz[i].bigImg.length; x++) {
-         let image = document.getElementById('hero' + [x])
-        image.setAttribute("src", "assets/" + tripz[i].bigImg[x]);
+        let image = document.getElementById('hero' + [x]);
+        if (x < 3){
+          image.setAttribute("srcset", "assets/" + tripz[i].bigImg[x]);
+        }
+        else {
+          image.setAttribute("src", "assets/" + tripz[i].bigImg[x]);
+        }
+        
         image.setAttribute("alt", tripz[i].name);
       }
 

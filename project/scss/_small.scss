@@ -86,6 +86,33 @@ main section {
     max-width: 100%;
 }
 
+.hero {
+    position: relative;
+}
+
+.CTA {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 75%;
+    transform: translate(-50%, -50%);
+}
+
+.CTA h1 {
+    font-size: 2rem;
+    color: #FFF;
+    margin: 1rem;
+}
+
 /* Weather Section */
 
 .weather {
@@ -175,7 +202,67 @@ main section {
 
 .main-article {
     text-align: left;
+    position: relative;
 }
+
+.sub-article {
+    position: relative;
+}
+
+.main-article:hover .overlay, .container:hover .overlay-small, .container:hover .overlay-small-2 {
+    opacity: .7;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 99%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #034687;
+}
+
+.overlay-small {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 1.5%;
+    right: 0;
+    height: 49%;
+    width: 98.5%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #034687;
+}
+
+.overlay-small-2 {
+    position: absolute;
+    top: 50%;
+    bottom: 0;
+    left: 1.5%;
+    right: 0;
+    height: 49%;
+    width: 98.5%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #034687;
+}
+
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
 
 /* River Section */
 
@@ -381,4 +468,20 @@ footer .social {
 
 footer .social img{
     max-width: 12%;
+}
+
+.ghost-btn {
+    padding: 1rem;
+    font-size: 1.1rem;
+    border: 2px  solid #FFF;
+    color: #FFF;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.ghost-btn:hover {
+    color: #034687;
+    background-color: #FFF;
+    opacity: .8;
 }

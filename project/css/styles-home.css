@@ -459,6 +459,29 @@ main section {
 .hero img {
   max-width: 100%; }
 
+.hero {
+  position: relative; }
+
+.CTA {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  text-align: center; }
+
+.text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 75%;
+  transform: translate(-50%, -50%); }
+
+.CTA h1 {
+  font-size: 2rem;
+  color: #FFF;
+  margin: 1rem; }
+
 /* Weather Section */
 .weather {
   display: grid;
@@ -528,7 +551,61 @@ main section {
   max-width: 100%; }
 
 .main-article {
-  text-align: left; }
+  text-align: left;
+  position: relative; }
+
+.sub-article {
+  position: relative; }
+
+.main-article:hover .overlay, .container:hover .overlay-small, .container:hover .overlay-small-2 {
+  opacity: .7; }
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 99%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #034687; }
+
+.overlay-small {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 1.5%;
+  right: 0;
+  height: 49%;
+  width: 98.5%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #034687; }
+
+.overlay-small-2 {
+  position: absolute;
+  top: 50%;
+  bottom: 0;
+  left: 1.5%;
+  right: 0;
+  height: 49%;
+  width: 98.5%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #034687; }
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center; }
 
 /* River Section */
 .river {
@@ -697,9 +774,26 @@ footer .social {
 footer .social img {
   max-width: 12%; }
 
+.ghost-btn {
+  padding: 1rem;
+  font-size: 1.1rem;
+  border: 2px  solid #FFF;
+  color: #FFF;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold; }
+
+.ghost-btn:hover {
+  color: #034687;
+  background-color: #FFF;
+  opacity: .8; }
+
 @media only screen and (min-width: 32.5em) and (min-width: 32.5em) {
   .navBar li:first-child {
     text-align: center; }
+
+  .CTA h1 {
+    font-size: 2.5rem; }
 
   /* Weather Section */
   .weather {
@@ -792,6 +886,10 @@ footer .social img {
   .social img {
     max-width: 15%; }
 
+  .CTA h1 {
+    font-size: 3rem;
+    margin: 1.5rem; }
+
   /* Weather Section */
   .weather {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr; }
@@ -860,6 +958,10 @@ footer .social img {
 
   .social img {
     max-width: 10%; }
+
+  .CTA h1 {
+    font-size: 4rem;
+    margin: 1.5rem; }
 
   /* Footer Section */
   footer .social img {
