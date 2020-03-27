@@ -437,15 +437,16 @@ fetch(requestURL)
 
   //-----------------Lazy Loading------------------
 
-const images = document.querySelectorAll("[data-src]");
+const images = document.querySelectorAll("[data-src], [data-srcset]");
 
 function preloadImage(img){ //substitutes the images
     const src = img.getAttribute("data-src");
     const srcset = img.getAttribute("data-srcset");
-    if (!src) { return; }
+    if (!src) { 
+        if (!srcset) { return; }
+        img.srcset = srcset;
+    }
     img.src = src;
-    if (!srcset) { return; }
-    img.srcset = srcset;
 }
 
 function removeImg(img){ //removes the data-src attribute so the blue effect in CSS will be removed
@@ -482,3 +483,6 @@ let date = new Date();
 let year = date.getFullYear();
 
 document.getElementById("currentYear").textContent = year;
+
+const maps = document.getElementsByTagName{"iframe"};
+maps.addEventListener('touchstart', onTouchStart, {passive: true});
