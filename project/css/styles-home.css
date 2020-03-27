@@ -472,15 +472,10 @@ main section {
 
 .text-container {
   position: absolute;
-  top: 50%;
+  top: 75%;
   left: 50%;
   width: 75%;
   transform: translate(-50%, -50%); }
-
-.CTA h1 {
-  font-size: 2rem;
-  color: #FFF;
-  margin: 1rem; }
 
 /* Weather Section */
 .weather {
@@ -796,9 +791,6 @@ footer .social img {
   .navBar li:first-child {
     text-align: center; }
 
-  .CTA h1 {
-    font-size: 2.5rem; }
-
   /* Weather Section */
   .weather {
     grid-template-columns: 1fr 1fr 1fr; }
@@ -890,10 +882,6 @@ footer .social img {
   .social img {
     max-width: 15%; }
 
-  .CTA h1 {
-    font-size: 3rem;
-    margin: 1.5rem; }
-
   /* Weather Section */
   .weather {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr; }
@@ -963,9 +951,8 @@ footer .social img {
   .social img {
     max-width: 10%; }
 
-  .CTA h1 {
-    font-size: 4rem;
-    margin: 1.5rem; }
+  .text-container {
+    top: 65%; }
 
   /* Footer Section */
   footer .social img {

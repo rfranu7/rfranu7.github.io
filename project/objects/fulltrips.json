@@ -2,9 +2,9 @@
     "tripData": [
       {
         "name": "Middle Fork of the Salmon Rafting",
-        "photo": "400-250.jpg",
+        "photo": "salmon-trip-middle-1.jpg",
         "desc": "One of the most beautiful stretches of river in the West, the Middle Fork guarantees a wild ride with over a 100 rapids, natural hot springs and complete wilderness immersion",
-        "bigImg": ["hero-small.jpg", "hero-med.jpg", "hero-large.jpg"], 
+        "bigImg": ["hero-small-middle.jpg", "hero-med-middle.jpg", "hero-large-middle.jpg"], 
         "long": [ "3-Day Trip", "6-Day Trip"],
         "dates": [ "June 15", "June 24", "July 2", "July 10", "July 18", "July 26", "August 3", "August 11" ],
         "cost": [ "2099", "3049"],
@@ -38,9 +38,9 @@
 
       {
         "name": "Middle Fork | Main Salmon River Rafting Combo",
-        "photo": "400-250.jpg",
+        "photo": "salmon-trip-middle-combo.jpg",
         "desc": "Experience two of the most beloved segments of the Salmon River as you’re treated to beautiful scenery, fragrant pine forests and abundant wildlife on this epic Idaho rafting trip",
-        "bigImg": ["hero-small.jpg", "hero-med.jpg", "hero-large.jpg"], 
+        "bigImg": ["hero-small-combo.jpg", "hero-med-combo.jpg", "hero-large-combo.jpg"], 
         "long": [ "11-Day Trip", "12-Day Trip"],
         "dates": [ "June 24", "July 18", "August 11" ],
         "cost": [ "4249", "4349"],
@@ -72,9 +72,9 @@
       },
       {
         "name": "Main Salmon | Lower Salmon River Rafting Combo",
-        "photo": "400-250.jpg",
+        "photo": "salmon-trip-lower.jpg",
         "desc": "This Idaho whitewater rafting adventure on the Main and Lower Salmon rivers offers stunning scenery along with the entire OARS fleet of water craft",
-        "bigImg": ["hero-small.jpg", "hero-med.jpg", "hero-large.jpg"], 
+        "bigImg": ["hero-small-lower.jpg", "hero-med-lower.jpg", "hero-large-lower.jpg"], 
         "long": [ "11-Day Trip", "12-Day Trip"],
         "dates": [ "June 29", "July 23", "August 16" ],
         "cost": [ "3149", "3299"],
@@ -107,9 +107,9 @@
       },
       {
         "name": "Ultimate Salmon River Experience",
-        "photo": "400-250.jpg",
+        "photo": "salmon-trip-ultimate.jpg",
         "desc": "Stunning scenery, thrilling whitewater, sandy beaches, hot springsand waterfalls await on this epic 300-mile journey down the three forks of Idaho’s Salmon River",
-        "bigImg": ["hero-small.jpg", "hero-med.jpg", "hero-large.jpg"], 
+        "bigImg": ["hero-small-ultimate.jpg", "hero-med-ultimate.jpg", "hero-large-ultimate.jpg"], 
         "long": [ "16-Day Trip", "17-Day Trip"],
         "dates": [ "June 24", "July 18", "August 11" ],
         "cost": [ "4899", "4999"],
