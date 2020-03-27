@@ -58,7 +58,7 @@ fetch(requestURL)
 
       var $dropdown = $(this);
 
-      $.getJSON("objects/book.json", function(data) {
+      $.getJSON("https://rfranu7.github.io/project/objects/book.json", function(data) {
 
         var key = $dropdown.val();
         var vals = [];
@@ -67,7 +67,7 @@ fetch(requestURL)
 
         switch(key) {
           case "Middle Fork of the Salmon Rafting":
-            vals = data.dates.split(",");
+            vals = data[0].dates.split(",");
             break;
           case "Middle Fork | Main Salmon River Rafting Combo":
             vals = data[1].dates.split(",");
