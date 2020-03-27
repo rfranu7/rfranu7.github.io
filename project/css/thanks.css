@@ -14,16 +14,16 @@
     padding: 1rem;
     width: 70%;
     margin: 0.5rem;
-    color: #FFF;
     border-radius: 5px;
 }
 
 .blue-btn {
-    background-color: #034687;
+    border: 2px solid #034687;
 }
 
 .red-btn {
     background-color: #E10032;
+    color: #FFF;
 }
 
 .red-btn:hover {
@@ -32,13 +32,18 @@
 }
 
 .blue-btn:hover {
-    background-color: #E10032;
-    font-weight: bold;
+    border: 1px solid #034687;
 }
 
 .card button a {
     text-decoration: none;
     color: #FFF;
+    font-weight: bold;
+}
+
+.card .blue-btn a {
+    text-decoration: none;
+    color: #034687;
 }
 
 @media only screen and (min-width: 32.5em){

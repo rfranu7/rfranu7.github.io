@@ -24,7 +24,6 @@ fetch(requestURL)
     const tableData = document.querySelectorAll('td.table-data');
     const tableHead = document.querySelectorAll('th.table-data');
     const adventureOptions = document.querySelector('.adventure');
-    const dateOptions = document.querySelector('.preferredDate')
 
     console.log(tableName);
     console.log(tableData);
@@ -41,7 +40,9 @@ fetch(requestURL)
     for (let i = 0; i < tripz.length; i++ ) {
 
         tableHead[i].textContent = tripz[i].name;
-        tableData[i].textContent = tripz[i].long[0] + " $" + tripz[i].cost[0];
+        for (let x = 0; x < tripz[i].long.length; x++ ) {
+          tableData[i].textContent = tripz[i].long[x] + " $" + tripz[i].cost[x];
+        }
         tableData[i+4].textContent = tripz[i].dates[0];
         tableData[i+8].textContent = tripz[i].minAge;
         tableData[i+12].textContent = tripz[i].skill;
@@ -63,8 +64,6 @@ fetch(requestURL)
         var key = $dropdown.val();
         var vals1 = [];
         var vals2 = [];
-
-        console.log(data);
 
         switch(key) {
           case "Middle Fork of the Salmon Rafting":
@@ -89,12 +88,14 @@ fetch(requestURL)
         $secondChoice.empty();
         $.each(vals1, function(index, value) {
           $secondChoice.append("<option>" + value + "</option>");
+          $('#second-choice option:nth-child(1)').attr('disabled', 'disabled');
         });
 
         var $thirdChoice = $("#third-choice");
         $thirdChoice.empty();
         $.each(vals2, function(index, value) {
           $thirdChoice.append("<option>" + value + "</option>");
+          $('#third-choice option:nth-child(1)').attr('disabled', 'disabled');
         });
       });
     });
