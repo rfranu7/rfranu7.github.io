@@ -484,5 +484,5 @@ let year = date.getFullYear();
 
 document.getElementById("currentYear").textContent = year;
 
-const maps = document.getElementsByTagName("iframe");
+const maps = document.getElementById("map");
 maps.addEventListener('touchstart', {passive: true});
