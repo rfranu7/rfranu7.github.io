@@ -413,7 +413,7 @@ fetch(requestURL)
 
             h3.textContent = trip[i].name;
             desc.textContent = trip[i].desc;
-            btn.textContent = "LEARN MORE";
+            btn.textContent = "Explore";
 
 
             div.appendChild(divImg);
@@ -428,7 +428,7 @@ fetch(requestURL)
 
             link.appendChild(btn);
             btn.classList.add("book-btn");
-            link.setAttribute("href", "adventures" +[i]+ ".html")
+            link.setAttribute("href", "adventures-trip-number" +[i+1]+ ".html")
             
             document.querySelector('section.trips').appendChild(div);
         }
