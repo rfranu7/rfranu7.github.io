@@ -75,6 +75,7 @@ fetch(apiForecastURL)
     nextDay.setDate(nextDay.getDate() + 1);
 
     const dayOfWeek = ["SUNDAY", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY"];
+    var counter = 0;
 
 	for (let i = 0; i < jsObject.list.length; i++ ){
 
@@ -136,6 +137,7 @@ fetch(apiForecastURL)
             div3.appendChild(high);
 
             document.querySelector('section.weather').appendChild(todayTitle);
+            counter = counter + 1;
 
 		}
         
@@ -195,7 +197,7 @@ fetch(apiForecastURL)
             div3.appendChild(high);
 
             document.querySelector('section.weather').appendChild(todayTitle);
-
+            counter = counter + 1;
         }
         
         else if (weatherDate.getHours() == 12 && weatherDate.getDate() == tomorrow.getDate()) {
@@ -254,7 +256,7 @@ fetch(apiForecastURL)
             div3.appendChild(high);
 
             document.querySelector('section.weather').appendChild(todayTitle);
-
+            counter = counter + 1;
         }
         
         else if (weatherDate.getHours() == 18 && weatherDate.getDate() == tomorrow.getDate()) {
@@ -313,10 +315,10 @@ fetch(apiForecastURL)
             div3.appendChild(high);
 
             document.querySelector('section.weather').appendChild(todayTitle);
-
+            counter = counter + 1;
         }
         
-        else if (weatherDate.getHours() != 12 && weatherDate.getDate() != today.getDate()) {
+        else if (counter != 4) {
         
         if (weatherDate.getHours() == 12 && weatherDate.getDate() == nextDay.getDate()) {
 

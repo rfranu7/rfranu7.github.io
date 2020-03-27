@@ -1,0 +1,29 @@
+{
+    "tripData": [
+      {
+        "name": "Middle Fork of the Salmon Rafting",
+        "long": "3-Day Trip,6-Day Trip",
+        "dates": "June 15,June 24,July 2,July 10,July 18,July 26,August 3,August 11",
+        "cost": "2099,3049"
+      },
+
+      {
+        "name": "Middle Fork | Main Salmon River Rafting Combo",
+        "long": "11-Day Trip,12-Day Trip",
+        "dates": "June 24,July 18,August 11",
+        "cost": "4249,4349"
+      },
+      {
+        "name": "Main Salmon | Lower Salmon River Rafting Combo",
+        "long": "11-Day Trip,12-Day Trip",
+        "dates": "June 29,July 23,August 16",
+        "cost": "3149,3299"
+      },
+      {
+        "name": "Ultimate Salmon River Experience",
+        "long": "16-Day Trip,17-Day Trip",
+        "dates": "June 24,July 18,August 11",
+        "cost": "4899,4999"
+      }
+    ]
+  }

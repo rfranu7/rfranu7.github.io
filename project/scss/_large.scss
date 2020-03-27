@@ -64,6 +64,41 @@
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 
+    /* Contact Section */
+
+    .contact {
+        border: 1px solid #333;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        grid-column-gap: .5rem;
+    }
+
+    .contact div:nth-child(1) {
+        grid-column: 1/3;
+        padding: 2rem 10rem;
+    }
+
+    
+    .contact-page input[type="text"],  .contact-page input[type="email"], .contact-page input[type="tel"], .contact-page select, .contact-page textarea {
+        width: 75%;
+    }
+
+    .contact-page textarea {
+        height: 150px;
+    }
+
+    .contact-page input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+    }
+
+    .contact-page input[type="submit"] {
+        width: 25%;
+    }
+
     /* Newsletter Section */
 
     .newsletter {

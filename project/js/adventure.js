@@ -128,10 +128,9 @@ fetch(requestURL)
       }
 
       div.setAttribute("class", "summary-data")
-      div.appendChild(container1);
-      container1.appendChild(div2);
-      container1.appendChild(div3);
-      container1.appendChild(div4);
+      div.appendChild(div2);
+      div.appendChild(div3);
+      div.appendChild(div4);
       div.appendChild(div5);
 
       div2.appendChild(h1);
@@ -148,9 +147,29 @@ fetch(requestURL)
       div5.setAttribute("class", "full")
       div5.appendChild(itineraryTitle);
       div5.appendChild(itiDiv);
-      itiDiv.appendChild(itinerary)
+      itiDiv.appendChild(itinerary);
+
+      let section = document.createElement('div');
+      let requestInfo = document.createElement('button');
+      let bookNow = document.createElement('button');
+      let link1 = document.createElement('a');
+      let link2 = document.createElement('a');
+
+      requestInfo.textContent = "REQUEST INFO";
+      requestInfo.setAttribute("class", "white-btn");
+      link1.setAttribute("href", "contact.html");
+      bookNow.textContent = "BOOK NOW!";
+      bookNow.setAttribute("class", "red-btn");
+      link2.setAttribute("href", "book.html");
+
+      link1.appendChild(requestInfo);
+      link2.appendChild(bookNow);
+      section.setAttribute("class", "buttonContainer")
+      section.appendChild(link1);
+      section.appendChild(link2);
 
       document.querySelector('section.trip-summary').appendChild(div);
+      document.querySelector('main').appendChild(section);
     }
   }
   }
