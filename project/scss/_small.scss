@@ -13,23 +13,39 @@ nav {
     justify-content: space-around;
     align-items: center;
     text-align: center;
+
+    ul{
+        margin: 0;
+        padding: 0;
+        display: inline;
+        list-style: none;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    li {
+        display: none;
+        flex: 1 1 100%;
+
+        a {
+            display: block;
+            padding: 1em;
+            color: #FFF;
+            text-decoration: none;
+        }
+
+        a:hover {
+            background-color: #E10032;
+        }
+    }
 }
 
 .logo {
     display: inline;
-}
 
-.logo img {
-    width: 80%;
-}
-
-nav ul{
-    margin: 0;
-    padding: 0;
-    display: inline;
-    list-style: none;
-    text-align: center;
-    font-size: 1.2rem;
+    img {
+        width: 80%;
+    }
 }
 
 .navBar li:first-child {
@@ -37,20 +53,8 @@ nav ul{
     text-align: left;
 }
 
-nav li {
-    display: none;
-    flex: 1 1 100%;
-}
-
-nav li a {
-    display: block;
-    padding: 1em;
-    color: #FFF;
-    text-decoration: none;
-}
-
-nav li a:hover {
-    background-color: #E10032;
+.responsive li {
+	display: block;
 }
 
 .active {
@@ -59,18 +63,14 @@ nav li a:hover {
     font-weight: bold;
 }
 
-.responsive li {
-	display: block;
-}
-
 .social {
     display: none;
     text-align: right;
     padding-right: 5%;
-}
 
-.social img{
-    max-width: 10%;
+    img{
+        max-width: 10%;
+    }
 }
 
 /* Main Section */
@@ -82,12 +82,12 @@ main section {
 
 /* Hero Section */
 
-.hero img {
-    max-width: 100%;
-}
-
 .hero {
     position: relative;
+
+    img {
+        max-width: 100%;
+    }
 }
 
 .CTA {
@@ -125,11 +125,11 @@ main section {
     text-align: center;
     justify-content: center;
     border-right: 1px solid #333;
-    padding: 1rem
-}
+    padding: 1rem;
 
-.weather-data h4 {
-    margin-bottom: 0;
+    h4 {
+        margin-bottom: 0;
+    }
 }
 
 .weather-data:nth-child(1) {
@@ -188,10 +188,10 @@ main section {
     grid-template-columns: 1fr;
     justify-content: space-between;
     align-items: center;
-}
 
-.blog img {
-    max-width: 100%;
+    img {
+        max-width: 100%;
+    }
 }
 
 .main-article {
