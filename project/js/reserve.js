@@ -61,31 +61,40 @@ fetch(requestURL)
       $.getJSON("https://rfranu7.github.io/project/objects/book.json", function(data) {
 
         var key = $dropdown.val();
-        var vals = [];
+        var vals1 = [];
+        var vals2 = [];
 
         console.log(data);
 
         switch(key) {
           case "Middle Fork of the Salmon Rafting":
-            vals = data[0].dates.split(",");
+            vals1 = data.long1.split(",");
+            vals2 = data.dates1.split(",");
             break;
           case "Middle Fork | Main Salmon River Rafting Combo":
-            vals = data[1].dates.split(",");
+            vals1 = data.long2.split(",");
+            vals2 = data.dates2.split(",");
             break;
           case "Main Salmon | Lower Salmon River Rafting Combo":
-            vals = data[2].dates.split(",");
+            vals1 = data.long2.split(",");
+            vals2 = data.dates2.split(",");
             break;
           case "Ultimate Salmon River Experience":
-            vals = data[3].dates.split(",");
+            vals1 = data.long2.split(",");
+            vals2 = data.dates2.split(",");
             break;
-          case 'base':
-            vals = ["Please choose from above"];
         }
 
         var $secondChoice = $("#second-choice");
         $secondChoice.empty();
-        $.each(vals, function(index, value) {
+        $.each(vals1, function(index, value) {
           $secondChoice.append("<option>" + value + "</option>");
+        });
+
+        var $thirdChoice = $("#third-choice");
+        $thirdChoice.empty();
+        $.each(vals2, function(index, value) {
+          $thirdChoice.append("<option>" + value + "</option>");
         });
       });
     });
