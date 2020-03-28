@@ -82,7 +82,7 @@
                             <img data-src="assets/wide-sub-article-1.jpg" alt="article-title">
                         </picture>
                         <div class="overlay-small">
-                            <div class="text">
+                            <div class="text-small">
                                 <h3>UNDERSTANDING WHITEWATER CLASSIFICATIONS</h3>
                                 <a class="ghost-btn" href="#">Read Blog</a>
                             </div>
@@ -96,7 +96,7 @@
                             <img data-src="assets/wide-sub-article-2.jpg" alt="article-title">
                         </picture>
                         <div class="overlay-small-2">
-                            <div class="text">
+                            <div class="text-small">
                                 <h3>11 MAGICAL THINGS THAT HAPPEN DURING A FAMILY RAFTING TRIP</h3>
                                 <a class="ghost-btn" href="#">Read Blog</a>
                             </div>
@@ -152,35 +152,19 @@
                     <p>&#x1F4F1; 208-891-2657</p>
                 </div>
                 <div>
-                    <div id="map"></div>
-                    <script>
-                        // Initialize and add the map
-                        function initMap() {
-                        // The location of Uluru
-                        var uluru = {lat: 45.407571, lng: -116.330706};
-                        // The map, centered at Uluru
-                        var map = new google.maps.Map(
-                            document.getElementById('map'), {
-                            zoom: 15, 
-                            center: uluru,
-                            mapTypeControl: false,
-                            fullscreenControl: false,
-                            streetViewControl: false,
-                            gestureHandling: 'cooperative'
-                            });
-                        // The marker, positioned at Uluru
-                        var marker = new google.maps.Marker({position: uluru, map: map});
-                        
-                        }
-                    </script>
-                    <!--Load the API from the specified URL
-                    * The async attribute allows the browser to render the page while the API loads
-                    * The key parameter will contain your own API key (which is not needed for this tutorial)
-                    * The callback parameter executes the initMap() function
-                    -->
-                    <script async defer
-                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFOWSnJ2Sr290YkWjS-GycooD37jf3POs&callback=initMap">
-                    </script>
+                    <!-- <iframe id="maps"
+                    width="600"
+                    height="450"
+                    frameborder="0" style="border:0"
+                    title="Salmon River Adventures Main Office"
+                    aria-hidden="true"
+                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAFOWSnJ2Sr290YkWjS-GycooD37jf3POs
+                        &q=1500+S+Main+St,+Riggins,+ID+83549,+USA" allowfullscreen>
+                    </iframe> -->
+
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2801.0968330411965!2d-116.33289468444444!3d45.40738687910022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54a6c50a8b477d35%3A0x2b4f0a0937b98808!2s1500%20S%20Main%20St%2C%20Riggins%2C%20ID%2083549%2C%20USA!5e0!3m2!1sen!2sph!4v1585362895484!5m2!1sen!2sph" 
+                    width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" title="Salmon River Adventures Main Office" aria-hidden="true" tabindex="0">
+                    </iframe>
                 </div>
             </section>
 
