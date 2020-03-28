@@ -49,8 +49,11 @@
         <main>
             <div class="hero">
                 <picture>
-                    <source media="(max-width: 520px)" srcset="assets/hero-small.jpg">
-                    <source media="(max-width: 1020px)" srcset="assets/hero-med.jpg">
+                    <source media="(max-width: 520px)" type="image/webp" data-srcset="assets/hero-small.webp">
+                    <source media="(max-width: 520px)" type="image/jpeg" data-srcset="assets/hero-small.jpg">
+                    <source media="(max-width: 1020px)" type="image/webp" data-srcset="assets/hero-med.webp">
+                    <source media="(max-width: 1020px)" type="image/jpeg" data-srcset="assets/hero-med.jpg">
+                    <source type="image/webp" data-srcset="assets/hero-large.webp">
                     <img data-src="assets/hero-large.jpg" alt="River Rafting">
                 </picture>
                 <div class="CTA">
