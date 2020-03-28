@@ -59,7 +59,7 @@ fetch(apiURL)
     
   });
 
-//-----------------Forecast - 1 - Data------------------
+//-----------------Forecast Data------------------
 
 const apiForecastURL = "https://api.openweathermap.org/data/2.5/forecast?id=4092267&units=imperial&APPID=35b12c8d999fdda2699d5d2204b76ea4";
 
@@ -383,6 +383,8 @@ fetch(apiForecastURL)
 });
 
 //-----------------Trips Data---------------------
+$(window).bind("load", function() {
+    // code here
 
 const requestURL = 'https://rfranu7.github.io/project/objects/trips.json';
 
@@ -435,7 +437,9 @@ fetch(requestURL)
     }
   );
 
-  //-----------------Lazy Loading------------------
+});
+
+//-----------------Lazy Loading------------------
 
 const images = document.querySelectorAll("[data-src], [data-srcset]");
 
@@ -483,6 +487,3 @@ let date = new Date();
 let year = date.getFullYear();
 
 document.getElementById("currentYear").textContent = year;
-
-const maps = document.getElementById("map");
-maps.addEventListener('touchstart', {passive: true});
