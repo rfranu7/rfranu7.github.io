@@ -8,6 +8,8 @@ function toggleMenu() {
 };
 
 //-----------------Current Weather Data---------------------
+$(window).bind("load", function() {
+    // code here
 
 const apiURL = "https://api.openweathermap.org/data/2.5/weather?id=4092267&units=imperial&APPID=35b12c8d999fdda2699d5d2204b76ea4";
 
@@ -380,6 +382,8 @@ fetch(apiForecastURL)
         }
         }
 	}
+});
+
 });
 
 //-----------------Trips Data---------------------
