@@ -152,15 +152,35 @@
                     <p>&#x1F4F1; 208-891-2657</p>
                 </div>
                 <div>
-                    <iframe id="maps"
-                    width="600"
-                    height="450"
-                    frameborder="0" style="border:0"
-                    title="Salmon River Adventures Main Office"
-                    aria-hidden="true"
-                    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAFOWSnJ2Sr290YkWjS-GycooD37jf3POs
-                        &q=1500+S+Main+St,+Riggins,+ID+83549,+USA" allowfullscreen>
-                    </iframe>
+                    <div id="map"></div>
+                    <script>
+                        // Initialize and add the map
+                        function initMap() {
+                        // The location of Uluru
+                        var uluru = {lat: 45.407571, lng: -116.330706};
+                        // The map, centered at Uluru
+                        var map = new google.maps.Map(
+                            document.getElementById('map'), {
+                            zoom: 15, 
+                            center: uluru,
+                            mapTypeControl: false,
+                            fullscreenControl: false,
+                            streetViewControl: false,
+                            gestureHandling: 'cooperative'
+                            });
+                        // The marker, positioned at Uluru
+                        var marker = new google.maps.Marker({position: uluru, map: map});
+                        
+                        }
+                    </script>
+                    <!--Load the API from the specified URL
+                    * The async attribute allows the browser to render the page while the API loads
+                    * The key parameter will contain your own API key (which is not needed for this tutorial)
+                    * The callback parameter executes the initMap() function
+                    -->
+                    <script async defer
+                    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+                    </script>
                 </div>
             </section>
 
