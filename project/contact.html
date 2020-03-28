@@ -10,7 +10,7 @@
         <meta name="description" content="Salmon River Adventures offers world-class, whitewater rafting experiences on the Salmon River in the middle of an Idaho wilderness.">
         <link rel="stylesheet" type="text/css" href="css/styles-home.css">
 
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="preconnect" rel="stylesheet">
                 
     </head>
     
@@ -19,7 +19,13 @@
         <nav>
 
             <div class="logo">
-                <a href="index.html"><img src="assets/salmon-river-adventures-logo.png" alt="Salmon River Adventures Logo"></a>
+                <a href="index.html">
+                    <picture>
+                        <source type="image/webp" srcset="assets/salmon-river-adventures-logo.webp">
+                        <source type="image/png" srcset="assets/salmon-river-adventures-logo.png">
+                        <img src="assets/salmon-river-adventures-logo.png" alt="Salmon River Adventures Logo">
+                    </picture>
+                </a>
             </div>
 
             <ul id="navParent" class="navBar">
