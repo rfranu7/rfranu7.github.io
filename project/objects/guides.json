@@ -1,0 +1,36 @@
+{
+    "guides": [
+      {
+        "name": "",
+        "photo": "",
+        "cert": "Raft Trip Leader",
+        "years": "3 years of experience",
+        "email": "@salmonriveradventures.com",
+        "desc": ""
+      },
+
+      {
+        "name": "",
+        "photo": "",
+        "cert": "Instructor",
+        "years": "7 years of experience",
+        "desc": ""
+      },
+      {
+        "name": "",
+        "photo": "",
+        "cert": "Raft Trip Leader",
+        "years": "3 years of experience",
+        "email": "@salmonriveradventures.com",
+        "desc": ""
+      },
+
+      {
+        "name": "",
+        "photo": "",
+        "cert": "Instructor",
+        "years": "7 years of experience",
+        "desc": ""
+      }
+    ]
+  }

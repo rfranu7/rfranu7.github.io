@@ -40,14 +40,15 @@ fetch(requestURL)
     for (let i = 0; i < tripz.length; i++ ) {
 
         tableHead[i].textContent = tripz[i].name;
-        for (let x = 0; x < tripz[i].long.length; x++ ) {
-          tableData[i].textContent = tripz[i].long[x] + " $" + tripz[i].cost[x];
-        }
-        tableData[i+4].textContent = tripz[i].dates[0];
-        tableData[i+8].textContent = tripz[i].minAge;
-        tableData[i+12].textContent = tripz[i].skill;
-        tableData[i+16].textContent = tripz[i].riverRate;
-        tableData[i+20].textContent = tripz[i].accomodation;
+        tableData[i].textContent = tripz[i].long[0] + " $" + tripz[i].cost[0];
+        tableData[i+4].textContent = tripz[i].long[1] + " $" + tripz[i].cost[1];
+        tableData[i+8].textContent = tripz[i].dates[0];
+        tableData[i+12].textContent = tripz[i].dates[1];
+        tableData[i+16].textContent = tripz[i].dates[2];
+        tableData[i+20].textContent = tripz[i].minAge;
+        tableData[i+24].textContent = tripz[i].skill;
+        tableData[i+28].textContent = tripz[i].riverRate;
+        tableData[i+32].textContent = tripz[i].accomodation;
 
         let x = document.createElement('option');
         x.textContent =  tripz[i].name;

@@ -6,7 +6,7 @@
         "desc": "One of the most beautiful stretches of river in the West, the Middle Fork guarantees a wild ride with over a 100 rapids, natural hot springs and complete wilderness immersion",
         "bigImg": ["hero-small-middle.jpg", "hero-med-middle.jpg", "hero-large-middle.jpg"], 
         "long": [ "3-Day Trip", "6-Day Trip"],
-        "dates": [ "June 15", "June 24", "July 2", "July 10", "July 18", "July 26", "August 3", "August 11" ],
+        "dates": [ "June 15", "July 2", "August 3" ],
         "cost": [ "2099", "3049"],
         "skill": "Class IV rapids; cold water with moderate to high flip/swim potential during peak flows (late-May to late-June); moderate hiking",
         "riverRate": "Class III - IV",
