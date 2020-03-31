@@ -63,6 +63,9 @@ fetch(requestURL)
 
         let div1 = document.createElement('div');
         let div2 = document.createElement('div');
+        let pic = document.createElement('picture');
+        let src1 = document.createElement('source');
+        let src2 = document.createElement('source');
         let image = document.createElement('img');
         let div3 = document.createElement('div');
         let name = document.createElement('h2');
@@ -71,7 +74,12 @@ fetch(requestURL)
         let email = document.createElement('p');
         let quote = document.createElement('p');
 
-        image.setAttribute("src", "assets/" + guide[i].photo);
+        pic.appendChild(src1);
+        pic.appendChild(src2);
+        pic.appendChild(image);
+        src1.setAttribute("media", "(max-width: 1550px)");
+        src1.setAttribute("srcset", "assets/" + guide[i].photo);
+        image.setAttribute("src", "assets/2-" + guide[i].photo);
         image.setAttribute("alt", "portrait of " + guide[i].name);
 
         name.textContent = guide[i].name;
@@ -83,7 +91,7 @@ fetch(requestURL)
         div1.setAttribute("class", "guideData")
         div1.appendChild(div2);
         div1.appendChild(div3);
-        div2.appendChild(image);
+        div2.appendChild(pic);
         div3.appendChild(name);
         div3.appendChild(cert);
         div3.appendChild(year);
