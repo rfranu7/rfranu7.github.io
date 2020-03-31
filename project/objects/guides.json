@@ -1,36 +1,38 @@
 {
     "guides": [
       {
-        "name": "",
-        "photo": "",
+        "name": "Bryson Beals",
+        "photo": "bryson-beals.jpg",
         "cert": "Raft Trip Leader",
         "years": "3 years of experience",
-        "email": "@salmonriveradventures.com",
-        "desc": ""
+        "email": "Bryson.Beals@salmonriveradventures.com",
+        "desc": "Insert a description here"
       },
 
       {
-        "name": "",
-        "photo": "",
+        "name": "Rhett Silver",
+        "photo": "rhett-silver.jpg",
         "cert": "Instructor",
         "years": "7 years of experience",
-        "desc": ""
+        "email": "Rhett.Silver@salmonriveradventures.com",
+        "desc": "Insert a description here"
       },
       {
-        "name": "",
-        "photo": "",
+        "name": "Mariah Hill",
+        "photo": "mariah-hill.jpg",
         "cert": "Raft Trip Leader",
         "years": "3 years of experience",
         "email": "@salmonriveradventures.com",
-        "desc": ""
+        "desc": "Insert a description here"
       },
 
       {
-        "name": "",
-        "photo": "",
+        "name": "Lauren Bernard",
+        "photo": "lauren-bernard.jpg",
         "cert": "Instructor",
         "years": "7 years of experience",
-        "desc": ""
+        "email": "Bryson.Beals@salmonriveradventures.com",
+        "desc": "Insert a description here"
       }
     ]
   }
