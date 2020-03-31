@@ -1,0 +1,17 @@
+.guides {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.guideData {
+    display: grid;
+    grid-template-columns: .5fr 1fr;
+    border: 1px solid #333;
+    margin: 1rem;
+}
+
+.guideData img {
+    max-height: 100%;
+}

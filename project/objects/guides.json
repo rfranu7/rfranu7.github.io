@@ -5,8 +5,8 @@
         "photo": "bryson-beals.jpg",
         "cert": "Raft Trip Leader",
         "years": "3 years of experience",
-        "email": "Bryson.Beals@salmonriveradventures.com",
-        "desc": "Insert a description here"
+        "email": "bryson.beals@salmonriveradventures.com",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec mollis odio. Vestibulum ut nisl molestie, dignissim odio non, tempus risus. Proin ut lorem dolor. Nam ac velit eget mauris commodo maximus id sit amet elit. Nullam nibh arcu, dignissim ac augue non, mollis sodales elit."
       },
 
       {
@@ -14,16 +14,16 @@
         "photo": "rhett-silver.jpg",
         "cert": "Instructor",
         "years": "7 years of experience",
-        "email": "Rhett.Silver@salmonriveradventures.com",
-        "desc": "Insert a description here"
+        "email": "rhett.silver@salmonriveradventures.com",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec mollis odio. Vestibulum ut nisl molestie, dignissim odio non, tempus risus. Proin ut lorem dolor. Nam ac velit eget mauris commodo maximus id sit amet elit. Nullam nibh arcu, dignissim ac augue non, mollis sodales elit."
       },
       {
         "name": "Mariah Hill",
         "photo": "mariah-hill.jpg",
         "cert": "Raft Trip Leader",
         "years": "3 years of experience",
-        "email": "@salmonriveradventures.com",
-        "desc": "Insert a description here"
+        "email": "mariah.hill@salmonriveradventures.com",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec mollis odio. Vestibulum ut nisl molestie, dignissim odio non, tempus risus. Proin ut lorem dolor. Nam ac velit eget mauris commodo maximus id sit amet elit. Nullam nibh arcu, dignissim ac augue non, mollis sodales elit."
       },
 
       {
@@ -31,8 +31,8 @@
         "photo": "lauren-bernard.jpg",
         "cert": "Instructor",
         "years": "7 years of experience",
-        "email": "Bryson.Beals@salmonriveradventures.com",
-        "desc": "Insert a description here"
+        "email": "lauren.bernard@salmonriveradventures.com",
+        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec mollis odio. Vestibulum ut nisl molestie, dignissim odio non, tempus risus. Proin ut lorem dolor. Nam ac velit eget mauris commodo maximus id sit amet elit. Nullam nibh arcu, dignissim ac augue non, mollis sodales elit."
       }
     ]
   }
