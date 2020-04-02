@@ -1,0 +1,26 @@
+/* Nav Section */
+
+nav {
+    grid-template-columns: .65fr 2fr  .5fr;
+}
+
+.social img{
+    max-width: 10%;
+}
+
+/* Guide Section*/
+
+.guideData {
+    grid-template-columns: .5fr 1fr;
+
+    img {
+        max-width: 100%;
+        max-height: auto;
+    }
+}
+
+/* Footer Section */
+
+footer .social img{
+    max-width: 5%;
+}

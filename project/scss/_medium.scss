@@ -1,99 +1,80 @@
-@media only screen and (min-width: 32.5em){
+/* Weather Section */
 
-    .navBar li:first-child {
-        text-align: center;
-    }
-    
-    /* Weather Section */
+.weather {
+    grid-template-columns: 1fr 1fr 1fr;
+}
 
-    .weather {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-    
-    .weather-data:nth-child(1) {
-        border-right: 1px solid #333 ;
-    }
-    
-    .weather-data:nth-child(2) {
-        border-right: none;
-        border-top: none;
-    }
-    
-    .weather-data:nth-child(3) {
-        border-right: 1px solid #333;
-        border-top: 1px solid #333;
-    }
-    
-    .weather-data:nth-child(4) {
-        border-right: 1px solid #333;
-        border-top: 1px solid #333;
-    }
-    
-    .weather-data:nth-child(5) {
-        border-right: none;
-        border-top: 1px solid #333;
-    }
+.weather-data:nth-child(1) {
+    border-right: 1px solid #333 ;
+}
 
-    /* Blog Section */
+.weather-data:nth-child(2) {
+    border-right: none;
+    border-top: none;
+}
 
-    .blog {
-        grid-template-columns: 2fr 1fr;
-    }
+.weather-data:nth-child(3) {
+    border-right: 1px solid #333;
+    border-top: 1px solid #333;
+}
 
-    .blog img {
+.weather-data:nth-child(4) {
+    border-right: 1px solid #333;
+    border-top: 1px solid #333;
+}
+
+.weather-data:nth-child(5) {
+    border-right: none;
+    border-top: 1px solid #333;
+}
+
+/* Blog Section */
+
+.blog {
+    grid-template-columns: 2fr 1fr;
+
+    img {
         max-width: 99%;
     }
+}
+.sub-article {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: .1rem;
+    text-align: right;
+}
 
-    .sub-article {
-        display: grid;
-        grid-template-rows: 1fr 1fr;
-        grid-row-gap: .1rem;
-        text-align: right;
-    }
+/* Trips Section */
 
-    /* Trips Section */
+.trips {
+    grid-template-columns: 1fr 1fr;
+}
 
-    .trips {
-        grid-template-columns: 1fr 1fr;
-    }
+/* Newsletter Section */
 
-    /* Contact Section */
+.newsletter form {
+    grid-template-columns: 1fr 1fr 1fr;
+}
 
-    .contact-page input[type="checkbox"] {
-        width: 20px;
-        height: 20px;
-    }
+/* Footer Section */
 
-    .contact-page form div {
-        margin-top: 0;
-    }
+footer {
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    text-align: left;
+    padding: 0;
 
-    /* Newsletter Section */
-
-    .newsletter form {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-    
-    /* Footer Section */
-
-    footer {
-        grid-template-columns: 2fr 1fr;
-        align-items: center;
-        text-align: left;
-        padding: 0;
-    }
-
-    footer div:nth-child(1) {
+    div:nth-child(1) {
         padding-left: .75rem;
     }
 
-    footer .social {
+    .social {
         text-align: right;
         padding: .5rem;
         padding-right: .75rem;
-    }
 
-    footer .social img{
-        max-width: 15%;
+        img{
+            max-width: 15%;
+        }
     }
 }

@@ -1,0 +1,21 @@
+@import "normalize";
+
+@import "small-thanks";
+
+@media only screen and (min-width: 32.5em) {
+
+    @import "medium-thanks";
+
+} /* end of media query */
+
+@media only screen and (min-width: 64em) {
+
+    @import "large-thanks";
+
+} /* end of media query */
+
+@media only screen and (min-width: 112.5em) {
+
+    @import "wide-thanks";
+
+} /* end of media query */

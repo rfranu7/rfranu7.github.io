@@ -455,181 +455,6 @@ main section {
   .hero img {
     max-width: 100%; }
 
-.CTA {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  text-align: center; }
-
-.text-container {
-  position: absolute;
-  top: 75%;
-  left: 50%;
-  width: 75%;
-  transform: translate(-50%, -50%); }
-
-/* Weather Section */
-.weather {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-content: center;
-  text-align: center;
-  border: 1px solid #333; }
-
-.weather img {
-  max-width: 100%; }
-
-.weather-data {
-  text-align: center;
-  justify-content: center;
-  border-right: 1px solid #333;
-  padding: 1rem; }
-  .weather-data h4 {
-    margin-bottom: 0; }
-
-.weather-data:nth-child(1) {
-  grid-column: 1 / 3;
-  border-right: none; }
-
-.weather-data:nth-child(2) {
-  border-right: 1px solid #333;
-  border-top: 1px solid #333; }
-
-.weather-data:nth-child(3) {
-  border-right: none;
-  border-top: 1px solid #333; }
-
-.weather-data:nth-child(4) {
-  border-right: 1px solid #333;
-  border-top: 1px solid #333; }
-
-.weather-data:nth-child(5) {
-  border-right: none;
-  border-top: 1px solid #333; }
-
-.weather-data:nth-child(1) div:nth-child(1) {
-  margin-bottom: 1.33rem; }
-
-.weather-data:nth-child(1) div:nth-child(2), .weather-data:nth-child(1) div:nth-child(3) {
-  text-align: left; }
-
-.weather-data div strong {
-  font-size: 2rem; }
-
-.weather-data div:nth-child(2) p {
-  margin-top: 0; }
-
-.weather-data:nth-child(1) div:nth-child(3) p {
-  margin: 0; }
-
-.weather-data div:nth-child(1) p {
-  margin-top: 0; }
-
-/* Blog Section */
-.blog {
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-content: space-between;
-  align-items: center; }
-  .blog img {
-    max-width: 100%; }
-
-.main-article {
-  text-align: left;
-  position: relative; }
-
-.sub-article {
-  position: relative; }
-
-.main-article:hover .overlay, .container:hover .overlay-small, .container:hover .overlay-small-2 {
-  opacity: .7; }
-
-.overlay, .overlay-small, .overlay-small-2 {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 99%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: #F29F05; }
-
-.overlay-small, .overlay-small-2 {
-  left: 1.5%;
-  height: 49%;
-  width: 98.5%; }
-
-.overlay-small-2 {
-  top: 50%; }
-
-.text, .text-small {
-  color: #333;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center; }
-
-.text-small {
-  font-size: 1rem;
-  width: 80%; }
-
-.text h3 {
-  margin-bottom: 2rem; }
-
-/* River Section */
-.river {
-  border: 1px solid #333;
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-content: center;
-  align-items: center;
-  grid-column-gap: .5rem; }
-  .river div:nth-child(1) {
-    text-align: center; }
-  .river img {
-    max-width: 100%; }
-  .river div:nth-child(2) {
-    font-size: 1rem;
-    padding: .8rem; }
-
-/* Trips Section */
-.trips {
-  display: grid;
-  grid-template-columns: 1fr;
-  justify-content: center;
-  justify-items: center;
-  text-align: center; }
-  .trips img {
-    max-width: 100%; }
-
-.trip-data {
-  border: 1px solid #333;
-  margin: 1rem 2%;
-  text-align: center;
-  max-width: 400px;
-  justify-content: center; }
-  .trip-data div:nth-child(2) {
-    padding: 0 1.5rem 1.5rem 1.5rem; }
-
-.book-btn {
-  padding: 1rem;
-  font-size: 1.1rem;
-  background-color: #E10032;
-  color: #FFF;
-  border: none;
-  border-radius: 10px; }
-
-.book-btn:hover {
-  background-color: #034687; }
-
 /* Contact Section */
 .contact {
   border: 1px solid #333;
@@ -650,50 +475,42 @@ iframe {
   width: 100%;
   height: 400px; }
 
+.contact-page form {
+  width: 75%;
+  margin: auto; }
+  .contact-page form div {
+    margin-top: 2rem;
+    margin-bottom: 2rem; }
+.contact-page input[type="text"], .contact-page input[type="email"], .contact-page input[type="tel"], .contact-page select, .contact-page textarea {
+  display: block;
+  width: 100%;
+  height: 40px;
+  margin-top: .5rem;
+  margin-bottom: 1rem; }
+.contact-page textarea {
+  height: 100px; }
+.contact-page input[type="checkbox"] {
+  width: 25px;
+  height: 25px;
+  margin-top: .5rem;
+  margin-bottom: 2rem; }
+.contact-page input[type="submit"] {
+  width: 50%; }
+
+.book-btn {
+  padding: 1rem;
+  font-size: 1.1rem;
+  background-color: #E10032;
+  color: #FFF;
+  border: none;
+  border-radius: 10px; }
+
+.book-btn:hover {
+  background-color: #034687; }
+
 .blue {
   background-color: #034687;
   height: 84px; }
-
-/* Newsletter Section */
-.newsletter {
-  background-color: #034687;
-  color: #FFF;
-  display: grid;
-  grid-template-columns: 1fr;
-  align-items: center;
-  padding: 1rem; }
-  .newsletter h3 {
-    margin-bottom: 0;
-    font-size: 1.2rem;
-    text-align: center; }
-  .newsletter p {
-    margin-top: 0;
-    font-size: .9rem;
-    text-align: center; }
-  .newsletter form {
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-items: center;
-    align-items: center;
-    grid-gap: 20px; }
-    .newsletter form div {
-      width: 100%; }
-  .newsletter input {
-    display: block; }
-  .newsletter input[type="text"], .newsletter input[type="email"] {
-    margin-top: .25rem;
-    padding: .5rem;
-    width: 90%; }
-  .newsletter .btn {
-    padding: 1rem;
-    font-size: 1.1rem;
-    background-color: #E10032;
-    color: #FFF;
-    border: none;
-    border-radius: 10px; }
-  .newsletter .btn:hover {
-    background-color: #F3F7F5;
-    color: #333; }
 
 /* Footer Section */
 footer {
@@ -715,44 +532,13 @@ footer {
       max-width: 12%; }
 
 @media only screen and (min-width: 32.5em) {
-  /* Weather Section */
-  .weather {
-    grid-template-columns: 1fr 1fr 1fr; }
+  /* Contact Section */
+  .contact-page input[type="checkbox"] {
+    width: 20px;
+    height: 20px; }
 
-  .weather-data:nth-child(1) {
-    border-right: 1px solid #333; }
-
-  .weather-data:nth-child(2) {
-    border-right: none;
-    border-top: none; }
-
-  .weather-data:nth-child(3) {
-    border-right: 1px solid #333;
-    border-top: 1px solid #333; }
-
-  .weather-data:nth-child(4) {
-    border-right: 1px solid #333;
-    border-top: 1px solid #333; }
-
-  .weather-data:nth-child(5) {
-    border-right: none;
-    border-top: 1px solid #333; }
-
-  /* Blog Section */
-  .blog {
-    grid-template-columns: 2fr 1fr; }
-    .blog img {
-      max-width: 99%; }
-
-  .sub-article {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-row-gap: .1rem;
-    text-align: right; }
-
-  /* Trips Section */
-  .trips {
-    grid-template-columns: 1fr 1fr; }
+  .contact-page form div {
+    margin-top: 0; }
 
   /* Newsletter Section */
   .newsletter form {
@@ -770,7 +556,7 @@ footer {
       text-align: right;
       padding: .5rem;
       padding-right: .75rem; }
-      footer .social img {
+      footer .social .social img {
         max-width: 15%; } }
 /* end of media query */
 @media only screen and (min-width: 64em) {
@@ -791,32 +577,6 @@ footer {
     .social img {
       max-width: 15%; }
 
-  /* Weather Section */
-  .weather {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; }
-
-  .weather-data:nth-child(1) {
-    grid-column: 1; }
-
-  .weather-data:nth-child(2), .weather-data:nth-child(3), .weather-data:nth-child(4) {
-    border-right: 1px solid #333;
-    border-top: none; }
-
-  .weather-data:nth-child(5) {
-    border-top: none; }
-
-  /* Blog Section */
-  .blog {
-    grid-template-columns: 1fr 1fr; }
-
-  /* River Section */
-  .river {
-    grid-template-columns: 1fr 1fr; }
-
-  /* Trips Section */
-  .trips {
-    grid-template-columns: 1fr 1fr 1fr 1fr; }
-
   /* Contact Section */
   .contact {
     border: 1px solid #333;
@@ -829,6 +589,16 @@ footer {
     .contact div:nth-child(1) {
       grid-column: 1/3;
       padding: 2rem 10rem; }
+
+  .contact-page input[type="text"], .contact-page input[type="email"], .contact-page input[type="tel"], .contact-page select, .contact-page textarea {
+    width: 75%; }
+  .contact-page textarea {
+    height: 150px; }
+  .contact-page input[type="checkbox"] {
+    width: 16px;
+    height: 16px; }
+  .contact-page input[type="submit"] {
+    width: 25%; }
 
   /* Newsletter Section */
   .newsletter {
@@ -845,9 +615,6 @@ footer {
 
   .social img {
     max-width: 10%; }
-
-  .text-container {
-    top: 65%; }
 
   /* Footer Section */
   footer .social img {

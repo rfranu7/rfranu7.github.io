@@ -1,0 +1,40 @@
+/* Contact Section */
+
+.contact-page input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+
+.contact-page form div {
+    margin-top: 0;
+}
+
+/* Newsletter Section */
+
+.newsletter form {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* Footer Section */
+
+footer {
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    text-align: left;
+    padding: 0;
+
+    div:nth-child(1) {
+        padding-left: .75rem;
+    }
+
+    .social {
+        text-align: right;
+        padding: .5rem;
+        padding-right: .75rem;
+
+        .social img{
+            max-width: 15%;
+
+        }
+    }
+}

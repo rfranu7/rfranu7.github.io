@@ -1,0 +1,52 @@
+/* Nav Section */
+
+nav {
+    grid-template-columns: .75fr 2fr .5fr;
+
+    ul{
+        display: flex;
+        font-size: 1rem;
+    }
+
+    li {
+        display: block;
+    }
+}
+
+.navBar li:nth-child(1) {
+    display: none;
+}
+
+.social {
+    display: inline;
+
+    img{
+        max-width: 15%;
+    }
+}
+
+/* Guide Section */
+
+.guides {
+    max-width: 1024px;
+}
+
+.guides {
+    grid-template-columns: 1fr 1fr;
+}
+    
+.guideData {
+    grid-template-columns: 1fr;
+}
+
+/* Newsletter Section */
+
+.newsletter {
+    grid-template-columns: 1fr 1fr;
+}
+
+/* Footer Section */
+
+footer .social img{
+    max-width: 7%;
+}

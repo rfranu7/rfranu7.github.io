@@ -1,0 +1,187 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: auto;
+    background-color: #F3F7F5;
+}
+
+/* Header Section */
+
+nav {
+    background-color: #034687;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+
+    ul{
+        margin: 0;
+        padding: 0;
+        display: inline;
+        list-style: none;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    li {
+        display: none;
+        flex: 1 1 100%;
+
+        a {
+            display: block;
+            padding: 1em;
+            color: #FFF;
+            text-decoration: none;
+        }
+
+        a:hover {
+            background-color: #E10032;
+        }
+    }
+}
+
+.logo {
+    display: inline;
+
+    img {
+        width: 80%;
+    }
+}
+
+.navBar li:first-child {
+    display: inline;
+    text-align: left;
+}
+
+.responsive li {
+	display: block;
+}
+
+.active {
+    background-color: #F3F7F5;
+    color: #034687;
+    font-weight: bold;
+}
+
+.social {
+    display: none;
+    text-align: right;
+    padding-right: 5%;
+
+    img{
+        max-width: 10%;
+    }
+}
+
+/* Main Section */
+
+main section {
+    max-width: 1850px;
+    margin: 2rem 2%;
+}
+
+/* Hero Section */
+
+.hero {
+    position: relative;
+
+    img {
+        max-width: 100%;
+    }
+}
+
+/* Thanks Section */
+
+.card {
+    max-width: 70%;
+    padding: 2rem;
+    background-color: #EEE;
+    text-align: center;
+    margin: 1rem auto;
+
+    img {
+        max-width: 90%;
+    }
+
+    button {
+        padding: 1rem;
+        width: 70%;
+        margin: 0.5rem;
+        border-radius: 5px;
+    }
+
+    button a {
+        text-decoration: none;
+        color: #FFF;
+        font-weight: bold;
+    }
+    
+    .blue-btn {
+        border: 2px solid #034687;
+        a {
+            text-decoration: none;
+            color: #034687;
+        }
+    }
+}
+
+.blue-btn-solid {
+    background-color: #034687;
+    a {
+        text-decoration: none;
+        color: #FFF;
+    }
+}
+
+.red-btn {
+    background-color: #E10032
+}
+
+.red-btn:hover {
+    background-color: #034687;
+    font-weight: bold;
+}
+
+.blue-btn:hover {
+    border: 1px solid #034687;
+}
+
+.blue-btn-solid:hover {
+    background-color: #E10032;
+    font-weight: bold;
+}
+
+.blue {
+    background-color: #034687;
+    height: 84px;
+}
+
+/* Footer Section */
+
+footer {
+    display: grid;
+    grid-template-columns: 2fr;
+    justify-content: space-between;
+    text-align: center;
+    padding: 1rem 1rem 0 1rem;
+
+
+    span {
+        font-size: 1.2rem;
+    }
+
+    a {
+        font-size: 1.2rem;
+        color: #000000;
+    }
+
+    .social {
+        display: block;
+        text-align: center;
+        padding: 1rem;
+
+        img{
+            max-width: 12%;
+        }
+    }
+}
