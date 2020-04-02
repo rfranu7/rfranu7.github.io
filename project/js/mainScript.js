@@ -391,9 +391,9 @@ function preloadImage(img){ //substitutes the images
     const srcset = img.getAttribute("data-srcset");
     if (!src) { 
         if (!srcset) { return; }
-        img.srcset = srcset;
+        else {img.srcset = srcset;}
     }
-    img.src = src;
+    else { img.src = src;}
 }
 
 function removeImg(img){ //removes the data-src attribute so the blue effect in CSS will be removed

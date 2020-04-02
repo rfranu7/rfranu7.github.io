@@ -7,7 +7,7 @@ function toggleMenu() {
 	document.getElementsByClassName("navBar")[0].classList.toggle("responsive");
 };
 
-//-----------------Trips Data---------------------
+//-----------------Guide Data---------------------
 
   const requestURL = 'https://rfranu7.github.io/project/objects/guides.json';
 
