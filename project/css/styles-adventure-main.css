@@ -546,6 +546,54 @@ main section {
   text-decoration: none;
   cursor: pointer; }
 
+/* Contact Section */
+.contact-page form {
+  width: 75%;
+  margin: auto; }
+  .contact-page form div {
+    margin-top: 2rem;
+    margin-bottom: 2rem; }
+.contact-page input[type="text"], .contact-page input[type="email"], .contact-page input[type="tel"], .contact-page select, .contact-page textarea {
+  display: block;
+  width: 100%;
+  height: 40px;
+  margin-top: .5rem;
+  margin-bottom: 1rem;
+  padding-left: .25rem; }
+.contact-page textarea {
+  height: 100px; }
+.contact-page input[type="checkbox"] {
+  width: 25px;
+  height: 25px;
+  margin-top: .5rem;
+  margin-bottom: 2rem; }
+.contact-page input[type="submit"] {
+  width: 50%; }
+.contact-page h2 {
+  margin-bottom: .5rem; }
+.contact-page small {
+  display: block;
+  margin-bottom: 1.5rem; }
+.contact-page .req {
+  color: #E10032; }
+.contact-page input:required {
+  border-left: 4px solid #E10032; }
+.contact-page input:valid {
+  border-left: 4px solid green; }
+.contact-page input[type="submit"]:valid {
+  border: none; }
+
+.book-btn {
+  padding: 1rem;
+  font-size: 1.1rem;
+  background-color: #E10032;
+  color: #FFF;
+  border: none;
+  border-radius: 10px; }
+
+.book-btn:hover {
+  background-color: #034687; }
+
 /* Footer Section */
 footer {
   display: grid;
@@ -579,6 +627,14 @@ footer {
 
   #adventureForm {
     width: 75%; }
+
+  /* Contact Section */
+  .contact-page input[type="checkbox"] {
+    width: 20px;
+    height: 20px; }
+
+  .contact-page form div {
+    margin-top: 0; }
 
   /* Newsletter Section */
   .newsletter form {
@@ -629,6 +685,17 @@ footer {
 
   #adventureForm input[type="text"], #adventureForm input[type="email"], #adventureForm input[type="tel"], #adventureForm select, #adventureForm textarea {
     width: 100%; }
+
+  /* Contact Section */
+  .contact-page input[type="text"], .contact-page input[type="email"], .contact-page input[type="tel"], .contact-page select, .contact-page textarea {
+    width: 75%; }
+  .contact-page textarea {
+    height: 150px; }
+  .contact-page input[type="checkbox"] {
+    width: 16px;
+    height: 16px; }
+  .contact-page input[type="submit"] {
+    width: 25%; }
 
   /* Newsletter Section */
   .newsletter {

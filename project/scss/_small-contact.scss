@@ -134,6 +134,7 @@ iframe {
         height: 40px;
         margin-top: .5rem;
         margin-bottom: 1rem;
+        padding-left: .25rem;
     }
 
     textarea {
@@ -149,6 +150,31 @@ iframe {
 
     input[type="submit"] {
         width: 50%;
+    }
+
+    h2 {
+        margin-bottom: .5rem;
+    }
+
+    small {
+        display: block;
+        margin-bottom: 1.5rem;
+    }
+
+    .req {
+        color: #E10032;
+    }
+
+    input:required {
+        border-left: 4px solid #E10032;
+    }
+    
+    input:valid {
+        border-left: 4px solid green;
+    }
+
+    input[type="submit"]:valid {
+        border: none;
     }
 
 }

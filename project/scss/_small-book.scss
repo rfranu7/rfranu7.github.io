@@ -93,12 +93,13 @@ main section {
 /* Table Section */
 
 .trip-table {
-    width: 320px;
+    width: 95%;
     margin: 2rem auto;
 }
 
 table {
     border: 1px solid #333;
+    overflow: auto;
 }
 
 td, th {
@@ -139,6 +140,7 @@ tr:nth-child(7), tr:nth-child(8) {
         height: 40px;
         margin-top: .5rem;
         margin-bottom: 1rem;
+        padding-left: .25rem;
     }
 
     textarea {
@@ -156,6 +158,30 @@ tr:nth-child(7), tr:nth-child(8) {
         width: 50%;
     }
 
+    h2 {
+        margin-bottom: .5rem;
+    }
+
+    small {
+        display: block;
+        margin-bottom: 1.5rem;
+    }
+
+    .req {
+        color: #E10032;
+    }
+
+    input:invalid {
+        border-left: 4px solid #E10032;
+    }
+    
+    input:valid {
+        border-left: 4px solid green;
+    }
+
+    input[type="submit"]:valid {
+        border: none;
+    }
 }
 
 .book-btn {

@@ -44,6 +44,28 @@ nav {
     width: 100%;
 }
 
+/* Contact Section */
+
+.contact-page {
+
+    input[type="text"],  input[type="email"], input[type="tel"], select, textarea {
+        width: 75%;
+    }
+
+    textarea {
+        height: 150px;
+    }
+
+    input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+    }
+
+    input[type="submit"] {
+        width: 25%;
+    }
+}
+
 /* Newsletter Section */
 
 .newsletter {
