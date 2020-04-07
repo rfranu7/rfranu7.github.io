@@ -6,24 +6,24 @@
         "cert": "Raft Trip Leader",
         "years": "3 years of experience",
         "email": "bryson.beals@salmonriveradventures.com",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec mollis odio. Vestibulum ut nisl molestie, dignissim odio non, tempus risus. Proin ut lorem dolor. Nam ac velit eget mauris commodo maximus id sit amet elit. Nullam nibh arcu, dignissim ac augue non, mollis sodales elit."
+        "desc": "Bryson Beals is a calm and cheery person. He is a guy that makes you laugh. He likes hiking, river rafting, and swimming. It may not look like him, but he also boasts to be a good cook."
       },
 
       {
         "name": "Rhett Silver",
         "photo": "rhett-silver.jpg",
         "cert": "Instructor",
-        "years": "7 years of experience",
+        "years": "12 years of experience",
         "email": "rhett.silver@salmonriveradventures.com",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec mollis odio. Vestibulum ut nisl molestie, dignissim odio non, tempus risus. Proin ut lorem dolor. Nam ac velit eget mauris commodo maximus id sit amet elit. Nullam nibh arcu, dignissim ac augue non, mollis sodales elit."
+        "desc": "Rhett Silver is great at what he does. He started his career early because of his love for adventure. He is a very passionate at helping others learn. He also enjoys a good BBQ."
       },
       {
-        "name": "Mariah Hill",
-        "photo": "mariah-hill.jpg",
+        "name": "Kristie Hill",
+        "photo": "kristie-hill.jpg",
         "cert": "Raft Trip Leader",
         "years": "3 years of experience",
-        "email": "mariah.hill@salmonriveradventures.com",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec mollis odio. Vestibulum ut nisl molestie, dignissim odio non, tempus risus. Proin ut lorem dolor. Nam ac velit eget mauris commodo maximus id sit amet elit. Nullam nibh arcu, dignissim ac augue non, mollis sodales elit."
+        "email": "kristie.hill@salmonriveradventures.com",
+        "desc": "Kristie Hill is a bright and quick-witted girl. She can do just about anything! She enjoys being in the nature and likes the peace and quiet it provides."
       },
 
       {
@@ -32,7 +32,7 @@
         "cert": "Instructor",
         "years": "7 years of experience",
         "email": "lauren.bernard@salmonriveradventures.com",
-        "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec mollis odio. Vestibulum ut nisl molestie, dignissim odio non, tempus risus. Proin ut lorem dolor. Nam ac velit eget mauris commodo maximus id sit amet elit. Nullam nibh arcu, dignissim ac augue non, mollis sodales elit."
+        "desc": "Lauren Bernard is very brave and outgoing. She enjoys being with others the most. She also has a knack for outdoor activities and goes for quite a few trips each year."
       }
     ]
   }
