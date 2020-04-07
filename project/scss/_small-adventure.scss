@@ -121,10 +121,15 @@ main section {
 .book-btn {
     padding: 1rem;
     font-size: 1.1rem;
+    font-weight: bold;
     background-color: #E10032;
-    color: #FFF;
     border: none;
     border-radius: 10px;
+
+    a {
+        color: #FFF;
+        text-decoration: none;
+    }
 }
 
 .book-btn:hover {
