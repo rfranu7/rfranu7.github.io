@@ -32,10 +32,7 @@ fetch(requestURL)
     tableName[0].innerHTML = "<strong> Destination </strong>";
     tableName[1].innerHTML = "<strong> Trips and Price </strong>";
     tableName[2].innerHTML = "<strong> Departure Dates </strong>";
-    tableName[3].innerHTML = "<strong> Minimum Age </strong>";
-    tableName[4].innerHTML = "<strong> Skill Level </strong>";
-    tableName[5].innerHTML = "<strong> River Rating </strong>";
-    tableName[6].innerHTML = "<strong> Accomodation </strong>";
+    tableName[3].innerHTML = "<strong> River Rating </strong>";
 
     for (let i = 0; i < tripz.length; i++ ) {
 
@@ -45,10 +42,7 @@ fetch(requestURL)
         tableData[i+8].textContent = tripz[i].dates[0];
         tableData[i+12].textContent = tripz[i].dates[1];
         tableData[i+16].textContent = tripz[i].dates[2];
-        tableData[i+20].textContent = tripz[i].minAge;
-        tableData[i+24].textContent = tripz[i].skill;
-        tableData[i+28].textContent = tripz[i].riverRate;
-        tableData[i+32].textContent = tripz[i].accomodation;
+        tableData[i+20].textContent = tripz[i].riverRate;
 
         let x = document.createElement('option');
         x.textContent =  tripz[i].name;

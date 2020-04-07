@@ -478,6 +478,9 @@ tr:nth-child(7), tr:nth-child(8) {
 .bottom-end {
   border-bottom: none; }
 
+.small-bottom {
+  border-bottom: none; }
+
 /* Contact Section */
 .contact-page form {
   width: 75%;
@@ -559,6 +562,9 @@ footer {
 
   tr:nth-child(7), tr:nth-child(8) {
     display: table-row; }
+
+  .small-bottom {
+    border-bottom: 1px solid #333; }
 
   /* Contact Section */
   .contact-page input[type="checkbox"] {
@@ -653,7 +659,6 @@ footer {
 
   /* Table Section */
   .trip-table {
-    width: 90%;
     margin: 3rem auto; }
 
   td, th {
