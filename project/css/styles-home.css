@@ -639,7 +639,7 @@ main section {
   text-decoration: none; }
 
 .cta-btn {
-  width: 30%; }
+  width: 80%; }
 
 .book-btn:hover {
   background-color: #034687; }
@@ -737,6 +737,9 @@ footer {
   .text-container {
     top: 65%; }
 
+  .cta-btn {
+    width: 50%; }
+
   /* Weather Section */
   .weather {
     grid-template-columns: 1fr 1fr 1fr; }
@@ -811,6 +814,9 @@ footer {
     .social img {
       max-width: 15%; }
 
+  .cta-btn {
+    width: 30%; }
+
   /* Weather Section */
   .weather {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr; }
@@ -866,6 +872,9 @@ footer {
 
   .text-container {
     top: 65%; }
+
+  .cta-btn {
+    width: 20%; }
 
   /* River Section */
   .river div:nth-child(2) h2, .contact div:nth-child(1) h2 {
