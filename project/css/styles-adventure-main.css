@@ -687,8 +687,8 @@ footer {
     width: 100%; }
 
   /* Contact Section */
-  .contact-page input[type="text"], .contact-page input[type="email"], .contact-page input[type="tel"], .contact-page select, .contact-page textarea {
-    width: 75%; }
+  .contact-page form {
+    width: 50%; }
   .contact-page textarea {
     height: 150px; }
   .contact-page input[type="checkbox"] {
