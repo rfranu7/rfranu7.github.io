@@ -524,7 +524,7 @@ tr {
   border-left: 4px solid #E10032; }
 .contact-page input:valid {
   border-left: 4px solid green; }
-.contact-page input[type="submit"]:valid {
+.contact-page input[type="submit"]:valid, .contact-page input[type="checkbox"]:valid {
   border: none; }
 
 .book-btn {

@@ -197,7 +197,7 @@ tr {
         border-left: 4px solid green;
     }
 
-    input[type="submit"]:valid {
+    input[type="submit"]:valid, input[type="checkbox"]:valid {
         border: none;
     }
 }
