@@ -457,26 +457,28 @@ main section {
 
 /* Guides Section */
 .guides {
-  max-width: 320px;
+  max-width: 520px;
   margin: auto;
   display: grid;
   grid-template-columns: 1fr;
-  justify-content: center;
-  align-items: center; }
+  justify-content: center; }
 
 .guideData {
+  max-width: 485px;
   display: grid;
   grid-template-columns: 1fr;
   border: 1px solid #333;
   margin: 1rem; }
   .guideData div:nth-child(1) {
     text-align: center; }
+    .guideData div:nth-child(1) img {
+      max-width: 100%; }
   .guideData div:nth-child(2) {
-    padding: 1rem; }
+    padding: 0 1rem 1rem 1rem; }
     .guideData div:nth-child(2) h2 {
       font-size: 1.75rem; }
     .guideData div:nth-child(2) p {
-      font-size: 1rem; }
+      font-size: .8rem; }
 
 /* Newsletter Section */
 .newsletter {
@@ -540,10 +542,8 @@ footer {
 
 @media only screen and (min-width: 32.5em) {
   /* Guide Section */
-  .guides {
-    max-width: 520px; }
-    .guides .guideData div:nth-child(2) p {
-      font-size: 1.1rem; }
+  .guides .guideData div:nth-child(2) p {
+    font-size: 1.1rem; }
 
   /* Newsletter Section */
   .newsletter form {
@@ -584,13 +584,8 @@ footer {
 
   /* Guide Section */
   .guides {
-    max-width: 1024px; }
-
-  .guides {
+    max-width: 1024px;
     grid-template-columns: 1fr 1fr; }
-
-  .guideData {
-    grid-template-columns: 1fr; }
 
   /* Newsletter Section */
   .newsletter {
@@ -600,18 +595,6 @@ footer {
   footer .social img {
     max-width: 7%; } }
 /* end of media query */
-@media only screen and (min-width: 96.875em) {
-  .guides {
-    max-width: 1850px; }
-
-  .guideData {
-    grid-template-columns: .75fr 1fr; }
-    .guideData div:nth-child(1) {
-      text-align: left; }
-    .guideData img {
-      max-width: none;
-      max-height: 100%; } }
-/* end of media query */
 @media only screen and (min-width: 112.5em) {
   /* Nav Section */
   nav {
@@ -620,11 +603,10 @@ footer {
   .social img {
     max-width: 10%; }
 
-  /* Guide Section*/
-  .guideData {
-    grid-template-columns: .5fr 1fr; }
-    .guideData img {
-      max-width: 100%; }
+  /* Guide Section */
+  .guides {
+    max-width: 1850px;
+    grid-template-columns: 1fr 1fr 1fr 1fr; }
 
   /* Footer Section */
   footer .social img {

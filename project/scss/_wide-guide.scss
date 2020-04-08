@@ -8,14 +8,11 @@ nav {
     max-width: 10%;
 }
 
-/* Guide Section*/
+/* Guide Section */
 
-.guideData {
-    grid-template-columns: .5fr 1fr;
-
-    img {
-        max-width: 100%;
-    }
+.guides {
+    max-width: 1850px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 /* Footer Section */
