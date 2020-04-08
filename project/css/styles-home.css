@@ -633,10 +633,9 @@ main section {
   font-weight: bold;
   background-color: #E10032;
   border: none;
-  border-radius: 10px; }
-  .book-btn a {
-    color: #FFF;
-    text-decoration: none; }
+  border-radius: 10px;
+  color: #FFF;
+  text-decoration: none; }
 
 .book-btn:hover {
   background-color: #034687; }

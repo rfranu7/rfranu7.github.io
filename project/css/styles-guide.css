@@ -477,8 +477,6 @@ main section {
       font-size: 1.75rem; }
     .guideData div:nth-child(2) p {
       font-size: 1rem; }
-  .guideData img {
-    max-width: 100%; }
 
 /* Newsletter Section */
 .newsletter {
@@ -611,7 +609,7 @@ footer {
     .guideData div:nth-child(1) {
       text-align: left; }
     .guideData img {
-      max-width: auto;
+      max-width: none;
       max-height: 100%; } }
 /* end of media query */
 @media only screen and (min-width: 112.5em) {
@@ -626,8 +624,7 @@ footer {
   .guideData {
     grid-template-columns: .5fr 1fr; }
     .guideData img {
-      max-width: 100%;
-      max-height: auto; }
+      max-width: 100%; }
 
   /* Footer Section */
   footer .social img {
