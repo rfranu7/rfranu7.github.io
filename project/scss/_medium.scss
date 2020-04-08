@@ -34,26 +34,35 @@
     border-top: 1px solid #333;
 }
 
-/* Blog Section */
+/* River Section */
 
-.blog {
-    grid-template-columns: 2fr 1fr;
+.river div:nth-child(2) {
 
-    img {
-        max-width: 99%;
+    p {
+        font-size: 1.1rem;
     }
-}
-.sub-article {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-row-gap: .1rem;
-    text-align: right;
 }
 
 /* Trips Section */
 
 .trips {
     grid-template-columns: 1fr 1fr;
+
+    .trip-data div:nth-child(2) {
+
+        p {
+            font-size: 1.1rem;
+        }
+    }
+}
+
+/* Contact Section */
+
+.contact div:nth-child(1) {
+
+    p {
+        font-size: 1.1rem;
+    }
 }
 
 /* Newsletter Section */

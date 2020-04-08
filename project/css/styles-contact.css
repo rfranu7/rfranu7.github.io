@@ -467,6 +467,10 @@ main section {
   .contact div:nth-child(1) {
     grid-column: 1;
     padding: 2rem; }
+    .contact div:nth-child(1) h2 {
+      font-size: 1.75rem; }
+    .contact div:nth-child(1) p {
+      font-size: 1rem; }
 
 iframe {
   width: 100%; }
@@ -554,6 +558,9 @@ footer {
   .contact-page form div {
     margin-top: 0; }
 
+  .contact div:nth-child(1) p {
+    font-size: 1.1rem; }
+
   /* Newsletter Section */
   .newsletter form {
     grid-template-columns: 1fr 1fr 1fr; }
@@ -629,6 +636,12 @@ footer {
 
   .social img {
     max-width: 10%; }
+
+  /* Contact Section */
+  .contact div:nth-child(1) h2 {
+    font-size: 2rem; }
+  .contact div:nth-child(1) p {
+    font-size: 1.2rem; }
 
   /* Footer Section */
   footer .social img {

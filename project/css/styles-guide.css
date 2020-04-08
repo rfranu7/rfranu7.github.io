@@ -473,6 +473,10 @@ main section {
     text-align: center; }
   .guideData div:nth-child(2) {
     padding: 1rem; }
+    .guideData div:nth-child(2) h2 {
+      font-size: 1.75rem; }
+    .guideData div:nth-child(2) p {
+      font-size: 1rem; }
   .guideData img {
     max-width: 100%; }
 
@@ -540,6 +544,8 @@ footer {
   /* Guide Section */
   .guides {
     max-width: 520px; }
+    .guides .guideData div:nth-child(2) p {
+      font-size: 1.1rem; }
 
   /* Newsletter Section */
   .newsletter form {

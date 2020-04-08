@@ -597,8 +597,12 @@ main section {
   .river img {
     max-width: 100%; }
   .river div:nth-child(2) {
-    font-size: 1rem;
-    padding: .8rem; }
+    padding: .8rem .8rem .8rem 1.25rem; }
+    .river div:nth-child(2) h2 {
+      text-align: center;
+      font-size: 1.75rem; }
+    .river div:nth-child(2) p {
+      font-size: 1rem; }
 
 /* Trips Section */
 .trips {
@@ -618,6 +622,10 @@ main section {
   justify-content: center; }
   .trip-data div:nth-child(2) {
     padding: 0 1.5rem 1.5rem 1.5rem; }
+    .trip-data div:nth-child(2) h3 {
+      font-size: 1.25rem; }
+    .trip-data div:nth-child(2) p {
+      font-size: 1rem; }
 
 .book-btn {
   padding: 1rem;
@@ -645,6 +653,10 @@ main section {
   .contact div:nth-child(1) {
     grid-column: 1;
     padding: 2rem; }
+    .contact div:nth-child(1) h2 {
+      font-size: 1.75rem; }
+    .contact div:nth-child(1) p {
+      font-size: 1rem; }
 
 iframe {
   width: 100%; }
@@ -745,21 +757,19 @@ footer {
     border-right: none;
     border-top: 1px solid #333; }
 
-  /* Blog Section */
-  .blog {
-    grid-template-columns: 2fr 1fr; }
-    .blog img {
-      max-width: 99%; }
-
-  .sub-article {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-row-gap: .1rem;
-    text-align: right; }
+  /* River Section */
+  .river div:nth-child(2) p {
+    font-size: 1.1rem; }
 
   /* Trips Section */
   .trips {
     grid-template-columns: 1fr 1fr; }
+    .trips .trip-data div:nth-child(2) p {
+      font-size: 1.1rem; }
+
+  /* Contact Section */
+  .contact div:nth-child(1) p {
+    font-size: 1.1rem; }
 
   /* Newsletter Section */
   .newsletter form {
@@ -812,13 +822,11 @@ footer {
   .weather-data:nth-child(5) {
     border-top: none; }
 
-  /* Blog Section */
-  .blog {
-    grid-template-columns: 1fr 1fr; }
-
   /* River Section */
   .river {
     grid-template-columns: 1fr 1fr; }
+    .river div:nth-child(2) {
+      padding: .8rem .8rem .8rem .8rem; }
 
   /* Trips Section */
   .trips {
@@ -855,6 +863,12 @@ footer {
 
   .text-container {
     top: 65%; }
+
+  /* River Section */
+  .river div:nth-child(2) h2, .contact div:nth-child(1) h2 {
+    font-size: 2rem; }
+  .river div:nth-child(2) p, .contact div:nth-child(1) p {
+    font-size: 1.2rem; }
 
   /* Footer Section */
   footer .social img {

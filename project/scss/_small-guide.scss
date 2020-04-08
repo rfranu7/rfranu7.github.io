@@ -108,13 +108,21 @@ main section {
         margin: 1rem;
 
 
-    div:nth-child(1){
+    div:nth-child(1) {
         text-align: center;
     }
 
 
-    div:nth-child(2){
+    div:nth-child(2) {
         padding: 1rem;
+
+        h2 {
+            font-size: 1.75rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
     }
 
     img {

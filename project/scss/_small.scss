@@ -270,8 +270,16 @@ main section {
     }
 
     div:nth-child(2) {
-        font-size: 1rem;
-        padding: .8rem;
+        padding: .8rem .8rem .8rem 1.25rem;
+
+        h2 {
+            text-align: center;
+            font-size: 1.75rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
     }
 }
 
@@ -298,6 +306,14 @@ main section {
 
     div:nth-child(2) {
         padding: 0 1.5rem 1.5rem 1.5rem;
+    
+        h3 {
+            font-size: 1.25rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
     }
 }
 
@@ -333,6 +349,14 @@ main section {
     div:nth-child(1) {
         grid-column: 1;
         padding: 2rem;
+        
+        h2 {
+            font-size: 1.75rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
     }
 }
 

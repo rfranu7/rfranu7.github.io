@@ -2,6 +2,13 @@
 
 .trips {
     grid-template-columns: 1fr 1fr;
+
+    .trip-data div:nth-child(2) {
+
+        p {
+            font-size: 1.1rem;
+        }
+    }
 }
 
 /* Newsletter Section */

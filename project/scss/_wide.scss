@@ -12,6 +12,19 @@ nav {
     top: 65%;
 }
 
+/* River Section */
+
+.river div:nth-child(2), .contact div:nth-child(1) {
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+}
+
 /* Footer Section */
 
 footer .social img{

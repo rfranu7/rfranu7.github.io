@@ -43,16 +43,14 @@ nav {
     border-top: none;
 }
 
-/* Blog Section */
-
-.blog {
-    grid-template-columns: 1fr 1fr;
-}
-
 /* River Section */
 
 .river {
     grid-template-columns: 1fr 1fr;
+
+    div:nth-child(2) {
+        padding: .8rem .8rem .8rem .8rem;
+    }
 }
 
 /* Trips Section */

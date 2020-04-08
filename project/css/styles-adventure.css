@@ -474,6 +474,10 @@ main section {
   justify-content: center; }
   .trip-data div:nth-child(2) {
     padding: 0 1.5rem 1.5rem 1.5rem; }
+    .trip-data div:nth-child(2) h3 {
+      font-size: 1.25rem; }
+    .trip-data div:nth-child(2) p {
+      font-size: 1rem; }
 
 .book-btn {
   padding: 1rem;
@@ -516,6 +520,8 @@ footer {
   /* Trips Section */
   .trips {
     grid-template-columns: 1fr 1fr; }
+    .trips .trip-data div:nth-child(2) p {
+      font-size: 1.1rem; }
 
   /* Newsletter Section */
   .newsletter form {

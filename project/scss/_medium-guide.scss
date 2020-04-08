@@ -2,6 +2,13 @@
 
 .guides {
     max-width: 520px;
+
+    .guideData div:nth-child(2) {
+
+        p {
+            font-size: 1.1rem;
+        }
+    }
 }
 
 /* Newsletter Section */
