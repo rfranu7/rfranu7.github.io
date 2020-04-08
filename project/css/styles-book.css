@@ -461,12 +461,13 @@ main section {
   margin: 2rem auto; }
 
 table {
-  border: 1px solid #333;
-  overflow: auto; }
+  border: 2px solid #333;
+  overflow: auto;
+  border-spacing: 0; }
 
 td, th {
-  border-right: 1px solid #333;
-  border-bottom: 1px solid #333;
+  border-right: 2px solid #333;
+  border-bottom: 2px solid #333;
   padding: .1rem;
   text-align: center; }
 
@@ -481,6 +482,13 @@ tr:nth-child(7), tr:nth-child(8) {
 
 .small-bottom {
   border-bottom: none; }
+
+tr:nth-child(1) td, tr:nth-child(1) th {
+  background-color: #034687;
+  color: #FFF; }
+
+tr {
+  background-color: white; }
 
 /* Contact Section */
 .contact-page form {
@@ -565,7 +573,7 @@ footer {
     display: table-row; }
 
   .small-bottom {
-    border-bottom: 1px solid #333; }
+    border-bottom: 2px solid #333; }
 
   /* Contact Section */
   .contact-page input[type="checkbox"] {
