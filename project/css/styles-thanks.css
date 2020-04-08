@@ -468,25 +468,20 @@ main section {
     padding: 1rem;
     width: 70%;
     margin: 0.5rem;
-    border-radius: 5px; }
-  .card button a {
+    border-radius: 10px;
     text-decoration: none;
     color: #FFF;
     font-weight: bold; }
   .card .blue-btn {
-    border: 2px solid #034687; }
-    .card .blue-btn a {
-      text-decoration: none;
-      color: #034687; }
-
-.blue-btn-solid {
-  background-color: #034687; }
-  .blue-btn-solid a {
+    border: 2px solid #034687;
+    text-decoration: none;
+    color: #034687; }
+  .card .red-btn {
+    background-color: #E10032; }
+  .card .blue-btn-solid {
+    background-color: #034687;
     text-decoration: none;
     color: #FFF; }
-
-.red-btn {
-  background-color: #E10032; }
 
 .red-btn:hover {
   background-color: #034687;

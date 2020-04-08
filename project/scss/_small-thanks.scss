@@ -107,10 +107,7 @@ main section {
         padding: 1rem;
         width: 70%;
         margin: 0.5rem;
-        border-radius: 5px;
-    }
-
-    button a {
+        border-radius: 10px;
         text-decoration: none;
         color: #FFF;
         font-weight: bold;
@@ -118,23 +115,19 @@ main section {
     
     .blue-btn {
         border: 2px solid #034687;
-        a {
-            text-decoration: none;
-            color: #034687;
-        }
+        text-decoration: none;
+        color: #034687;
     }
-}
 
-.blue-btn-solid {
-    background-color: #034687;
-    a {
+    .red-btn {
+        background-color: #E10032
+    }
+
+    .blue-btn-solid {
+        background-color: #034687;
         text-decoration: none;
         color: #FFF;
     }
-}
-
-.red-btn {
-    background-color: #E10032
 }
 
 .red-btn:hover {

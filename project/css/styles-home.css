@@ -629,14 +629,17 @@ main section {
 
 .book-btn {
   padding: 1rem;
+  width: 50%;
   font-size: 1.1rem;
   font-weight: bold;
   background-color: #E10032;
   border: none;
   border-radius: 10px;
   color: #FFF;
-  text-decoration: none;
-  line-height: 3rem; }
+  text-decoration: none; }
+
+.cta-btn {
+  width: 30%; }
 
 .book-btn:hover {
   background-color: #034687; }

@@ -319,6 +319,7 @@ main section {
 
 .book-btn {
     padding: 1rem;
+    width: 50%;
     font-size: 1.1rem;
     font-weight: bold;
     background-color: #E10032;
@@ -326,7 +327,10 @@ main section {
     border-radius: 10px;
     color: #FFF;
     text-decoration: none;
-    line-height: 3rem;
+}
+
+.cta-btn {
+    width: 30%;
 }
 
 .book-btn:hover {
