@@ -22,7 +22,7 @@ const links = [
     }
   ]
 
-for(var i=0;i < links.length();i++){
+for(var i=0;i < links.length;i++){
     listItem = document.createElement("li");
     a = document.createElement("a");
     link = document.createTextNode(links[i][0]);
