@@ -22,13 +22,13 @@ const links = [
     }
   ]
 
-for(entry in links){
+for(var i=0;i < links.length();i++){
     listItem = document.createElement("li");
     a = document.createElement("a");
-    link = document.createTextNode(links[entry][0]);
+    link = document.createTextNode(links[i][0]);
     a.appendChild(link);
-    a.title = "go to "+links[entry][0];
-    a.href = links[entry][1];
+    a.title = "go to "+links[i][0];
+    a.href = links[i][1];
 
     listItem.appendChild(a);
     document.getElementById(portfolioLinks).appendChild(listItem);
