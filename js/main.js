@@ -21,6 +21,8 @@ const links = [
       url: "week1/index.html"
     }
   ]
+  const jsonLinks = JSON.parse(items)
+  console.log(jsonLinks);
 
   console.log("link:"+links[0].url)
 
