@@ -34,6 +34,7 @@ fetch(requestURL)
         a.appendChild(link);
         a.setAttribute("title","go to "+links[i].label);
         a.setAttribute("href",links[i].url);
+        a.setAttribute("target","blank");
 
         listItem.appendChild(a);
         
