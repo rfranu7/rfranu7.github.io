@@ -1,13 +1,13 @@
 <!doctype html>
 <html>
 <head>
-    <title>Flashcards</title>
+    <title>Japanese Flashcards</title>
     <link href="flashcard.css" rel="stylesheet">
 </head>
 
 <body onload="showAllCards()">
     <section class="title">
-        <h1>Flashcards!</h1>
+        <h1>Japanese Flashcards!</h1>
         <button class="btn" onclick="openModal()">Add Card</button>
     </section>
     <section id="displayCards"></section>
@@ -18,7 +18,7 @@
                 <span class="close">&times;</span>
             </section>
             <section class="form">
-                <input id="character_input" placeholder="Japanese Character"></input>
+                <input id="character_input" placeholder="japanese character"></input>
                 <input id="translation_input" placeholder="romanized version"></input>
                 <textarea id="meaning_input" placeholder="Write the english translation here"></textarea>
                 <button onclick="addCard()">Save</button>
