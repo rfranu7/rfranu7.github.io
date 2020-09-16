@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+    <title>Customers</title>
+    <link href="flashcard.css" rel="stylesheet">
+</head>
+
+<body onload="showAllCards()">
+    <section class="title">
+        <h1>Flashcards!</h1>
+        <button class="btn" onclick="openModal()">Add Card</button>
+    </section>
+    <section id="displayCards"></section>
+    
+    <div id="addCardModal" class="modal hide">
+        <div class="modal-content">
+            <section class="row-1">
+                <span class="close">&times;</span>
+            </section>
+            <section class="form">
+                <input id="character_input" placeholder="Japanese Character"></input>
+                <input id="translation_input" placeholder="English Translation"></input>
+                <textarea id="meaning_input" placeholder="Write the meaning here"></textarea>
+                <button onclick="addCard()">Save</button>
+            </section>
+        </div>
+    </div>
+
+    
+    <script type="text/javascript" src="flashcard.js"></script>
+</body>
+</html>
