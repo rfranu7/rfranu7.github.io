@@ -25,10 +25,12 @@ body {
     bottom: 0;
     right: 0;
     transform: translate(-50% -50%);
+    display: grid;
 }
 
 .row-1{
     height: 28px;
+    order: 3;
 }
 
 .close {
@@ -178,5 +180,9 @@ body {
     .form textarea {
         width: 360px;
         height: 100px;
+    }
+
+    .row-1{
+        order: -1;
     }
 }
