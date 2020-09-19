@@ -17,10 +17,14 @@ body {
 
 .modal-content {
     background-color: #fefefe;
-    margin: 15% auto;
+    margin: 0;
     padding: 15px 20px;
     border: 1px solid #888;
-    width: 400px;
+    width: 90%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    transform: translate(-50% -50%);
 }
 
 .row-1{
@@ -66,8 +70,15 @@ body {
     background-color: #f5c08d;
 }
 
+.form input {
+    padding: .5rem;
+}
+
 .form input, .form textarea {
-    margin: .15rem 0;
+    padding: .5rem;
+    margin: .5rem 0;
+    display: block;
+    width: 90%;
 }
 
 .form button {
@@ -75,8 +86,8 @@ body {
 }
 
 .form textarea {
-    width: 350px;
-    height: 100px;
+    width: 90%;
+    height: 200px;
 }
 
 #displayCards{
@@ -145,6 +156,27 @@ body {
     display: block;
 }
 
-@media only screen and (min-width: 520px){
+@media only screen and (min-width: 768px){
+    .modal-content {
+        margin: 15% auto;
+        width: 400px;
+        position: unset;
+        bottom: unset;
+        left: unset;
+        transform: translate(-50% -50%);
+    }
+
+    .form input, .form textarea {
+        margin: .5rem 0;
+        display: block;
+    }
     
+    .form button {
+        display: block;
+    }
+    
+    .form textarea {
+        width: 360px;
+        height: 100px;
+    }
 }

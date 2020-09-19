@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Japanese Flashcards</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="flashcard.css" rel="stylesheet">
 </head>
 
@@ -17,11 +18,12 @@
             <section class="row-1">
                 <span class="close">&times;</span>
             </section>
+            <h3>Enter the character</h3>
             <section class="form">
                 <input id="character_input" placeholder="japanese character"></input>
                 <input id="translation_input" placeholder="romanized version"></input>
                 <textarea id="meaning_input" placeholder="Write the english translation here"></textarea>
-                <button onclick="addCard()">Save</button>
+                <button class="btn" onclick="addCard()">Save</button>
             </section>
         </div>
     </div>
