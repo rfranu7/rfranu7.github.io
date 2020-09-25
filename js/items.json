@@ -3,6 +3,16 @@
         {
             "label": "Week 1 - Japanese Flashcard Collector",
             "url": "/wdd330/week01/japan-flashcards.html"
+        },
+
+        {
+            "label": "Week 2 - Team Activity",
+            "url": "/wdd330/week02/team-activity.html"
+        },
+
+        {
+            "label": "Week 2 - Extended Team Activity",
+            "url": "/wdd330/week02/team-activity-extended.html"
         }
     ]
 }

@@ -1,0 +1,158 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>W02: Team Activity</title>
+        <link rel="shortcut icon" href="favicon.ico">
+        <meta name="author" content="Randeep Ranu">
+        <meta name="description" content="Extended version of the team activity that handles error message">
+
+        <style>
+            body {
+                text-align: center;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            div {
+                margin: 1rem 0;
+            }
+
+            div p {
+                padding: 1rem;
+            }
+
+            .error {
+                background-color: #ff7676;
+            }
+
+            input {
+                width: 40%;
+                padding: .5rem .25rem;
+            }
+            
+            button {
+                border-radius: 10px;
+                border: none;
+                background-color: #ffc862;
+                padding: .5rem 1rem;
+                margin: .5rem .5rem;
+            }
+
+            @media only screen and (min-width: 500px){
+                .btn {   
+                    margin: 0 .5rem;
+                }
+            }
+
+        </style>
+
+        <script>
+
+            /**********************************************************************************
+            /* Handles the four operations
+            /*  -- pass in the operation functions (add, sub, mult, or div)
+            /*  -- throws an error if any of the input is blank
+            /*********************************************************************************/
+
+            function handleOperation(operation){
+                try {
+                    var num1 = validateNumber("inputRef1");
+                    var num2 = validateNumber("inputRef2");
+
+                    var message;
+                    const output = operation(num1, num2);
+                    message = "<p>The total is : "+ output+"</p>";
+                }
+                catch(err) {
+                    message = "<p class='error'>"+err+"</p>";
+                }
+                document.getElementById("display").innerHTML = message;
+            }
+
+            // list of operation functions
+
+            const add = (num1, num2) => num1 + num2;
+            const sub = (num1, num2) => num1 - num2;
+            const mult = (num1, num2) => num1 * num2;
+            const div = (num1, num2) => num1 / num2;
+
+
+            /**********************************************************************************
+            /* Sums All the numbers based on one input
+            /*  -- uses int instead of float for calculation
+            /*  -- throws error if the second input box is filled
+            /*  -- calls recursion to calculate all the values upto the parameter given
+            /*********************************************************************************/
+
+            function sumAll(){
+                try {
+                    var inputNumber = validateNumber("inputRef1", parseInt);
+                    var inputNumber2 = validateNumber("inputRef2", parseInt, true);
+                    if(inputNumber2 == ""){
+                        var total = calculateAll(inputNumber);
+                        var message = "<p>The total is: "+total+"</p>";
+                    }
+                    else {
+                        throw "Error: This operation will only be performed if the second text box is empty.";
+                    }
+                }
+                catch(err){
+                    var message = "<p class='error'>"+err+"</p>";
+                }
+                document.getElementById("display").innerHTML = message;
+            }
+
+            function calculateAll(num) {
+                if(num === 1){ return 1};
+                return num + calculateAll(num-1);
+            }
+
+            /**********************************************************************************
+            /* Gets and validates the number from the parameter.
+            /*  -- pass Id of the input element
+            /*  -- pass the parse method to use (default is float)
+            /*  -- pass if the blank error message should be handled (default is false)
+            /*********************************************************************************/
+
+            function validateNumber(numberRef, parseMethod = parseFloat, allowBlank = false){
+                const inputNumber = document.getElementById(numberRef).value;
+                const intNumber = parseMethod(inputNumber);
+                if(inputNumber == "" && !allowBlank){
+                    throw "Error: The text box cannot be blank.";
+                }
+                else if(inputNumber == "" && allowBlank){
+                    return 0;
+                }
+                else {
+                    return intNumber;
+                }
+            }
+        </script>
+                
+    </head>
+    
+    <body>
+
+        <main>
+            <h1>Calculator of Some Sort</h1>
+
+            <input id="inputRef1" type="number" placeholder="Enter a number">
+            <input id="inputRef2" type="number" placeholder="Enter a number">
+            <div>
+                <button class="btn" onclick="handleOperation(add)">Add</button>
+                <button class="btn" onclick="handleOperation(sub)">Subtract</button>
+                <button class="btn" onclick="handleOperation(mult)">Multiply</button>
+                <button class="btn" onclick="handleOperation(div)">Divide</button>
+                <button class="btn" onclick="sumAll()">Sum Number</button>
+            </div>
+
+            <div id="display"></div>
+        </main>
+
+    </body>
+</html>

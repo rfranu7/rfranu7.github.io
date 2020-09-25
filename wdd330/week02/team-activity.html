@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- Step 01 -->
+  <input type="text" id="entry1">
+  <input type="button" onclick="readValue()" value="Click me">
+  <div id="result1"></div>
+
+  <!-- Step 02 -->
+  <input type="number" id="entry2" required>
+  <input type="button" onclick="addValue()" value="Click me">
+  <div id="result2"></div>
+
+  <!-- Step 03 -->
+  <input type="number" id="entry3" required>
+  <input type="button" onclick="sumEntries()" value="+">
+  <input type="button" onclick="subEntries()" value="-">
+  <input type="button" onclick="mulEntries()" value="*">
+  <input type="button" onclick="divEntries()" value="/">
+  <div id="result3"></div>
+
+  <script>
+    function readValue(){
+      let entry = document.getElementById("entry1");
+      let result = document.getElementById("result1");
+      result.innerHTML = entry.value;
+    }
+
+    function calculateAll(num) {
+                if(num === 1){ return 1};
+                return num + calculateAll(num-1);
+    }
+
+    function addValue(){
+      let result = document.getElementById("result2");
+      // result.innerHTML = entry.value;
+      // console.log(Number.isFinite(parseInt(entry.value)));
+      let numberEntry = validate("entry2");
+ 
+      let total = calculateAll(numberEntry);
+      result.innerHTML = total;
+      
+
+
+    }
+
+    function sumEntries(){
+
+      let result = document.getElementById("result3");
+      let numberEntry2 = validate("entry2");
+      let numberEntry3 = validate("entry3");
+
+      let total = numberEntry2 + numberEntry3;
+      result.innerHTML = total;
+      
+
+    }
+
+    function subEntries(){
+
+      let result = document.getElementById("result3");
+      let numberEntry2 = validate("entry2");
+      let numberEntry3 = validate("entry3");
+
+      let total = numberEntry2 - numberEntry3;
+      result.innerHTML = total;
+      
+
+    }
+
+    const mulEntries = function(){
+
+      let result = document.getElementById("result3");
+      let numberEntry2 = validate("entry2");
+      let numberEntry3 = validate("entry3");
+
+      let total = numberEntry2 * numberEntry3;
+      result.innerHTML = total;
+      
+
+    }
+
+    const divEntries = ()=>{
+
+      let result = document.getElementById("result3");
+      let numberEntry2 = validate("entry2");
+      let numberEntry3 = validate("entry3");
+
+        errorHandler(numberEntry3 === 0, function(){alert("Can't divide by zero")});
+        if(numberEntry3 === 0){
+          result.innerHTML = "Can't divide by zero";
+        }
+        else{
+          let total = numberEntry2 / numberEntry3;
+          result.innerHTML = total;
+        }
+        
+      
+
+    }
+
+    const errorHandler = (condition,userFunction)=>{
+      if(condition){
+        userFunction();
+      }
+    }
+
+    function validate(elementID){
+
+      let element = document.getElementById(elementID)
+      let numberEntry = parseFloat(element.value)
+     
+      errorHandler(isNaN(numberEntry), function(){
+        alert("You have not entered a number");numberEntry = 0;
+      });
+
+      return numberEntry;
+    
+    }
+  </script>
+</body>
+</html>
