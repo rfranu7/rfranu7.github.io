@@ -18,6 +18,11 @@
         {
             "label": "Week 2 - Extended Team Activity",
             "url": "/wdd330/week02/team-activity-extended.html"
+        },
+
+        {
+            "label": "Week 3 - Robot",
+            "url": "/wdd330/week03/robot.html"
         }
     ]
 }
