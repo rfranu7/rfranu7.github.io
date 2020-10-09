@@ -8,7 +8,6 @@
         <link rel="shortcut icon" href="favicon.ico">
         <meta name="author" content="Randeep Ranu">
         <meta name="description" content="CHANGE DESCRIPTION">
-        <link rel="stylesheet" type="text/css" href="/css/small.css">
 
         <style>
 
@@ -16,6 +15,14 @@
                 background-color: #231B19;
                 color: white;
                 text-align: center;
+            }
+
+            header {
+                background-color: #05386B;
+                color: white;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                border-radius: 15px;
             }
 
             h1 {
@@ -153,25 +160,25 @@
                 <div class="item">                    
                     <h2>Sword | $<span id="swordAmount">20</span></h2>
                     <section class="bottom">
+                        <button onclick="removeItem('sword')">-</button>
                         <input id="sword" type="number"value="1">
                         <button onclick="addItem('sword')">+</button>
-                        <button onclick="removeItem('sword')">-</button>
                     </section>
                 </div>
                 <div class="item">
                     <h2>Shield | $<span id="shieldAmount">15</span></h2>
                     <section class="bottom">
+                        <button onclick="removeItem('shield')">-</button>
                         <input id="shield" type="number"value="1">
                         <button onclick="addItem('shield')">+</button>
-                        <button onclick="removeItem('shield')">-</button>
                     </section>
                 </div>
                 <div class="item">
                     <h2>Potion | $<span id="potionAmount">1</span></h2>
                     <section class="bottom">
+                        <button onclick="removeItem('potion')">-</button>
                         <input id="potion" type="number" value="1">
                         <button onclick="addItem('potion')">+</button>
-                        <button onclick="removeItem('potion')">-</button>
                     </section>
                 </div>
             </div>
