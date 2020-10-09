@@ -1,0 +1,334 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>CHANGE TITLE</title>
+        <link rel="shortcut icon" href="favicon.ico">
+        <meta name="author" content="Randeep Ranu">
+        <meta name="description" content="CHANGE DESCRIPTION">
+        <link rel="stylesheet" type="text/css" href="/css/small.css">
+
+        <style>
+
+            body {
+                background-color: #231B19;
+                color: white;
+                text-align: center;
+            }
+
+            h1 {
+                font-size: 3rem;
+            }
+
+            main {
+                max-width: 1200px;
+                margin: 3rem auto;
+            }
+
+            .store {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                justify-content: center;
+                color: black;
+            }
+
+            .item {
+                background-color: white;
+                width: 350px;
+                height: 500px;
+                display: grid;
+                border-radius: 10px;
+            }
+
+            .item:first-child{
+                background-image: url(sword.png);
+            }
+
+            .item:nth-child(2){
+                background-image: url(shield.png);
+            }
+
+            .item:last-child{
+                background-image: url(potion.png);
+            }
+
+            .bottom {
+                margin: .5rem auto;
+                align-self: flex-end;
+            }
+
+            input {
+                width: 60px;
+                padding: .5rem;
+            }
+
+            button {
+                background-color: #f99535;
+                border: none;
+                font-weight: bold;
+                border-radius: 5px;
+                padding: .5rem 1rem;
+            }
+
+            .keeper {
+                background-image: url(keeper.png);
+                width: 400px;
+                height: 800px;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+            }
+
+            .mainButtons {
+                margin: 2rem auto;
+            }
+
+            #debug {
+                text-align: left;
+                margin: 2rem 0;
+            }
+
+            .cartItems {
+                margin: 0;
+            }
+
+            .total {
+                font-weight: bold;
+            }
+
+            .modal {
+                display: none;
+                position: fixed;
+                z-index: 1;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                background-color: rgb(0,0,0);
+                background-color: rgba(0,0,0,0.4);
+            }
+
+            .close {
+                color: #aaa;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+            }
+
+            .close:hover, .close:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+            .modal-content {
+                background-color: #fefefe;
+                margin: 15% auto;
+                padding: 20px;
+                border: 1px solid #888;
+                width: 25%;
+            }
+
+            #checkoutModal {
+                padding: .5rem 1rem;
+                font-size: 1.3rem;
+            }
+
+            #payment {
+                width: 300px;
+            }
+
+        </style>
+    </head>
+    
+    <body>
+
+        <header><h1>WELCOME ADVENTURER!</h1></header>
+        <main>
+            
+            <div class="store">
+                <div class="item">                    
+                    <h2>Sword | $<span id="swordAmount">20</span></h2>
+                    <section class="bottom">
+                        <input id="sword" type="number"value="1">
+                        <button onclick="addItem('sword')">+</button>
+                        <button onclick="removeItem('sword')">-</button>
+                    </section>
+                </div>
+                <div class="item">
+                    <h2>Shield | $<span id="shieldAmount">15</span></h2>
+                    <section class="bottom">
+                        <input id="shield" type="number"value="1">
+                        <button onclick="addItem('shield')">+</button>
+                        <button onclick="removeItem('shield')">-</button>
+                    </section>
+                </div>
+                <div class="item">
+                    <h2>Potion | $<span id="potionAmount">1</span></h2>
+                    <section class="bottom">
+                        <input id="potion" type="number" value="1">
+                        <button onclick="addItem('potion')">+</button>
+                        <button onclick="removeItem('potion')">-</button>
+                    </section>
+                </div>
+            </div>
+            <div class="keeper"></div>
+            <div class="mainButtons">
+                <button id="checkoutModal">Proceed to Checkout</button>
+            </div>
+            <div id="debug"></div>
+            
+        </main>
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <input id="payment" type="number" placeholder="Enter payment amount">
+              <button onclick="checkout()">Checkout</button>
+            </div>
+        </div>
+
+    </body>
+
+    <script>
+        class ShoppingCart {
+
+            total = 0;
+            cart = {};
+
+            display(){
+                const debug = document.getElementById("debug");
+                while (debug.firstChild) {
+                    debug.firstChild.remove();
+                }
+                
+                const h2 = document.createElement("h2");
+                h2.textContent = "CART ITEMS";
+                debug.appendChild(h2);
+
+                if(this.checkCart()){
+                    const p = document.createElement("p");
+                    p.className = "cartItems";
+                    p.textContent = "no items found.";
+                    debug.appendChild(p);
+                }
+                Object.entries(this.cart).forEach(([key,value]) => {   
+                    const p = document.createElement("p");
+                    p.className = "cartItems";
+                    p.textContent = key+": "+value;
+                    debug.appendChild(p);
+                })
+                const p = document.createElement("p");
+                p.className = "total";
+                p.textContent = "TOTAL: $"+this.total;
+                debug.appendChild(p);
+            }
+
+            addItem(item, quantity, price){
+                if(this.cart.hasOwnProperty(item)){
+                    this.cart[item] = parseInt(this.cart[item])+parseInt(quantity);
+                } else {
+                    this.cart[item] = quantity
+                }
+                this.total += (quantity*price);
+            }
+
+            removeItem(item, quantity, price){
+                if(this.cart.hasOwnProperty(item)){
+                    if(this.cart[item] > quantity){
+                        this.cart[item] = this.cart[item]-quantity;
+                    } else {
+                        delete this.cart[item];
+                    }
+                
+                    this.total -= (quantity*price);
+                } else {
+                    alert("item does not exist in the cart");
+                }
+            }
+
+            checkCart(){
+                return Object.keys(this.cart).length === 0;
+            }
+
+            checkout(payment){
+                if(this.checkCart()){
+                    alert("There are no cart items for you to checkout.");
+                } else {
+                    if(payment<this.total){
+                        this.total -= payment;
+                        this.display();
+                        alert("Your payment is still incomplete. Please pay the full amount");
+                        return "incomplete";
+                    } else {
+                        this.total -= payment;
+                        if(this.total < 0){
+                            alert("Thank you for your purchase! Your change is $"+Math.abs(this.total));
+                        } else {
+                            alert("Thank you for your purchase!");
+                        }
+                        this.resetCart();
+                        this.display();
+                        return "success";
+                    }
+                }
+            }
+
+            resetCart(){
+                for (var key in this.cart) {
+                    delete this.cart[key];
+                }
+                this.total = 0;
+            }
+        }
+
+        var modal = document.getElementById("myModal");
+        var btn = document.getElementById("checkoutModal");
+        var span = document.getElementsByClassName("close")[0];
+
+        btn.onclick = function() {
+            if(cart.checkCart()){
+                alert("There are no cart items for you to checkout.")
+                return
+            }
+            modal.style.display = "block";
+        }
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        const cart = new ShoppingCart();
+
+        function addItem(itemName){
+            amount = document.getElementById(itemName+"Amount").textContent;
+            quantity = document.getElementById(itemName).value;
+            cart.addItem(itemName, quantity, amount);
+            cart.display();
+        }
+
+        function removeItem(itemName){
+            amount = document.getElementById(itemName+"Amount").textContent;
+            quantity = document.getElementById(itemName).value;
+            cart.removeItem(itemName, quantity, amount);
+            cart.display();
+        }
+
+        function checkout(){
+            const payment = document.getElementById("payment").value;
+            const status = cart.checkout(payment);
+            if(status == "success"){
+                modal.style.display = "none";
+            }   
+        }
+    </script>
+</html>
