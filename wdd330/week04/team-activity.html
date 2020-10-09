@@ -54,7 +54,7 @@
         let totalTurns = 0;
 
         let winnerArray = new Array(9);
-        console.log(winnerArray);
+        let notFinished = true
 
         let turn = 0;
         const players = [
@@ -64,26 +64,22 @@
 
         //Writes X and O for each click
         function takeTurn(event) {
-            console.log('clicked');
 
-            let square = event.target;
-            console.log(square);
-            square.textContent = players[turn].symbol;
+            if(notFinished){
+                let square = event.target;
+                if(square.textContent == ""){
+                    square.textContent = players[turn].symbol;
+                }
 
-            winnerArray[parseInt(square.id) - 1] = players[turn].name;
-            console.log(winnerArray);
+                winnerArray[parseInt(square.id) - 1] = players[turn].name;
+                changeTurns();totalTurns++;
 
-            changeTurns();
-
-            totalTurns++;
-
-            if (totalTurns >= 5) {
-            winner();
+                if (totalTurns >= 5) {
+                    winner();
+                }
+            } else {
+                resetBoard();
             }
-            //if(totalTurns == 9) {
-                //winner();
-               // window.setTimeout(timeDelay, 500);
-            
         }
 
         //delays the alert pop-up
@@ -107,68 +103,78 @@
 
                 winnerArray[i-1] = '';
             }
-
-
+            totalTurns = 0;
             turn = 0;
+            notFinished = true;
         }
 
         //Who won?
         function winner() {
-            if (winnerArray[0] === winnerArray[1] && winnerArray[0] === winnerArray[2] && winnerArray[0] !== '') {
+            if (winnerArray[0] === winnerArray[1] && winnerArray[0] === winnerArray[2] && typeof(winnerArray[0]) !== 'undefined' && winnerArray[0] !== '') {
                 let message = 'The winner is ' + winnerArray[0] + '!'
                 window.setTimeout(function(){
                     timeDelay(message);
-                }, 500);
+                }, 200);
+                notFinished = false;
             }
-            else if (winnerArray[3] === winnerArray[4] && winnerArray[3] === winnerArray[5] && winnerArray[3] !== '') {
+            else if (winnerArray[3] === winnerArray[4] && winnerArray[3] === winnerArray[5] && typeof(winnerArray[3]) !== 'undefined' && winnerArray[3] !== '') {
                 let message = 'The winner is ' + winnerArray[3] + '!'
                 window.setTimeout(function(){
                     timeDelay(message);
-                }, 500);
+                }, 200);
+                notFinished = false;
             }
-            else if (winnerArray[6] === winnerArray[7] && winnerArray[6] === winnerArray[8] && winnerArray[6] !== '') {
+            else if (winnerArray[6] === winnerArray[7] && winnerArray[6] === winnerArray[8] && typeof(winnerArray[6]) !== 'undefined' && winnerArray[6] !== '') {
                 let message = 'The winner is ' + winnerArray[6] + '!'
                 window.setTimeout(function(){
                     timeDelay(message);
-                }, 500);
+                }, 200);
+                notFinished = false;
             }
-            else if (winnerArray[0] === winnerArray[3] && winnerArray[0] === winnerArray[6] && winnerArray[0] !== '') {
+            else if (winnerArray[0] === winnerArray[3] && winnerArray[0] === winnerArray[6] && typeof(winnerArray[0]) !== 'undefined' && winnerArray[0] !== '') {
                 let message = 'The winner is ' + winnerArray[0] + '!'
                 window.setTimeout(function(){
                     timeDelay(message);
-                }, 500);
+                }, 200);
+                notFinished = false;
             }
-            else if (winnerArray[1] === winnerArray[4] && winnerArray[1] === winnerArray[7] && winnerArray[1] !== '') {
+            else if (winnerArray[1] === winnerArray[4] && winnerArray[1] === winnerArray[7] && typeof(winnerArray[1]) !== 'undefined' && winnerArray[1] !== '') {
                 let message = 'The winner is ' + winnerArray[1] + '!'
                 window.setTimeout(function(){
                     timeDelay(message);
-                }, 500);
+                }, 200);
+                notFinished = false;
             }
-            else if (winnerArray[2] === winnerArray[5] && winnerArray[2] === winnerArray[8] && winnerArray[2] !== '') {
+            else if (winnerArray[2] === winnerArray[5] && winnerArray[2] === winnerArray[8] && typeof(winnerArray[2]) !== 'undefined' && winnerArray[2] !== '') {
                 let message = 'The winner is ' + winnerArray[2] + '!'
                 window.setTimeout(function(){
                     timeDelay(message);
-                }, 500);
+                }, 200);
+                notFinished = false;
             }
-            else if (winnerArray[0] === winnerArray[4] && winnerArray[0] === winnerArray[8] && winnerArray[0] !== '') {
+            else if (winnerArray[0] === winnerArray[4] && winnerArray[0] === winnerArray[8] && typeof(winnerArray[0]) !== 'undefined' && winnerArray[0] !== '') {
                 let message = 'The winner is ' + winnerArray[0] + '!'
                 window.setTimeout(function(){
                     timeDelay(message);
-                }, 500);
+                }, 200);
+                notFinished = false;
             }
-            else if (winnerArray[2] === winnerArray[4] && winnerArray[2] === winnerArray[6] && winnerArray[2] !== '') {
+            else if (winnerArray[2] === winnerArray[4] && winnerArray[2] === winnerArray[6] && typeof(winnerArray[2]) !== 'undefined' && winnerArray[2] !== '') {
                 let message = 'The winner is ' + winnerArray[2] + '!'
                 window.setTimeout(function(){
                     timeDelay(message);
                 }, 500);
+                notFinished = false;
             }
             else {
                 if (totalTurns === 9) {
-                let message = 'The game is a tie!'
-                window.setTimeout(function(){
-                    timeDelay(message);
-                }, 500);
-            }
+                    console.log(totalTurns);        
+                    let message = 'The game is a tie!'
+                    window.setTimeout(function(){
+                        timeDelay(message);
+                    }, 500);
+                    notFinished = false;
+                }
             }
         }
     </script>
