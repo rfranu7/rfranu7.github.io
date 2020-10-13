@@ -142,19 +142,52 @@
     .meron-wala {
       display: grid;
       grid-template-columns: 1fr 1fr;
-    }
-
-    .meron-wala section {
-      background-color: #eeeee9;
+      grid-column-gap: .25rem;
     }
 
     .table-name {
-      padding: 1rem .5rem;
+      border: 1px outset;
+      background: linear-gradient(#eeeee9, #faf7f9);
+      background: -webkit-linear-gradient(#eeeee9, #faf7f9);
+      background: -moz-linear-gradient(#eeeee9, #faf7f9);
+      padding: .5rem;
+      box-shadow: 2px 2px #888888;
+      margin-bottom: 3px;
+      font-size: .85rem;
+    }
+
+    @media only screen and (min-width: 376px){
+      .table-name {
+        font-size: 1.1rem;
+      }
+    }
+
+    .meron-wala section div:nth-child(2){
+      border: 1px outset;
+      background-image: linear-gradient(#eeeee9, #faf7f9);
+      background: -webkit-linear-gradient(#eeeee9, #faf7f9);
+      background: -moz-linear-gradient(#eeeee9, #faf7f9);
+      padding: .5rem;
+      box-shadow: 2px 2px #888888;
+      margin-bottom: 3px;
+      font-size: 1.1rem;
+    }
+
+    .meron-wala table {
+      border: 1px solid #888888;
+      background-color: #eeeee9;
+    }
+
+    .titleDesc {
+      margin-bottom: 0;
     }
 
     .bottom-circles {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+      background: linear-gradient(#eeeee9, #faf7f9);
+      background: -webkit-linear-gradient(#eeeee9, #faf7f9);
+      background: -moz-linear-gradient(#eeeee9, #faf7f9);
     }
 
     .text-span {
@@ -288,7 +321,7 @@
                     <div class="table-name">
                       <b>MERON-WALA</b>
                     </div>
-                      <div style="width:100%; overflow: auto;">
+                    <div style="width:100%; overflow: auto;">
                       <table border="1px" class="center" style="color: white;">
                         <tr>
                           <td>

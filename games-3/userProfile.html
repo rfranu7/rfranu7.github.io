@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
 	<!-- CSS only -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   </head>
@@ -19,7 +21,7 @@
 	  }
 	  
 	  .profileDetail{
-	    margin:3px 20px;
+	    margin:3px;
 	  }
 	  
 	/** Hide scrollbar **/
@@ -31,18 +33,79 @@
 	  -ms-overflow-style: none;  /* IE and Edge */
 	  scrollbar-width: none;  /* Firefox */	  
 	}
+
+	/***************************************/
+
+	.container {
+		color: #9E9E9E;
+		text-align: center;
+	}
+
+	input {
+		box-sizing: border-box;
+		width: 100%;
+		padding: .75rem;
+		font-size: 1rem;
+		font-weight: bold;
+		color: #9E9E9E;
+		background-color: #fff;
+		background-clip: padding-box;
+		border: 1px solid #ced4da;
+		transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+	}
+
+	.btn {
+		box-sizing: border-box;
+		display: block;
+		width: 100%;
+		background-color: #cb0c10;
+		margin-top: 1rem;
+		color: #fff;
+		text-align: center;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		border: 1px solid transparent;
+		padding: .75rem;
+		line-height: 1.5;
+		font-size: 1.1rem;
+		font-weight: bold;
+		transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+	}
+
+	@media only screen and (min-width: 768px){
+		input, .btn{
+			width: 75%;
+		}
+
+		.btn {
+			margin: 1rem auto;
+		}
+
+		.detailsContainer {
+			text-align: center;
+		}
+	}
+
+	@media only screen and (min-width: 1024px){
+		input, .btn{
+			width: 50%;
+		}
+	}
 	</style>
   
   
     <div class="pageHeader"><b>Profile</b>
 	</div>
 	<br/>
-	<div class="container-fluid">
+	<div class="container-fluid container">
 	  <span class="profileHeader">User Account: User 11</span><br/><br/>
 	  <input type="text" placeholder="First Name" class="textfield profileDetail" size="50" readonly><br/>
 	  <input type="text" placeholder="Last Name" class="textfield profileDetail" size="50" readonly><br/>	
 	  <input type="text" placeholder="Contact Number" class="textfield profileDetail" size="50" readonly><br/>	
 	  <input type="text" placeholder="Facebook Account" class="textfield profileDetail" size="50" readonly><br/><br/>
+	  <button type="submit" class="btn btn-danger btn-block">UPDATE</button>
 	</div>
   </body>
 </html>
