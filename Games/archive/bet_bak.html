@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+	<!-- CSS only -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  </head>
+  <body>
+    <style>
+      table, th, td {
+        border: none;
+        border-collapse: collapse;
+      }
+      th, td {
+        padding: 5px;
+        text-align: left;
+      }
+
+      .button {
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 15px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+
+      .button1 {border-radius: 4px;
+                background-color: #d12e1f;
+                padding: 15px 74px;
+                margin: 1px 2px;
+                vertical-align: bottom;
+                color: #e69515;}
+      .button2 {border-radius: 4px;
+                background-color: #302c2c;
+                padding: 11px 14px;
+                margin: 1px 2px;
+                vertical-align: bottom;}
+      .button3 {border-radius: 4px;
+                background-color: #6b6565;
+                padding: 15px 80px;
+                margin: 1px 2px;
+                vertical-align: bottom;}
+      .button4 {border-radius: 4px;
+                background-color: #6b6565;
+                padding: 15px 74px;
+                margin: 1px 2px;
+                vertical-align: bottom;}
+      .button5 {border-radius: 50%;}
+      .button6 {border-radius: 4px;
+                background-color: #000000;
+                padding: 15px 74px;
+                margin: 1px 2px;
+                vertical-align: bottom;
+                color: #e69515;}
+      .button7 {border-radius: 4px;
+                background-color: #6b6565;
+                padding: 15px 38px;
+                margin: 1px 2px;
+                vertical-align: bottom;
+                color: #ffffff;}
+      .button8 {border-radius: 4px;
+                background-color: #5cd950;
+                padding: 15px 22px;
+                margin: 1px 2px;
+                vertical-align: bottom;
+                color: #ffffff;}
+
+      .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+      }
+
+      /* Modal Content */
+      .modal-content {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 30%;
+        border-radius: 10px;
+      }
+
+      /* The Close Button */
+      .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+
+
+
+    </style>
+	
+    <table style="width:100%">
+      <tr>
+        <td style="text-align:center;">
+          <iframe width="797" height="598" src="https://www.youtube.com/embed/d4aAkP3V7l8"
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+            encrypted-media; gyroscope; picture-in-picture">
+          </iframe>
+        </td>
+        <td>
+          <table style="width:100%">
+            <tr>
+              <td style="text-align:center; font-size:30px; color:red">MERON</td>
+              <td style="text-align:center; font-size:15px; color:green">
+                OPEN <br />
+                <font color="black"><b>Fight #70</b></font>
+              </td>
+              <td style="text-align:center; font-size:30px">WALA</td>
+            </tr>
+            <tr>
+              <td style="text-align:center; font-size:50px">Php. 100,000</td>
+              <td style="text-align:center;">Total Bet</td>
+              <td style="text-align:center; font-size:50px">Php. 150,000</td>
+            </tr>
+            <tr>
+              <td style="text-align:center; font-size:30px; color:green">235%</td>
+              <td style="text-align:center;">Payout per 100</td>
+              <td style="text-align:center; font-size:30px; color:red ">160%</td>
+            </tr>
+            <tr>
+              <td colspan="3"><hr /></td>
+            </tr>
+            <tr>
+              <td colspan="3"> Current Wallet: Php.<label id="wallet">10000</label> <a href="./load.html"><button class="button button5" onclick="hideStuff()">+</button></a></td>
+            </tr>
+            <tr>
+              <td colspan="3" style="text-align:center; font-size:30px;">
+                <input type="text" id="myBet"placeholder="0" name="bet" size="28" style="font-size:30px;">
+                <button class="button button2" onclick="document.getElementById('myBet').value = ''">Clear</button>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="3" style="text-align:center;">
+                <button class="button button3" onclick="add100Bill()">100</button>
+                <button class="button button3" onclick="add200Bill()">200</button>
+                <button class="button button3" onclick="add500Bill()">500</button>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="3" style="text-align:center;">
+                <button class="button button4" onclick="add1000Bill()">1,000</button>
+                <button class="button button4" onclick="add2000Bill()">2,000</button>
+                <button class="button button4" onclick="add5000Bill()">5,000</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Php. <label id="winningBet">0</label></td>
+              <td></td>
+              <td>Php. <label id="winningBet2">0</label></td>
+            </tr>
+            <tr>
+              <td><button class="button button1" id="meron"><b>BET ON MERON</b></button></td>
+              <td></td>
+              <td><button class="button button6" id="wala"><b>BET ON WALA</b></button></td>
+            </tr>
+            <tr>
+              <td><b>Meron-Wala</b></td>
+              <td><b>Trends</b></td>
+              <td style="text-align:right;"><b>Llamado-Dehado</b></td>
+            </tr>
+
+          </table>
+        </td>
+      </tr>
+
+    </table>
+
+    <!-- modal ng meron -->
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p align="center"><font color="red"><b>MERON</b></font></p>
+        <p align="center">
+          <b>Bet: Php. 100</b>
+          <br  />
+          <b>Win: Php. 235</b>
+        </p>
+        <p align="center"><font color="green"><b>235%</b></font></p>
+        <button class="button button7" id="cancelMeron">Cancel</button>
+        <button class="button button8" id="confirmMeron">Confirm Bet</button>
+      </div>
+
+    </div>
+
+    <!-- modal ng wala -->
+    <div id="walaModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p align="center"><font color="black"><b>WALA</b></font></p>
+        <p align="center">
+          <b>Bet: Php. 100</b>
+          <br  />
+          <b>Win: Php. 160</b>
+        </p>
+        <p align="center"><font color="red"><b>160%</b></font></p>
+        <button class="button button7" id="cancelMeron2">Cancel</button>
+        <button class="button button8" id="confirmMeron2">Confirm Bet</button>
+      </div>
+
+    </div>
+
+    <script>
+      function add100Bill(){
+        document.getElementById("myBet").value = Number(document.getElementById("myBet").value) + 100;
+      }
+      function add200Bill(){
+        document.getElementById("myBet").value = Number(document.getElementById("myBet").value) + 200;
+      }
+      function add500Bill(){
+        document.getElementById("myBet").value = Number(document.getElementById("myBet").value) + 500;
+      }
+      function add1000Bill(){
+        document.getElementById("myBet").value = Number(document.getElementById("myBet").value) + 1000;
+      }
+      function add2000Bill(){
+        document.getElementById("myBet").value = Number(document.getElementById("myBet").value) + 2000;
+      }
+      function add5000Bill(){
+        document.getElementById("myBet").value = Number(document.getElementById("myBet").value) + 5000;
+      }
+      function editWallet(){
+        document.getElementById("wallet").innerHTML = Number(document.getElementById("wallet").innerHTML) - 100;
+      }
+
+      // Get the modal
+      var modal = document.getElementById("myModal");
+      var modal2 = document.getElementById("walaModal");
+
+      // Get the button that opens the modal
+      var btn = document.getElementById("meron");
+      var btn2 = document.getElementById("wala");
+
+      //cancel and confirm button
+      var btnClose = document.getElementById("cancelMeron");
+      var btnConfirm = document.getElementById("confirmMeron");
+      var btnClose2 = document.getElementById("cancelMeron2");
+      var btnConfirm2 = document.getElementById("confirmMeron2");
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks the button, open the modal
+      btn.onclick = function() {
+        modal.style.display = "block";
+      }
+
+      btn2.onclick = function() {
+        modal2.style.display = "block";
+      }
+
+      btnClose.onclick = function() {
+        modal.style.display = "none";
+      }
+      btnClose2.onclick = function() {
+        modal2.style.display = "none";
+      }
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+      window.onclick = function(event) {
+        if (event.target == modal2) {
+          modal2.style.display = "none";
+        }
+      }
+
+      btnConfirm.onclick = function(){
+        document.getElementById("wallet").innerHTML = Number(document.getElementById("wallet").innerHTML) - 100;
+        document.getElementById("winningBet").innerHTML = '100 - Php. 235';
+        modal.style.display = "none";
+      }
+
+      btnConfirm2.onclick = function(){
+        document.getElementById("wallet").innerHTML = Number(document.getElementById("wallet").innerHTML) - 100;
+        document.getElementById("winningBet2").innerHTML = '100 - Php. 160';
+        modal2.style.display = "none";
+      }
+
+    </script>
+
+  </body>
+</html>
