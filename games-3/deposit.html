@@ -15,7 +15,7 @@
   <body style="margin-top:3px;">
     <style>
 	  .pageHeader{
-	  background-image: linear-gradient(#e8e6e7, #faf7f9);
+	  	background-image: linear-gradient(#e8e6e7, #faf7f9);
 		border-bottom:solid 0.5px #9E9E9E;
 		padding:5px 15px;
 	  }
@@ -32,7 +32,7 @@
 	  .amountBtn{
 		width:70px;
 		margin-bottom:5px;
-			margin-right: 1rem;
+		margin-right: 1rem;
 	  }
 
 	  .actions{
@@ -50,24 +50,10 @@
 	  .depositContainer{
 	  	width:100%;
 		/*margin-left:20px;*/
-		padding:0px 10px 10px 0px;
-	  }
-
-	  @media only screen and (min-width: 1200px) {
-		  .depositContainer{
-			width:100%;
-			/*margin-left:20px;*/
-			padding:0px 10px 10px 0px;
-		  }
+		padding:0px;
 	  }
 
 	  @media only screen and (min-width: 800px) {
-		  .depositContainer{
-			width:100%;
-			/*margin-left:20px;*/
-			padding:0px 10px 10px 0px;
-		  }
-
 		  .amountBtn{width:100px;}
 	  }
 
@@ -111,6 +97,23 @@
 	  scrollbar-width: none;  /* Firefox */
 	}
 
+	.btn-info {
+		color: #fff;
+		background-color: #40adf2;
+		border-color: #40adf2;
+	}
+
+	.btn-secondary {
+		color: #fff;
+		background-color: #6a757e;
+		border-color: #6a757e;
+	}
+
+	.btn-send {
+		color: #fff;
+		background-color: #3578ff;
+		border-color: #3578ff;
+	}
 	</style>
 
 
@@ -143,7 +146,7 @@
 
 	  <div class="actions">
 	    <button class="btn btn-secondary">CLOSE</button>
-	    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#paymentModal">SUBMIT</button>
+	    <button type="button" class="btn btn-send" data-toggle="modal" data-target="#paymentModal">SUBMIT</button>
 	  </div>
 
 	  <!-- The Modal -->

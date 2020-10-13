@@ -46,24 +46,10 @@
 	  .depositContainer{
 	  	width:100%;
 		/*margin-left:20px;*/
-		padding:0px 10px 10px 0px;
-	  }
-
-	  @media only screen and (min-width: 1200px) {
-		  .depositContainer{
-			width:100%;
-			/*margin-left:20px;*/
-			padding:0px 10px 10px 0px;
-		  }
+		padding:0px;
 	  }
 
 	  @media only screen and (min-width: 800px) {
-		  .depositContainer{
-			width:100%;
-			/*margin-left:20px;*/
-			padding:0px 10px 10px 0px;
-		  }
-
 		  .amountBtn{width:100px;}
 	  }
 
@@ -116,6 +102,18 @@
 	  scrollbar-width: none;  /* Firefox */
 	}
 
+	.btn-secondary {
+		color: #fff;
+		background-color: #6a757e;
+		border-color: #6a757e;
+	}
+
+	.btn-send {
+		color: #fff;
+		background-color: #3578ff;
+		border-color: #3578ff;
+	}
+
 	</style>
 
 
@@ -148,7 +146,7 @@
 
 	  <div class="actions">
 	    <button class="btn btn-secondary">CLOSE</button>
-	    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#paymentModal">SUBMIT</button>
+	    <button type="button" class="btn btn-send" data-toggle="modal" data-target="#paymentModal">SUBMIT</button>
 	  </div>
 
 	  <!-- The Modal -->

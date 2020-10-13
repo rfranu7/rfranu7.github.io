@@ -9,95 +9,97 @@
   <body style="overflow:scroll">
     <style>
 	  .pageHeader{
-	    background:#D3D3D3;
+	  background-image: linear-gradient(#e8e6e7, #faf7f9);
 		border-bottom:solid 0.5px #9E9E9E;
+    box-shadow: 1px 2px #000000;
 		padding:5px 15px;
 	  }
-	  
+
 	  .detailsContainer{
 	    padding:0px 20px;
 	  }
-	  
+
 	  .transTable{
 	    font-weight:500;
 		vertical-align:center;
 	  }
-	  
+
 	  .transTable td{
 	    vertical-align:middle;
+      font-weight: bold;
 	  }
-	  
+
 	  .subtx{
 	    font-size:x-small;
 	  }
-	  
+
 	  /** Hide scrollbar **/
 	  body::-webkit-scrollbar {
 		display: none;
 	  }
-	  
+
 	  body{
 	    -ms-overflow-style: none;  /* IE and Edge */
-	    scrollbar-width: none;  /* Firefox */	  
+	    scrollbar-width: none;  /* Firefox */
 	  }
 	</style>
-  
-  
+
+
     <div class="pageHeader"><b> Transaction Summary</b></div>
 	<br/>
 	<div class="container-fluid detailsContainer">
 	  <div class="card">
 		<div class="card-body">
-			Current Points Ending 10/08/2020 10:18AM - 1,522.51
+			Current Points Ending 10/08/2020 10:18AM - 2,302.51
 		</div>
       </div>
 	  <br/>
-	  <table class="table table-bordered transTable">		
+	  <table class="table table-bordered transTable" style="font-size:20px">
 		<thead>
 		  <tr>
 		    <th scope="col">Description</th>
-			<th scope="col">Amount</th>
+			  <th scope="col" style="text-align: right;">Amount</th>
 		  </tr>
 		</thead>
 		<tbody>
 		  <tr>
 		    <td>Initial Points</td>
-			<td>1000</td>
+			  <td style="text-align: right;">1,522.51</td>
 		  </tr>
 		  <tr>
 		    <td>Total Win</td>
-			<td class="text-success">1000</td>
+			<td class="text-success" style="text-align: right;">780</td>
 		  </tr>
 		  <tr>
 		    <td>Total Lose</td>
-			<td class="text-danger">1000</td>
+			<td class="text-danger" style="text-align: right;">0</td>
 		  </tr>
 		  <tr>
 		    <td>Total Deposit</td>
-			<td class="text-success">1000</td>
+			<td class="text-success" style="text-align: right;">0</td>
 		  </tr>
 		  <tr>
 		    <td>Total Withdraw</td>
-			<td class="text-danger">1000</td>
+			  <td class="text-danger" style="text-align: right;">0</td>
 		  </tr>
 		  <tr>
 		    <td>Ending Total</td>
-			<td>1000</td>
+			  <td style="text-align: right;">2,302.51</td>
 		  </tr>
 		  <tr>
 		    <td>Difference (Win-Lost)</td>
-			<td>1000</td>
+			  <td style="text-align: right;">780</td>
 		  </tr>
 		</tbody>
 	  </table>
 	  <br/>
 
 	</div>
-	
+
 	<div class="pageHeader"><b>Bet Transaction History</b></div>
 	<br/>
 	<div class="container-fluid detailsContainer">
-	  <table class="table table-bordered transTable text-center font-weight-bold">		
+	  <table class="table table-bordered transTable text-center font-weight-bold" style="font-size:20px">
 		<thead>
 		  <tr>
 		    <th>Fight #</td>
@@ -107,18 +109,13 @@
 		</thead>
 		<tbody>
 		  <tr>
-		    <td>#21<br/><span class="subtx">Oct. 08, 2020 10:18AM</span></td>
-			<td class="text-success">MERON</td>
-			<td>WIN<br/><span class="subtx">100 bet on meron</span></td>
-		  </tr>
-		  <tr>
-		    <td>#21<br/><span class="subtx">Oct. 08, 2020 10:18AM</span></td>
-			<td class="text-info">WALA</td>
-			<td>WIN<br/><span class="subtx">100 bet on meron</span></td>
+		    <td>#1<br/><span class="subtx">Oct. 08, 2020 10:18AM</span></td>
+			<td class="text-danger">MERON</td>
+			<td>WIN<br/><span class="subtx">1,000 bet on meron</span></td>
 		  </tr>
 		</tbody>
 	  </table>
 	</div>
-	
+
   </body>
 </html>
