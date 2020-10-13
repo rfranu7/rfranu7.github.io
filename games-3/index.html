@@ -16,6 +16,51 @@
 <body>
 
   <style>
+
+	.fa {
+		display: inline-block;
+		font: normal normal normal 14px/1 FontAwesome;
+		font-size: inherit;
+		text-rendering: auto;
+		-webkit-font-smoothing: antialiased;
+	}
+
+	#userIcon, #betHistIcon, #addMoneyIcon, #subMoneyIcon, #logoutIcon {
+		position: relative;
+		width: 20px;
+		height: 15px;
+	}
+
+	#userIcon::before, #betHistIcon::before, #addMoneyIcon::before, #subMoneyIcon::before, #logoutIcon::before {
+		content: "";
+   		background-size: 15px;
+		width: 15px;
+		height: 15px;
+		position: absolute;
+		top: 2px;
+		left: 0;
+	}
+
+	#userIcon::before {
+		background-image: url(assets/userIcon.png);
+	}
+
+	#betHistIcon::before {
+		background-image: url(assets/wallet-icon.png);
+	}
+	
+	#addMoneyIcon::before {
+		background-image: url(assets/add-money-icon.png);
+	}
+	
+	#subMoneyIcon::before {
+		background-image: url(assets/sub-money-icon.png);
+	}
+
+	#logoutIcon::before {
+		background-image: url(assets/logout.png);
+	}
+
 	#wrapper.menuDisplayed .menu-btn {
 		display: none;
 	}
@@ -248,11 +293,19 @@
 				<span><b>USER11</b><br/><span style="font-size:smaller">ACT100001</span></span>
 				<a href="#" class="btn menu-btn-small" id="menu-toggle2"><span class="glyphicon glyphicon-menu-hamburger glyph-small" style="color:black"></span></a>
 			</li>
-			<li><a data-toggle="pill" href="#userProfile" onclick="showBack()"><i class="fa fa-user" aria-hidden="true"></i> Profile</a></li>
-			<li><a data-toggle="pill" href="#betHistory" onclick="showBack()"><i class="fa fa-credit-card-alt" aria-hidden="true"></i> Bet History</a></li>
-			<li><a data-toggle="pill" href="#withdraw" ><i class="fa fa-money" aria-hidden="true"></i> Withdraw</a></li>
-			<li><a data-toggle="pill" href="#deposit" onclick="showBack()"><i class="fa fa-money" aria-hidden="true"></i> Deposit</a></li>
-			<li><a href="#" onclick="window.location='login.html'"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+			<!-- OLD ICONS 
+				<li><a data-toggle="pill" href="#userProfile" onclick="showBack()"><i class="fa fa-user" aria-hidden="true"></i> Profile</a></li>
+				<li><a data-toggle="pill" href="#betHistory" onclick="showBack()"><i class="fa fa-credit-card-alt" aria-hidden="true"></i> Bet History</a></li>
+				<li><a data-toggle="pill" href="#withdraw" ><i class="fa fa-money" aria-hidden="true"></i> Withdraw</a></li>
+				<li><a data-toggle="pill" href="#deposit" onclick="showBack()"><i class="fa fa-money" aria-hidden="true"></i> Deposit</a></li>			
+				<li><a href="#" onclick="window.location='login.html'"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+			-->
+
+			<li><a data-toggle="pill" href="#userProfile" onclick="showBack()"><i class="fa" id="userIcon" aria-hidden="true"></i> Profile</a></li>
+			<li><a data-toggle="pill" href="#betHistory" onclick="showBack()"><i class="fa" id="betHistIcon" aria-hidden="true"></i>Bet History</a></li>
+			<li><a data-toggle="pill" href="#withdraw" ><i class="fa" id="addMoneyIcon" aria-hidden="true"></i> Withdraw</a></li>
+			<li><a data-toggle="pill" href="#deposit" onclick="showBack()"><i class="fa" id="subMoneyIcon" aria-hidden="true"></i> Deposit</a></li>
+			<li><a href="#" onclick="window.location='login.html'"><i class="fa" id="logoutIcon" aria-hidden="true"></i> Logout</a></li>
 		</ul>
 		</div>
 	</div>
