@@ -14,14 +14,16 @@
       .titleDiv {
         border: 1px outset;
         background-color: #eeeee9;
-        box-shadow: 2px 2px #888888;
+        box-shadow: 1px 2px #888888;
         padding: 8px;
         margin-bottom: 3px;
       }
       .announcementDiv {
         border: 1px outset;
-        background-color: #eb0008;
-        box-shadow: 2px 2px #888888;
+        background: linear-gradient(#c00b17, #eb0807);
+        background: -webkit-linear-gradient(#c00b17, #eb0807);
+        background: -moz-linear-gradient(#c00b17, #eb0807);
+        box-shadow: 1px 2px #888888;
         padding: 3px;
         padding-top: 7px;
         margin-bottom: 3px;
@@ -29,21 +31,27 @@
       }
       .meronDiv {
         border: 1px outset;
-        background-color: #e30000;
+        background: linear-gradient(#c00b17, #eb0807);
+        background: -webkit-linear-gradient(#c00b17, #eb0807);
+        background: -moz-linear-gradient(#c00b17, #eb0807);
         box-shadow: 2px 2px #888888;
         padding: 8px;
         margin-bottom: 5px;
         font-size: 25px;
         color: white;
+        width: 50%;
       }
       .walaDiv {
         border: 1px outset;
-        background-color: #337bec;
+        background: linear-gradient(#457aaa, #4279ef);
+        background: -webkit-linear-gradient(#457aaa, #4279ef);
+        background: -moz-linear-gradient(#457aaa, #4279ef);
         box-shadow: 2px 2px #888888;
         padding: 8px;
         margin-bottom: 5px;
         font-size: 25px;
         color: white;
+        width: 50%;
       }
       .rateDiv {
         border: 1px outset;
@@ -98,11 +106,11 @@
         }
         .btnSuccess {
           background-color: #299400;
-          border-radius: 4px;
+          border-radius: 0;
           color: white;
           font-family: arial;
           font-weight: bold;
-          box-shadow: 1px 3px #000000;
+          box-shadow: 0 3px #888888;
           margin-bottom: 4px;
         }
 
@@ -139,6 +147,12 @@
     
     /**************************************/
 
+    .gradient {
+      background: linear-gradient(#eeeee9, #faf7f9);
+      background: -webkit-linear-gradient(#eeeee9, #faf7f9);
+      background: -moz-linear-gradient(#eeeee9, #faf7f9);
+    }
+
     .meron-wala {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -151,24 +165,20 @@
       background: -webkit-linear-gradient(#eeeee9, #faf7f9);
       background: -moz-linear-gradient(#eeeee9, #faf7f9);
       padding: .5rem;
-      box-shadow: 2px 2px #888888;
+      box-shadow: 2px 2px #888888;;
       margin-bottom: 3px;
       font-size: .85rem;
     }
 
-    @media only screen and (min-width: 376px){
-      .table-name {
-        font-size: 1.1rem;
-      }
-    }
+    
 
     .meron-wala section div:nth-child(2){
       border: 1px outset;
-      background-image: linear-gradient(#eeeee9, #faf7f9);
-      background: -webkit-linear-gradient(#eeeee9, #faf7f9);
-      background: -moz-linear-gradient(#eeeee9, #faf7f9);
+      background-image: linear-gradient(#eeeee9, #fff);
+      background: -webkit-linear-gradient(#eeeee9, #fff);
+      background: -moz-linear-gradient(#eeeee9, #fff);
       padding: .5rem;
-      box-shadow: 2px 2px #888888;
+      box-shadow: 0 0 5px 2px #888888;
       margin-bottom: 3px;
       font-size: 1.1rem;
     }
@@ -180,37 +190,74 @@
 
     .titleDesc {
       margin-bottom: 0;
+      padding: 8px;
     }
 
     .bottom-circles {
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+      padding: 0 8px;
       background: linear-gradient(#eeeee9, #faf7f9);
       background: -webkit-linear-gradient(#eeeee9, #faf7f9);
       background: -moz-linear-gradient(#eeeee9, #faf7f9);
     }
 
+    .circle-group {
+      margin: 0;
+      padding: 0 .25rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-right: 2px solid #888888;
+    }
+
+    .circle-group:last-of-type{
+      border-right: none;
+    }
+
     .text-span {
       display: block;
       margin: auto;
+      color: white;
     }
 
     .text-words {
-      font-size: .7rem;
+      font-size: .5rem;
       font-weight: bold;
+    }
+
+    .sizing {
+      width:98%;
+      padding: 0;
+    }
+
+    @media only screen and (min-width: 376px){
+      .table-name {
+        font-size: 1.1rem;
+      }
+
+      .text-words {
+        font-size: .7rem;
+      }
+    }
+
+    @media only screen and (min-width: 1024px){
+      .sizing {
+        width:98%;
+        padding: 0 .5rem;
+      }
     }
 
     </style>
   </head>
   <body>
-        <div class="comtainer-fluid" style="margin-top:10px">
+        <div class="comtainer-fluid" style="margin-top:3px;">
 
-          <div class="row">
+          <div class="row" style="margin: 0 auto;">
 
-            <div class="col-md-6"  style="padding-right:2px; padding-left:15px;">
+            <div class="col-md-6 sizing">
 
               <!-- header video -->
-              <div class="titleDiv" style="text-align: center;">
+              <div class="titleDiv gradient" style="text-align: center;">
                 <h6>7-STAG DERBY BIG EVENT & 6-STAG CONCIERTO 289 FIGHTS <br />
                 <font color="red">OCTOBER 08, 2020</font></h6>
               </div>
@@ -230,34 +277,34 @@
                 </div>
               </div>
               <!-- footer video-->
-              <div class="titleDiv">
+              <div class="titleDiv gradient">
                 <div class="row">
                   <div class="col-sm-12">
-                    <b>FIGHT#: 1</b> <span class="label success pull-right" style="margin-right: 20px;">BETTING OPEN</span>
+                    <b>FIGHT#: 1</b> <span class="label success pull-right">BETTING OPEN</span>
                   </div>
                 </div>
               </div>
 
             </div>
 
-            <div class="col-md-6"  style="padding-right:15px; padding-left:15px;">
-              <div class="row">
-                <div class="col-sm-12" style="overflow-x:auto; padding-bottom:3px;">
-                  <table style="width:100%;">
+            <div class="col-md-6" style="width:98%; padding: 0;">
+              <div class="row" style="margin: 0;">
+                <div class="col-sm-12" style="padding: 0; padding-bottom:3px;">
+                  <table style="width:100%; margin: 0 auto; border-collapse: separate;">
                     <thead style="text-align: center; font-size:25px;">
-                      <td style="background-color: #e60000; color: white; font-family: arial; box-shadow: 2px 2px #888888;"><b>MERON</b></td>
-                      <td style="background-color: #317ae1; color: white; font-family: arial; box-shadow: 2px 2px #888888;"><b>WALA</b></td>
+                      <td class="meronDiv"><b>MERON</b></td>
+                      <td class="walaDiv"><b>WALA</b></td>
                     </thead>
                     <tr>
-                      <td><button type="button" class="btn btnSuccess btn-block" onclick="openModal('MERON')"><i class="fa fa-plus-circle"></i><b> BET MERON</b></button></td>
-                      <td><button type="button" class="btn btnSuccess btn-block" onclick="openModal('WALA')"><i class="fa fa-plus-circle"></i> <b>BET WALA</b></button></td>
+                      <td><button type="button" style="margin-right: .5px;" class="btn btnSuccess btn-block" onclick="openModal('MERON')"><i class="fa fa-plus-circle"></i><b> BET MERON</b></button></td>
+                      <td><button type="button" style="margin-left: .5px;" class="btn btnSuccess btn-block" onclick="openModal('WALA')"><i class="fa fa-plus-circle"></i> <b>BET WALA</b></button></td>
                     </tr>
                     <tr>
-                      <td style="background-color: #eeeee9; text-align: center;">
+                      <td class="gradient" style="margin-right: 1px; text-align: center; border: 1px outset; box-shadow: 2px 2px #888888;">
                         <b><font color="#e60000" style="font-size: 25px;">764,017</font> <br />
                         PAYOUT = 178.017% <br /></b>
                       </td>
-                      <td style="background-color: #eeeee9; text-align: center;">
+                      <td class="gradient" style="margin-left: 1px; text-align: center; border: 1px outset; box-shadow: 2px 2px #888888">
                         <b><font color="#317ae1" style="font-size: 25px;">764,018</font> <br />
                         PAYOUT = 292.1% <br />
                       </td>
@@ -267,45 +314,45 @@
               </div>
 
               <!-- current points -->
-              <div class="row">
-                <div class="col-sm-12">
-                  <div class="titleDiv" style="text-align: center;">
+              <div class="row" style="margin: 0;">
+                <div class="col-sm-12" style="padding: 0;">
+                  <div class="titleDiv gradient" style="text-align: center;">
                     <b>CURRENT POINTS: <span class="label dark">1,522. 51</span></b>
                   </div>
                 </div>
               </div>
 
               <!-- bet amount -->
-              <div class="row">
-                <div class="col-sm-12">
-                  <div class="titleDiv">
+              <div class="row" style="margin: 0;">
+                <div class="col-sm-12" style="padding: 0;">
+                  <div class="titleDiv gradient">
 
-                    <div class="row" style="padding-left: 15px; padding-right: 15px; ">
+                    <div class="row" style="padding-left: 10px; padding-right: 10px; width: 100%;">
                       <div class="col-10 p-1">
                         <input type="text" id="myBet" class="form-control" placeholder="ENTER AMOUNT" style="font-size: 14px">
                       </div>
-                      <div class="col-2 p-1">
+                      <div class="col-2 p-1" style="padding-left: 0!important;">
                         <button class="btn btnBet" type="button" onclick="document.getElementById('myBet').value = ''" style="font-size: 13px">CLEAR</button>
                       </div>
                     </div>
 
                     <div class="row" style="padding: 15px;">
-                        <div class="col-4 p-1">
+                        <div class="col-4 p-1" style="padding-left: 0!important; padding-right: .5px!important; padding-bottom: 0!important;">
                             <button class="btn btn-lg btnBet btn-block shadow-button" onclick="document.getElementById('myBet').value= '100'">100</button>
                         </div>
-                        <div class="col-4 p-1">
+                        <div class="col-4 p-1" style="padding-left: 0!important; padding-right: .5px!important; padding-bottom: 0!important;">
                             <button class="btn btn-lg btnBet btn-block shadow-button" onclick="document.getElementById('myBet').value= '300'">300</button>
                         </div>
-                        <div class="col-4 p-1">
+                        <div class="col-4 p-1" style="padding-left: 0!important; padding-right: .5px!important; padding-bottom: 0!important;">
                             <button class="btn btn-lg btnBet btn-block shadow-button" onclick="document.getElementById('myBet').value= '500'">500</button>
                         </div>
-                        <div class="col-4 p-1">
+                        <div class="col-4 p-1" style="padding-left: 0!important; padding-right: .5px!important; padding-top: 1px!important">
                             <button class="btn btn-lg btnBet btn-block shadow-button" onclick="document.getElementById('myBet').value= '1000'">1,000</button>
                         </div>
-                        <div class="col-4 p-1">
+                        <div class="col-4 p-1" style="padding-left: 0!important; padding-right: .5px!important; padding-top: 1px!important">
                             <button class="btn btn-lg btnBet btn-block shadow-button" onclick="document.getElementById('myBet').value= '5000'">5,000</button>
                         </div>
-                        <div class="col-4 p-1">
+                        <div class="col-4 p-1" style="padding-left: 0!important; padding-right: .5px!important; padding-top: 1px!important">
                             <button class="btn btn-lg btnBet btn-block shadow-button" onclick="document.getElementById('myBet').value= '10000'">10,000</button>
                         </div>
                     </div>
@@ -315,8 +362,8 @@
               </div>
 
               <!-- Table -->
-              <div class="row">
-                <div class="col-sm-12 meron-wala">
+              <div class="row" style="margin: 0;">
+                <div class="col-sm-12 meron-wala" style="padding: 0;">
                   <section style="overflow-x:auto; padding-bottom:3px;">
                     <div class="table-name">
                       <b>MERON-WALA</b>
@@ -348,6 +395,31 @@
                           <td>
                               <span class="text-span" style="background: #de2326;">37</span>
                           </td>
+
+                          <td>
+                            <span class="text-span" style="background: #de2326;"></span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;"></span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;"></span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;"></span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;"></span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;"></span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;"></span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;"></span>
+                          </td>
                         </tr>
                         <tr>
                           <td>
@@ -373,6 +445,31 @@
                           </td>
                           <td>
                               <span class="text-span" style="background: #de2326;">38</span>
+                          </td>
+                          
+                          <td>
+                            <span class="text-span" style="background: #de2326;"></span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;"></span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;"></span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;"></span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;"></span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;"></span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;"></span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;"></span>
                           </td>
                         </tr>
                         <tr>
@@ -400,6 +497,31 @@
                           <td>
                               <span class="text-span" style="background: #de2326;">39</span>
                           </td>
+                          
+                          <td>
+                            <span class="text-span" style="background: #de2326;"></span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;"></span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;"></span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;"></span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;"></span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;"></span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;"></span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;"></span>
+                          </td>
                         </tr>
                         <tr>
                           <td>
@@ -426,6 +548,31 @@
                           <td>
                               <span class="text-span" style="background: #de2326;">40</span>
                           </td>
+                          
+                          <td>
+                            <span class="text-span" style="background: #de2326;"></span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;"></span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;"></span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;"></span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;"></span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;"></span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;"></span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;"></span>
+                          </td>
                         </tr>
                         <tr>
                           <td>
@@ -451,6 +598,31 @@
                           </td>
                           <td>
                               <span class="text-span" style="background: #de2326;">41</span>
+                          </td>
+                          
+                          <td>
+                            <span class="text-span" style="background: #de2326;"></span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;"></span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;"></span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;"></span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;"></span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;"></span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;"></span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;"></span>
                           </td>
                         </tr>
                       </table>
@@ -487,6 +659,31 @@
                             <td>
                                 <span class="text-span" style="background: #a810b8;">37</span>
                             </td>
+                            
+                            <td>
+                              <span class="text-span" style="background: #a810b8;"></span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;"></span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;"></span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;"></span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;"></span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;"></span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;"></span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;"></span>
+                            </td>
                           </tr>
                           <tr>
                             <td>
@@ -512,6 +709,31 @@
                             </td>
                             <td>
                                 <span class="text-span" style="background: #a810b8;">38</span>
+                            </td>
+                             
+                            <td>
+                              <span class="text-span" style="background: #a810b8;"></span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;"></span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;"></span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;"></span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;"></span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;"></span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;"></span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;"></span>
                             </td>
                           </tr>
                           <tr>
@@ -539,6 +761,31 @@
                             <td>
                                 <span class="text-span" style="background: #a810b8;">39</span>
                             </td>
+                             
+                            <td>
+                              <span class="text-span" style="background: #a810b8;"></span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;"></span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;"></span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;"></span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;"></span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;"></span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;"></span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;"></span>
+                            </td>
                           </tr>
                           <tr>
                             <td>
@@ -564,6 +811,31 @@
                             </td>
                             <td>
                                 <span class="text-span" style="background: #a810b8;">40</span>
+                            </td>
+                             
+                            <td>
+                              <span class="text-span" style="background: #a810b8;"></span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;"></span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;"></span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;"></span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;"></span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;"></span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;"></span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;"></span>
                             </td>
                           </tr>
                           <tr>
@@ -591,6 +863,31 @@
                             <td>
                                 <span class="text-span" style="background: #a810b8;">41</span>
                             </td>
+                             
+                            <td>
+                              <span class="text-span" style="background: #a810b8;"></span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;"></span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;"></span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;"></span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;"></span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;"></span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;"></span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;"></span>
+                            </td>
                           </tr>
                         </table>
                       </div>
@@ -602,15 +899,21 @@
               </div>
 
               <!-- count -->
-              <div class="row">
-                <div class="col-sm-12">
+              <div class="row" style="margin: 0;">
+                <div class="col-sm-12" style="padding: 0;">
                   <div class="titleDiv bottom-circles" style="text-align: center;">
-                    <p class="titleDesc"><span class="text-span" style="background: #de2326;">30</span><span class="text-words">MERON</span></p>
-                    <p class="titleDesc"><span class="text-span" style="background: #3584dc;">5</span><span class="text-words">WALA</span></p>
-                    <p class="titleDesc"><span class="text-span" style="background: #53ae16;">5</span><span class="text-words">DRAW</span></p>
-                    <p class="titleDesc"><span class="text-span" style="background: #737172;">5</span><span class="text-words">CANCELLED</span></p>
-                    <p class="titleDesc"><span class="text-span" style="background: #a810b8;">5</span><span class="text-words">LLAMADO</span></p>
-                    <p class="titleDesc"><span class="text-span" style="background: #f67a06;">5</span><span class="text-words">DEHADO</span></p>
+                    <div class="circle-group">
+                      <span class="titleDesc"><span class="text-span" style="background: #de2326;">30</span><span class="text-words">MERON</span></span>
+                      <span class="titleDesc"><span class="text-span" style="background: #3584dc;">5</span><span class="text-words">WALA</span></span>
+                    </div>
+                    <div class="circle-group">
+                      <p class="titleDesc"><span class="text-span" style="background: #53ae16;">5</span><span class="text-words">DRAW</span></p>
+                      <p class="titleDesc"><span class="text-span" style="background: #737172;">5</span><span class="text-words">CANCELLED</span></p>
+                    </div>
+                    <div class="circle-group">
+                      <p class="titleDesc"><span class="text-span" style="background: #a810b8;">5</span><span class="text-words">LLAMADO</span></p>
+                      <p class="titleDesc"><span class="text-span" style="background: #f67a06;">5</span><span class="text-words">DEHADO</span></p>
+                    </div>
                   </div>
                 </div>
               </div>

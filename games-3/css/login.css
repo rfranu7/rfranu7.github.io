@@ -67,6 +67,12 @@ form {
     text-decoration: none;
 }
 
+.apps {
+    margin-top: .5rem;
+    display: flex;
+    flex-direction: row;
+}
+
 @media only screen and (min-width: 768px) and (orientation: portrait) {
     body {
         padding: 2% 4%;
@@ -82,6 +88,10 @@ form {
 
     .btn {
         margin-bottom: 1rem;
+    }
+    
+    .apps {
+        margin-top: 1rem;
     }
 }
 

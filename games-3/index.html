@@ -17,6 +17,10 @@
 
   <style>
 
+	.maincontent {
+		margin: .25rem;
+	}
+
 	.fa {
 		display: inline-block;
 		font: normal normal normal 14px/1 FontAwesome;
@@ -170,7 +174,6 @@
 	}
 
 	.navmenu{
-	  margin:0px !important;
 	  background:lightgray;
 	  background-image: linear-gradient(to bottom right, #eeeee9, #eeeee9);
 	  padding:10px 0px;
@@ -199,7 +202,7 @@
 	  background-position:10px;
 	  background-size:contain;
 	  background-repeat:no-repeat;
-	  flex:70%
+	  flex:60%
 	}
 
 	.logo h4{
@@ -249,15 +252,15 @@
 
     <!-- Page Content -->
     <div id="page-content-wrapper">
-      <div class="navmenu row">
-	      <div class="col-sm-8 logo">
+      <div class="navmenu row" style="margin: 0;">
+	      <div class="logo">
 			<h4><b>LOGO</b></h4>
 		  </div>
-		  <div class="col-sm-3">
+		  <div>
 		    <a data-toggle="pill" href="#bet" class="btn menu-btn backbtn" onclick="hideBack()"><span class="fa fa-chevron-left"></span> GO BACK</a>
 		  </div>
-		  <div class="col-sm-1">
-			<a href="#" class="btn menu-btn" id="menu-toggle"><span class="glyphicon glyphicon-menu-hamburger" style="color:black"></span></a>
+		  <div>
+			<a href="#" class="btn menu-btn" id="menu-toggle"><span class="glyphicon glyphicon-menu-hamburger" style="color:black; font-size: 2rem;"></span></a>
 		  </div>
 	  </div>
 
@@ -291,7 +294,7 @@
 		<ul class="sidebar-nav">	
 			<li class="userDetail">
 				<span><b>USER11</b><br/><span style="font-size:smaller">ACT100001</span></span>
-				<a href="#" class="btn menu-btn-small" id="menu-toggle2"><span class="glyphicon glyphicon-menu-hamburger glyph-small" style="color:black"></span></a>
+				<a href="#" class="btn menu-btn-small" id="menu-toggle2"><span class="glyphicon glyphicon-menu-hamburger glyph-small" style="color:black; font-size: 2rem;"></span></a>
 			</li>
 			<!-- OLD ICONS 
 				<li><a data-toggle="pill" href="#userProfile" onclick="showBack()"><i class="fa fa-user" aria-hidden="true"></i> Profile</a></li>
@@ -302,7 +305,7 @@
 			-->
 
 			<li><a data-toggle="pill" href="#userProfile" onclick="showBack()"><i class="fa" id="userIcon" aria-hidden="true"></i> Profile</a></li>
-			<li><a data-toggle="pill" href="#betHistory" onclick="showBack()"><i class="fa" id="betHistIcon" aria-hidden="true"></i>Bet History</a></li>
+			<li><a data-toggle="pill" href="#betHistory" onclick="showBack()"><i class="fa" id="betHistIcon" aria-hidden="true"></i> Bet History</a></li>
 			<li><a data-toggle="pill" href="#withdraw" ><i class="fa" id="addMoneyIcon" aria-hidden="true"></i> Withdraw</a></li>
 			<li><a data-toggle="pill" href="#deposit" onclick="showBack()"><i class="fa" id="subMoneyIcon" aria-hidden="true"></i> Deposit</a></li>
 			<li><a href="#" onclick="window.location='login.html'"><i class="fa" id="logoutIcon" aria-hidden="true"></i> Logout</a></li>
