@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+	<!-- CSS only -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  </head>
+  <body style="overflow:scroll">
+    <style>
+	  .pageHeader{
+	    background:#D3D3D3;
+		border-bottom:solid 0.5px #9E9E9E;
+		padding:5px 15px;
+	  }
+	  
+	  .detailsContainer{
+	    padding:0px 20px;
+	  }
+	  
+	  .transTable{
+	    font-weight:500;
+		vertical-align:center;
+	  }
+	  
+	  .transTable td{
+	    vertical-align:middle;
+	  }
+	  
+	  .subtx{
+	    font-size:x-small;
+	  }
+	  
+	  /** Hide scrollbar **/
+	  body::-webkit-scrollbar {
+		display: none;
+	  }
+	  
+	  body{
+	    -ms-overflow-style: none;  /* IE and Edge */
+	    scrollbar-width: none;  /* Firefox */	  
+	  }
+	  
+	  .profileDetail{
+	    margin-top:10px;
+	  }
+	  
+	.navmenu{
+	  margin:0px !important;
+	  background:lightgray;
+	  background-image: linear-gradient(to bottom right, #9E9E9E, #D3D3D3);
+	  padding:10px 0px;
+	  border-bottom:solid 0.5px #9E9E9E;
+	  display:flex;
+	  z-index:1;
+	  position:fixed;
+	  width:100%;
+	}
+	
+	.logo{
+	  background-image:url(./images/logo.png);
+	  background-position:10px;
+	  background-size:contain;
+	  background-repeat:no-repeat;
+	  flex:70%
+	}
+	
+	.logo h4{
+	  opacity:0;
+	}
+	
+	.regHolder{
+	  padding-top:57px;
+	}
+
+	/***************************************/
+	form {
+		margin: 0 auto;
+	}
+
+	input {
+		box-sizing: border-box;
+		width: 100%;
+		padding: .75rem;
+		font-size: 1rem;
+		font-weight: 400;
+		color: #495057;
+		background-color: #fff;
+		background-clip: padding-box;
+		border: 1px solid #ced4da;
+		transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+	}
+
+	.btn {
+		box-sizing: border-box;
+		display: block;
+		width: 100%;
+		background-color: #cb0c10;
+		margin-top: 1rem;
+		color: #fff;
+		text-align: center;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		border: 1px solid transparent;
+		padding: .75rem;
+		line-height: 1.5;
+		font-size: 1.1rem;
+		font-weight: bold;
+		transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+	}
+
+	@media only screen and (min-width: 768px){
+		input, .btn{
+			width: 75%;
+		}
+
+		.btn {
+			margin: 1rem auto;
+		}
+
+		.detailsContainer {
+			text-align: center;
+		}
+	}
+
+	@media only screen and (min-width: 1024px){
+		input, .btn{
+			width: 50%;
+		}
+	}
+	</style>
+    <div class="navmenu row">
+	    <div class="col-sm-8 logo">
+		  <h4><b>LOGO</b></h4>
+	    </div>
+    </div>  
+    <div class="regHolder">
+    <div class="pageHeader"><b> Account Login</b></div>
+	<div class="container-fluid detailsContainer">
+      <input type="text" placeholder="User Account" class="textfield profileDetail" size="50" ><br/>
+	  <input type="password" placeholder="Password" class="textfield profileDetail" size="50" ><br/>
+	  <input type="password" placeholder="Confirm Password" class="textfield profileDetail" size="50" ><br/>	  
+	  <br/>
+
+	</div>
+	
+	<div class="pageHeader"><b>Account Details</b></div>
+	<div class="container-fluid detailsContainer">
+      <input type="text" placeholder="First Name" class="textfield profileDetail" size="50" readonly><br/>
+	  <input type="text" placeholder="Last Name" class="textfield profileDetail" size="50" readonly><br/>
+	  <input type="text" placeholder="Mobile Number" class="textfield profileDetail" size="50" readonly><br/>
+	  <input type="text" placeholder="Facebook Account" class="textfield profileDetail" size="50" readonly><br/>
+	  <button type="submit" class="btn btn-danger btn-block">REGISTER</button>
+	</div>
+	</div>
+  </body>
+</html>

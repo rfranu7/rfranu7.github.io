@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Sabong Express</title>
+    <style>
+      .titleDiv {
+        border: 1px outset;
+        background-color: #eeeee9;
+        box-shadow: 2px 2px #888888;
+        padding: 8px;
+        margin-bottom: 3px;
+      }
+      .announcementDiv {
+        border: 1px outset;
+        background-color: #eb0008;
+        box-shadow: 2px 2px #888888;
+        padding: 3px;
+        padding-top: 7px;
+        margin-bottom: 3px;
+        color: white;
+      }
+      .meronDiv {
+        border: 1px outset;
+        background-color: #e30000;
+        box-shadow: 2px 2px #888888;
+        padding: 8px;
+        margin-bottom: 5px;
+        font-size: 25px;
+        color: white;
+      }
+      .walaDiv {
+        border: 1px outset;
+        background-color: #337bec;
+        box-shadow: 2px 2px #888888;
+        padding: 8px;
+        margin-bottom: 5px;
+        font-size: 25px;
+        color: white;
+      }
+      .rateDiv {
+        border: 1px outset;
+        background-color: #eeeee9;
+        box-shadow: 2px 2px #888888;
+        padding: 8px;
+        margin-bottom: 5px;
+        font-size: 20px;
+        text-align: center;
+      }
+      .text-span{
+          border-radius:50%;
+          height: 26px;
+          width: 26px;
+          line-height: 26px;
+          display: inline-block;
+          text-align: center;
+          margin-right: 6px;
+          vertical-align:top;
+      }
+      .center {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .dark {background-color: #000000;
+          border-radius: 8px;
+          color: #d2b008;
+          text-align:center;
+          padding-left: 8px;
+          padding-right: 8px;
+          padding-bottom: 2px;
+        }
+      .success {background-color: #2b9900;
+          border-radius: 7px;
+          color: white;
+          padding-left: 10px;
+          padding-right: 10px;
+          padding-bottom: 3px;
+          padding-top: 2px;
+          font-size: 13px;
+
+        }
+
+        .btnBet {
+          border: 2px solid #d1cfd0;
+          background-image: linear-gradient(#e8e6e7, #faf7f9);
+          color: black;
+          border-radius: 0px;
+          font-family: arial;
+          font-weight: bold;
+        }
+        .btnSuccess {
+          background-color: #299400;
+          border-radius: 4px;
+          color: white;
+          font-family: arial;
+          font-weight: bold;
+          box-shadow: 1px 3px #000000;
+          margin-bottom: 4px;
+        }
+
+      /* For desktop: */
+      .col-1 {width: 8.33%;}
+      .col-2 {width: 16.66%;}
+      .col-3 {width: 25%;}
+      .col-4 {width: 33.33%;}
+      .col-5 {width: 41.66%;}
+      .col-6 {width: 50%;}
+      .col-7 {width: 58.33%;}
+      .col-8 {width: 66.66%;}
+      .col-9 {width: 75%;}
+      .col-10 {width: 83.33%;}
+      .col-11 {width: 91.66%;}
+      .col-12 {width: 100%;}
+
+      @media only screen and (max-width: 768px) {
+        /* For mobile phones: */
+        [class*="col-"] {
+          width: 100%;
+        }
+      }
+
+	  /** Hide scrollbar **/
+	  body::-webkit-scrollbar {
+		display: none;
+	  }
+
+	  body{
+	    -ms-overflow-style: none;  /* IE and Edge */
+	    scrollbar-width: none;  /* Firefox */
+    }
+    
+    /**************************************/
+
+    .meron-wala {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .meron-wala section {
+      background-color: #eeeee9;
+    }
+
+    .table-name {
+      padding: 1rem .5rem;
+    }
+
+    .bottom-circles {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    .text-span {
+      display: block;
+      margin: auto;
+    }
+
+    .text-words {
+      font-size: .7rem;
+      font-weight: bold;
+    }
+
+    </style>
+  </head>
+  <body>
+        <div class="comtainer-fluid" style="margin-top:10px">
+
+          <div class="row">
+
+            <div class="col-md-6"  style="padding-right:2px; padding-left:15px;">
+
+              <!-- header video -->
+              <div class="titleDiv" style="text-align: center;">
+                <h6>7-STAG DERBY BIG EVENT & 6-STAG CONCIERTO 289 FIGHTS <br />
+                <font color="red">OCTOBER 08, 2020</font></h6>
+              </div>
+
+              <!-- video -->
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/d4aAkP3V7l8"
+                  allowfullscreen></iframe>
+              </div>
+
+              <!-- footer video-->
+              <div class="announcementDiv">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <marquee direction="left">Announcement here, scrolling right to left...</marquee>
+                  </div>
+                </div>
+              </div>
+              <!-- footer video-->
+              <div class="titleDiv">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <b>FIGHT#: 1</b> <span class="label success pull-right" style="margin-right: 20px;">BETTING OPEN</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="col-md-6"  style="padding-right:15px; padding-left:15px;">
+              <div class="row">
+                <div class="col-sm-12" style="overflow-x:auto; padding-bottom:3px;">
+                  <table style="width:100%;">
+                    <thead style="text-align: center; font-size:25px;">
+                      <td style="background-color: #e60000; color: white; font-family: arial; box-shadow: 2px 2px #888888;"><b>MERON</b></td>
+                      <td style="background-color: #317ae1; color: white; font-family: arial; box-shadow: 2px 2px #888888;"><b>WALA</b></td>
+                    </thead>
+                    <tr>
+                      <td><button type="button" class="btn btnSuccess btn-block" onclick="openModal('MERON')"><i class="fa fa-plus-circle"></i><b> BET MERON</b></button></td>
+                      <td><button type="button" class="btn btnSuccess btn-block" onclick="openModal('WALA')"><i class="fa fa-plus-circle"></i> <b>BET WALA</b></button></td>
+                    </tr>
+                    <tr>
+                      <td style="background-color: #eeeee9; text-align: center;">
+                        <b><font color="#e60000" style="font-size: 25px;">764,017</font> <br />
+                        PAYOUT = 178.017% <br /></b>
+                      </td>
+                      <td style="background-color: #eeeee9; text-align: center;">
+                        <b><font color="#317ae1" style="font-size: 25px;">764,018</font> <br />
+                        PAYOUT = 292.1% <br />
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+
+              <!-- current points -->
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="titleDiv" style="text-align: center;">
+                    <b>CURRENT POINTS: <span class="label dark">1,522. 51</span></b>
+                  </div>
+                </div>
+              </div>
+
+              <!-- bet amount -->
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="titleDiv">
+
+                    <div class="row" style="padding-left: 15px; padding-right: 15px; ">
+                      <div class="col-10 p-1">
+                        <input type="text" id="myBet" class="form-control" placeholder="ENTER AMOUNT" style="font-size: 14px">
+                      </div>
+                      <div class="col-2 p-1">
+                        <button class="btn btnBet" type="button" onclick="document.getElementById('myBet').value = ''" style="font-size: 13px">CLEAR</button>
+                      </div>
+                    </div>
+
+                    <div class="row" style="padding: 15px;">
+                        <div class="col-4 p-1">
+                            <button class="btn btn-lg btnBet btn-block shadow-button" onclick="document.getElementById('myBet').value= '100'">100</button>
+                        </div>
+                        <div class="col-4 p-1">
+                            <button class="btn btn-lg btnBet btn-block shadow-button" onclick="document.getElementById('myBet').value= '300'">300</button>
+                        </div>
+                        <div class="col-4 p-1">
+                            <button class="btn btn-lg btnBet btn-block shadow-button" onclick="document.getElementById('myBet').value= '500'">500</button>
+                        </div>
+                        <div class="col-4 p-1">
+                            <button class="btn btn-lg btnBet btn-block shadow-button" onclick="document.getElementById('myBet').value= '1000'">1,000</button>
+                        </div>
+                        <div class="col-4 p-1">
+                            <button class="btn btn-lg btnBet btn-block shadow-button" onclick="document.getElementById('myBet').value= '5000'">5,000</button>
+                        </div>
+                        <div class="col-4 p-1">
+                            <button class="btn btn-lg btnBet btn-block shadow-button" onclick="document.getElementById('myBet').value= '10000'">10,000</button>
+                        </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <!-- Table -->
+              <div class="row">
+                <div class="col-sm-12 meron-wala">
+                  <section style="overflow-x:auto; padding-bottom:3px;">
+                    <div class="table-name">
+                      <b>MERON-WALA</b>
+                    </div>
+                      <div style="width:100%; overflow: auto;">
+                      <table border="1px" class="center" style="color: white;">
+                        <tr>
+                          <td>
+                              <span class="text-span" style="background: #de2326;">1</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;">6</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;">12</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #3584dc;">17</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;">22</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #737172;">27</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;">32</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;">37</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                              <span class="text-span" style="background: #de2326;">2</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;">7</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;">13</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #3584dc;">18</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;">23</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #53ae16;">28</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;">33</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;">38</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                              <span class="text-span" style="background: #3584dc;">3</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;">8</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;">14</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #3584dc;">19</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;">24</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;">29</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;">34</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;">39</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                              <span class="text-span" style="background: #3584dc;">4</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;">9</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;">15</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;">20</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;">25</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;">30</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;">35</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;">40</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                              <span class="text-span" style="background: #de2326;">5</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;">10</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;">16</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;">21</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;">26</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;">31</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;">36</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background: #de2326;">41</span>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  </section>
+                  <section style="overflow-x:auto; padding-bottom:3px;">
+                      <div class="table-name">
+                        <b>LLAMADO-DEHADO</b>
+                      </div>
+                      <div style="overflow-x:auto;">
+                        <table border="1px" class="center" style="color: white; overflow:auto;">
+                          <tr>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;">1</span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;">6</span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;">12</span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #f67a06;">17</span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;">22</span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #737172;">27</span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;">32</span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;">37</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;">2</span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;">7</span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;">13</span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #f67a06;">18</span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;">23</span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #53ae16;">28</span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;">33</span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;">38</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                                <span class="text-span" style="background: #f67a06;">3</span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;">8</span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;">14</span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #f67a06;">19</span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;">24</span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;">29</span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;">34</span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;">39</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                                <span class="text-span" style="background: #f67a06;">4</span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;">9</span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;">15</span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;">20</span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;">25</span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #f67a06;">30</span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;">35</span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;">40</span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;">5</span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;">10</span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;">16</span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;">21</span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;">26</span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;">31</span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;">36</span>
+                            </td>
+                            <td>
+                                <span class="text-span" style="background: #a810b8;">41</span>
+                            </td>
+                          </tr>
+                        </table>
+                      </div>
+                  </section>
+                </div>
+
+
+
+              </div>
+
+              <!-- count -->
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="titleDiv bottom-circles" style="text-align: center;">
+                    <p class="titleDesc"><span class="text-span" style="background: #de2326;">30</span><span class="text-words">MERON</span></p>
+                    <p class="titleDesc"><span class="text-span" style="background: #3584dc;">5</span><span class="text-words">WALA</span></p>
+                    <p class="titleDesc"><span class="text-span" style="background: #53ae16;">5</span><span class="text-words">DRAW</span></p>
+                    <p class="titleDesc"><span class="text-span" style="background: #737172;">5</span><span class="text-words">CANCELLED</span></p>
+                    <p class="titleDesc"><span class="text-span" style="background: #a810b8;">5</span><span class="text-words">LLAMADO</span></p>
+                    <p class="titleDesc"><span class="text-span" style="background: #f67a06;">5</span><span class="text-words">DEHADO</span></p>
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+
+
+
+
+          </div>
+
+
+
+
+        </div>
+
+        <div class="modal fade" id="betModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                  <form data-validate-on="submit" novalidate="" name="register">
+                      <div class="modal-body text-center">
+                          <h4 class="text-danger font-weight-bold" id="p1"></h4>
+                          <h5 class="font-weight-bold" id="p2"></h5>
+                          <h5 class="font-weight-bold" id="p3"></h5>
+                          <input type="hidden" name="amount" >
+                      </div>
+                      <div class="modal-footer row border-0 p-3" style="justify-content: normal;">
+                          <button type="button" class="btn btn-secondary col" style="background-color:#4e4e4e" data-dismiss="modal">Cancel</button>
+                          <input type="submit" class="btn btn-success col" name="confirm-button" style="background-color:green" value="Confirm Bet" />
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script>
+      function openModal(place){
+        var amountToBetValue = document.getElementById("myBet").value;
+        document.getElementById("p1").innerHTML = place;
+        document.getElementById("p2").innerHTML = "Bet Amount: " + document.getElementById("myBet").value;
+
+        $("#betModal").modal();
+    }
+    </script>
+  </body>
+</html>

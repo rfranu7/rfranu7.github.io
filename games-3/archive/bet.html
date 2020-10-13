@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Sabong Express</title>
+    <style>
+      .titleDiv {
+        border: 1px outset;
+        background-color: #eeeee9;
+        box-shadow: 2px 2px #888888;
+        padding: 8px;
+        margin-bottom: 5px;
+      }
+      .meronDiv {
+        border: 1px outset;
+        background-color: #e30000;
+        box-shadow: 2px 2px #888888;
+        padding: 8px;
+        margin-bottom: 5px;
+        font-size: 20px;
+        color: white;
+      }
+      .walaDiv {
+        border: 1px outset;
+        background-color: #337bec;
+        box-shadow: 2px 2px #888888;
+        padding: 8px;
+        margin-bottom: 5px;
+        font-size: 20px;
+        color: white;
+      }
+      .rateDiv {
+        border: 1px outset;
+        background-color: #eeeee9;
+        box-shadow: 2px 2px #888888;
+        padding: 8px;
+        margin-bottom: 5px;
+        font-size: 15px;
+        text-align: center;
+      }
+      .text-span{
+          border-radius:50%;
+          height: 26px;
+          width: 26px;
+          line-height: 26px;
+          display: inline-block;
+          text-align: center;
+          margin-right: 6px;
+          vertical-align:top;
+      }
+      .center {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      /* For desktop: */
+      .col-1 {width: 8.33%;}
+      .col-2 {width: 16.66%;}
+      .col-3 {width: 25%;}
+      .col-4 {width: 33.33%;}
+      .col-5 {width: 41.66%;}
+      .col-6 {width: 50%;}
+      .col-7 {width: 58.33%;}
+      .col-8 {width: 66.66%;}
+      .col-9 {width: 75%;}
+      .col-10 {width: 83.33%;}
+      .col-11 {width: 91.66%;}
+      .col-12 {width: 100%;}
+
+      @media only screen and (max-width: 768px) {
+        /* For mobile phones: */
+        [class*="col-"] {
+          width: 100%;
+        }
+      }
+
+	  /** Hide scrollbar **/
+	  body::-webkit-scrollbar {
+		display: none;
+	  }
+
+	  body{
+	    -ms-overflow-style: none;  /* IE and Edge */
+	    scrollbar-width: none;  /* Firefox */
+	  }
+    </style>
+  </head>
+  <body>
+        <div class="comtainer-fluid">
+
+          <div class="row">
+
+            <div class="col-md-6"  style="padding-right:2px; padding-left:2px;">
+
+              <!-- header video -->
+              <div class="titleDiv" style="text-align: center;">
+                7-STAG DERBY BIG EVENT & 6-STAG CONCIERTO 289 FIGHTS <br />
+                <font color="red">OCTOBER 08, 2020</font>
+              </div>
+
+              <!-- video -->
+              <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/d4aAkP3V7l8"
+                  allowfullscreen></iframe>
+              </div>
+
+              <!-- footer video-->
+              <div class="titleDiv">
+                <b>FIGHT#: 1</b>
+              </div>
+
+            </div>
+
+            <div class="col-md-6"  style="padding-right:2px; padding-left:2px;">
+              <div class="row">
+
+                <!-- MERON side -->
+                <div class="col-sm-6"  style="padding-right:2px;">
+                  <div class="meronDiv" style="text-align: center;">
+                    <b>MERON</b>
+                  </div>
+                  <div class="rateDiv">
+                    <b><font color="#e30000">764,017</font> <br />
+                    PAYOUT = 178.017% <br />
+                    <font color="green">100 = 178.17</font></b>
+                  </div>
+                  <button type="button" class="btn btn-success btn-block" onclick="openModal('MERON')"><i class="fa fa-plus-circle"></i> <b>BET MERON</b></button>
+                </div>
+
+                <!-- WALA side -->
+                <div class="col-sm-6"  style="padding-right:2px; padding-left:2px;">
+                  <div class="walaDiv" style="text-align: center;">
+                    <b>WALA</b>
+                  </div>
+                  <div class="rateDiv">
+                    <b><font color="#337bec">764,017</font> <br />
+                    PAYOUT = 292.1% <br />
+                    <font color="green">100 = 202.1</font></b>
+                  </div>
+                  <button type="button" class="btn btn-success btn-block" onclick="openModal('WALA')"><i class="fa fa-plus-circle"></i> <b>BET WALA</b></button>
+                </div>
+
+              </div>
+
+              <!-- current points -->
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="titleDiv" style="text-align: right;">
+                    <b>CURRENT POINTS: </b>
+                  </div>
+                </div>
+              </div>
+
+              <!-- bet amount -->
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="titleDiv">
+
+                    <div class="input-group mb-3">
+                      <input type="text" id="myBet" class="form-control" value="0" placeholder="ENTER AMOUNT">
+                      <button class="btn btn-outline-secondary" type="button" onclick="document.getElementById('myBet').value = ''">Clear</button>
+                    </div>
+
+                    <div class="row p-0">
+                        <div class="col-4 p-1">
+                            <button class="btn btn-lg btn-secondary btn-sm btn-block shadow-button" onclick="document.getElementById('myBet').value= '100'">100</button>
+                        </div>
+                        <div class="col-4 p-1">
+                            <button class="btn btn-lg btn-secondary btn-sm btn-block shadow-button" onclick="document.getElementById('myBet').value= '300'">300</button>
+                        </div>
+                        <div class="col-4 p-1">
+                            <button class="btn btn-lg btn-secondary btn-sm btn-block shadow-button" onclick="document.getElementById('myBet').value= '500'">500</button>
+                        </div>
+                        <div class="col-4 p-1">
+                            <button class="btn btn-lg btn-secondary btn-sm btn-block shadow-button" onclick="document.getElementById('myBet').value= '1000'">1,000</button>
+                        </div>
+                        <div class="col-4 p-1">
+                            <button class="btn btn-lg btn-secondary btn-sm btn-block shadow-button" onclick="document.getElementById('myBet').value= '5000'">5,000</button>
+                        </div>
+                        <div class="col-4 p-1">
+                            <button class="btn btn-lg btn-secondary btn-sm btn-block shadow-button" onclick="document.getElementById('myBet').value= '10000'">10,000</button>
+                        </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <!-- MERON-WALA LLAMADO-DEHADO -->
+              <div class="row">
+                <div class="col-sm-6"  style="padding-right:2px;">
+                  <div class="titleDiv" style="text-align: center;">
+                    <b>MERON-WALA</b>
+                  </div>
+                </div>
+                <div class="col-sm-6"  style="padding-right:2px; padding-left:2px;">
+                  <div class="titleDiv" style="text-align: center;">
+                    <b>LLAMADO-DEHADO</b>
+                  </div>
+                </div>
+              </div>
+
+              <!-- TABLES -->
+              <div class="row">
+                <div class="col-sm-6"  style="padding-right:2px;">
+                  <div class="titleDiv" style="text-align: center;">
+                    <div style="overflow-x:auto;">
+                      <table border="1px" class="center">
+                        <tr>
+                          <td>
+                              <span class="text-span" style="background:red;">1</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:red;">6</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:red;">12</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:blue;">17</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:red;">22</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:gray;">27</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:red;">32</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:red;">37</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                              <span class="text-span" style="background:red;">2</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:red;">7</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:red;">13</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:blue;">18</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:red;">23</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:green;">28</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:red;">33</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:red;">38</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                              <span class="text-span" style="background:blue;">3</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:red;">8</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:red;">14</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:blue;">19</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:red;">24</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:red;">29</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:red;">34</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:red;">39</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                              <span class="text-span" style="background:blue;">4</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:red;">9</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:red;">15</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:red;">20</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:red;">25</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:red;">30</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:red;">35</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:red;">40</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                              <span class="text-span" style="background:red;">5</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:red;">10</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:red;">16</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:red;">21</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:red;">26</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:red;">31</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:red;">36</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:red;">41</span>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6"  style="padding-right:2px; padding-left:2px;">
+                  <div class="titleDiv" style="text-align: center;">
+                    <div style="overflow-x:auto;">
+                      <table border="1px" class="center">
+                        <tr>
+                          <td>
+                              <span class="text-span" style="background:purple;">1</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:purple;">6</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:purple;">12</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:blue;">17</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:purple;">22</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:gray;">27</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:purple;">32</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:purple;">37</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                              <span class="text-span" style="background:purple;">2</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:purple;">7</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:purple;">13</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:blue;">18</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:purple;">23</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:green;">28</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:purple;">33</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:purple;">38</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                              <span class="text-span" style="background:blue;">3</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:purple;">8</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:purple;">14</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:blue;">19</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:purple;">24</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:purple;">29</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:purple;">34</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:purple;">39</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                              <span class="text-span" style="background:blue;">4</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:purple;">9</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:purple;">15</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:purple;">20</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:purple;">25</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:purple;">30</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:purple;">35</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:purple;">40</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                              <span class="text-span" style="background:purple;">5</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:purple;">10</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:purple;">16</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:purple;">21</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:purple;">26</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:purple;">31</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:purple;">36</span>
+                          </td>
+                          <td>
+                              <span class="text-span" style="background:purple;">41</span>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- count -->
+              <div class="row">
+                <div class="col-sm-12">
+                  <div class="titleDiv" style="text-align: center;">
+                    <span class="text-span" style="background:red;">30</span><span>MERON</span>
+                    <span class="text-span" style="background:blue;">5</span><span>WALA</span>
+                    <span class="text-span" style="background:green;">5</span><span>DRAW</span>
+                    <span class="text-span" style="background:gray;">5</span><span>CANCELLED</span>
+                    <span class="text-span" style="background:purple;">5</span><span>LLAMADO</span>
+                    <span class="text-span" style="background:orange;">5</span><span>DEHADO</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+
+
+
+        </div>
+
+        <div class="modal fade" id="betModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                  <form data-validate-on="submit" novalidate="" name="register">
+                      <div class="modal-body text-center">
+                          <h4 class="text-danger font-weight-bold" id="p1"></h4>
+                          <h5 class="font-weight-bold" id="p2"></h5>
+                          <h5 class="font-weight-bold" id="p3"></h5>
+                          <input type="hidden" name="amount" >
+                      </div>
+                      <div class="modal-footer row border-0 p-3" style="justify-content: normal;">
+                          <button type="button" class="btn btn-secondary col" style="background-color:#4e4e4e" data-dismiss="modal">Cancel</button>
+                          <input type="submit" class="btn btn-success col" name="confirm-button" style="background-color:green" value="Confirm Bet" />
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script>
+      function openModal(place){
+        var amountToBetValue = document.getElementById("myBet").value;
+        document.getElementById("p1").innerHTML = place;
+        document.getElementById("p2").innerHTML = "Bet Amount: " + document.getElementById("myBet").value;
+
+        $("#betModal").modal();
+    }
+    </script>
+  </body>
+</html>

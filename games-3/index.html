@@ -6,7 +6,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
+  
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -16,7 +16,6 @@
 <body>
 
   <style>
-
 	#wrapper.menuDisplayed .menu-btn {
 		display: none;
 	}
@@ -29,7 +28,13 @@
 		float: right;
 	}
 
-	@media only screen and (min-width: 768px) and (orientation: landscape){
+	.userDetail {
+		display: grid;
+		grid-template-columns: 2fr .5fr;
+		align-items: center;
+	}
+
+	@media only screen and (min-width: 768px){
 
 		#wrapper.menuDisplayed #page-content-wrapper{
 			padding-right:250px;
@@ -40,7 +45,7 @@
 			padding-right:250px;
 		}
 
-		.menu-btn-small {
+		.menu-btn-small, .glyph-small {
 			display: none;
 		}
 
@@ -94,8 +99,6 @@
 	#wrapper.menuDisplayed #sidebar-wrapper{
 	  width:250px;
 	}
-
-	/* insert code here */
 
 	/* Sidebar styling */
 	.sidebar-nav{
@@ -237,12 +240,14 @@
       </div>
     </div>
 
-	<!-- Sidebar -->
+    <!-- Sidebar -->
 	<div id="sidebar-container">
 		<div id="sidebar-wrapper">
-		<ul class="sidebar-nav">
-			<a href="#" class="btn menu-btn menu-btn-small" id="menu-toggle2"><span class="glyphicon glyphicon-menu-hamburger" style="color:black"></span></a>	
-			<li class="userDetail"><b>USER11</b><br/><span style="font-size:smaller">ACT100001</span></li>
+		<ul class="sidebar-nav">	
+			<li class="userDetail">
+				<span><b>USER11</b><br/><span style="font-size:smaller">ACT100001</span></span>
+				<a href="#" class="btn menu-btn-small" id="menu-toggle2"><span class="glyphicon glyphicon-menu-hamburger glyph-small" style="color:black"></span></a>
+			</li>
 			<li><a data-toggle="pill" href="#userProfile" onclick="showBack()"><i class="fa fa-user" aria-hidden="true"></i> Profile</a></li>
 			<li><a data-toggle="pill" href="#betHistory" onclick="showBack()"><i class="fa fa-credit-card-alt" aria-hidden="true"></i> Bet History</a></li>
 			<li><a data-toggle="pill" href="#withdraw" ><i class="fa fa-money" aria-hidden="true"></i> Withdraw</a></li>
