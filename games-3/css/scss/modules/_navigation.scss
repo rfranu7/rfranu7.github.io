@@ -19,7 +19,7 @@ $hamburgerSize: 30px;
 
     @supports (display: grid) {
         display: grid;
-        grid-template-columns: 2fr 1fr .5fr;
+        grid-template-columns: 2fr 1fr 30px;
         grid-column-gap: .5rem;
         align-items: center;
     }
@@ -28,7 +28,7 @@ $hamburgerSize: 30px;
         justify-self: center;
     }
 
-    @include MQ(1024px){
+    @include MQ(768px){
         grid-template-columns: 1fr 100px 50px;
         grid-column-gap: 1rem;
     }
@@ -42,6 +42,15 @@ $hamburgerSize: 30px;
     }
 }
 
+.backbtn {
+    font-size: .85rem;
+    text-decoration:none;
+    color:black;
+    @include MQ(400px){
+        font-size: 1rem;
+    }
+}
+
 #menu-toggle{
     transition:all .3s;
     float:right;
@@ -50,7 +59,10 @@ $hamburgerSize: 30px;
 #menu-toggle2{
     transition:all .3s;
     float:right;
-    padding-right: 20px;
+    justify-self: flex-end;
+    @include MQ(768px){
+        margin-right: 10px;
+    }
 }
 
 #hamburgerIcon {
@@ -120,9 +132,10 @@ $hamburgerSize: 30px;
 }
 
 .sidebar-nav li{
-    width:100%;
+    width: calc(100% - 20px);
     transition:all .3s;
     padding:10px;
+    max-width: 100%;
 }
 
 .sidebar-nav li a {
@@ -133,13 +146,6 @@ $hamburgerSize: 30px;
 
 .sidebar-nav li:hover{
     background:#9E9E9E;
-}
-
-.backbtn{
-    float:right;
-    padding-top:8px;
-    text-decoration:none;
-    color:black;
 }
 
 #wrapper.menuDisplayed .menu-btn {
@@ -154,9 +160,16 @@ $hamburgerSize: 30px;
     float: right;
 }
 
+@include MQ(1024px){
+
+    #wrapper.menuDisplayed #sidebar-wrapper{
+        width:350px;
+    }
+}
+
 .userDetail {
     display: grid;
-    grid-template-columns: 2fr .5fr;
+    grid-template-columns: 1.5fr .5fr;
     align-items: center;
     height: 5vh;
 }
@@ -208,24 +221,4 @@ $hamburgerSize: 30px;
 
 #hamburgerIcon::before {
     background-image: url(../assets/hamburgerIcon.png);
-}
-
-@include MQ(1024px){
-
-    #wrapper.menuDisplayed #page-content-wrapper{
-        padding-right:250px;
-    }
-
-    #wrapper.menuDisplayed .menu-btn {
-        display: block;
-        padding-right:500px;
-    }
-
-    .menu-btn-small, .glyph-small {
-        display: none;
-    }
-
-    #wrapper.menuDisplayed .menu-btn-small {
-        display: none;
-    }
 }

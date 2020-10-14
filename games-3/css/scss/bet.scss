@@ -1,5 +1,4 @@
 @import "modules/mixins";
-@import "modules/navigation";
 
 body {
   margin: 0;
@@ -15,6 +14,11 @@ body {
 .heading {
   margin: 5px;
   margin-top: Calc(5vh + 25px);
+  @include MQO(1024px, "landscape") {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: .6rem;
+  }
 }
 
 .titleDiv {
@@ -25,11 +29,23 @@ body {
   @include box-sizing(border-box)
 }
 
+.mainTitle {
+  font-size: 2rem;
+  
+  h6{
+   margin: 0;
+  }
+}
+
 iframe {
-  width: Calc(100vw - 10px); 
+  width: Calc(100vw - 10px);
   height: 56.25vw;
   border: none;
-  @include box-sizing(border-box)
+  @include box-sizing(border-box);
+  @include MQO(1024px, "landscape") {
+    width: Calc(50vw - 10px);
+    height: Calc(Calc(56.25vw - 70px) / 2);
+  }
 }
 
 .announcementDiv {
@@ -56,7 +72,7 @@ iframe {
 .meronDiv, .walaDiv {
   border: 1px outset #c00b17;
   @include gradient(#c00b17, #eb0807);
-  @include topBottomShadow(#aaa);
+  @include allShadow(5px,#000);
   padding: .5rem;
   font-size: 25px;
   text-align: center;
@@ -77,7 +93,7 @@ iframe {
   color: white;
   font-family: arial;
   font-weight: bold;
-  @include topBottomShadow(#000);
+  @include allShadow(5px,#000);
   width: 100%;
   margin-bottom: 2px;
   padding: .5rem 0;
@@ -87,7 +103,7 @@ iframe {
   border: 1px outset;
   text-align: center;
   padding: 1rem .25rem;
-  @include topBottomShadow(#000);
+  @include allShadow(5px,#000);
 
   span {
     display: block;
@@ -104,7 +120,6 @@ iframe {
       font-size: 1rem;
     }
   }
-  
 }
 
 .label {
@@ -114,7 +129,7 @@ iframe {
 .betAmountTable {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
 
   div:first-child {
     display: grid;
@@ -129,8 +144,8 @@ iframe {
 
   div:nth-child(2) {
     display: grid;
-    grid-template-columns: Calc(100%/3) Calc(100%/3) Calc(100%/3);
-    justify-content: center;
+    grid-template-columns: Calc(Calc(100% - 10px) / 3) Calc(Calc(100% - 10px) / 3) Calc(Calc(100% - 10px) / 3);
+    justify-content: space-between;
     grid-column-gap: .15rem;
     grid-row-gap: .15rem;
 
@@ -180,7 +195,8 @@ iframe {
 .meron-wala {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-column-gap: .20rem;
+  grid-column-gap: .15rem;
+  @include allShadow(5px,#000);
 }
 
 .table-name {
@@ -196,7 +212,6 @@ iframe {
   border: 1px outset #eeeee9;
   @include gradient(#eeeee9, #faf7f9);
   padding: .5rem;
-  margin-bottom: 3px;
   font-size: 1.1rem;
 }
 
@@ -241,6 +256,7 @@ iframe {
   text-align: center;
   justify-content: center;
   @include gradient(#eeeee9, #faf7f9);
+  @include someShadow(#000);
 }
 
 .circle-group {
@@ -304,7 +320,7 @@ iframe {
 
 
 /******************************************************************
-	            	    Styles for sidebar
+	            	    Styles for modal
 ******************************************************************/
 .modal {
   display: none;
