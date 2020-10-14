@@ -1,0 +1,35 @@
+@import "modules/mixins";
+.pageHeader{
+    background-image: linear-gradient(#e8e6e7, #faf7f9);
+  border-bottom:solid 0.5px #9E9E9E;
+     box-shadow: 1px 2px #000000;
+  padding:5px 15px;
+}
+
+.detailsContainer{
+  padding:0px 20px;
+}
+
+.transTable{
+  font-weight:500;
+  vertical-align:center;
+}
+
+.transTable td{
+  vertical-align:middle;
+font-weight: bold;
+}
+
+.subtx{
+  font-size:x-small;
+}
+
+/** Hide scrollbar **/
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body{
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}

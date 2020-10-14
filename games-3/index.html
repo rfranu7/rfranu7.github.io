@@ -1,12 +1,14 @@
 <html>
 <head>
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="css/style.css">
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -14,295 +16,51 @@
 
 
 <body>
-
-  <style>
-
-	.fa {
-		display: inline-block;
-		font: normal normal normal 14px/1 FontAwesome;
-		font-size: inherit;
-		text-rendering: auto;
-		-webkit-font-smoothing: antialiased;
-	}
-
-	#userIcon, #betHistIcon, #addMoneyIcon, #subMoneyIcon, #logoutIcon {
-		position: relative;
-		width: 20px;
-		height: 15px;
-	}
-
-	#userIcon::before, #betHistIcon::before, #addMoneyIcon::before, #subMoneyIcon::before, #logoutIcon::before {
-		content: "";
-   		background-size: 15px;
-		width: 15px;
-		height: 15px;
-		position: absolute;
-		top: 2px;
-		left: 0;
-	}
-
-	#userIcon::before {
-		background-image: url(assets/userIcon.png);
-	}
-
-	#betHistIcon::before {
-		background-image: url(assets/wallet-icon.png);
-	}
-	
-	#addMoneyIcon::before {
-		background-image: url(assets/add-money-icon.png);
-	}
-	
-	#subMoneyIcon::before {
-		background-image: url(assets/sub-money-icon.png);
-	}
-
-	#logoutIcon::before {
-		background-image: url(assets/logout.png);
-	}
-
-	#wrapper.menuDisplayed .menu-btn {
-		display: none;
-	}
-
-	#wrapper.menuDisplayed .menu-btn-small {
-		display: block;
-	}
-
-	.menu-btn-small {
-		float: right;
-	}
-
-	.userDetail {
-		display: grid;
-		grid-template-columns: 2fr .5fr;
-		align-items: center;
-	}
-
-	@media only screen and (min-width: 768px){
-
-		#wrapper.menuDisplayed #page-content-wrapper{
-			padding-right:250px;
-		}
-
-		#wrapper.menuDisplayed .menu-btn {
-			display: block;
-			padding-right:250px;
-		}
-
-		.menu-btn-small, .glyph-small {
-			display: none;
-		}
-
-		#wrapper.menuDisplayed .menu-btn-small {
-			display: none;
-		}
-	}
-
-	/* Sidebar */
-	#sidebar-container {
-		z-index:1;
-		width:0;
-		height:100%;
-		overflow-y:hidden;
-		background: transparent;
-		right:0;
-		position:fixed;
-	}
-
-	#sidebar-wrapper{
-	  z-index:1;
-	  width:0;
-	  height:100%;
-	  overflow-y:hidden;
-	  background: lightgray;
-	  background-image: linear-gradient(to bottom right, #D3D3D3, #9E9E9E);
-	  opacity:1;
-      transition:all .5s;
- 	  display:flex;
-	  right:0;
-	  position:fixed;
-	}
-
-	/* Main Content */
-	#page-content-wrapper{
-	  width: 100%;
-	  position: absolute;
-      transition:all .5s;
-	}
-
-	#menu-toggle{
-	  transition:all .3s;
-	  float:right;
-	  padding-top:10px;
-	}
-	/* Change the width of the sidebar to display it*/
-	#wrapper.menuDisplayed #sidebar-container{
-	  width:100%;
-	}
-
-	#wrapper.menuDisplayed #sidebar-wrapper{
-	  width:250px;
-	}
-
-	/* Sidebar styling */
-	.sidebar-nav{
-	  padding:0;
-	  list-style:none;
-	  transition:all .5s;
-	  width:100%;
-	}
-
-	.sidebar-nav li{
-	  width:100%;
-	  transition:all .3s;
-	  padding:10px;
-	}
-
-	.sidebar-nav li a {
-	  display:block;
-	  text-decoration:none;
-	  color:black;
-	}
-
-	.sidebar-nav li:hover{
-	  background:#9E9E9E;
-	}
-
-	.navmenu{
-	  background:lightgray;
-	  background-image: linear-gradient(to bottom right, #eeeee9, #eeeee9);
-	  padding:10px 0px;
-	  border-bottom:solid 0.5px #9E9E9E;
-	  display:flex;
-	  z-index:1;
-	  position:fixed;
-	  width: 100%;
-	}
-
-	.maincontent{
-	  width:100%;
-	  padding-left:0px;
-	  padding-right:0px;
-	  overflow-y:hidden;
-	}
-
-	.userDetail{
-	  padding: 9.5px !important;
-	  border-bottom:solid 0.5px #9E9E9E;
-	  color:black;
-	}
-
-	.logo{
-	  background-image:url(./images/logo.png);
-	  background-position:10px;
-	  background-size:contain;
-	  background-repeat:no-repeat;
-	  flex:60%
-	}
-
-	.logo h4{
-	  opacity:0;
-	}
-
-	.frame{
-	  display: block;
-	  width: 100vw;
-	  height: 100vh;
-	  max-width: 100%;
-	  margin: 0;
-	  padding: 0;
-	  border: 0 none;
-	  box-sizing: border-box;
-	}
-
-	#betHistory{
-	  overflow:auto;
-	  margin-bottom:10px;
-	}
-
-	.container-fluid{
-	  padding-top:60px;
-	}
-
-	/** Hide scrollbar **/
-	body::-webkit-scrollbar {
-	  display: none;
-	}
-
-	body{
-	  -ms-overflow-style: none;  /* IE and Edge */
-	  scrollbar-width: none;  /* Firefox */
-	}
-
-	.backbtn{
-	  float:right;
-	  padding-top:8px;
-	  text-decoration:none;
-	  color:black;
-	}
-
-  </style>
-
   <div id="wrapper">
 
     <!-- Page Content -->
     <div id="page-content-wrapper">
-      <div class="navmenu row" style="margin: 0;">
+      <nav class="navmenu">
 	      <div class="logo">
-			<h4><b>LOGO</b></h4>
+			<img src="images/logo.png" alt="Logo">
 		  </div>
 		  <div>
 		    <a data-toggle="pill" href="#bet" class="btn menu-btn backbtn" onclick="hideBack()"><span class="fa fa-chevron-left"></span> GO BACK</a>
 		  </div>
 		  <div>
-			<a href="#" class="btn menu-btn" id="menu-toggle"><span class="glyphicon glyphicon-menu-hamburger" style="color:black; font-size: 2rem;"></span></a>
+			<a href="#" class="btn menu-btn" id="menu-toggle"><span class="fa" id="hamburgerIcon"></span></a>
 		  </div>
-	  </div>
+	  </nav>
 
-
-	  <div class="container-fluid">
-        <div class="row">
-          <div class="col-lg-12 maincontent tab-content">
-			<div class="tab-pane active" id="bet">
-			  <iframe class="frame" src="./bet.html" allowfullscreen></iframe>
-			</div>
-			<div class="tab-pane" id="userProfile">
-			  <iframe class="frame" src="./userProfile.html" allowfullscreen></iframe>
-			</div>
-			<div class="tab-pane" id="betHistory">
-			  <iframe class="frame" src="./betHistory.html" allowfullscreen></iframe>
-			</div>
-			<div class="tab-pane" id="deposit">
-			  <iframe class="frame" src="./deposit.html" allowfullscreen></iframe>
-			</div>
-			<div class="tab-pane" id="withdraw">
-			  <iframe class="frame" src="./withdraw.html" allowfullscreen></iframe>
-			</div>
-          </div>
-        </div>
-      </div>
-    </div>
+	  <div>
+		<div class="tab-pane active" id="bet">
+			<iframe class="frame" src="./bet.html" allowfullscreen></iframe>
+		</div>
+		<div class="tab-pane" id="userProfile">
+			<iframe class="frame" src="./userProfile.html" allowfullscreen></iframe>
+		</div>
+		<div class="tab-pane" id="betHistory">
+			<iframe class="frame" src="./betHistory.html" allowfullscreen></iframe>
+		</div>
+		<div class="tab-pane" id="deposit">
+			<iframe class="frame" src="./deposit.html" allowfullscreen></iframe>
+		</div>
+		<div class="tab-pane" id="withdraw">
+			<iframe class="frame" src="./withdraw.html" allowfullscreen></iframe>
+		</div>
+	</div>
 
     <!-- Sidebar -->
 	<div id="sidebar-container">
 		<div id="sidebar-wrapper">
-		<ul class="sidebar-nav">	
+		<ul class="sidebar-nav">
 			<li class="userDetail">
 				<span><b>USER11</b><br/><span style="font-size:smaller">ACT100001</span></span>
-				<a href="#" class="btn menu-btn-small" id="menu-toggle2"><span class="glyphicon glyphicon-menu-hamburger glyph-small" style="color:black; font-size: 2rem;"></span></a>
+				<a href="#" class="btn menu-btn-small" id="menu-toggle2"><span class="fa glyph-small" id="hamburgerIcon"></span></a>
 			</li>
-			<!-- OLD ICONS 
-				<li><a data-toggle="pill" href="#userProfile" onclick="showBack()"><i class="fa fa-user" aria-hidden="true"></i> Profile</a></li>
-				<li><a data-toggle="pill" href="#betHistory" onclick="showBack()"><i class="fa fa-credit-card-alt" aria-hidden="true"></i> Bet History</a></li>
-				<li><a data-toggle="pill" href="#withdraw" ><i class="fa fa-money" aria-hidden="true"></i> Withdraw</a></li>
-				<li><a data-toggle="pill" href="#deposit" onclick="showBack()"><i class="fa fa-money" aria-hidden="true"></i> Deposit</a></li>			
-				<li><a href="#" onclick="window.location='login.html'"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
-			-->
-
-			<li><a data-toggle="pill" href="#userProfile" onclick="showBack()"><i class="fa" id="userIcon" aria-hidden="true"></i> Profile</a></li>
+			<li><a data-toggle="pill" href="#userProfile" onclick="showBack('#userProfile')"><i class="fa" id="userIcon" aria-hidden="true"></i> Profile</a></li>
 			<li><a data-toggle="pill" href="#betHistory" onclick="showBack()"><i class="fa" id="betHistIcon" aria-hidden="true"></i> Bet History</a></li>
-			<li><a data-toggle="pill" href="#withdraw" ><i class="fa" id="addMoneyIcon" aria-hidden="true"></i> Withdraw</a></li>
+			<li><a data-toggle="pill" href="#withdraw" onclick="showBack()"><i class="fa" id="addMoneyIcon" aria-hidden="true"></i> Withdraw</a></li>
 			<li><a data-toggle="pill" href="#deposit" onclick="showBack()"><i class="fa" id="subMoneyIcon" aria-hidden="true"></i> Deposit</a></li>
 			<li><a href="#" onclick="window.location='login.html'"><i class="fa" id="logoutIcon" aria-hidden="true"></i> Logout</a></li>
 		</ul>
@@ -339,8 +97,13 @@
 	});
   </script>
   <script>
-	function showBack(){
+	function showBack(id){
 		$(".backbtn").show()
+		var elems = document.querySelectorAll(".active");
+		[].forEach.call(elems, function(el) {
+			el.classList.remove("active");
+		});
+		$(id).addClass("active");
 	}
 	function hideBack(){
 		$(".backbtn").hide()

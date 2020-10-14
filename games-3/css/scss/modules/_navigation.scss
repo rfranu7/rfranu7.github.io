@@ -1,0 +1,231 @@
+@import "mixins";
+$hamburgerSize: 30px;
+
+/******************************************************************
+	            	Styles for top navigation
+******************************************************************/
+
+.navmenu{
+    background:red;
+    background-image: linear-gradient(to bottom right, #eeeee9, #eeeee9);
+    padding:10px;
+    border-bottom:solid 0.5px #9E9E9E;
+    display:flex;
+    z-index:1;
+    position:fixed;
+    width:100%;
+    margin: 0;
+    @include box-sizing(border-box);
+
+    @supports (display: grid) {
+        display: grid;
+        grid-template-columns: 2fr 1fr .5fr;
+        grid-column-gap: .5rem;
+        align-items: center;
+    }
+
+    div:nth-child(n+2){
+        justify-self: center;
+    }
+
+    @include MQ(1024px){
+        grid-template-columns: 1fr 100px 50px;
+        grid-column-gap: 1rem;
+    }
+}
+
+.logo {
+    flex:60%;
+
+    img {
+        max-height: 5vh;
+    }
+}
+
+#menu-toggle{
+    transition:all .3s;
+    float:right;
+}
+
+#menu-toggle2{
+    transition:all .3s;
+    float:right;
+    padding-right: 20px;
+}
+
+#hamburgerIcon {
+    position: relative;
+    width: $hamburgerSize;
+    height: $hamburgerSize;
+}
+
+#hamburgerIcon::before {
+    content: "";
+    background-size: $hamburgerSize;
+    width: $hamburgerSize;
+    height: $hamburgerSize;
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include transform(50% 50%);
+}
+
+/******************************************************************
+	            	    Styles for sidebar
+******************************************************************/
+
+/* Sidebar */
+#sidebar-container {
+    z-index:99;
+    width:0;
+    height:100%;
+    overflow-y:hidden;
+    background: transparent;
+    top: 0;
+    right:0;
+    position:fixed;
+}
+
+#sidebar-wrapper{
+    z-index:1;
+    width:0;
+    height:100%;
+    overflow-y:hidden;
+    background: lightgray;
+    background-image: linear-gradient(to bottom right, #D3D3D3, #9E9E9E);
+    opacity:1;
+    transition:all .5s;
+    display:flex;
+    top: 0;
+    right:0;
+    position:fixed;
+}
+
+/* Change the width of the sidebar to display it*/
+#wrapper.menuDisplayed #sidebar-container{
+    width:100%;
+}
+
+#wrapper.menuDisplayed #sidebar-wrapper{
+    width:250px;
+}
+
+/* Sidebar styling */
+.sidebar-nav{
+    padding:0;
+    margin: 0;
+    list-style:none;
+    transition:all .5s;
+    width:100%;
+}
+
+.sidebar-nav li{
+    width:100%;
+    transition:all .3s;
+    padding:10px;
+}
+
+.sidebar-nav li a {
+    display:block;
+    text-decoration:none;
+    color:black;
+}
+
+.sidebar-nav li:hover{
+    background:#9E9E9E;
+}
+
+.backbtn{
+    float:right;
+    padding-top:8px;
+    text-decoration:none;
+    color:black;
+}
+
+#wrapper.menuDisplayed .menu-btn {
+    display: none;
+}
+
+#wrapper.menuDisplayed .menu-btn-small {
+    display: block;
+}
+
+.menu-btn-small {
+    float: right;
+}
+
+.userDetail {
+    display: grid;
+    grid-template-columns: 2fr .5fr;
+    align-items: center;
+    height: 5vh;
+}
+
+// Side bar icons
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+#userIcon, #betHistIcon, #addMoneyIcon, #subMoneyIcon, #logoutIcon {
+    position: relative;
+    width: 20px;
+    height: 15px;
+}
+
+#userIcon::before, #betHistIcon::before, #addMoneyIcon::before, #subMoneyIcon::before, #logoutIcon::before {
+    content: "";
+    background-size: 15px;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 2px;
+    left: 0;
+}
+
+#userIcon::before {
+    background-image: url(../assets/userIcon.png);
+}
+
+#betHistIcon::before {
+    background-image: url(../assets/wallet-icon.png);
+}
+
+#addMoneyIcon::before {
+    background-image: url(../assets/add-money-icon.png);
+}
+
+#subMoneyIcon::before {
+    background-image: url(../assets/sub-money-icon.png);
+}
+
+#logoutIcon::before {
+    background-image: url(../assets/logout.png);
+}
+
+#hamburgerIcon::before {
+    background-image: url(../assets/hamburgerIcon.png);
+}
+
+@include MQ(1024px){
+
+    #wrapper.menuDisplayed #page-content-wrapper{
+        padding-right:250px;
+    }
+
+    #wrapper.menuDisplayed .menu-btn {
+        display: block;
+        padding-right:500px;
+    }
+
+    .menu-btn-small, .glyph-small {
+        display: none;
+    }
+
+    #wrapper.menuDisplayed .menu-btn-small {
+        display: none;
+    }
+}

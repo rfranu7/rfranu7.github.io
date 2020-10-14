@@ -1,0 +1,47 @@
+@mixin MQ($size) {
+    @media only screen and (min-width: $size){ @content; };
+}
+
+@mixin gradient($color1, $color2) {
+  background: linear-gradient($color1, $color2);
+  background: -webkit-linear-gradient($color1, $color2);
+  background: -moz-linear-gradient($color1, $color2);
+}
+
+@mixin box-sizing($type) {
+    -webkit-box-sizing: $type;
+ -moz-box-sizing: $type;
+ box-sizing: $type;
+}
+
+@mixin transform($options) {
+    -webkit-transform: $options;
+  -moz-transform: $options;
+  -ms-transform: $options;
+  -o-transform: $options;
+  transform: $options;
+}
+
+@mixin transition($options) {
+    -webkit-transition: $options;
+  -moz-transition: $options;
+  transition: $options;
+}
+
+@mixin allShadow($size, $color){
+  -webkit-box-shadow: 0 0 $size $color;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    0 0 $size $color;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         0 0 $size $color;
+}
+
+@mixin someShadow($color){
+  -webkit-box-shadow: 3px 3px 3px -3px $color, 3px 3px 3px -3px $color, -3px 3px 3px -3px $color;
+-moz-box-shadow:    3px 3px 3px -3px $color, 3px 3px 3px -3px $color, -3px 3px 3px -3px $color;
+box-shadow:         3px 3px 3px -3px $color, 3px 3px 3px -3px $color, -3px 3px 3px -3px $color;
+}
+
+@mixin topBottomShadow($color){
+  -webkit-box-shadow: 0px 1px 1px $color, 0px -1px 1px $color;
+  -moz-box-shadow: 0px 1px 1px $color, 0px -1px 1px $color;
+  box-shadow: 0px 1px 1px $color, 0px -1px 1px $color;
+}

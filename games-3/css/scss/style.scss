@@ -1,0 +1,69 @@
+@import "modules/mixins";
+@import "modules/navigation";
+
+body {
+    margin: 0;
+    font-family: Arial,sans-serif;
+}
+
+.tab-pane {
+  display: none;
+}
+.tab-pane.active {
+  display: block;
+}
+
+.maincontent {
+    margin: .25rem;
+    margin-left: .35rem;
+}
+
+/* Main Content */
+#page-content-wrapper{
+  width: 100%;
+  position: absolute;
+  transition:all .5s;
+}
+
+.maincontent{
+  width:100%;
+  padding-left:0px;
+  padding-right:0px;
+  overflow-y:hidden;
+}
+
+.userDetail{
+  padding: 9.5px !important;
+  border-bottom:solid 0.5px #9E9E9E;
+  color:black;
+}
+
+.frame{
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0 none;
+  box-sizing: border-box;
+}
+
+#betHistory{
+  overflow:auto;
+  margin-bottom:10px;
+}
+
+.container-fluid{
+  padding-top:60px;
+}
+
+/** Hide scrollbar **/
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body{
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
