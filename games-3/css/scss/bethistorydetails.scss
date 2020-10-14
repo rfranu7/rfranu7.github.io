@@ -1,4 +1,10 @@
 @import "modules/mixins";
+
+.heading {
+  margin: 5px;
+  margin-top: Calc(5vh + 25px);
+}
+
 .pageHeader{
     background-image: linear-gradient(#e8e6e7, #faf7f9);
   border-bottom:solid 0.5px #9E9E9E;

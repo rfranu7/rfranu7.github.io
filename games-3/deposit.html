@@ -117,78 +117,80 @@
 	}
 	</style>
 
+	<main class="heading">
 
-    <div class="pageHeader"><b>Deposit</b></div>
-	<br/>
-	<div class="container-fluid depositContainer">
-	  <div class="requestHeader" style="border-bottom:solid 0.5px lightgray;">Request Deposit Amount</div><br/>
-	  <div class="row amounts">
-	    <button class="btn btn-info amountBtn">1K</button>
-	    <button class="btn btn-info amountBtn">2K</button>
-	    <button class="btn btn-info amountBtn">3K</button>
-	    <button class="btn btn-info amountBtn">4K</button>
-	    <button class="btn btn-info amountBtn">5K</button>
-	    <button class="btn btn-info amountBtn">10K</button>
-	  </div>
-	  <br/>
-
-	  <div class="amounts">
-	    <label>Custom Amount</label><br/>
-
-	  <div class="input-group mb-3">
-	    <input type="text" class="form-control customAmount" placeholder="Amount">
-	    <div class="input-group-append">
-		  <span class="input-group-text customInfo" id="basic-addon2"><span class="fa fa-info-circle" aria-hidden="true"></span></span>
-	    </div>
-	  </div>
-
-	  </div>
-	  <br/>
-
-	  <div class="actions">
-	    <button class="btn btn-secondary">CLOSE</button>
-	    <button type="button" class="btn btn-send" data-toggle="modal" data-target="#paymentModal">SUBMIT</button>
-	  </div>
-
-	  <!-- The Modal -->
-	  <div class="modal" id="paymentModal">
-		<div class="modal-dialog">
-		  <div class="modal-content">
-
-			<div class="modal-header">
-			  <h4 class="modal-title">REQUEST PAYMENT</h4>
-			  <button type="button" class="close" data-dismiss="modal">&times;</button>
-			</div>
-
-			<div class="modal-body">
-
-			<div class="card bg-light payment">
-			  <div class="card-body">
-
- 			    <div class="input-group mb-3">
-				  <div class="input-group-prepend paymentColors">
-				    <span class="input-group-text lightgreen" id="basic-addon1"><span class="fa fa-check"></span></span>
-				  </div>
-				  <input type="text" class="form-control text-success lightergreen" disabled value="TRANSACTION INFO" aria-label="Username" aria-describedby="basic-addon1">
-			    </div>
-
-			    <p class="card-text">Payee should scan the QR code or manually input the REF# on Send Payment Form</p>
-			    <img class="card-img-bottom" src="./images/qr.png" alt="Card image cap">
-			  </div>
-			</div>
-
-			<ul class="list-group paymentDetails">
-			  <li class="list-group-item"><b>REF#:</b> 203ESA55A3BNG1602205393</li>
-			  <li class="list-group-item"><b>CURRENCY:</b> PHP</li>
-			  <li class="list-group-item"><b>AMOUNT:</b> 1000</li>
-			</ul>
-
-			</div>
-
-		  </div>
+		<div class="pageHeader"><b>Deposit</b></div>
+		<br/>
+		<div class="container-fluid depositContainer">
+		<div class="requestHeader" style="border-bottom:solid 0.5px lightgray;">Request Deposit Amount</div><br/>
+		<div class="row amounts">
+			<button class="btn btn-info amountBtn">1K</button>
+			<button class="btn btn-info amountBtn">2K</button>
+			<button class="btn btn-info amountBtn">3K</button>
+			<button class="btn btn-info amountBtn">4K</button>
+			<button class="btn btn-info amountBtn">5K</button>
+			<button class="btn btn-info amountBtn">10K</button>
 		</div>
-	  </div>
+		<br/>
 
-	</div>
+		<div class="amounts">
+			<label>Custom Amount</label><br/>
+
+		<div class="input-group mb-3">
+			<input type="text" class="form-control customAmount" placeholder="Amount">
+			<div class="input-group-append">
+			<span class="input-group-text customInfo" id="basic-addon2"><span class="fa fa-info-circle" aria-hidden="true"></span></span>
+			</div>
+		</div>
+
+		</div>
+		<br/>
+
+		<div class="actions">
+			<button class="btn btn-secondary">CLOSE</button>
+			<button type="button" class="btn btn-send" data-toggle="modal" data-target="#paymentModal">SUBMIT</button>
+		</div>
+
+		<!-- The Modal -->
+		<div class="modal" id="paymentModal">
+			<div class="modal-dialog">
+			<div class="modal-content">
+
+				<div class="modal-header">
+				<h4 class="modal-title">REQUEST PAYMENT</h4>
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+
+				<div class="modal-body">
+
+				<div class="card bg-light payment">
+				<div class="card-body">
+
+					<div class="input-group mb-3">
+					<div class="input-group-prepend paymentColors">
+						<span class="input-group-text lightgreen" id="basic-addon1"><span class="fa fa-check"></span></span>
+					</div>
+					<input type="text" class="form-control text-success lightergreen" disabled value="TRANSACTION INFO" aria-label="Username" aria-describedby="basic-addon1">
+					</div>
+
+					<p class="card-text">Payee should scan the QR code or manually input the REF# on Send Payment Form</p>
+					<img class="card-img-bottom" src="./images/qr.png" alt="Card image cap">
+				</div>
+				</div>
+
+				<ul class="list-group paymentDetails">
+				<li class="list-group-item"><b>REF#:</b> 203ESA55A3BNG1602205393</li>
+				<li class="list-group-item"><b>CURRENCY:</b> PHP</li>
+				<li class="list-group-item"><b>AMOUNT:</b> 1000</li>
+				</ul>
+
+				</div>
+
+			</div>
+			</div>
+		</div>
+
+		</div>
+	</main>
   </body>
 </html>

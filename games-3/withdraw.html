@@ -117,88 +117,90 @@
 
 	</style>
 
+	<main class="heading">
 
-    <div class="pageHeader"><b>Withdraw</b></div>
-	<br/>
-	<div class="container-fluid depositContainer">
-	  <div class="requestHeader" style="border-bottom:solid 0.5px lightgray;">BANK TRANSFER REQUEST</div><br/>
-	  <div class="amounts">
-	      <label>AMOUNT</label><br/>
+		<div class="pageHeader"><b>Withdraw</b></div>
+		<br/>
+		<div class="container-fluid depositContainer">
+		<div class="requestHeader" style="border-bottom:solid 0.5px lightgray;">BANK TRANSFER REQUEST</div><br/>
+		<div class="amounts">
+			<label>AMOUNT</label><br/>
 
-		  <div class="input-group mb-3">
-			<input type="text" class="form-control customAmount" placeholder="Amount">
-			<div class="input-group-append">
-			  <span class="input-group-text customInfo" id="basic-addon2"><span class="fa fa-info-circle" aria-hidden="true"></span></span>
-			</div>
-		  </div>
-
-		  <br/>
-
-		  <select class="form-control otherInfo">
-			<option selected>BDO</option>
-			<option>BPI</option>
-			<option>UnionBank</option>
-		  </select>
-
-		  <input type="text" class="form-control otherInfo" placeholder="Account Number">
-		  <input type="text" class="form-control otherInfo" placeholder="Account Name">
-	  </div>
-	  <br/>
-
-	  <div class="actions">
-	    <button class="btn btn-secondary">CLOSE</button>
-	    <button type="button" class="btn btn-send" data-toggle="modal" data-target="#paymentModal">SUBMIT</button>
-	  </div>
-
-	  <!-- The Modal -->
-	  <div class="modal" id="paymentModal">
-		<div class="modal-dialog">
-		  <div class="modal-content">
-
-			<div class="modal-header">
-			  <h4 class="modal-title">BANK TRANSFER REQUEST</h4>
-			  <button type="button" class="close" data-dismiss="modal">&times;</button>
+			<div class="input-group mb-3">
+				<input type="text" class="form-control customAmount" placeholder="Amount">
+				<div class="input-group-append">
+				<span class="input-group-text customInfo" id="basic-addon2"><span class="fa fa-info-circle" aria-hidden="true"></span></span>
+				</div>
 			</div>
 
-			<div class="modal-body">
+			<br/>
 
-			  <div>
-				  <label>AMOUNT</label><br/>
+			<select class="form-control otherInfo">
+				<option selected>BDO</option>
+				<option>BPI</option>
+				<option>UnionBank</option>
+			</select>
 
-				  <div class="input-group mb-3">
-					<input type="text" class="form-control customAmount modalAmount" value="100" disabled>
-					<div class="input-group-append">
-					  <span class="input-group-text customInfo" id="basic-addon2"><span class="fa fa-info-circle" aria-hidden="true"></span></span>
-					</div>
-				  </div>
-			  </div>
-
-			<div class="card bg-light payment">
-			  <div class="card-body">
-
- 			    <div class="input-group mb-3" style="margin-bottom:0px !important">
-				  <div class="input-group-prepend paymentColors">
-				    <span class="input-group-text lightgreen" id="basic-addon1"><span class="fa fa-check"></span></span>
-				  </div>
-				  <input type="text" class="form-control text-success lightergreen" disabled value="TRANSACTION INFO" aria-label="Username" aria-describedby="basic-addon1">
-			    </div>
-			  </div>
-			</div>
-
-			<ul class="list-group paymentDetails">
-			  <li class="list-group-item"><b>REF#:</b> 203ESA55A3BNG1602205393</li>
-			  <li class="list-group-item"><b>CURRENCY:</b> PHP</li>
-			  <li class="list-group-item"><b>AMOUNT:</b> 1000</li>
-			</ul>
-
-			</div>
-
-			</div>
-
-		  </div>
+			<input type="text" class="form-control otherInfo" placeholder="Account Number">
+			<input type="text" class="form-control otherInfo" placeholder="Account Name">
 		</div>
-	  </div>
+		<br/>
 
-	</div>
+		<div class="actions">
+			<button class="btn btn-secondary">CLOSE</button>
+			<button type="button" class="btn btn-send" data-toggle="modal" data-target="#paymentModal">SUBMIT</button>
+		</div>
+
+		<!-- The Modal -->
+		<div class="modal" id="paymentModal">
+			<div class="modal-dialog">
+			<div class="modal-content">
+
+				<div class="modal-header">
+				<h4 class="modal-title">BANK TRANSFER REQUEST</h4>
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+
+				<div class="modal-body">
+
+				<div>
+					<label>AMOUNT</label><br/>
+
+					<div class="input-group mb-3">
+						<input type="text" class="form-control customAmount modalAmount" value="100" disabled>
+						<div class="input-group-append">
+						<span class="input-group-text customInfo" id="basic-addon2"><span class="fa fa-info-circle" aria-hidden="true"></span></span>
+						</div>
+					</div>
+				</div>
+
+				<div class="card bg-light payment">
+				<div class="card-body">
+
+					<div class="input-group mb-3" style="margin-bottom:0px !important">
+					<div class="input-group-prepend paymentColors">
+						<span class="input-group-text lightgreen" id="basic-addon1"><span class="fa fa-check"></span></span>
+					</div>
+					<input type="text" class="form-control text-success lightergreen" disabled value="TRANSACTION INFO" aria-label="Username" aria-describedby="basic-addon1">
+					</div>
+				</div>
+				</div>
+
+				<ul class="list-group paymentDetails">
+				<li class="list-group-item"><b>REF#:</b> 203ESA55A3BNG1602205393</li>
+				<li class="list-group-item"><b>CURRENCY:</b> PHP</li>
+				<li class="list-group-item"><b>AMOUNT:</b> 1000</li>
+				</ul>
+
+				</div>
+
+				</div>
+
+			</div>
+			</div>
+		</div>
+
+		</div>
+	</main>
   </body>
 </html>

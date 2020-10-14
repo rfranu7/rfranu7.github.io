@@ -14,6 +14,12 @@ body {
 .heading {
   margin: 5px;
   margin-top: Calc(5vh + 25px);
+  @include MQO(320px, "landscape") {
+    margin-top: Calc(5vh + 35px);
+  }
+  @include MQO(768px, "landscape") {
+    margin-top: Calc(5vh + 25px);
+  }
   @include MQO(1024px, "landscape") {
     display: grid;
     grid-template-columns: 1fr 1fr;

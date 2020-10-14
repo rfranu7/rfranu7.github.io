@@ -1,6 +1,10 @@
 @import "modules/mixins";
 @import "modules/navigation";
 
+* {
+  -webkit-overflow-scrolling: auto;
+}
+
 body {
     margin: 0;
     font-family: Arial,sans-serif;

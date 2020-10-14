@@ -2,7 +2,7 @@
 	            	Styles for top navigation
 ******************************************************************/
 .navmenu {
-  background: red;
+  background: #000;
   background-image: linear-gradient(to bottom right, #eeeee9, #eeeee9);
   padding: 10px;
   border-bottom: solid 0.5px #9E9E9E;
@@ -184,6 +184,9 @@
 
 #hamburgerIcon::before {
   background-image: url(../assets/hamburgerIcon.png); }
+
+* {
+  -webkit-overflow-scrolling: auto; }
 
 body {
   margin: 0;
