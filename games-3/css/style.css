@@ -186,7 +186,7 @@
   background-image: url(../assets/hamburgerIcon.png); }
 
 * {
-  -webkit-overflow-scrolling: auto; }
+  -webkit-overflow-scrolling: touch; }
 
 body {
   margin: 0;
