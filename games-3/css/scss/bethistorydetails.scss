@@ -67,3 +67,10 @@ body{
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
+
+.extra {
+  height: 150px;
+  @include MQO(768px, "landscape"){
+    height: 0;
+  }
+}

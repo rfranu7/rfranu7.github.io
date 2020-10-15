@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="css/bethistorydetails.css">
 
   </head>
-  <body style="overflow:scroll">
+  <body onload="getbrowser()" style="overflow:scroll">
 
 	<div class="pageHeader"><b> Transaction Summary</b></div>
 	<br/>
@@ -82,6 +82,37 @@
 		</tbody>
 	</table>
 	</div>
-
+	<section id="spacing"></section>
+	<script>
+        function getbrowser(){
+            var isMobile = {
+                Android: function() {
+                    return navigator.userAgent.match(/Android/i);
+                },
+                BlackBerry: function() {
+                    return navigator.userAgent.match(/BlackBerry/i);
+                },
+                iOS: function() {
+                    return /iPad|iPhone|iPod/.test(navigator.platform) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
+                },
+                Opera: function() {
+                    return navigator.userAgent.match(/Opera Mini/i);
+                },
+                Windows: function() {
+                    return navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/WPDesktop/i);
+                },
+                any: function() {
+                    return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+                }
+            };
+    
+            if( isMobile.any() ){
+                console.log("mobile");
+                document.getElementById("spacing").className = "extra";
+            } else {
+                console.log("not");
+            }
+        }
+    </script>
   </body>
 </html>

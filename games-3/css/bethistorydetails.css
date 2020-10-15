@@ -53,3 +53,9 @@ body {
   /* IE and Edge */
   scrollbar-width: none;
   /* Firefox */ }
+
+.extra {
+  height: 150px; }
+  @media only screen and (min-width: 768px) and (orientation: landscape) {
+    .extra {
+      height: 0; } }
