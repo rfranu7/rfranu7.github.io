@@ -2,6 +2,7 @@
 
 body {
   margin: 0;
+  overscroll-behavior-y: none;
 }
 
 .tab-content>.tab-pane {
@@ -422,4 +423,11 @@ iframe {
 
 .modal-backdrop {
   z-index: -1 !important;
+}
+
+.extra {
+  height: 80px;
+  @include MQO(768px, "landscape"){
+    height: 0;
+  }
 }

@@ -1,5 +1,6 @@
 body {
-  margin: 0; }
+  margin: 0;
+  overscroll-behavior-y: none; }
 
 .tab-content > .tab-pane {
   display: none; }
@@ -403,3 +404,9 @@ iframe {
 
 .modal-backdrop {
   z-index: -1 !important; }
+
+.extra {
+  height: 80px; }
+  @media only screen and (min-width: 768px) and (orientation: landscape) {
+    .extra {
+      height: 0; } }

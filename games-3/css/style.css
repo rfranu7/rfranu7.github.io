@@ -188,10 +188,15 @@
 * {
   -webkit-overflow-scrolling: touch; }
 
+html, body {
+  height: 100%; }
+
 body {
   margin: 0;
   font-family: Arial,sans-serif;
-  scroll-behavior: smooth; }
+  scroll-behavior: smooth;
+  overscroll-behavior: none;
+  overscroll-behavior-y: none; }
 
 .tab-pane {
   display: none; }

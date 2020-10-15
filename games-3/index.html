@@ -54,25 +54,63 @@
 	</div>
 	</main>
 
-    <!-- Sidebar -->
-	<div id="sidebar-container">
-		<div id="sidebar-wrapper">
-		<ul class="sidebar-nav">
-			<li class="userDetail">
-				<span><b>USER11</b><br/><span style="font-size:smaller">ACT100001</span></span>
-				<a href="#" class="btn menu-btn-small" id="menu-toggle2"><span class="fa glyph-small" id="hamburgerIcon"></span></a>
-			</li>
-			<li><a data-toggle="pill" href="#userProfile" onclick="showBack('#userProfile')"><i class="fa" id="userIcon" aria-hidden="true"></i> Profile</a></li>
-			<li><a data-toggle="pill" href="#betHistory" onclick="showBack('#betHistory')"><i class="fa" id="betHistIcon" aria-hidden="true"></i> Bet History</a></li>
-			<li><a data-toggle="pill" href="#withdraw" onclick="showBack('#withdraw')"><i class="fa" id="addMoneyIcon" aria-hidden="true"></i> Withdraw</a></li>
-			<li><a data-toggle="pill" href="#deposit" onclick="showBack('#deposit')"><i class="fa" id="subMoneyIcon" aria-hidden="true"></i> Deposit</a></li>
-			<li><a href="#" onclick="window.location='login.html'"><i class="fa" id="logoutIcon" aria-hidden="true"></i> Logout</a></li>
-		</ul>
+	<!-- Sidebar -->
+	<aside>
+		<div id="sidebar-container">
+			<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="userDetail">
+					<span><b>USER11</b><br/><span style="font-size:smaller">ACT100001</span></span>
+					<a href="#" class="btn menu-btn-small" id="menu-toggle2"><span class="fa glyph-small" id="hamburgerIcon"></span></a>
+				</li>
+				<li><a data-toggle="pill" href="#userProfile" onclick="showBack('#userProfile')"><i class="fa" id="userIcon" aria-hidden="true"></i> Profile</a></li>
+				<li><a data-toggle="pill" href="#betHistory" onclick="showBack('#betHistory')"><i class="fa" id="betHistIcon" aria-hidden="true"></i> Bet History</a></li>
+				<li><a data-toggle="pill" href="#withdraw" onclick="showBack('#withdraw')"><i class="fa" id="addMoneyIcon" aria-hidden="true"></i> Withdraw</a></li>
+				<li><a data-toggle="pill" href="#deposit" onclick="showBack('#deposit')"><i class="fa" id="subMoneyIcon" aria-hidden="true"></i> Deposit</a></li>
+				<li><a href="#" onclick="window.location='login.html'"><i class="fa" id="logoutIcon" aria-hidden="true"></i> Logout</a></li>
+			</ul>
+			</div>
 		</div>
-	</div>
-	<footer></footer>
+	</aside>
   </div>
-  <script src="css/show.js"></script>
+  <script>
+	function hideAddressBar() {
+	// Big screen. Fixed chrome likely.
+	if(screen.width > 980 || screen.height > 980) return;
+
+	// Standalone (full screen webapp) mode
+	if(window.navigator.standalone === true) return;
+
+	// Page zoom or vertical scrollbars
+	if(window.innerWidth !== document.documentElement.clientWidth) {
+		// Sometimes one pixel too much. Compensate.
+		if((window.innerWidth - 1) !== document.documentElement.clientWidth) return;
+
+	}
+
+	// Check that the current page can be scrolled first. Pad content if necessary.
+	if(document.documentElement.scrollHeight <= document.documentElement.clientHeight) {
+		// Extend body height to overflow and cause scrolling
+		bodyTag = document.getElementsByTagName('body')[0];
+		bodyTag.style.height = document.documentElement.clientWidth / screen.width * screen.height + 'px'; // Viewport height at fullscreen
+
+	}
+
+	setTimeout(function() {
+		// Already scrolled?
+		if(window.pageYOffset !== 0) return;
+
+		// Perform autoscroll
+		window.scrollTo(0, 1);
+
+		// Reset body height and scroll
+		if(bodyTag !== undefined) bodyTag.style.height = window.innerHeight + 'px';
+		window.scrollTo(0, 0);
+
+	}, 1000);
+
+}
+  </script>
   <script>
 	$(document).ready(function(){
 	  $("#menu-toggle").click(function(e){
