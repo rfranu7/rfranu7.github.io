@@ -2,7 +2,17 @@
 
 body {
   margin: 0;
-  
+}
+
+.tab-content>.tab-pane {
+  display: none;
+}
+.tab-content>.active {
+  display: block;
+}
+
+.heading {
+  margin: 5px;
   margin-top: Calc(5vh + 25px);
   @include MQO(320px, "landscape") {
     margin-top: Calc(5vh + 35px);
@@ -14,24 +24,6 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: .6rem;
-  }
-}
-
-.tab-content>.tab-pane {
-  display: none;
-}
-.tab-content>.active {
-  display: block;
-}
-
-header {
-  grid-row: 1/ span 2;
-}
-
-.heading {
-  margin: 5px;
-  @include MQO(768px, "landscape") {
-    margin-top: 0;
   }
 }
 

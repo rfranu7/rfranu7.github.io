@@ -1,17 +1,5 @@
 body {
-  margin: 0;
-  margin-top: Calc(5vh + 25px); }
-  @media only screen and (min-width: 320px) and (orientation: landscape) {
-    body {
-      margin-top: Calc(5vh + 35px); } }
-  @media only screen and (min-width: 768px) and (orientation: landscape) {
-    body {
-      margin-top: Calc(5vh + 25px); } }
-  @media only screen and (min-width: 1024px) and (orientation: landscape) {
-    body {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-column-gap: .6rem; } }
+  margin: 0; }
 
 .tab-content > .tab-pane {
   display: none; }
@@ -19,14 +7,20 @@ body {
 .tab-content > .active {
   display: block; }
 
-header {
-  grid-row: 1/ span 2; }
-
 .heading {
-  margin: 5px; }
+  margin: 5px;
+  margin-top: Calc(5vh + 25px); }
+  @media only screen and (min-width: 320px) and (orientation: landscape) {
+    .heading {
+      margin-top: Calc(5vh + 35px); } }
   @media only screen and (min-width: 768px) and (orientation: landscape) {
     .heading {
-      margin-top: 0; } }
+      margin-top: Calc(5vh + 25px); } }
+  @media only screen and (min-width: 1024px) and (orientation: landscape) {
+    .heading {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: .6rem; } }
 
 .titleDiv {
   border: 1px outset;
