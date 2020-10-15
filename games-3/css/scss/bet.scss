@@ -431,3 +431,12 @@ iframe {
     height: 0;
   }
 }
+
+.small-pc-browser {
+  @include MQ(300PX){
+    width: Calc(100vw - 27px);
+  }
+  @include MQO(1024px, "landscape") {
+    width: Calc(50vw - 10px);
+  }
+}

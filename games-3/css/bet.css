@@ -410,3 +410,10 @@ iframe {
   @media only screen and (min-width: 768px) and (orientation: landscape) {
     .extra {
       height: 0; } }
+
+@media only screen and (min-width: 300PX) {
+  .small-pc-browser {
+    width: Calc(100vw - 27px); } }
+@media only screen and (min-width: 1024px) and (orientation: landscape) {
+  .small-pc-browser {
+    width: Calc(50vw - 10px); } }

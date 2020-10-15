@@ -12,7 +12,7 @@
 
     <title>Sabong Express</title>
   </head>
-  <body>
+  <body onload="getbrowser()">
         <main class="heading">
 
             <div>
@@ -24,7 +24,7 @@
 
               <!-- video -->
               <div class="video">
-                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/d4aAkP3V7l8" allowfullscreen></iframe>
+                <iframe id="videoFrame" class="embed-responsive-item" src="https://www.youtube.com/embed/d4aAkP3V7l8" allowfullscreen></iframe>
               </div>
 
               <!-- footer marquee-->
@@ -645,7 +645,7 @@
             </div>
             </section>
         </main>
-        <section class="extra"></section>
+        <section id="spacing"></section>
 
         <div class="modal-own" id="betModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-container-own">
@@ -681,5 +681,39 @@
         $("#betModal").modal();
     }
     </script>
+    <script>
+        function getbrowser(){
+            var isMobile = {
+                Android: function() {
+                    return navigator.userAgent.match(/Android/i);
+                },
+                BlackBerry: function() {
+                    return navigator.userAgent.match(/BlackBerry/i);
+                },
+                iOS: function() {
+                    return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+                },
+                Opera: function() {
+                    return navigator.userAgent.match(/Opera Mini/i);
+                },
+                Windows: function() {
+                    return navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/WPDesktop/i);
+                },
+                any: function() {
+                    return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+                }
+            };
+    
+            if( isMobile.any() ){
+                console.log("mobile");
+                document.getElementById("spacing").className = "extra";
+            } else {
+                console.log("not")
+                document.getElementById("videoFrame").className = "small-pc-browser"
+                const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
+                console.log(vw);
+            }
+        }
+      </script>
   </body>
 </html>
