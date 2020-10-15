@@ -417,3 +417,10 @@ iframe {
 @media only screen and (min-width: 1024px) and (orientation: landscape) {
   .small-pc-browser {
     width: Calc(50vw - 10px); } }
+
+@media only screen and (min-width: 300PX) {
+  .ios-browser {
+    width: Calc(100vw - 10px); } }
+@media only screen and (min-width: 1024px) and (orientation: landscape) {
+  .ios-browser {
+    width: Calc(50vw - 10px); } }

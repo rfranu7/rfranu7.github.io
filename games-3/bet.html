@@ -691,7 +691,7 @@
                     return navigator.userAgent.match(/BlackBerry/i);
                 },
                 iOS: function() {
-                    return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+                    return /iPad|iPhone|iPod/.test(navigator.platform) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
                 },
                 Opera: function() {
                     return navigator.userAgent.match(/Opera Mini/i);
@@ -707,6 +707,9 @@
             if( isMobile.any() ){
                 console.log("mobile");
                 document.getElementById("spacing").className = "extra";
+                if(isMobile.iOS()){
+                    document.getElementById("videoFrame").className = "ios-browser"
+                }
             } else {
                 console.log("not")
                 document.getElementById("videoFrame").className = "small-pc-browser"
