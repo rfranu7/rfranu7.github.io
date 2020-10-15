@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAEA,QAAS;EACL,MAAM,EAAE,GAAG;EACX,UAAU,EAAE,gBAAgB",
-"sources": ["scss/withdraw.scss"],
-"names": [],
-"file": "withdraw.css"
-}

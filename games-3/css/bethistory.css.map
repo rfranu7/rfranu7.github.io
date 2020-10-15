@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAEA,QAAS;EACL,MAAM,EAAE,GAAG;EACX,UAAU,EAAE,gBAAgB",
-"sources": ["scss/bethistory.scss"],
-"names": [],
-"file": "bethistory.css"
-}

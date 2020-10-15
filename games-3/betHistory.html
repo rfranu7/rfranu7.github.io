@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
 	<!-- CSS only -->
-	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	<link rel="stylesheet" href="css/bethistory.css">
 
@@ -13,100 +13,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   </head>
-  <body onload="showStuff()" style="margin-top:3px; width:100%;">
-    <style>
-	  .pageHeader{
-	  	background-image: linear-gradient(#e8e6e7, #faf7f9);
-		border-bottom:solid 0.5px #9E9E9E;
-		padding:5px 15px;
-	  }
-
-	  .profileHeader{
-	    font-weight:bold;
-		padding:0px 20px;
-	  }
-
-	  .profileDetail{
-	    margin:3px 20px;
-	  }
-
-	  .eventList{
-	    width:100%;
-	  }
-
-	  .eventList{
-	  	width:100%;
-		/*margin-left:20px;*/
-		padding:0px;
-	  }
-
-	  @media only screen and (min-width: 1200px) {
-		  .eventList{
-			width:100%;
-		  }
-	  }
-
-	  @media only screen and (min-width: 800px) {
-		  .depositContainer{
-			width:65%;
-			margin-left:20px;
-			padding:0px 10px 10px 0px;
-		  }
-	  }
-
-	  .eventList li b{
-	    font-size:large;
-	  }
-
-	  .eventList a{
-	    text-decoration:none;
-		color:black;
-	  }
-
-	  .eventList li:hover{
-	    background:#D3D3D3;
-	  }
-
-	  .eventContainer{
-	    padding:0px 20px;
-	  }
-
-	  .badge{
-	    float:right;
-		padding-top:15px;
-	  }
-
-	  .tab-content .eventContainer::-webkit-scrollbar {
-		display: none;
-	  }
-
-	  /** Hide scrollbar **/
-	  body::-webkit-scrollbar {
-		display: none;
-	  }
-
-	  body{
-	    -ms-overflow-style: none;  /* IE and Edge */
-	    scrollbar-width: none;  /* Firefox */
-	  }
-
-	.frame{
-	  display: block;
-	  width: 100vw;
-	  height: 100vh;
-	  max-width: 100%;
-	  margin: 0;
-	  padding: 0;
-	  border: 0 none;
-	  box-sizing: border-box;
-	}
-
-	#betDetails{
-	  overflow:auto;
-	  margin-bottom:10px;
-	}
-	</style>
-
+  <body onload="showStuff()" onunload="resetStuff()">
 	<main class="heading">
 
 		<div class="tab-content">
@@ -115,9 +22,9 @@
 		</div>
 		</div>
 
-		<div class="pageHeader"><b>Bet History</b></div>
+		<div id="mainHeader" class="pageHeader"><b>Bet History</b></div>
 		<br/>
-		<div class="container-fluid eventContainer">
+		<div id="mainEventContainer" class="eventContainer">
 		<ul class="list-group eventList">
 			<a data-toggle="pill" href="#betDetails" onclick="hideStuff()"><li class="list-group-item"><b>Event Name</b><span class="badge fa fa-chevron-right"> </span><br/>Oct 08, 2020 </li></a>
 			<a data-toggle="pill" href="#betDetails" onclick="hideStuff()"><li class="list-group-item"><b>Event Name</b><span class="badge fa fa-chevron-right"> </span><br/>Oct 08, 2020 </li></a>
@@ -131,12 +38,10 @@
 	function hideStuff(){
 	    $(".pageHeader").hide()
 		$(".eventContainer").hide()
-		$(".tab-content").show()
 	}
 	function showStuff(){
 	    $(".pageHeader").show()
 		$(".eventContainer").show()
-		$(".tab-content").hide()
 	}
   </script>
 </html>

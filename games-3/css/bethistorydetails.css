@@ -1,6 +1,5 @@
-.heading {
-  margin: 5px;
-  margin-top: Calc(5vh + 25px); }
+body {
+  margin: 0; }
 
 .pageHeader {
   background-image: linear-gradient(#e8e6e7, #faf7f9);
@@ -8,19 +7,42 @@
   box-shadow: 1px 2px #000000;
   padding: 5px 15px; }
 
-.detailsContainer {
-  padding: 0px 20px; }
+.card, table, th, td {
+  border: 1px solid #e9e9e9; }
+
+.card {
+  padding: 15px 10px;
+  text-align: center; }
 
 .transTable {
+  width: 100%;
+  font-size: 20px;
   font-weight: 500;
-  vertical-align: center; }
+  vertical-align: center;
+  border-collapse: collapse; }
 
-.transTable td {
+.transTable td, .transTable th {
   vertical-align: middle;
-  font-weight: bold; }
+  font-weight: bold;
+  padding: 15px 10px; }
+
+.detailsContainer {
+  padding: 0px 10px; }
 
 .subtx {
   font-size: x-small; }
+
+.text-center {
+  text-align: center; }
+
+.red {
+  color: #c00b17; }
+
+.blue {
+  color: #457aaa; }
+
+.green {
+  color: #299400; }
 
 /** Hide scrollbar **/
 body::-webkit-scrollbar {
@@ -31,5 +53,3 @@ body {
   /* IE and Edge */
   scrollbar-width: none;
   /* Firefox */ }
-
-/*# sourceMappingURL=bethistorydetails.css.map */
