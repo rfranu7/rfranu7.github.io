@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>BOX</title>
+        <link rel="shortcut icon" href="favicon.ico">
+        <meta name="author" content="Randeep Ranu">
+        <meta name="description" content="CHANGE DESCRIPTION">
+        <link rel="stylesheet" type="text/css" href="/css/small.css">
+                
+    </head>
+    
+    <body>
+        <script>
+
+            const box = {
+                locked: true,
+                _content: {},
+
+                // Methods
+                unlock() { this.locked = false; },
+                lock() { this.locked = true;  },
+                look_content() {
+                    if (this.locked) throw new Error("Cannot view items as the box is locked!");
+                    if(Object.keys(this._content).length === 0) throw new Error("There are no items in the box.");
+                    var message = "Items: \n\n";
+                    Object.entries(this._content).forEach(([key,value]) => {
+                        message += key+": "+value+"\n";
+                    });
+                    console.log(message)
+                },
+                add_content(item, quantity) {
+                    if (this.locked){
+                        throw new Error("Cannot add items as the box is locked!");
+                    } else if(item == "" || quantity == ""){
+                        throw new Error("You must have an item to add.");
+                    } else if(!(typeof(item) == "string") || !(typeof(quantity) == "number")){
+                        throw new Error("Invalid type");
+                    } else {
+                        this._content[item] = quantity
+                        return {success: true}
+                    }
+                }
+            };
+
+            function withBoxUnlocked(option, item="", quantity="") {
+                if(box.locked){
+                    box.unlock();
+                    try {
+                        if(option == "add"){
+                            item = item || "";
+                            quantity = quantity || "";
+                            const added = box.add_content(item, quantity);
+                            if(added.success){
+                                console.log("Successfully added item.");
+                            }
+                        } else if (option == "get"){
+                            box.look_content();
+                        } else {
+                            throw new Error("Invalid option.");
+                        }
+                    } catch(err) {
+                        console.log(err.message)
+                    } finally {
+                        box.lock();
+                    }
+                } else {
+                    return body;
+                }
+            }
+
+            function playWithBox(){
+                withBoxUnlocked("add", "gold piece", 50);
+                withBoxUnlocked("add", "crown", 1);
+                withBoxUnlocked("add");
+                withBoxUnlocked("get");
+                withBoxUnlocked("swim");
+            }
+
+            playWithBox();
+
+        </script>
+    </body>
+</html>
