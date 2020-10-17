@@ -43,6 +43,16 @@
         {
             "label": "Week 4 - Shopping Cart",
             "url": "/wdd330/week04/shopping-cart.html"
+        },
+
+        {
+            "label": "Week 5 - Team Activity",
+            "url": "/wdd330/week05/hiking-start.html"
+        },
+
+        {
+            "label": "Week 5 - Try Catch Exercise",
+            "url": "/wdd330/week05/try.html"
         }
     ]
 }
