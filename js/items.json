@@ -53,6 +53,11 @@
         {
             "label": "Week 5 - Try Catch Exercise",
             "url": "/wdd330/week05/try.html"
+        },
+
+        {
+            "label": "Week 6 - To Do List App",
+            "url": "/wdd330/week06/todolist.html"
         }
     ]
 }
