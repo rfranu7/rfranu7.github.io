@@ -2,6 +2,9 @@
 @mixin MQ($canvas) {
     @media only screen and (min-width: $canvas) { @content; }
 }
+@mixin MQO($canvas, $orientation) {
+    @media only screen and (min-width: $canvas) and (orientation: $orientation){ @content; }
+}
 
 body {
     height: 100vh;
@@ -95,6 +98,7 @@ main {
         display: flex;
         gap: 1rem;
         justify-content: center;
+        align-items: center;
     }
 
     .active {
@@ -129,10 +133,12 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: .5rem;
+    gap: 1rem;
 
     @include MQ(1024px){
         display: none;
+    } @include MQO(568px, "landscape"){
+        height: 15vh;
     }
 
     background-image: url(../assets/small.jpg);
@@ -141,6 +147,7 @@ footer {
     } @include MQ(1024px){
         background-image: url(../assets/large.jpg);
     }
+
 }
 
 .newTask {
@@ -167,7 +174,11 @@ footer {
     color: white;
     border: none;
     border-radius: 50%;
-    appearance: none;
-    -moz-appearance: none;
     -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    &:hover, &:focus{
+        background-color: black;
+    }
 }

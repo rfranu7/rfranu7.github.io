@@ -85,6 +85,7 @@ main div {
   display: flex;
   gap: 1rem;
   justify-content: center;
+  align-items: center;
 }
 .todofilter .active {
   border: 1px solid #333;
@@ -119,12 +120,17 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: .5rem;
+  gap: 1rem;
   background-image: url(../assets/small.jpg);
 }
 @media only screen and (min-width: 1024px) {
   footer {
     display: none;
+  }
+}
+@media only screen and (min-width: 568px) and (orientation: landscape) {
+  footer {
+    height: 15vh;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -161,7 +167,10 @@ footer {
   color: white;
   border: none;
   border-radius: 50%;
-  appearance: none;
-  -moz-appearance: none;
   -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.addTaskBtn:hover, .addTaskBtn:focus {
+  background-color: black;
 }

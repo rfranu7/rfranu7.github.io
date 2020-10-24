@@ -2,7 +2,7 @@ import { TaskHandler } from "./ls.js";
 
 // local storage handling class
 const taskHandler = new TaskHandler();
-const addBtn = document.querySelector(".addTaskBtn");
+const addBtn = document.querySelectorAll(".addTaskBtn");
 const status = document.getElementById("status");
 var taskList = taskHandler.filterList();
 
@@ -10,17 +10,25 @@ window.addEventListener("load", (event) => {
     console.log("document loaded");
     //taskHandler.clear();
     displayAllTasks(taskList);
-})
+    console.log(addBtn);
+});
 
-addBtn.addEventListener("click", (event) => {
-    console.log(event)
-    addTask();
-})
+addBtn.forEach(element => {
+    element.addEventListener("click", (event) => {
+        console.log(event)
+        addTask(event);
+    });
+
+    element.addEventListener("touchend", (event) => {
+        console.log(event)
+        addTask(event);
+    });
+});
 
 status.addEventListener("click", (event) => {
     console.log(event)
     updateFilters(event);
-})
+});
 
 function displayAllTasks(taskList) {
     resetTaskTable();
@@ -70,9 +78,11 @@ function resetTaskTable(){
     document.getElementById("todolist").innerHTML = '';
 }
 
-function addTask(){
-    const task = document.querySelector(".newTask");
+function addTask(event){
+    const task = event.target.previousElementSibling;
+    console.log(task);
     if(task.value == "" || task.value == null || typeof(task.value) == "undefined"){
+        alert("Please write the task on the textbox before adding it.")
         return
     }
     
