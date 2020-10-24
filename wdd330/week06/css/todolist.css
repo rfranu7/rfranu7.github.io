@@ -87,6 +87,9 @@ main div {
   justify-content: center;
   align-items: center;
 }
+.todofilter #status p {
+  cursor: pointer;
+}
 .todofilter .active {
   border: 1px solid #333;
   padding: .7rem;
@@ -170,6 +173,7 @@ footer {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  cursor: pointer;
 }
 .addTaskBtn:hover, .addTaskBtn:focus {
   background-color: black;

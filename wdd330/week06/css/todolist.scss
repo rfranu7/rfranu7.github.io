@@ -99,6 +99,10 @@ main {
         gap: 1rem;
         justify-content: center;
         align-items: center;
+
+        p {
+            cursor: pointer;
+        }
     }
 
     .active {
@@ -177,6 +181,7 @@ footer {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    cursor: pointer;
 
     &:hover, &:focus{
         background-color: black;

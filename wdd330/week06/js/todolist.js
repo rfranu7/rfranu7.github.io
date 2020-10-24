@@ -82,7 +82,6 @@ function addTask(event){
     const task = event.target.previousElementSibling;
     console.log(task);
     if(task.value == "" || task.value == null || typeof(task.value) == "undefined"){
-        alert("Please write the task on the textbox before adding it.")
         return
     }
     
