@@ -1,0 +1,217 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>AJAX Practice</title>
+        <link rel="shortcut icon" href="favicon.ico">
+        <meta name="author" content="Randeep Ranu">
+        <meta name="description" content="AJAX Practice">
+
+        <style>
+
+            body {    
+                padding: 1rem;
+                font-family: 'Open Sans', sans-serif;
+            }
+
+            img {
+                display: block;
+                max-width: 150px;
+                margin: auto;
+            }
+
+            #usersContainer {
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                grid-column-gap: 1rem;
+                grid-row-gap: 1rem;
+                justify-content: center;
+                text-align: center;
+            }
+
+            #usersContainer h1 {
+                grid-column: 1/6;
+            }
+
+            #usersContainer div {
+                background-color: #eee;
+                padding: 1rem;
+            }
+
+            #usersContainer div:hover {
+                background-color: #ccc;
+            }
+
+            #usersContainer img {
+                border-radius: 50%;
+            }
+
+            #usersContainer h2 {
+                margin-bottom: 0;
+            }
+
+            #usersContainer p {
+                margin-top: 0;
+            }
+
+            #usersContainer button {
+                padding: .5rem 1rem;
+                background-color: #FFA054;
+                border: none;
+                border-radius: 5px;
+                margin-bottom: 2rem;
+                font-weight: bold;
+            }
+
+            #usersContainer button:hover {
+                background-color: #ffc18f;
+            }
+
+            #userContainer {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-row-gap: 1rem;
+                justify-content: center;
+                text-align: center;
+            }
+
+            #userContainer div {
+                display: grid;
+                grid-template-columns: 1fr 2fr;
+                align-items: center;
+                padding: 1rem;
+                max-width: 600px;
+                margin: 0 auto;
+            }
+
+            #userContainer div section {
+                padding: 1rem;
+                height: 200px;
+                background-color: #eee;
+            }
+
+            #userContainer div section:nth-child(2){
+                text-align: left;
+                padding-left: 1rem;
+                background-color: #f6f6f6;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            #userContainer img {
+                border-radius: 50%;
+                margin-bottom: .5rem;
+            }
+
+            #userContainer p {
+                margin-top: 0;
+            }
+
+            #userContainer button {
+                padding: .5rem 1rem;
+                background-color: #FFA054;
+                border: none;
+                border-radius: 5px;
+                font-weight: bold;
+            }
+
+            #userContainer button:hover {
+                background-color: #ffc18f;
+            }
+
+            .buttons {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-column-gap: 2rem;
+                align-items: center;
+            }
+            
+        </style>
+                
+    </head>
+    
+    <body onload="load()">
+        <div id="usersContainer"></div>
+        <div id="userContainer"></div>
+
+        <script>
+
+            function load(){
+                fetch('https://jsonplaceholder.typicode.com/users')
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log(data);
+                        const parent = document.getElementById("usersContainer");
+                        
+                        const title = document.createElement("h1");
+                        title.textContent = "USERS LIST";
+                        parent.appendChild(title);
+
+                        data.forEach(element => {
+                            const div = document.createElement("div");
+                            div.innerHTML = "<img src='user.png' alt='user-image'>"+
+                                            "<h2>"+element.name+"</h2>"+
+                                            "<a href='mailto:"+element.email+"'><p>"+element.email+"</p></a>"+
+                                            "<button onclick='getUserData("+element.id+")'>Get to know</button>";
+                            parent.appendChild(div);
+
+                        });
+                    });
+            }
+
+            function getUserData(id){
+                const url = 'https://jsonplaceholder.typicode.com/users/'+id
+                fetch(url)
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log(data)
+                        document.getElementById("usersContainer").style.display= "none";
+
+                        const parent = document.getElementById("userContainer");
+                    
+                        const title = document.createElement("h1");
+                        title.textContent = "GET TO KNOW "+data.name;
+                        parent.appendChild(title);
+
+                        const div = document.createElement("div");
+                        div.innerHTML = "<section>"+
+                                            "<img src='user.png' alt='user-image'>"+
+                                            "<strong>"+data.name+"</strong>"+
+                                            "<a href='mailto:"+data.email+"'><p>"+data.email+"</p></a>"+
+                                        "</section>"+
+                                        "<section>"+
+                                            "<p>Hi! I'm "+data.name+". I live in "+data.address.suite+" "+data.address.street+" "+data.address.city+".</p>"+
+                                            "<p> I am currently working at "+data.company.name+"</p>"+
+                                            "<span class='buttons'>"+
+                                                "<button onclick='deleteUser("+data.id+")'>Delete User</button>"+
+                                                "<button onclick='goBack()'>Go Back</button>"+
+                                            "</span>"
+                                        "</section>";
+                        parent.appendChild(div);
+                    });
+            }
+
+            function goBack(){
+                document.getElementById("usersContainer").style.display= "grid";
+                document.getElementById("userContainer").innerHTML = '';
+            }
+
+            function deleteUser(id){
+                const url = 'https://jsonplaceholder.typicode.com/users/'+id;
+                fetch(url, { 
+                    method: 'DELETE' 
+                }).then(response => {
+                    if(response.ok){
+                        alert("User has been deleted. (not really, but it's as if it is, once you click ok, you will be redirected to the main screen.)");
+                        goBack();
+                    }
+                })
+            }
+
+        </script>
+
+    </body>
+</html>

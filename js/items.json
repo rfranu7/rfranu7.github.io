@@ -58,6 +58,16 @@
         {
             "label": "Week 6 - To Do List App",
             "url": "/wdd330/week06/todolist.html"
+        },
+
+        {
+            "label": "Week 7 - Team Activity: Hiking Extended",
+            "url": "/wdd330/week07/hiking-start.html"
+        },
+
+        {
+            "label": "Week 7 - Fetch Exercises",
+            "url": "/wdd330/week07/users.html"
         }
     ]
 }
