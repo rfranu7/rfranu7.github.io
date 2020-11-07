@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #app{
+      display: grid;
+      width: 320px;
+      margin: auto;
+      grid-row-gap: 2%;
+    }
+    button{
+      width: 50%;
+      background-color: cornflowerblue;
+      border-radius: 5px;
+      border: none;
+      padding: 0.5rem 0;
+    }
+    .entry{
+      background-color: #dddddd;
+      padding: .5rem;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+
+  </div>
+
+  <script>
+
+    function getAPIData(endpoint){
+
+      try {
+        const response = fetch(endpoint).then(
+          function(res){
+            if(res.ok){
+              return res.json();
+            }   
+          }
+        )
+        .then(function(json){
+          displayData(json);
+          // displayFooter(json.previous,json.next);
+           console.log(json);
+        });
+      } catch (error) {
+        console.log(error);
+      }  
+    }
+
+    function displayData(list){
+      let parent = document.getElementById('app');
+      parent.innerHTML='';
+      list.results.forEach((element, key) => {
+        let div = document.createElement('div');
+        div.classList.add('entry');
+        div.innerText = element.name;
+        div.id = key;
+        parent.appendChild(div);
+        div.onclick = function(e){
+          displayContent(Object.entries(list.results[key]), list);
+        }
+      });
+      displayFooter(list.previous,list.next);
+    }
+
+    function displayContent(list, parentList){
+      let parent = document.getElementById('app');
+      parent.innerHTML='';
+      for (const [key, value] of list){
+          let div = document.createElement('div');
+          div.classList.add('entry');
+          div.innerText = `${key}: ${value}`;
+          // console.log(element);
+          div.id = key;
+          parent.appendChild(div);
+      }
+      let returnButton = document.createElement("button");
+      returnButton.innerText = "Return"
+      parent.appendChild(returnButton);
+      returnButton.onclick = function(){
+        displayData(parentList);
+      }
+    }
+    function displayFooter(APIprev, APInext){
+      let parent = document.getElementById('app');
+      if(APIprev){
+        let prev = document.createElement('button');
+        prev.innerText = 'prev';
+        parent.appendChild(prev);
+        prev.onclick = function(){
+          getAPIData(APIprev);
+        }
+      }
+      if(APInext){
+        let next = document.createElement('button');
+        next.innerText = 'next';
+        parent.appendChild(next);
+        next.onclick = function(){
+          getAPIData(APInext);
+        }
+      }
+    }
+
+    const endpoint = 'https://swapi.dev/api/people/';
+    getAPIData(endpoint);
+
+  </script>
+</body>
+</html>

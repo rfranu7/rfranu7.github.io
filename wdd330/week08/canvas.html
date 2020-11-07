@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>CANVAS</title>
+        <link rel="shortcut icon" href="favicon.ico">
+        <meta name="author" content="Randeep Ranu">
+
+        <style>
+            body {
+                background-color: aqua;
+                overflow: hidden;
+                padding: 0;
+            }
+
+            #platform  {
+                position: absolute;
+                top: Calc(100% - 60px);
+                left: 0;
+            }
+
+            #player {
+                position: absolute;
+                top: Calc(100% - 120px);
+                left: 0;
+                animation: walk 10s linear infinite;
+            }
+
+            @keyframes walk {
+                0% { left: 0}
+                100% { left: Calc(100% - 48px)}
+            }
+        </style>
+                
+    </head>
+    
+    <body>
+
+        <main>
+
+            <canvas id="player"></canvas>
+            <canvas id="platform" height="60px" width="1920px" ></canvas>
+            <script>
+
+                let canvas1 = document.querySelector("#player").getContext("2d");
+                let img = document.createElement("img");
+                img.src = "player.png";
+                let spriteW = 48, spriteH = 60;
+                img.addEventListener("load", () => {
+                    let cycle = 0;
+                    setInterval(() => {
+                        canvas1.clearRect(0, 0, spriteW, spriteH);
+                        canvas1.drawImage(img,
+                                // source rectangle
+                                cycle * spriteW, 0, spriteW, spriteH,
+                                // destination rectangle
+                                0,               0, spriteW, spriteH);
+                        cycle = (cycle + 1) % 8;
+                    }, 120);
+                });
+
+                let canvas2 = document.querySelector("#platform").getContext("2d");
+                canvas2.fillStyle = "brown";
+                canvas2.strokeStyle = "green";
+                canvas2.rect(0, 0, window.innerWidth, 60);
+                canvas2.stroke();
+                canvas2.fill()
+            </script>
+
+        </main>
+    </body>
+</html>

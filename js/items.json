@@ -68,6 +68,16 @@
         {
             "label": "Week 7 - Fetch Exercises",
             "url": "/wdd330/week07/users.html"
+        },
+
+        {
+            "label": "Week 8 - Canvas",
+            "url": "/wdd330/week08/canvas.html"
+        },
+
+        {
+            "label": "Week 8 - Team Activity",
+            "url": "/wdd330/week08/team-activity.html"
         }
     ]
 }
