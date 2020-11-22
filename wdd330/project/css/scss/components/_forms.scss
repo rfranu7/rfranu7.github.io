@@ -1,0 +1,54 @@
+.login {
+    background-color: black;
+    background-image: url(../images/bg-gold.svg);
+    margin: 0;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    height: Calc(100vh - 2rem);
+
+    main {
+        width: 100%;
+        background-color: white;
+        padding: 1rem;
+
+        .imageContainer {
+            text-align: center;
+            margin-bottom: 1rem;
+
+            img {
+                max-width: 150px;
+            }
+        }
+
+        form {
+            label {
+                display: block;
+                margin-bottom: .25rem;
+            }
+            input {
+                width: 100%;
+                height: 30px;
+                padding: .25rem;
+                padding-left: .5rem;
+                margin-bottom: .5rem;
+            }
+
+            input:last-of-type {
+                margin-bottom: 1rem;
+            }
+        }
+
+        #editForm {
+            padding: 1rem 0;
+            
+            h2 {
+                text-align: center;
+            }
+        }
+
+        .bodyFooter {
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,163 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Gentleman Booking App</title>
+        <link rel="shortcut icon" href="favicon.ico">
+        <meta name="author" content="Randeep Ranu">
+        <meta name="description" content="CHANGE DESCRIPTION">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+                
+    </head>
+    
+    <body class="book">
+        <header>
+            <section class="imageContainer">
+                <img src="images/banner1.jpg">
+            </section>
+        </header>
+        <main>
+            <h2>Add Booking</h2>
+            <div class="calendar">
+                <div class="month">
+                    <ul>
+                    <li class="prev">&#10094;</li>
+                    <li>August <span style="font-size:18px">2017</span></li>
+                    <li class="next">&#10095;</li>
+                    </ul>
+                </div>
+                
+                <ul class="weekdays">
+                    <li>Mo</li>
+                    <li>Tu</li>
+                    <li>We</li>
+                    <li>Th</li>
+                    <li>Fr</li>
+                    <li>Sa</li>
+                    <li>Su</li>
+                </ul>
+                
+                <ul class="days">
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                    <li>7</li>
+                    <li>8</li>
+                    <li>9</li>
+                    <li><span class="active">10</span></li>
+                    <li>11</li>
+                    ...etc
+                </ul>
+            </div>
+            <div class="timeslot">
+                <button class="btn-var">9:00AM-10:00AM</button>
+                <button class="btn-var">10:00AM-11:00AM</button>
+                <button class="btn-var">11:00AM-12:00PM</button>
+                
+                <button class="btn-var">1:00PM-2:00PM</button>
+                <button class="btn-var">2:00PM-3:00PM</button>
+                <button class="btn-var">3:00PM-4:00PM</button>
+                
+                <button class="btn-var">4:00PM-5:00PM</button>
+                <button class="btn-var">5:00PM-6:00PM</button>
+                <button class="btn-var">6:00PM-7:00PM</button>
+            </div>
+
+            <h2>Services Offered</h2>
+            <div class="services">
+                <section class="service">
+                    <div class="imgContainer">
+                        <img src="images/banner2.jpg">
+                    </div>
+                    <h3>SERVICE</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempus, leo at placerat elementum, quam leo gravida elit, sed condimentum dui orci sit amet lacus. Praesent scelerisque sed massa vel mattis. Donec vel aliquet augue, at feugiat nibh. Morbi ut justo non erat pellentesque porttitor ut sit amet magna</p>
+                    <button class="btn-var">SELECT</button>
+                </section>
+
+                <section class="service">
+                    <div class="imgContainer">
+                        <img src="images/banner2.jpg">
+                    </div>
+                    <h3>SERVICE</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempus, leo at placerat elementum, quam leo gravida elit, sed condimentum dui orci sit amet lacus. Praesent scelerisque sed massa vel mattis. Donec vel aliquet augue, at feugiat nibh. Morbi ut justo non erat pellentesque porttitor ut sit amet magna</p>
+                    <button class="btn-var">SELECT</button>
+                </section>
+            </div>
+
+            <div class="btnContainer">
+                <button id="proceed" class="btn">PROCEED</button>
+            </div>
+        </main>
+
+        <footer>
+            <section class="logoContainer">
+                <img src="images/gentman-invert.svg">
+            </section>
+            <a href="login.html">Logout</a>
+            <a href="settings.html">Account</a>
+            <a href="book.html">Book</a>
+        </footer>
+
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="modalHeader">
+                    <h3>Booking Details</h3>
+                </div>
+                <div class="modalBody">
+                    <div class="modalService">
+                        <p><b>Selected Services</b></p>
+                    </div>
+                    <div class="modalDate">
+                        <p><b>Date</b></p>
+                    </div>
+                    <div class="modalAmount">
+                        <p><b>Total Amount</b></p>
+                    </div>
+                    <div class="btnContainer">
+                        <button id="book" class="btn">BOOK</button>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+
+        <script>
+            // Get the modal
+            var modal = document.getElementById("myModal");
+
+            // Get the button that opens the modal
+            var btn = document.getElementById("proceed");
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+
+            // When the user clicks on the button, open the modal
+            btn.onclick = function() {
+                modal.style.display = "block";
+            }
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+
+    </body>
+</html>
