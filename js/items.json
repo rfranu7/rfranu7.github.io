@@ -78,6 +78,11 @@
         {
             "label": "Week 8 - Team Activity",
             "url": "/wdd330/week08/team-activity.html"
+        },
+
+        {
+            "label": "Project",
+            "url": "/wdd330/project/index.html"
         }
     ]
 }
