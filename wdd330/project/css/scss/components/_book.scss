@@ -43,6 +43,12 @@
                 margin-bottom: 1rem;
             }
         }
+
+        .selectedTime, .selectedService {
+            background-color: #000;
+            color: #fff;
+            border-color: #fff;
+        }
     }
 
 

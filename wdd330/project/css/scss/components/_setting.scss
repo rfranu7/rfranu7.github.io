@@ -1,0 +1,79 @@
+.setting {
+    margin: 0;
+    padding: 1rem;
+    width: 100%;
+    background-color: black;
+    background-image: url(../images/bg-gold.svg);
+    height: Calc(100vh - 2rem);
+
+    form {
+        background-color: white;
+        padding: 1rem;
+        margin-bottom: 2rem;
+
+        label {
+            display: block;
+            margin-bottom: .25rem;
+        }
+        input {
+            width: 100%;
+            height: 30px;
+            padding: .25rem;
+            padding-left: .5rem;
+            margin-bottom: .5rem;
+        }
+
+        input:last-of-type {
+            margin-bottom: 1rem;
+        }
+            
+        h2 {
+            text-align: center;
+        }
+
+        .bodyFooter {
+            text-align: center;
+        }
+    }
+
+
+    footer {
+        background-color: black;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        display: grid;
+        grid-template-columns: 50px 1fr 1fr 1fr;
+        align-items: center;
+    
+        a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        
+            &:hover {
+                background-color: #ddd;
+                color: #333;
+            }
+    
+            .active {
+                background-color: #4CAF50;
+                color: white;
+            }
+        }
+
+        .logoContainer {
+            text-align: center;
+
+            img {
+                width: 100%;
+                max-width: 35px;
+            }
+        }
+    }
+}

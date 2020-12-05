@@ -12,8 +12,8 @@
                 
     </head>
     
-    <body class="login">
-        <main>
+    <body class="setting">
+        <section>
             <form id="editForm">
                 <h2>ACCOUNT PROFILE</h2>
                 <div>
@@ -28,15 +28,35 @@
                     <label for="name">Email Address</label>
                     <input type="email" id="email" required>
                 </div>
+                <div class="btnContainer">
+                    <button class="btn" id="submitAccountBtn">SAVE CHANGES</button>
+            </form>
+        </section>
+
+        <section>
+            <form id="editFormPassword">
+                <h2>CHANGE PASSWORD</h2>
                 <div>
                     <label for="name">Password</label>
                     <input type="password" id="password" required>
                 </div>
                 <div class="btnContainer">
-                    <button class="btn" id="submitBtn">SAVE CHANGES</button>
-                    <button class="btn" id="goBack">GO BACK</button>
+                    <button class="btn" id="submitPassBtn">SAVE CHANGES</button>
                 </div>
             </form>
-        </main> 
+        </section>
+
+        <footer>
+            <a href="index.html" style="padding: 0;">
+                <section class="logoContainer">
+                    <img src="images/gentman-invert.svg">
+                </section>
+            </a>
+            <a id="signOut">Logout</a>
+            <a href="settings.html">Account</a>
+            <a href="book.html">Book</a>
+        </footer>
+
+        <script type="module" src="js/account.js"></script>
     </body>
 </html>

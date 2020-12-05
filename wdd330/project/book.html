@@ -24,48 +24,35 @@
                 <div class="month">
                     <ul>
                     <li class="prev">&#10094;</li>
-                    <li>August <span style="font-size:18px">2017</span></li>
+                    <li id="monthLabel"></li>
                     <li class="next">&#10095;</li>
                     </ul>
                 </div>
                 
                 <ul class="weekdays">
+                    <li>Su</li>
                     <li>Mo</li>
                     <li>Tu</li>
                     <li>We</li>
                     <li>Th</li>
                     <li>Fr</li>
                     <li>Sa</li>
-                    <li>Su</li>
                 </ul>
                 
-                <ul class="days">
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li>
-                    <li>5</li>
-                    <li>6</li>
-                    <li>7</li>
-                    <li>8</li>
-                    <li>9</li>
-                    <li><span class="active">10</span></li>
-                    <li>11</li>
-                    ...etc
-                </ul>
+                <ul id="calBody" class="days"></ul>
             </div>
             <div class="timeslot">
-                <button class="btn-var">9:00AM-10:00AM</button>
-                <button class="btn-var">10:00AM-11:00AM</button>
-                <button class="btn-var">11:00AM-12:00PM</button>
+                <button class="btn-var" data-time="09:00">9:00AM-10:00AM</button>
+                <button class="btn-var" data-time="10:00">10:00AM-11:00AM</button>
+                <button class="btn-var" data-time="11:00">11:00AM-12:00PM</button>
                 
-                <button class="btn-var">1:00PM-2:00PM</button>
-                <button class="btn-var">2:00PM-3:00PM</button>
-                <button class="btn-var">3:00PM-4:00PM</button>
+                <button class="btn-var" data-time="13:00">1:00PM-2:00PM</button>
+                <button class="btn-var" data-time="14:00">2:00PM-3:00PM</button>
+                <button class="btn-var" data-time="15:00">3:00PM-4:00PM</button>
                 
-                <button class="btn-var">4:00PM-5:00PM</button>
-                <button class="btn-var">5:00PM-6:00PM</button>
-                <button class="btn-var">6:00PM-7:00PM</button>
+                <button class="btn-var" data-time="16:00">4:00PM-5:00PM</button>
+                <button class="btn-var" data-time="17:00">5:00PM-6:00PM</button>
+                <button class="btn-var" data-time="18:00">6:00PM-7:00PM</button>
             </div>
 
             <h2>Services Offered</h2>
@@ -74,18 +61,18 @@
                     <div class="imgContainer">
                         <img src="images/banner2.jpg">
                     </div>
-                    <h3>SERVICE</h3>
+                    <h3>HAIRCUT</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempus, leo at placerat elementum, quam leo gravida elit, sed condimentum dui orci sit amet lacus. Praesent scelerisque sed massa vel mattis. Donec vel aliquet augue, at feugiat nibh. Morbi ut justo non erat pellentesque porttitor ut sit amet magna</p>
-                    <button class="btn-var">SELECT</button>
+                    <button class="btn-var" data-name="HAIRCUT" data-amount="100" data-img="images/banner2.jpg">SELECT</button>
                 </section>
 
                 <section class="service">
                     <div class="imgContainer">
                         <img src="images/banner2.jpg">
                     </div>
-                    <h3>SERVICE</h3>
+                    <h3>SHAVE</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempus, leo at placerat elementum, quam leo gravida elit, sed condimentum dui orci sit amet lacus. Praesent scelerisque sed massa vel mattis. Donec vel aliquet augue, at feugiat nibh. Morbi ut justo non erat pellentesque porttitor ut sit amet magna</p>
-                    <button class="btn-var">SELECT</button>
+                    <button class="btn-var" data-name="SHAVE" data-amount="100" data-img="images/banner2.jpg">SELECT</button>
                 </section>
             </div>
 
@@ -95,10 +82,12 @@
         </main>
 
         <footer>
-            <section class="logoContainer">
-                <img src="images/gentman-invert.svg">
-            </section>
-            <a href="login.html">Logout</a>
+            <a href="index.html" style="padding: 0;">
+                <section class="logoContainer">
+                    <img src="images/gentman-invert.svg">
+                </section>
+            </a>
+            <a id="signOut">Logout</a>
             <a href="settings.html">Account</a>
             <a href="book.html">Book</a>
         </footer>
@@ -116,12 +105,13 @@
                 <div class="modalBody">
                     <div class="modalService">
                         <p><b>Selected Services</b></p>
+                        <div id="serviceParent"></div>
                     </div>
                     <div class="modalDate">
-                        <p><b>Date</b></p>
+                        <p><b>Date: </b><span id="modalActualDate"></span></p>
                     </div>
                     <div class="modalAmount">
-                        <p><b>Total Amount</b></p>
+                        <p><b>Total Amount: </b><span id="modalActualAmount"></span></p>
                     </div>
                     <div class="btnContainer">
                         <button id="book" class="btn">BOOK</button>
@@ -130,34 +120,6 @@
             </div>
         
         </div>
-
-        <script>
-            // Get the modal
-            var modal = document.getElementById("myModal");
-
-            // Get the button that opens the modal
-            var btn = document.getElementById("proceed");
-
-            // Get the <span> element that closes the modal
-            var span = document.getElementsByClassName("close")[0];
-
-            // When the user clicks on the button, open the modal
-            btn.onclick = function() {
-                modal.style.display = "block";
-            }
-
-            // When the user clicks on <span> (x), close the modal
-            span.onclick = function() {
-                modal.style.display = "none";
-            }
-
-            // When the user clicks anywhere outside of the modal, close it
-            window.onclick = function(event) {
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                }
-            }
-        </script>
-
+        <script type="module" src="js/book.js"></script>
     </body>
 </html>

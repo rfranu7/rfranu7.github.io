@@ -114,7 +114,12 @@ img {
   padding: 1rem;
   margin-bottom: 2rem;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Personal\/BYUI\/rfranu7\.github\.io\/wdd330\/project\/css\/scss\/components\/_home\.scss}line{font-family:\0000317}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Personal\/BYUI\/rfranu7\.github\.io\/wdd330\/project\/css\/scss\/components\/_home\.scss}line{font-family:\0000315}}
+.home main .booking {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Personal\/BYUI\/rfranu7\.github\.io\/wdd330\/project\/css\/scss\/components\/_home\.scss}line{font-family:\0000322}}
 .home footer {
   background-color: black;
   width: 100%;
@@ -124,7 +129,7 @@ img {
   grid-template-columns: 50px 1fr 1fr 1fr;
   align-items: center;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Personal\/BYUI\/rfranu7\.github\.io\/wdd330\/project\/css\/scss\/components\/_home\.scss}line{font-family:\0000326}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Personal\/BYUI\/rfranu7\.github\.io\/wdd330\/project\/css\/scss\/components\/_home\.scss}line{font-family:\0000331}}
 .home footer a {
   float: left;
   display: block;
@@ -134,22 +139,103 @@ img {
   text-decoration: none;
   font-size: 17px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Personal\/BYUI\/rfranu7\.github\.io\/wdd330\/project\/css\/scss\/components\/_home\.scss}line{font-family:\0000335}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Personal\/BYUI\/rfranu7\.github\.io\/wdd330\/project\/css\/scss\/components\/_home\.scss}line{font-family:\0000340}}
 .home footer a:hover {
   background-color: #ddd;
   color: #333;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Personal\/BYUI\/rfranu7\.github\.io\/wdd330\/project\/css\/scss\/components\/_home\.scss}line{font-family:\0000340}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Personal\/BYUI\/rfranu7\.github\.io\/wdd330\/project\/css\/scss\/components\/_home\.scss}line{font-family:\0000345}}
 .home footer a .active {
   background-color: #4CAF50;
   color: white;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Personal\/BYUI\/rfranu7\.github\.io\/wdd330\/project\/css\/scss\/components\/_home\.scss}line{font-family:\0000346}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Personal\/BYUI\/rfranu7\.github\.io\/wdd330\/project\/css\/scss\/components\/_home\.scss}line{font-family:\0000351}}
 .home footer .logoContainer {
   text-align: center;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Personal\/BYUI\/rfranu7\.github\.io\/wdd330\/project\/css\/scss\/components\/_home\.scss}line{font-family:\0000349}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Personal\/BYUI\/rfranu7\.github\.io\/wdd330\/project\/css\/scss\/components\/_home\.scss}line{font-family:\0000354}}
 .home footer .logoContainer img {
+  width: 100%;
+  max-width: 35px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Personal\/BYUI\/rfranu7\.github\.io\/wdd330\/project\/css\/scss\/components\/_setting\.scss}line{font-family:\000031}}
+.setting {
+  margin: 0;
+  padding: 1rem;
+  width: 100%;
+  background-color: black;
+  background-image: url(../images/bg-gold.svg);
+  height: Calc(100vh - 2rem);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Personal\/BYUI\/rfranu7\.github\.io\/wdd330\/project\/css\/scss\/components\/_setting\.scss}line{font-family:\000039}}
+.setting form {
+  background-color: white;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Personal\/BYUI\/rfranu7\.github\.io\/wdd330\/project\/css\/scss\/components\/_setting\.scss}line{font-family:\0000314}}
+.setting form label {
+  display: block;
+  margin-bottom: .25rem;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Personal\/BYUI\/rfranu7\.github\.io\/wdd330\/project\/css\/scss\/components\/_setting\.scss}line{font-family:\0000318}}
+.setting form input {
+  width: 100%;
+  height: 30px;
+  padding: .25rem;
+  padding-left: .5rem;
+  margin-bottom: .5rem;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Personal\/BYUI\/rfranu7\.github\.io\/wdd330\/project\/css\/scss\/components\/_setting\.scss}line{font-family:\0000326}}
+.setting form input:last-of-type {
+  margin-bottom: 1rem;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Personal\/BYUI\/rfranu7\.github\.io\/wdd330\/project\/css\/scss\/components\/_setting\.scss}line{font-family:\0000330}}
+.setting form h2 {
+  text-align: center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Personal\/BYUI\/rfranu7\.github\.io\/wdd330\/project\/css\/scss\/components\/_setting\.scss}line{font-family:\0000334}}
+.setting form .bodyFooter {
+  text-align: center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Personal\/BYUI\/rfranu7\.github\.io\/wdd330\/project\/css\/scss\/components\/_setting\.scss}line{font-family:\0000340}}
+.setting footer {
+  background-color: black;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: 50px 1fr 1fr 1fr;
+  align-items: center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Personal\/BYUI\/rfranu7\.github\.io\/wdd330\/project\/css\/scss\/components\/_setting\.scss}line{font-family:\0000350}}
+.setting footer a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Personal\/BYUI\/rfranu7\.github\.io\/wdd330\/project\/css\/scss\/components\/_setting\.scss}line{font-family:\0000359}}
+.setting footer a:hover {
+  background-color: #ddd;
+  color: #333;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Personal\/BYUI\/rfranu7\.github\.io\/wdd330\/project\/css\/scss\/components\/_setting\.scss}line{font-family:\0000364}}
+.setting footer a .active {
+  background-color: #4CAF50;
+  color: white;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Personal\/BYUI\/rfranu7\.github\.io\/wdd330\/project\/css\/scss\/components\/_setting\.scss}line{font-family:\0000370}}
+.setting footer .logoContainer {
+  text-align: center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Personal\/BYUI\/rfranu7\.github\.io\/wdd330\/project\/css\/scss\/components\/_setting\.scss}line{font-family:\0000373}}
+.setting footer .logoContainer img {
   width: 100%;
   max-width: 35px;
 }
@@ -202,7 +288,13 @@ img {
   margin-left: .5rem;
   margin-bottom: 1rem;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Personal\/BYUI\/rfranu7\.github\.io\/wdd330\/project\/css\/scss\/components\/_book\.scss}line{font-family:\0000349}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Personal\/BYUI\/rfranu7\.github\.io\/wdd330\/project\/css\/scss\/components\/_book\.scss}line{font-family:\0000347}}
+.book main .selectedTime, .book main .selectedService {
+  background-color: #000;
+  color: #fff;
+  border-color: #fff;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Personal\/BYUI\/rfranu7\.github\.io\/wdd330\/project\/css\/scss\/components\/_book\.scss}line{font-family:\0000355}}
 .book footer {
   background-color: black;
   width: 100%;
@@ -212,7 +304,7 @@ img {
   grid-template-columns: 50px 1fr 1fr 1fr;
   align-items: center;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Personal\/BYUI\/rfranu7\.github\.io\/wdd330\/project\/css\/scss\/components\/_book\.scss}line{font-family:\0000358}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Personal\/BYUI\/rfranu7\.github\.io\/wdd330\/project\/css\/scss\/components\/_book\.scss}line{font-family:\0000364}}
 .book footer a {
   float: left;
   display: block;
@@ -222,21 +314,21 @@ img {
   text-decoration: none;
   font-size: 17px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Personal\/BYUI\/rfranu7\.github\.io\/wdd330\/project\/css\/scss\/components\/_book\.scss}line{font-family:\0000367}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Personal\/BYUI\/rfranu7\.github\.io\/wdd330\/project\/css\/scss\/components\/_book\.scss}line{font-family:\0000373}}
 .book footer a:hover {
   background-color: #ddd;
   color: #333;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Personal\/BYUI\/rfranu7\.github\.io\/wdd330\/project\/css\/scss\/components\/_book\.scss}line{font-family:\0000372}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Personal\/BYUI\/rfranu7\.github\.io\/wdd330\/project\/css\/scss\/components\/_book\.scss}line{font-family:\0000378}}
 .book footer a .active {
   background-color: #4CAF50;
   color: white;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Personal\/BYUI\/rfranu7\.github\.io\/wdd330\/project\/css\/scss\/components\/_book\.scss}line{font-family:\0000378}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Personal\/BYUI\/rfranu7\.github\.io\/wdd330\/project\/css\/scss\/components\/_book\.scss}line{font-family:\0000384}}
 .book footer .logoContainer {
   text-align: center;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Personal\/BYUI\/rfranu7\.github\.io\/wdd330\/project\/css\/scss\/components\/_book\.scss}line{font-family:\0000381}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Personal\/BYUI\/rfranu7\.github\.io\/wdd330\/project\/css\/scss\/components\/_book\.scss}line{font-family:\0000387}}
 .book footer .logoContainer img {
   width: 100%;
   max-width: 35px;
@@ -303,22 +395,34 @@ ul {
   margin: 0;
   text-align: center;
 }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Personal\/BYUI\/rfranu7\.github\.io\/wdd330\/project\/css\/scss\/components\/_calendar\.scss}line{font-family:\0000354}}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Personal\/BYUI\/rfranu7\.github\.io\/wdd330\/project\/css\/scss\/components\/_calendar\.scss}line{font-family:\0000353}}
 .days li {
   list-style-type: none;
   text-align: center;
   margin-bottom: 5px;
-  font-size: 12px;
   color: #777;
-}
-
-/* Highlight the "current" day */
-@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Personal\/BYUI\/rfranu7\.github\.io\/wdd330\/project\/css\/scss\/components\/_calendar\.scss}line{font-family:\0000363}}
-.days li .active {
   padding: 5px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Personal\/BYUI\/rfranu7\.github\.io\/wdd330\/project\/css\/scss\/components\/_calendar\.scss}line{font-family:\0000360}}
+.days li a {
+  text-decoration: none;
+  color: black;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Personal\/BYUI\/rfranu7\.github\.io\/wdd330\/project\/css\/scss\/components\/_calendar\.scss}line{font-family:\0000366}}
+.days .today {
   background: #1abc9c;
-  color: white !important;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Personal\/BYUI\/rfranu7\.github\.io\/wdd330\/project\/css\/scss\/components\/_calendar\.scss}line{font-family:\0000368}}
+.days .today a {
+  color: white;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Personal\/BYUI\/rfranu7\.github\.io\/wdd330\/project\/css\/scss\/components\/_calendar\.scss}line{font-family:\0000373}}
+.days .selectedDay {
+  background-color: black;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Personal\/BYUI\/rfranu7\.github\.io\/wdd330\/project\/css\/scss\/components\/_calendar\.scss}line{font-family:\0000375}}
+.days .selectedDay a {
+  color: white;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/D\:\/Personal\/BYUI\/rfranu7\.github\.io\/wdd330\/project\/css\/scss\/components\/_modal\.scss}line{font-family:\000031}}

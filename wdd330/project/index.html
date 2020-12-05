@@ -21,24 +21,25 @@
         <main>
             <h2>Your Bookings</h2>
             <div class="bookingList"></div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean molestie velit elit, a vulputate neque dapibus ut. Nam vel rutrum urna. Maecenas tempor erat in metus posuere ultrices. Nunc sagittis metus erat, id dignissim est feugiat et. Maecenas at ultricies arcu. Maecenas volutpat orci at odio malesuada, vitae pharetra nibh malesuada. Aliquam viverra venenatis nibh, id suscipit erat mollis et.
-
-                Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed nec dolor laoreet, sollicitudin est vel, hendrerit urna. Phasellus sollicitudin risus vel felis ultricies imperdiet. Praesent pellentesque arcu non nisi laoreet semper. Fusce ut semper risus, eu ultricies quam. Nulla maximus a mauris vulputate sodales. Suspendisse eu dictum dui. Sed mattis tempor turpis ac blandit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum sodales auctor felis sit amet aliquet. Integer tincidunt finibus augue, non posuere arcu aliquam non. Praesent sodales tincidunt libero, non fringilla diam varius id.
-                
-                Nam gravida lacus et orci lacinia consectetur. Curabitur mollis elementum malesuada. Sed et dui et libero mollis pharetra ac non velit. Vestibulum id imperdiet dui. Vestibulum interdum quis magna id dignissim. Mauris ut luctus neque. Phasellus blandit urna mauris, sed facilisis purus laoreet non. Nulla scelerisque tortor vitae dui fringilla rhoncus. Donec in nisl congue, dictum magna ac, sollicitudin ex. Aenean fermentum a magna et dapibus. Curabitur vel eros a quam mollis euismod tempor eget tellus. Nam et nulla elit. Ut sed convallis turpis, vel auctor justo. Integer in consequat nisi. Phasellus id tortor sollicitudin, sagittis urna nec, condimentum tortor. Etiam lacinia dolor eget leo mollis, sed ornare augue vestibulum.
-                
-                Donec sodales dictum eros et vulputate. Praesent molestie lorem et elit hendrerit, non pulvinar justo semper. Quisque tristique eget magna eu maximus. Duis in eros consectetur, aliquet metus at, rhoncus nisl. Praesent magna enim, mollis ac leo id, ultricies maximus nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin sagittis, quam sed euismod pharetra, urna metus lobortis lacus, non sollicitudin nunc tortor ac arcu. Aliquam euismod vestibulum odio, eget tempus ante mattis id. Fusce tellus felis, vulputate at tincidunt sed, scelerisque rhoncus augue. Integer sed nisl sed mauris fringilla semper dictum ut arcu. Etiam blandit dolor sed risus consectetur molestie.
-                
-                Integer ut velit eget sapien ornare tempus. Sed sit amet est eget tellus sagittis placerat. Aenean pellentesque, velit lacinia vulputate efficitur, ipsum est tempus ex, vel lacinia erat ligula eget velit. Cras lacus orci, tempus vel tincidunt non, hendrerit et est. Donec sed risus vestibulum, commodo quam non, facilisis arcu. Aenean hendrerit, velit a elementum commodo, felis libero sollicitudin dui, ut aliquet dui ligula id enim. Quisque vehicula interdum porttitor. Aliquam non tellus congue magna efficitur aliquet. Nullam volutpat ultrices tempus. Suspendisse potenti. Nulla gravida ante tincidunt est pellentesque dapibus. Praesent ac convallis nulla, ut tempor dui. Duis at eros non orci mattis sollicitudin. Quisque at arcu vel nibh tempus faucibus vel ut nibh. Aenean at eros sapien. Nullam id aliquet erat.</p>
         </main>
 
         <footer>
-            <section class="logoContainer">
-                <img src="images/gentman-invert.svg">
-            </section>
-            <a href="login.html">Logout</a>
+            <a href="index.html" style="padding: 0;">
+                <section class="logoContainer">
+                    <img src="images/gentman-invert.svg">
+                </section>
+            </a>
+            <a id="signOut">Logout</a>
             <a href="settings.html">Account</a>
             <a href="book.html">Book</a>
         </footer>
+
+        <script type="module" src="js/index.js"></script>
+        <script>
+            const user = sessionStorage.getItem("uid");
+            if (!user) {
+                window.location.replace("login.html");
+            }
+        </script>
     </body>
 </html>

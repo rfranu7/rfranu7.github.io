@@ -11,6 +11,11 @@
         background-color: white;
         padding: 1rem;
         margin-bottom: 2rem;
+
+        .booking {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
     }
 
 
