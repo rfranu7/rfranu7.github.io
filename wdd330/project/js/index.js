@@ -21,12 +21,23 @@ request('get-booking', 'POST', {user})
     response.bookings.forEach(element => {
         var date = new Date(element.data.date);
         date.setHours(element.data.time.split(":")[0]);
+        var time = element.data.time;
 
         const div = document.createElement('div');
         div.className = "booking";
 
-        div.innerHTML = "<p>"+element.data.services.toString()+"</p>"+
-                        "<p>"+month[date.getMonth()]+" "+date.getDate()+", "+date.getFullYear()+"</p>";
+        var services = "";
+        element.data.services.forEach(function(i, idx, array){
+            if (idx === array.length - 1){ 
+                services += i;
+            } else {
+                services+= i+", ";
+            }
+         });
+         
+
+        div.innerHTML = "<p>"+services+"</p>"+
+                        "<p>"+month[date.getMonth()]+" "+date.getDate()+", "+date.getFullYear()+" at "+time+"</p>";
         parent.appendChild(div);
     });
 }).catch(function(error) {

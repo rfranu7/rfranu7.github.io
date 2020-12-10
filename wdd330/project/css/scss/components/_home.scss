@@ -12,9 +12,23 @@
         padding: 1rem;
         margin-bottom: 2rem;
 
+        .bookingList{
+            border: 1px solid #333;
+        }
+
         .booking {
             display: grid;
             grid-template-columns: 1fr 1fr;
+            padding: 2px 5px;
+            border-bottom: 1px solid #333;
+
+            p:last-child{
+                text-align: right;
+            }
+
+            &:last-child{
+                border-bottom: none;
+            }
         }
     }
 

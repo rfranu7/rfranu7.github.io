@@ -240,6 +240,40 @@ app.post('/get-booking', (req, res) => {
   };
 });
 
+app.get('/get-all-booking', (req, res) => {
+  console.log(req.body);
+  try {
+    db.collection('bookings').get()
+    .then((result) => {
+      if (result.empty) {
+        console.log('No matching documents.');
+        const status = 404;
+        const message = 'No matching documents.';
+        res.status(status).json({ status, message });
+        return;
+      }  
+      var bookings = [];
+      result.forEach(doc => {
+        console.log(doc.id, '=>', doc.data());
+        object = {
+          id: doc.id,
+          data: doc.data()
+        }
+        bookings.push(object);
+      });
+
+      const status = 200;
+      res.status(status).json({ status, bookings });
+      return;
+    });
+  } catch(error) {
+      var status = error.code;
+      var message = error.message;
+      res.status(400).json({ status, message });
+      return;
+  };
+});
+
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
 // function (origin, callback) {

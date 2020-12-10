@@ -1,7 +1,12 @@
+import { request } from './db.js';
+import BookTime from './book-time.js';
+
 export default class Calendar {
     month;
     year;
     today; // Date Object
+
+    bookings;
 
     month_list = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
     month_list_short = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"]
@@ -11,6 +16,13 @@ export default class Calendar {
         this.month = month;
         this.year = year;
         this.today =  today;
+            
+        this.generateBooking();
+    }
+
+    async generateBooking(){
+        const books = await request('get-all-booking');
+        this.bookings = new BookTime(books.bookings);
     }
 
     fillCalendar() {
@@ -70,6 +82,7 @@ export default class Calendar {
                     element.classList.remove("selectedDay");
                 });
                 e.target.parentNode.classList.add("selectedDay");
+                this.bookings.checkBookingDate(chosenDate)
             });
         });
     }

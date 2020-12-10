@@ -1,5 +1,6 @@
 // Backend Server URL
-const baseURL = 'http://127.0.0.1:3000/';
+// const baseURL = 'http://127.0.0.1:3000/'; //TESTING
+const baseURL = 'https://booking-app-42142-backend.herokuapp.com/'; //PRODUCTION
 
 export async function request(url, method = 'GET', body = null) {
     let options = {

@@ -9,8 +9,8 @@ var month = todayDate.getMonth();
 // Initialize calendar
 const calendar = new Calendar(month, year, todayDate);
 
-window.onload =  (e) => {
-    console.log(event);
+window.onload =  async (e) => {
+    console.log(e);
     const user = sessionStorage.getItem("uid");
     if (!user) {
         window.location.replace("login.html");
@@ -25,7 +25,6 @@ window.onload =  (e) => {
     document.querySelector('.next').addEventListener("click", (e) => { 
         calendar.nextMonth();
     });
-
 
     const timeButton = document.querySelectorAll('.timeslot>.btn-var');
     timeButton.forEach(element => {
