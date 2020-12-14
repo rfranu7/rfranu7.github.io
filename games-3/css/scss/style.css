@@ -1,0 +1,264 @@
+/******************************************************************
+	            	Styles for top navigation
+******************************************************************/
+.navmenu {
+  background: #000;
+  background-image: linear-gradient(to bottom right, #eeeee9, #eeeee9);
+  padding: 10px;
+  border-bottom: solid 0.5px #9E9E9E;
+  display: flex;
+  z-index: 1;
+  position: fixed;
+  width: 100%;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  @supports (display: grid) {
+    .navmenu {
+      display: grid;
+      grid-template-columns: 2fr 1fr 30px;
+      grid-column-gap: .5rem;
+      align-items: center; } }
+  .navmenu div:nth-child(n+2) {
+    justify-self: center; }
+  @media only screen and (min-width: 768px) {
+    .navmenu {
+      grid-template-columns: 1fr 100px 50px;
+      grid-column-gap: 1rem; } }
+
+.logo {
+  flex: 60%; }
+  .logo img {
+    max-height: 5vh; }
+
+.backbtn {
+  font-size: .85rem;
+  text-decoration: none;
+  color: black; }
+  @media only screen and (min-width: 400px) {
+    .backbtn {
+      font-size: 1rem; } }
+
+#menu-toggle {
+  transition: all .3s;
+  float: right; }
+
+#menu-toggle2 {
+  transition: all .3s;
+  float: right;
+  justify-self: flex-end; }
+  @media only screen and (min-width: 768px) {
+    #menu-toggle2 {
+      margin-right: 10px; } }
+
+#hamburgerIcon {
+  position: relative;
+  width: 30px;
+  height: 30px; }
+
+#hamburgerIcon::before {
+  content: "";
+  background-size: 30px;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: 50% 50%;
+  -moz-transform: 50% 50%;
+  -ms-transform: 50% 50%;
+  -o-transform: 50% 50%;
+  transform: 50% 50%; }
+
+/******************************************************************
+	            	    Styles for sidebar
+******************************************************************/
+/* Sidebar */
+#sidebar-container {
+  z-index: 99;
+  width: 0;
+  height: 100%;
+  overflow-y: hidden;
+  background: transparent;
+  top: 0;
+  right: 0;
+  position: fixed; }
+
+#sidebar-wrapper {
+  z-index: 1;
+  width: 0;
+  height: 100%;
+  overflow-y: hidden;
+  background: lightgray;
+  background-image: linear-gradient(to bottom right, #D3D3D3, #9E9E9E);
+  opacity: 1;
+  transition: all .5s;
+  display: flex;
+  top: 0;
+  right: 0;
+  position: fixed; }
+
+/* Change the width of the sidebar to display it*/
+#wrapper.menuDisplayed #sidebar-container {
+  width: 100%; }
+
+#wrapper.menuDisplayed #sidebar-wrapper {
+  width: 250px; }
+
+/* Sidebar styling */
+.sidebar-nav {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  transition: all .5s;
+  width: 100%; }
+
+.sidebar-nav li {
+  width: calc(100% - 20px);
+  transition: all .3s;
+  padding: 10px;
+  max-width: 100%; }
+
+.sidebar-nav li a {
+  display: block;
+  text-decoration: none;
+  color: black; }
+
+.sidebar-nav li:hover {
+  background: #9E9E9E; }
+
+#wrapper.menuDisplayed .menu-btn {
+  display: none; }
+
+#wrapper.menuDisplayed .menu-btn-small {
+  display: block; }
+
+.menu-btn-small {
+  float: right; }
+
+@media only screen and (min-width: 1024px) {
+  #wrapper.menuDisplayed #sidebar-wrapper {
+    width: 350px; } }
+.userDetail {
+  display: grid;
+  grid-template-columns: 1.5fr .5fr;
+  align-items: center;
+  height: 5vh; }
+
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased; }
+
+#userIcon, #betHistIcon, #addMoneyIcon, #subMoneyIcon, #logoutIcon {
+  position: relative;
+  width: 20px;
+  height: 15px; }
+
+#userIcon::before, #betHistIcon::before, #addMoneyIcon::before, #subMoneyIcon::before, #logoutIcon::before {
+  content: "";
+  background-size: 15px;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 2px;
+  left: 0; }
+
+#userIcon::before {
+  background-image: url(../assets/userIcon.png); }
+
+#betHistIcon::before {
+  background-image: url(../assets/wallet-icon.png); }
+
+#addMoneyIcon::before {
+  background-image: url(../assets/add-money-icon.png); }
+
+#subMoneyIcon::before {
+  background-image: url(../assets/sub-money-icon.png); }
+
+#logoutIcon::before {
+  background-image: url(../assets/logout.png); }
+
+#hamburgerIcon::before {
+  background-image: url(../assets/hamburgerIcon.png); }
+
+* {
+  -webkit-overflow-scrolling: touch; }
+
+html, body {
+  height: 100%; }
+
+body {
+  margin: 0;
+  font-family: Arial,sans-serif;
+  scroll-behavior: smooth;
+  overscroll-behavior: none;
+  overscroll-behavior-y: none; }
+
+.tab-pane {
+  display: none; }
+
+.tab-pane.active {
+  display: block; }
+
+.maincontent {
+  margin: .25rem;
+  margin-left: .35rem; }
+
+/* Main Content */
+#page-content-wrapper {
+  width: 100%;
+  position: absolute;
+  transition: all .5s; }
+
+.maincontent {
+  width: 100%;
+  padding-left: 0px;
+  padding-right: 0px;
+  overflow-y: hidden; }
+
+.userDetail {
+  padding: 9.5px !important;
+  border-bottom: solid 0.5px #9E9E9E;
+  color: black; }
+
+.frame {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0 none;
+  box-sizing: border-box; }
+
+#betHistory {
+  overflow: auto;
+  margin-bottom: 10px; }
+
+.container-fluid {
+  padding-top: 60px; }
+
+/** Hide scrollbar **/
+body::-webkit-scrollbar {
+  display: none; }
+
+body {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */ }
+
+/* 
+ button bet spacing - G
+ box shadow for meron wala - G
+ spacing of meron wala table - G
+ spacing of form amount - G
+ title - G
+ other pages
+*/
+
+/*# sourceMappingURL=style.css.map */
