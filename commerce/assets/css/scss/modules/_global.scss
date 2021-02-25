@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+*, ::after, ::before{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    font-family: "Poppins", "Arial", "Helvetica", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #333;
+}
+
+.screen-only {
+    position: absolute;
+    top: -10000em;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+input, textarea, select {
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.button-container a, .button-container button, .button-container input {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 600;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    font-size: 16px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transition: background-color .25s ease-out;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background-color: $primary-btn;
+    color: #fff !important;
+    line-height: 1.5 !important;
+
+    &:hover {
+        background-color: $primary-hover;
+    }
+}
+
+.btn-secondary {
+    background-color: $secondary-btn;
+    color: #fff !important;
+    line-height: 1.5 !important;
+
+    &:hover {
+        background-color: $secondary-hover;
+    }
+}
+
+.btn-inverted {
+    background-color: $inverted-btn;
+    color: #333 !important;
+    line-height: 1.5 !important;
+
+    &:hover {
+        background-color: $inverted-hover;
+    }
+}
+
+.btn-dark {
+    background-color: $dark-btn;
+    color: #fff !important;
+    line-height: 1.5 !important;
+
+    &:hover {
+        background-color: $dark-hover;
+    }
+}
+
+.btn-success {
+    background-color: $success-btn;
+    color: #fff !important;
+    line-height: 1.5 !important;
+
+    &:hover {
+        background-color: $success-hover;
+    }
+}
+
+.text-center {
+    text-align: center;
+}

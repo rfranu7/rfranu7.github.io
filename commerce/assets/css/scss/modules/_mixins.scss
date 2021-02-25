@@ -1,0 +1,11 @@
+@mixin MQ($size) {
+    @media only screen and (min-width: $size) {
+        @content
+    }
+};
+
+@mixin MQO($size, $orientation) {
+    @media only screen and (min-width: $size) and (orientation: $orientation) {
+        @content
+    }
+};

@@ -1,0 +1,59 @@
+.footer-nav {
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    border-style: solid;
+    border-width: 08px 0 0 0;
+    border-color: $primary-btn;
+
+    .footer-items {
+        max-width: 1200px;
+        margin: 0 auto;
+        @include MQ(768px) { 
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    
+
+    ul {
+        padding: 0;
+    }
+
+    li {
+        list-style: none;
+        padding: 13px 20px;
+    }
+
+    a {
+        color: #E7E7E7;
+        text-decoration: none;
+    }
+
+    p {
+        color: #E7E7E7;
+    }
+
+
+    &.image-1 {
+        background-color: #242424;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.93), rgba(0, 0, 0, 0.93)), url(http://jns.zizonsolutions.com/wp-content/uploads/2021/02/jewelry-store.jpg);
+        background-position: center center;
+        background-size: cover;
+    }
+}
+
+footer {
+    background-color: #303030;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
+
+    div {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 10px;
+    }
+}
+

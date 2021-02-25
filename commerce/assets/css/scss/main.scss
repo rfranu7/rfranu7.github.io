@@ -1,0 +1,483 @@
+@import "modules/variables";
+@import "modules/mixins";
+@import "modules/animations";
+
+@import "modules/global";
+@import "modules/header";
+@import "modules/footer";
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+
+.hero {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    @include MQ(1024px) { grid-template-columns: 1.5fr 1fr; }
+    gap: 10px;
+
+    .spacer {
+        height: 128px;
+    }
+
+    .container {
+        padding: 0 5%;
+    }
+
+    .buttons {
+        margin-top: 1rem;
+        gap: 10px;
+        @include MQ(768px) { 
+            display: flex; 
+        }
+        .button-container {
+            margin-bottom: 10px;
+        }
+    }
+
+    .image-1 {
+        background-image: url(http://jns.zizonsolutions.com/wp-content/uploads/2021/02/bg1.jpg);
+    }
+
+    .image-2 {
+        text-align: right;
+        color: #fff;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(http://jns.zizonsolutions.com/wp-content/uploads/2021/02/jewelries.jpg);
+        background-position: center center;
+
+        .button-container {
+            margin-top: 1rem;
+        }
+    }
+}
+
+.offer-banner {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: $primary-btn;
+    color: #fff;
+    @include MQ(768px) { display: flex; }
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    margin-bottom: 10px;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+        text-align: center;
+        align-items: center;
+        gap: 1rem;
+
+        @include MQ(768px) { 
+            flex-direction: row; 
+            margin-bottom: 0;
+            text-align: left;
+        }
+    }
+
+    .button-container {
+        text-align: center;
+    }
+
+    h3 {
+        font-size: 20px;
+        font-weight: 600;
+    }
+}
+
+.featured {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    @include MQ(768px) { grid-template-columns: repeat(2, 1fr); }
+    gap: 10px;
+
+    .container {
+        padding: 0 5%;
+        text-align: center;
+        color: #fff;
+
+        .button-container {
+            margin-top: 2rem;
+        }
+    }
+
+    .image-1 {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(http://jns.zizonsolutions.com/wp-content/uploads/2021/02/5e386d7e5bc79c74eb732d97.jpg);
+    }
+
+    .image-2 {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(http://jns.zizonsolutions.com/wp-content/uploads/2021/02/mossberg500homedefense.jpg);
+    }
+}
+
+.story {
+    margin-top: 100px;
+    border-style: solid;
+    border-width: 08px 0px 8px 0px;
+    border-color: $primary-btn;
+    
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        @include MQ(1024px) { grid-template-columns: .80fr 1fr; }
+        gap: 1rem;
+        padding: 10px;
+
+        div:nth-child(2) {
+            text-align: center;
+
+            h2 {
+                color: $primary-btn;
+            }
+
+            p {
+                font-size: .9rem;
+            }
+        }
+
+        .button-container {
+            margin-top: 2rem;
+
+            button {
+                font-size: 20px;
+            }
+        }
+
+        .awards {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2rem;
+
+            img {
+                max-width: 200px;
+            }
+        }
+    }
+
+    .image-1 {
+        background-color: #F3F3F3;
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.94)), url(http://jns.zizonsolutions.com/wp-content/uploads/2021/02/ourstory.jpg);
+        background-position: center center;
+        background-size: cover;
+    }
+}
+
+.reviews {
+    color: #fff;
+
+    h2 {
+        text-align: center;
+        padding: 10px;
+        margin-bottom: 1rem;
+    }
+
+    .spacer {
+        height: 100px;
+    }
+
+    .testimonials {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 20px 1fr 20px;
+        @include MQ(1024px) { grid-template-columns: 20px 1fr 20px; }
+        align-items: center;
+        gap: 1rem;
+        padding: 10px;
+    }
+
+    .testimonial {
+        text-align: center;
+    }
+
+    .testimonial-footer {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
+        cite span {
+            display: block;
+            text-align: left;
+        }
+
+        .testimonial-title {
+            color: $primary-btn;
+        }
+    }
+
+    .testimonial-image {
+        img {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    .testimonial {
+        display: none;
+    }
+
+    .prev, .next {
+        cursor: pointer;
+        width: auto;
+        padding: 16px;
+        transition: 0.6s ease;
+        user-select: none;
+    }
+
+    .dot {
+        cursor: pointer;
+        height: 10px;
+        width: 10px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+
+    .active, .dot:hover {
+        background-color: #717171;
+    }
+
+    .image-1 {
+        background-color: #440404;
+        background: linear-gradient(0deg, rgba(64, 4, 4, 0.81), rgba(64, 4, 4, 0.81)), url(http://jns.zizonsolutions.com/wp-content/uploads/2021/02/G0920-Glock-G44-6.jpg);
+        background-position: center center;
+        background-size: cover;
+    }
+}
+
+.brands {
+    background-color: #F2F2F2;
+    text-align: center;
+
+    .brand-logos {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.subscriptions {
+    border-style: solid;
+    border-width: 8px 0px 8px 0px;
+    border-color: #6CB300;
+    color: white;
+    text-align: center;
+
+    .newsletters {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        @include MQ(768px) { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @include MQ(768px) { 
+        .newsletter-item:first-of-type {
+            border-right: 3px dashed white;
+        }
+    }
+
+    form {
+        margin: 1rem;
+        @include MQ(768px) { 
+            display: flex;
+            gap: 10px;
+        }
+
+        input, button {
+            width: 100%;
+            display: block;
+            margin-bottom: .5rem;
+        }
+    }
+
+    .image-1 {
+        background: linear-gradient(0deg, rgba(178, 50, 49, 0.9), rgba(178, 50, 49, 0.9)), url(http://jns.zizonsolutions.com/wp-content/uploads/2021/02/4a4032d17c1ed963b51d8ec873234954.jpg);
+        background-size: cover;
+        opacity: 1;
+        mix-blend-mode: multiply;
+    }
+}
+
+.items {
+    padding: 0 5%;
+    @include MQ(768px) { 
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    .products {
+        display: grid;
+        grid-template-columns: 1fr;
+        @include MQ(768px) { 
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+        @include MQ(1024px) { 
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1rem;
+        }
+
+        .product {
+            margin-bottom: 2rem;
+            padding: 10px;
+
+            .image-container {
+                text-align: center;
+            }
+
+            .price {
+                margin-top: 1rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+    }
+
+    .categories {
+        display: grid;
+        grid-template-columns: 1fr;
+        @include MQ(768px) { 
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+        @include MQ(1024px) { 
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1rem;
+        }
+
+        .category {
+            margin-bottom: 2rem;
+            padding: 10px;
+
+            .image-container {
+                text-align: center;
+            }
+
+            .tinysubtitle {
+                margin: 2rem 0 0 0;
+                text-align: center;
+            }
+        }
+    }
+
+    .category-button-container {
+        text-align: center;
+    }
+
+    .news {
+        display: grid;
+        grid-template-columns: 1fr;
+        @include MQ(768px) { 
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+        @include MQ(1024px) { 
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        .post {
+            margin-bottom: 2rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .post-title {
+            font-size: 18px;
+        }
+
+        .post-meta-data {
+            line-height: 1.3em;
+            font-size: 12px;
+            margin-bottom: 13px;
+            color: #adadad;
+        }
+
+        .post-read-more {
+            font-size: 12px;
+            font-weight: 600;
+            color: #c36;
+        }
+    }
+}
+
+.locations {
+    .spacer {
+        height: 50px;
+        @include MQ(768px) { height: 100px; }
+    }
+
+    iframe {
+        width: 100%;
+        height: 300px;
+    }
+}
+
+.spacer {
+    height: 100px;
+}
+
+.bg-container {
+    background-size: cover;
+}
+
+.title {
+    font-size: 49px;
+    font-weight: 600;
+}
+
+.minititle {
+    font-size: 38px;
+    font-weight: 600;
+}
+
+.subtitle {
+    font-size: 27px;
+    font-weight: 600;
+}
+
+.tinysubtitle {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.minisubtitle {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.fa-star {
+    color: #f0ad4e;
+    width: 20px;
+}
+

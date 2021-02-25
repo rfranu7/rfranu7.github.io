@@ -1,841 +1,1025 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>J&S eCommerce</title>
-
-    <!-- ADD CSS -->
+    <title>J&amp;S &#8211; PAWN AND GUN</title>
+    <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        iframe {
-            width: 100%;
-            max-width: 1048px;
-        }
-
-        body {
-            max-width: 1080px;
-            margin: 0 auto;
-            padding: 0 1rem;
-        }
-
-        .text-banner {
-            background-color: black;
-            color: white;
-            padding: .25rem;
-            text-align: center;
-            border-radius: 3px;
-        }
-
-        .text-banner .small {
-            font-size: 12px;
-            margin: 0;
-        }
-
-        .text-banner .medium {
-            font-size: 16px;
-            margin: 0;
-        }
-
-        nav {
-            height: 79px;
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        nav .logo-placeholder {
-            flex: 0 0 243px;
-            justify-content: center;
-            text-align: center;
-        }
-
-        nav .navigation-bar {
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: column;
-            justify-content: flex-end;
-            align-items: flex-end;
-            flex: 0 0 calc(100% - 243px);
-            gap: 1rem;
-            padding-right: 1rem;
-        }
-
-        .navigation-items {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        .navigation-items li {
-            list-style: none;
-        }
-
-        .navigation-items li a {
-            text-decoration: none;
-            color: black;
-            line-height: 25px;
-            padding: .5rem;
-            border: 1px solid transparent;
-            border-radius: 3px;
-        }
-
-        .navigation-items li .shop {
-            border-color: black;
-        }
-
-        .navigation-items li:hover a {
-            background-color: black;
-            color: white;
-            border: 1px solid black;
-        }
-
-        .hero {
-            height: 480px;
-            padding: 0 5rem;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            /* background-color: black;
-            color: white; */
-        }
-
-        .hero .offer, .hero .offer-image {
-            flex: 1;
-        }
-        
-        .hero .offer h1 {
-            margin-bottom: 0;
-        }
-
-        .hero .offer h3 {
-            margin-top: .5rem;
-        }
-
-        .limited-offer {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .shop-offer {
-            padding: 1rem 0;
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-        }
-
-        .shop-offer .item {
-            position: relative;
-        }
-
-        .shop-offer .title {
-            position: absolute;
-            top: 0;
-            width: 100%;
-            text-align: center;
-            background-color: white;
-            color: black;
-            border: 1px solid black;
-            transition: background-color .5s ease-out;
-        }
-
-        .shop-offer .title:hover {
-            background-color: black;
-            color: white;
-            transition: background-color .5s ease-out;
-        }
-
-        .shop-offer .cta {
-            position: absolute;
-            bottom: 50px;
-            width: 100%;
-            text-align: center;
-        }
-
-        .story {
-            padding: 0 5rem;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            justify-content: center;
-            align-items: center;
-            border-bottom: 1px solid black;
-            padding-bottom: 1rem;
-        }
-
-        .story-image, .story-text {
-            flex: 1;
-        }
-
-        .story-text {
-            text-align: center;
-        }
-
-        .story .awards {
-            margin-top: 1rem;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            text-align: center;
-            width: 100%;
-        }
-
-        .story .awards .cards {
-            flex: 1;
-        }
-
-        .featured {
-            border-bottom: 1px solid black;
-            padding-bottom: 1rem;
-        }
-
-        .featured-products, .featured-reviews, .featured-categories {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-            align-items: center;
-            width: 100%;
-            margin-bottom: 2rem;
-        }
-
-        .featured-reviews {
-            margin-bottom: 2rem;
-        }
-
-        .products {
-            display: flex;
-            gap: 1rem;
-            flex: 80%;
-            justify-content: center;
-        }
-
-        .products .cards {
-            text-align: center;
-        }
-
-        .products .cards img {
-            border: 1px solid #333;
-            border-radius: 3px;
-        }
-
-        .products .cards img:hover {
-            transform: scale(1.2);
-        }
-
-        .products .cards p {
-            margin: .5rem 0;
-        }
-
-        .products .cards .cta {
-            display: flex;
-            gap: 1rem;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .review-items {
-            flex: 80%;
-            display: flex;
-            flex-wrap: wrap;
-            padding: 1rem;
-            justify-content: center;
-            background-color: #ddd;
-            max-width: 70%;
-            margin: 0 auto;
-        }
-
-        .review-items .card-container {
-            max-width: 50%;
-            margin: 0 auto;
-        }
-        
-        .review-items .cards {
-            display: flex;
-            align-items: center;
-            font-size: 1.3rem;
-            padding: 1rem;
-            gap: 1rem;
-        }
-        
-        .review-items .cards p {
-            margin: 0;
-        }
-
-        .categories {
-            margin-bottom: 3rem;
-        }
-
-        .category-items {
-            flex: 80%;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1rem;
-        }
-
-        .category-items img {
-            border: 1px solid #333;
-            border-radius: 3px;
-        }
-
-        .category-items img:hover {
-            transform: scale(1.2);
-        }
-
-        .form-inputs {
-            background-color: #999999;
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-        }
-
-        .newsletter, .wishlist {
-            padding: 1rem;
-            flex: 1;
-            text-align: center;
-        }
-        .newsletter h2, .wishlist h2 {
-            margin: 0 0 .5rem 0;
-        }
-
-        .newsletter p, .wishlist p {
-            text-align: center;
-            margin: 0 0 1rem 0;
-            font-size: 20px;
-        }
-
-        .newsletter form, .wishlist form {
-            display: inline-block;
-        }
-
-        .newsletter {
-            border-right: 1px solid black;
-        }
-
-        .featured-products .news .cards p {
-            text-align: left;
-        }
-
-        .featured-products .news .cards .cta {
-            justify-content: left;
-        }
-
-        .products.news .cards img:hover {
-            transform: none;
-        }
-
-        .locations {
-            margin-bottom: 3rem;
-        }
-
-        .footer-links {
-            display: flex;
-            margin-bottom: 1rem;
-        }
-
-        .footer-links .col {
-            flex: 0 0 33%;
-            height: 150px;
-        }
-        
-        .footer-links .col2 {
-            border-left: 2px solid black;
-            border-right: 2px solid black;
-        }
-
-        .footer-items {
-            background-color: #999999;
-            padding: .5rem 1rem;
-            text-align: center;
-        }
-
-        .footer-items p {
-            font-weight: 500;
-        }
-
-        img {
-            max-width: 100%;
-            border-radius: 3px;
-        }
-
-        .btn {
-            display: inline-block;
-            margin-bottom: 0;
-            font-weight: normal;
-            text-align: center;
-            white-space: nowrap;
-            vertical-align: middle;
-            touch-action: manipulation;
-            cursor: pointer;
-            background-image: none;
-            border: 1px solid transparent;
-            padding: 6px 12px;
-            font-size: 14px;
-            line-height: 1.42857143;
-            border-radius: 4px;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
-            transition: background-color .25s ease-out;
-        }
-
-        a.btn {
-            text-decoration: none;
-            color: black;
-        }
-
-        .btn-small {
-            line-height: 1;
-        }
-
-        .btn:hover {
-            transition: background-color .25s ease-out;
-        }
-
-        .btn-outline {
-            border: 1px solid black;
-        }
-
-        .btn-outline-black:hover {
-            border: 1px solid white;
-        }
-
-        .btn-primary {
-            background-color: white;
-        }
-
-        .btn-primary:hover {
-            background-color: black;
-            color: white;
-        }
-
-        input, textarea, select {
-            height: 34px;
-            padding: 6px 12px;
-            font-size: 14px;
-            line-height: 1.42857143;
-            color: #555555;
-            background-color: #fff;
-            background-image: none;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-        }
-
-        .text-center {
-            text-align: center;
-        }
-        
-        .text-title {
-            margin: 3rem;
-        }
-
-        @media only screen and (max-width: 600px) {
-            body {
-                padding: 0;
-            }
-            
-            nav .navigation-bar {
-                display: none;
-            }
-
-            nav .logo-placeholder {
-                flex: 0 0 100%;
-            }
-
-            .products {
-                flex-wrap: wrap;
-            }
-
-            .fa-chevron-left, .fa-chevron-right {
-                display: none;
-            }
-
-            .products.news {
-                padding: 1rem;
-            }
-
-            form input{
-                display: block;
-                margin-bottom: .5rem;
-            }
-            
-            .review-items {
-                display: block;
-            }
-            
-            .review-items .card-container {
-                max-width: 100%;
-            }
-
-            .story {
-                display: block;
-                padding: 1rem;
-            }
-            
-            .shop-offer {
-                display: block;
-                padding: 1rem;
-            }
-
-            .hero {
-                display: block;
-                padding: 1rem;
-            }
-        }
-
-    </style>
-
 </head>
+
 <body>
 
     <header>
-        <div class="text-banner">
-            <p class="small">PROMOTION TEXT (can be changed) Example.  FREE DELIVERY ON ALL ORDERS OVER $100</p>
-        </div>
+        <section class="announcement-banner">
+            <div>
+                <strong>DEAL OF THE WEEK</strong> &#8211; 15% OFF in All Purchases &#8211; 
+                <a href="#"><strong>Shop Now</strong></a>
+            </div>
+        </section>
 
-        <nav>
-            <div class="logo-placeholder">
-                <img src="assets/images/logo.png" alt="J&S Pawn and Gun">
+        <section class="top-header">
+            <div>
+                <span><i aria-hidden="true" class="fas fa-truck"></i> </span>
+                <span>FREE Next Day Delivery For Orders $35+</span>
             </div>
 
-            <div class="navigation-bar">
-                <div class="top-row">
-                    <span><i class="fas fa-search fa-lg"></i></span>
-                    <span><i class="fas fa-user fa-lg"></i></span>
-                    <span><i class="fas fa-shopping-cart fa-lg"></i> (0)</span>
-                </div>
-                <div class="bottom-row">
-                    <ul class="navigation-items">
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Get a loan</a></li>
-                        <li><a href="#">Sell your stuff</a></li>
-                        <li><a href="#">Make your payments</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Locations</a></li>
-                        <li><a class="shop" href="#">Shop Online</a></li>
+            <div>
+                <div class="top-nav">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <span>
+                                    <i aria-hidden="true" class="fas fa-map-marker-alt"></i> 
+                                </span>
+                                <span>Our Stores</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"> 
+                                <span>
+                                    <i aria-hidden="true" class="fas fa-truck"></i> 
+                                </span>
+                                <span>Track Your Order</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"> 
+                                <span>
+                                    <i aria-hidden="true" class="fas fa-question-circle"></i> 
+                                </span>
+                                <span>Help</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"> 
+                                <span>
+                                    <i aria-hidden="true" class="fas fa-heart"></i> 
+                                </span>
+                                <span>Wish List</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
+
+                <div class="social-icons">
+                    
+                    <div>
+                        <a href="#">
+                            <span class="screen-only">Facebook-f</span>
+                            <i class="fab fa-facebook-f"></i> 
+                        </a>
+                    </div>
+
+                    <div>
+                        <a href="#">
+                            <span class="screen-only">Twitter</span>
+                            <i class="fab fa-twitter"></i> 
+                        </a>
+                    </div>
+                    
+                    <div>
+                        <a href="#">
+                            <span class="screen-only">Instagram</span>
+                            <i class="fab fa-instagram"></i> 
+                        </a>
+                    </div>
+                </div>
             </div>
-        </nav>
+        </section>
+
+        <section class="mobile-header">
+            <div>
+                <img width="482" height="100"
+                    src="http://jns.zizonsolutions.com/wp-content/uploads/2021/02/logo1.png"
+                    class="attachment-large size-large" alt="" loading="lazy"
+                    srcset="http://jns.zizonsolutions.com/wp-content/uploads/2021/02/logo1.png 482w, http://jns.zizonsolutions.com/wp-content/uploads/2021/02/logo1-300x62.png 300w"
+                    sizes="(max-width: 482px) 100vw, 482px" /> 
+            </div>
+
+            <div class="navigation">
+                <div class="menu-toggle">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                    <span class="screen-only">Menu</span>
+                </div>
+            </div>
+
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <a href="#">
+                            <i class="fas fa-bars" style="margin-right:7px;"></i>
+                            All Departments
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="#">Firearms</a>
+                            </li>
+                            <li>
+                                <a href="#">Jewelries</a>
+                            </li>
+                            <li>
+                                <a href="#">Gaming Systems</a>
+                            </li>
+                            <li>
+                                <a href="#">Musical Instruments</a>
+                            </li>
+                            <li>
+                                <a href="#">Tools</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">About Us</a>
+                    </li>
+                    <li>
+                        <a href="#">Get a Loan</a>
+                    </li>
+                    <li>
+                        <a href="#">Sell Your Stuff</a>
+                    </li>
+                    <li>
+                        <a href="#">Make Your Payments</a>
+                    </li>
+                    <li>
+                        <a href="#">Blog</a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+
+        <section class="search-header">
+            <div class="image-container">
+                <img width="482" height="100"
+                    src="http://jns.zizonsolutions.com/wp-content/uploads/2021/02/logo1.png"
+                    class="attachment-large size-large" alt="" loading="lazy"
+                    srcset="http://jns.zizonsolutions.com/wp-content/uploads/2021/02/logo1.png 482w, http://jns.zizonsolutions.com/wp-content/uploads/2021/02/logo1-300x62.png 300w"
+                    sizes="(max-width: 482px) 100vw, 482px" />
+            </div>
+                
+            <div class="search-form">
+                <form role="search" action="http://jns.zizonsolutions.com" method="get">
+                    <input placeholder="Search..." type="search" name="s" title="Search" value="">
+                    <button class="elementor-search-form--submit" type="submit" title="Search" aria-label="Search">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                            <span class="screen-only">Search</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+                
+            <div class="image-container">
+                <a href="tel:304-738-7296">
+                    <img width="173" height="36"
+                        src="http://jns.zizonsolutions.com/wp-content/uploads/2021/02/phone1.png"
+                        class="attachment-large size-large" alt="" loading="lazy" /> </a>
+            </div>
+
+            <div class="image-container">
+                <a href="#">
+                    <img width="173" height="36"
+                        src="http://jns.zizonsolutions.com/wp-content/uploads/2021/02/info2-1.png"
+                        class="attachment-large size-large" alt="" loading="lazy" /> </a>
+            </div>
+
+            
+            <div class="image-container">
+                <a href="#">
+                    <img width="70" height="36"
+                        src="http://jns.zizonsolutions.com/wp-content/uploads/2021/02/cart.png"
+                        class="attachment-large size-large" alt="" loading="lazy" /> </a>
+            </div>
+        </section>
+
+        <div class="main-nav">
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <a href="#">
+                            <i class="fas fa-bars" style="margin-right:7px;"></i>
+                            All Departments
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="#">Firearms</a>
+                            </li>
+                            <li>
+                                <a href="#">Jewelries</a>
+                            </li>
+                            <li>
+                                <a href="#">Gaming Systems</a>
+                            </li>
+                            <li>
+                                <a href="#">Musical Instruments</a>
+                            </li>
+                            <li>
+                                <a href="#">Tools</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">About Us</a>
+                    </li>
+                    <li>
+                        <a href="#">Get a Loan</a>
+                    </li>
+                    <li>
+                        <a href="#">Sell Your Stuff</a>
+                    </li>
+                    <li>
+                        <a href="#">Make Your Payments</a>
+                    </li>
+                    <li>
+                        <a href="#">Blog</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="button-container">
+                <a href="#" class="btn-primary" role="button">
+                    <span>SHOP NOW</span>
+                </a>
+            </div>
+        </div>
+        
     </header>
 
     <main>
-        <div class="hero">
-            <div class="offer">
-                <h1>ADVENTURE AWAITS</h1>
-                <h3>with GLOCK 44 .22LR CALIBER PISTOL</h3>
-                <div class="cta">
-                    <a href="#" class="btn btn-primary btn-outline">AVAILABLE NOW - SHOP</a>
-                    <a href="#" class="btn btn-primary btn-outline">MAKE AN OFFER</a>
-                </div>
-            </div>
-            <div class="offer-image">
-                <img src="assets/images/GLOCK 44 .22LR CALIBER PISTOL.jpeg" alt="GLOCK 44 .22LR CALIBER PISTOL">
-            </div>
-        </div>
-
-        <div class="limited-offer text-banner">
-            <i class="far fa-clock"></i>
-            <p class="medium">CONTEST TEXT | LIMITED PROMOTIONAL $ or % OFF CODE TEXT</p>
-            <a href="#" class="btn btn-primary btn-outline btn-outline-black btn-small">CLAIM YOURS NOW</a>
-        </div>
-
-        <div class="shop-offer">
-            <div class="item">
-                <div class="image-placeholder">
-                    <img src="assets/images/Artboard 1.png" alt="image-1">
-                </div>
-                <div class="title">
-                    <p>SHOP NEW DIAMONDS, JEWELRY & GOLD</p>
-                </div>
-                <div class="cta">
-                    <button class="btn btn-primary btn-outline btn-small">SHOP NOW</button>
-                </div>
-            </div>
+    
+        <section class="hero">
             
-            <div class="item">
-                <div class="image-placeholder">
-                    <img src="assets/images/enticing.png" alt="image-1">
+            <div class="bg-container image-1">
+                
+                <div class="spacer"></div>
+                <div class="container">
+                    <h2 class="title">ADVENTURE AWAITS</h2>
+                    <h2 class="subtitle">with GLOCK 44 .22LR CALIBER PISTOL</h2>
+            
+                    <div class="buttons">
+                        <div class="button-container">
+                            <a href="#" class="btn-primary" role="button">
+                                <span>AVAILABLE NOW-SHOP</span>
+                            </a>
+                        </div>
+                    
+                        <div class="button-container">
+                            <a href="#" class="btn-success" role="button">
+                                <span>MAKE AN OFFER</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="title">
-                    <p>THIS WEEK'S SALE - HUNTING/FIREARMS</p>
-                </div>
-                <div class="cta">
-                    <button class="btn btn-primary btn-outline">VIEW MORE</button>
-                </div>
+                
+                <div class="spacer"></div>
             </div>
-        </div>
 
-        <div class="story">
-            <div class="story-image">
-                <img src="assets/images/gunsbaby.jpg" alt="our story">
-            </div>
-            <div class="story-text">
-                <h2>Our Story</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis a iste quidem, tenetur nesciunt reprehenderit maxime commodi, aliquid laborum sunt tempore consequuntur minus beatae, expedita molestias numquam impedit corporis fugiat.</p>
-                <a href="#" class="btn btn-primary btn-outline">Learn more</a>
-                <div class="awards">
-                    <div class="cards">
-                        <img src="assets/images/b.png" alt="">
-                        <p>BBB</p>
-                    </div>
-                    <div class="cards">
-                        <img src="assets/images/a.png" alt="">
-                        <p>NPA</p>
-                    </div>
-                    <div class="cards">
-                        <img src="assets/images/c.png" alt="">
-                        <p>AWARDS</p>
-                    </div>
-                    <div class="cards">
-                        <img src="assets/images/d.png" alt="">
-                        <p>ACCOLADES</p>
+                
+            <div class="bg-container image-2">
+                
+                <div class="spacer"></div>
+                <div class="container">
+                    <h2 class="subtitle">BROWSE OUR JEWELRY</h2>
+                    <h2 class="minititle">STARTING AT $199</h2>
+                
+                    <div class="button-container">
+                        <a href="#" class="btn-primary" role="button">
+                            <span>SHOP NOW</span>
+                        </a>
                     </div>
                 </div>
+                <div class="spacer"></div>
             </div>
-        </div>
+        </section>
+        <!-- END HERO -->
 
-        <div class="featured">
-            <h1 class="text-center text-title">Top Products at J&S Pawn and Gun</h1>
-            <div class="featured-products">
-                <i class="fas fa-chevron-left fa-2x"></i>
-                <div class="products listing">
-                    <div class="cards">
-                        <img src="assets/images/shotguns.png" alt="">
-                        <p>Lorem ipsum dolor sit amet</p>
-                        <p class="ratings">
-                            <i class="fas fa-star fa-sm"></i>
-                            <i class="fas fa-star fa-sm"></i>
-                            <i class="fas fa-star fa-sm"></i>
-                            <i class="fas fa-star-half-alt fa-sm"></i>
-                            <i class="far fa-star fa-sm"></i>
-                        </p>
-                        <div class="cta">
-                            <span class="amount">$100.00</span>
-                            <button class="btn btn-primary btn-outline btn-small">BUY</button>
-                        </div>
+        <section class="offer-banner">
+            <div class="container">
+                <span><i aria-hidden="true" class="far fa-clock fa-3x"></i></span>
+
+                <h3 class="elementor-icon-box-title">
+                    <span>CONTEST TEXT LIMITED PROMOTIONAL $ or % OFF CODE TEXT</span>
+                </h3>
+            </div>
+
+            <div class="button-container">
+                <a href="#" class="btn-inverted" role="button">
+                    <span >CLAIM YOURS NOW</span>
+                </a>
+            </div>
+        </section>
+        <!-- END OFFER BANNER -->
+                    
+        <section class="featured">
+                
+            <div class="bg-container image-1">
+                
+                <div class="spacer"></div>
+                <div class="container">
+                    <h2 class="subtitle">SHOP NEW DIAMONDS, JEWELRY, AND GOLD</h2>
+            
+                    <div class="button-container">
+                        <a href="#" class="btn-primary" role="button">
+                            <span>SHOP NOW</span>
+                        </a>
                     </div>
-
-                    <div class="cards">
-                        <img src="assets/images/top.png" alt="">
-                        <p>Lorem ipsum dolor sit amet</p>
-                        <p class="ratings">
-                            <i class="fas fa-star fa-sm"></i>
-                            <i class="fas fa-star fa-sm"></i>
-                            <i class="fas fa-star fa-sm"></i>
-                            <i class="fas fa-star-half-alt fa-sm"></i>
-                            <i class="far fa-star fa-sm"></i>
-                        </p>
-                        <div class="cta">
-                            <span class="amount">$100.00</span>
-                            <button class="btn btn-primary btn-outline btn-small">BUY</button>
-                        </div>
-                    </div>
-
-                    <div class="cards">
-                        <img src="assets/images/topguns.png" alt="">
-                        <p>Lorem ipsum dolor sit amet</p>
-                        <p class="ratings">
-                            <i class="fas fa-star fa-sm"></i>
-                            <i class="fas fa-star fa-sm"></i>
-                            <i class="fas fa-star fa-sm"></i>
-                            <i class="fas fa-star-half-alt fa-sm"></i>
-                            <i class="far fa-star fa-sm"></i>
-                        </p>
-                        <div class="cta">
-                            <span class="amount">$100.00</span>
-                            <button class="btn btn-primary btn-outline btn-small">BUY</button>
-                        </div>
-                    </div>
-
-                    <div class="cards">
-                        <img src="assets/images/topguns2.png" alt="">
-                        <p>Lorem ipsum dolor sit amet</p>
-                        <p class="ratings">
-                            <i class="fas fa-star fa-sm"></i>
-                            <i class="fas fa-star fa-sm"></i>
-                            <i class="fas fa-star fa-sm"></i>
-                            <i class="fas fa-star-half-alt fa-sm"></i>
-                            <i class="far fa-star fa-sm"></i>
-                        </p>
-                        <div class="cta">
-                            <span class="amount">$100.00</span>
-                            <button class="btn btn-primary btn-outline btn-small">BUY</button>
-                        </div>
-                    </div>
-
-                    <div class="cards">
-                        <img src="assets/images/topguns3.png" alt="">
-                        <p>Lorem ipsum dolor sit amet</p>
-                        <p class="ratings">
-                            <i class="fas fa-star fa-sm"></i>
-                            <i class="fas fa-star fa-sm"></i>
-                            <i class="fas fa-star fa-sm"></i>
-                            <i class="fas fa-star-half-alt fa-sm"></i>
-                            <i class="far fa-star fa-sm"></i>
-                        </p>
-                        <div class="cta">
-                            <span class="amount">$100.00</span>
-                            <button class="btn btn-primary btn-outline btn-small">BUY</button>
-                        </div>
-                    </div>
-
                 </div>
-                <i class="fas fa-chevron-right fa-2x"></i>
+                <div class="spacer"></div>
             </div>
-        </div>
+        
+        
+            <div class="bg-container image-2">
+                
+                <div class="spacer"></div>
+                <div class="container">
+                    <h2 class="subtitle">THIS WEEK'S SALE HUNTING/FIREARMS</h2>
+                
+                    <div class="button-container">
+                        <a href="#" class="btn-primary" role="button">
+                            <span>VIEW MORE</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="spacer"></div>
+            </div>
+        </section>
+        <!-- END FEATURED -->
 
-        <div class="featured">
-            <h1 class="text-center text-title">Read What Other's Are Saying About Us</h1>
-            <div class="featured-reviews">
-                <i class="fas fa-chevron-left fa-2x"></i>
-                <div class="review-items">
-                    <div class="card-container">
-                        <div class="cards">
-                            <span><i class="fas fa-user fa-2x"></i></span>
-                            <div class="review-text">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                <p>—Kenny Bostick</p>
+        <section class="story">
+            <div class="bg-container image-1">
+            
+                <div class="spacer"></div>
+                <div class="container">
+                    <div>
+                        <img width="800" height="592"
+                            src="http://jns.zizonsolutions.com/wp-content/uploads/2021/02/ourstory-1024x758.jpg"
+                            class="attachment-large size-large" alt="" loading="lazy"
+                            srcset="http://jns.zizonsolutions.com/wp-content/uploads/2021/02/ourstory-1024x758.jpg 1024w, http://jns.zizonsolutions.com/wp-content/uploads/2021/02/ourstory-300x222.jpg 300w, http://jns.zizonsolutions.com/wp-content/uploads/2021/02/ourstory-768x568.jpg 768w, http://jns.zizonsolutions.com/wp-content/uploads/2021/02/ourstory.jpg 1193w"
+                            sizes="(max-width: 800px) 100vw, 800px" />
+                    </div>
+                            
+                    <div>
+                        
+                        <h2 class="title">OUR STORY</h2>
+                                
+                        <div class="elementor-text-editor elementor-clearfix">
+                            <p>We are a unique and inventive retailer that offers an expansive selection of
+                                new and gently used merchandise. We seek to tap into and help enrich a
+                                community spirit with a compassionate and involved business model.</p>
+                        </div>
+                                
+                        <div class="button-container">
+                            <a href="#" class="btn-primary" role="button">
+                                <span>Learn More</span>
+                            </a>
+                        </div>
+    
+                        <section class="awards">
+                            
+                            <div class="image-container">
+                                <img src="http://jns.zizonsolutions.com/wp-content/uploads/2021/02/BBB-Logo-1024x523.png"
+                                    class="attachment-large size-large" alt="" loading="lazy"
+                                    srcset="http://jns.zizonsolutions.com/wp-content/uploads/2021/02/BBB-Logo-1024x523.png 1024w, http://jns.zizonsolutions.com/wp-content/uploads/2021/02/BBB-Logo-300x153.png 300w, http://jns.zizonsolutions.com/wp-content/uploads/2021/02/BBB-Logo-768x392.png 768w, http://jns.zizonsolutions.com/wp-content/uploads/2021/02/BBB-Logo-1536x785.png 1536w, http://jns.zizonsolutions.com/wp-content/uploads/2021/02/BBB-Logo.png 1673w"
+                                    sizes="(max-width: 800px) 100vw, 800px" /> 
+                            </div>
+                                            
+                            <div class="image-container">
+                                <img src="http://jns.zizonsolutions.com/wp-content/uploads/2021/02/npa.jpg"
+                                    class="attachment-large size-large" alt="" loading="lazy"
+                                    srcset="http://jns.zizonsolutions.com/wp-content/uploads/2021/02/npa.jpg 640w, http://jns.zizonsolutions.com/wp-content/uploads/2021/02/npa-300x154.jpg 300w"
+                                    sizes="(max-width: 640px) 100vw, 640px" /> 
+                            </div>
+                                        
+                        </section>
+                        <!-- END AWARDS -->
+                    </div>
+                </div>
+                <div class="spacer"></div>
+            </div>
+        </section>
+        <!-- END STORY -->
+
+        <section class="items">
+            <div class="spacer"></div>
+            
+            <h2 class="minititle">Top Products at J & S Pawn and Gun</h2>
+                
+            <section class="products">
+                
+                <div class="product">
+                    <div class="image-container">
+                        <img width="323" height="323"
+                            src="http://jns.zizonsolutions.com/wp-content/uploads/2021/02/lespaul.png"
+                            class="attachment-large size-large" alt="" loading="lazy"
+                            srcset="http://jns.zizonsolutions.com/wp-content/uploads/2021/02/lespaul.png 323w, http://jns.zizonsolutions.com/wp-content/uploads/2021/02/lespaul-300x300.png 300w, http://jns.zizonsolutions.com/wp-content/uploads/2021/02/lespaul-150x150.png 150w"
+                            sizes="(max-width: 323px) 100vw, 323px" /> 
+                    </div>
+                        
+                    <div class="minisubtitle">Gibson Les Paul Black Custom LP ,Gold hardware</div>
+                    
+
+                    <div class="product-rating">
+                        <i class="fas fa-star">&#xE934;</i>
+                        <i class="fas fa-star">&#xE934;</i>
+                        <i class="fas fa-star">&#xE934;</i>
+                        <i class="fas fa-star">&#xE934;</i>
+                        <i class="fas fa-star">&#xE934;</i>
+                            <span itemprop="ratingValue" class="screen-only">5/5</span>
+                    </div>
+
+                    <div class="price">
+                        <div>
+                            <div>
+                                <p class="tinysubtitle">$305</p>
                             </div>
                         </div>
+
+                        <div class="button-container">
+                            <a href="#" class="btn-success" role="button">
+                                <span>BUY</span>
+                            </a>
+                        </div>
                     </div>
-                   
-                    <div class="card-container">
-                        <div class="cards">
-                            <span><i class="fas fa-user fa-2x"></i></span>
-                            <div class="review-text">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                                <p>—Brad Harris</p>
+                </div>
+
+                <div class="product">
+                    <div class="image-container">
+                        <img width="323" height="323" src="http://jns.zizonsolutions.com/wp-content/uploads/2021/02/ps5.jpg" class="attachment-large size-large" alt="" loading="lazy" srcset="http://jns.zizonsolutions.com/wp-content/uploads/2021/02/ps5.jpg 300w, http://jns.zizonsolutions.com/wp-content/uploads/2021/02/ps5-150x150.jpg 150w" sizes="(max-width: 300px) 100vw, 300px">
+                    </div>
+                        
+                    <div class="minisubtitle">Gibson Les Paul Black Custom LP ,Gold hardware</div>
+                    
+
+                    <div class="product-rating">
+                        <i class="fas fa-star">&#xE934;</i>
+                        <i class="fas fa-star">&#xE934;</i>
+                        <i class="fas fa-star">&#xE934;</i>
+                        <i class="fas fa-star">&#xE934;</i>
+                        <i class="fas fa-star">&#xE934;</i>
+                            <span itemprop="ratingValue" class="screen-only">5/5</span>
+                    </div>
+
+                    <div class="price">
+                        <div>
+                            <div>
+                                <p class="tinysubtitle">$305</p>
                             </div>
                         </div>
+
+                        <div class="button-container">
+                            <a href="#" class="btn-success" role="button">
+                                <span>BUY</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <div class="image-container">
+                        <img width="323" height="323" src="http://jns.zizonsolutions.com/wp-content/uploads/2021/02/Untitled.jpg" class="attachment-large size-large" alt="" loading="lazy" srcset="http://jns.zizonsolutions.com/wp-content/uploads/2021/02/Untitled.jpg 240w, http://jns.zizonsolutions.com/wp-content/uploads/2021/02/Untitled-150x150.jpg 150w" sizes="(max-width: 240px) 100vw, 240px">
+                    </div>
+                        
+                    <div class="minisubtitle">Gibson Les Paul Black Custom LP ,Gold hardware</div>
+                    
+
+                    <div class="product-rating">
+                        <i class="fas fa-star">&#xE934;</i>
+                        <i class="fas fa-star">&#xE934;</i>
+                        <i class="fas fa-star">&#xE934;</i>
+                        <i class="fas fa-star">&#xE934;</i>
+                        <i class="fas fa-star">&#xE934;</i>
+                            <span itemprop="ratingValue" class="screen-only">5/5</span>
                     </div>
 
+                    <div class="price">
+                        <div>
+                            <div>
+                                <p class="tinysubtitle">$305</p>
+                            </div>
+                        </div>
+
+                        <div class="button-container">
+                            <a href="#" class="btn-success" role="button">
+                                <span>BUY</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <i class="fas fa-chevron-right fa-2x"></i>
-            </div>
-            <div class="text-center">
-                <button class="btn btn-primary btn-outline btn-small">Review Us</button>
-            </div>
-        </div>
 
-        <div class="categories">
-            <h1 class="text-center text-title">Top Categories You May Find at J&S Pawn and Gun</h1>
-            <div class="featured-categories">
-                <i class="fas fa-chevron-left fa-2x"></i>
-                <div class="category-items">
-                    <img src="assets/images/gloves.png" alt="category">
-                    <img src="assets/images/handgun.png" alt="category">
-                    <img src="assets/images/sniper.png" alt="category">
-                    <img src="assets/images/accessories.png" alt="category">
-                    <img src="assets/images/arex.png" alt="category">
-                    <img src="assets/images/ammo.png" alt="category">
-                    <img src="assets/images/gun.png" alt="category">
-                    <img src="assets/images/scope.png" alt="category">
+                <div class="product">
+                    <div class="image-container">
+                        <img width="323" height="323" src="http://jns.zizonsolutions.com/wp-content/uploads/2021/02/we.jpg" class="attachment-large size-large" alt="" loading="lazy" srcset="http://jns.zizonsolutions.com/wp-content/uploads/2021/02/we.jpg 292w, http://jns.zizonsolutions.com/wp-content/uploads/2021/02/we-150x150.jpg 150w" sizes="(max-width: 292px) 100vw, 292px">
+                    </div>
+                        
+                    <div class="minisubtitle">Gibson Les Paul Black Custom LP ,Gold hardware</div>
+                    
+
+                    <div class="product-rating">
+                        <i class="fas fa-star">&#xE934;</i>
+                        <i class="fas fa-star">&#xE934;</i>
+                        <i class="fas fa-star">&#xE934;</i>
+                        <i class="fas fa-star">&#xE934;</i>
+                        <i class="fas fa-star">&#xE934;</i>
+                            <span itemprop="ratingValue" class="screen-only">5/5</span>
+                    </div>
+
+                    <div class="price">
+                        <div>
+                            <div>
+                                <p class="tinysubtitle">$305</p>
+                            </div>
+                        </div>
+
+                        <div class="button-container">
+                            <a href="#" class="btn-success" role="button">
+                                <span>BUY</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <i class="fas fa-chevron-right fa-2x"></i>
-            </div>
-            <div class="text-center">
-                <button class="btn btn-primary btn-outline btn-small">SHOP BY CATEGORY</button>
-            </div>
-        </div>
 
-        <div class="form-inputs">
-            <div class="newsletter">
-                <h2 class="text-center">Love That Free Stuff Feeling?</h2>
-                <p>Get Specials, Discounts and Free Stuff</p>
-                <form>
-                    <input type="email" id="emailAddress" placeholder="Add Your Email">
-                    <button class="btn btn-primary btn-outline">SUBMIT</button>
-                </form>
-            </div>
-            <div class="wishlist">
-                <h2 class="text-center">Can't Find What You're Looking For?</h2>
-                <p>Add Your Name To Our Wishlist</p>
-                <form>
-                    <input type="email" id="emailAddress" placeholder="Add Your Email">
-                    <input type="text" id="productName" placeholder="Product Name">
-                    <button class="btn btn-primary btn-outline">SUBMIT</button>
-                </form>
-            </div>
-        </div>
+                <div class="product">
+                    <div class="image-container">
+                        <img width="323" height="323" src="http://jns.zizonsolutions.com/wp-content/uploads/2021/02/jaja.jpg" class="attachment-large size-large" alt="" loading="lazy" srcset="http://jns.zizonsolutions.com/wp-content/uploads/2021/02/jaja.jpg 300w, http://jns.zizonsolutions.com/wp-content/uploads/2021/02/jaja-150x150.jpg 150w" sizes="(max-width: 300px) 100vw, 300px">
+                    </div>
+                        
+                    <div class="minisubtitle">Gibson Les Paul Black Custom LP ,Gold hardware</div>
+                    
 
-        <div class="featured">
-            <h1 class="text-center text-title">Latest News from J&S Pawn and Gun</h1>
-            <div class="featured-products">
-                <i class="fas fa-chevron-left fa-2x"></i>
-                <div class="products news">
+                    <div class="product-rating">
+                        <i class="fas fa-star">&#xE934;</i>
+                        <i class="fas fa-star">&#xE934;</i>
+                        <i class="fas fa-star">&#xE934;</i>
+                        <i class="fas fa-star">&#xE934;</i>
+                        <i class="fas fa-star">&#xE934;</i>
+                            <span itemprop="ratingValue" class="screen-only">5/5</span>
+                    </div>
 
-                    <div class="cards">
-                        <img src="assets/images/policy.png" alt="">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis nihil excepturi quis quasi quisquam libero reprehenderit cumque amet exercitationem accusamus, ullam quam quae nostrum dolorem laboriosam ratione molestias aut earum.</p>
-                        <div class="cta">
-                            <button class="btn btn-primary btn-outline btn-small">Read more</button>
+                    <div class="price">
+                        <div>
+                            <div>
+                                <p class="tinysubtitle">$305</p>
+                            </div>
+                        </div>
+
+                        <div class="button-container">
+                            <a href="#" class="btn-success" role="button">
+                                <span>BUY</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                    
+            </section>
+            <!-- END PRODUCT -->
+            <div class="spacer"></div>
+
+        </section>
+        <!-- END TOP PRODUCTS -->
+
+        <section class="reviews">
+            <div class="bg-container image-1">
+                <div class="spacer"></div>
+            
+                <h2 class="minititle">Read What Others Are Saying About Us</h2>
+
+                <section class="testimonials">
+
+                    <div class="prev">
+                        <i class="fas fa-chevron-left" aria-hidden="true" onclick="plusSlides(-1)"></i>
+                        <span class="screen-only">Previous</span>
+                    </div>
+                    
+                    <div class="testimonial fade">
+                        <div class="testimonial-content">
+                            <div>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Ut elit tellus, luctus nec ullamcorper mattis, pulvinar
+                                dapibus leo. 
+                            </div>
+                        </div>
+                        <div class="testimonial-footer">
+                            <div class="testimonial-image">
+                                <img src="http://jns.zizonsolutions.com/wp-content/plugins/elementor/assets/images/placeholder.png"
+                                    alt="John Doe">
+                            </div>
+                            <cite class="testimonial-cite">
+                                <span class="testimonial-name">John Doe</span>
+                                <span class="testimonial-title">CEO</span>
+                            </cite>
                         </div>
                     </div>
 
-                    <div class="cards">
-                        <img src="assets/images/sales.png" alt="">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis nihil excepturi quis quasi quisquam libero reprehenderit cumque amet exercitationem accusamus, ullam quam quae nostrum dolorem laboriosam ratione molestias aut earum.</p>
-                        <div class="cta">
-                            <button class="btn btn-primary btn-outline btn-small">Read more</button>
+                    <div class="testimonial fade">
+                        <div class="testimonial-content">
+                            <div>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Ut elit tellus, luctus nec ullamcorper mattis, pulvinar
+                                dapibus leo. 
+                            </div>
+                        </div>
+                        <div class="testimonial-footer">
+                            <div class="testimonial-image">
+                                <img src="http://jns.zizonsolutions.com/wp-content/plugins/elementor/assets/images/placeholder.png"
+                                    alt="Jane Doe">
+                            </div>
+                            <cite class="testimonial-cite">
+                                <span class="testimonial-name">Jane Doe</span>
+                                <span class="testimonial-title">CEO</span>
+                            </cite>
                         </div>
                     </div>
 
-                    <div class="cards">
-                        <img src="assets/images/hunt.png" alt="">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis nihil excepturi quis quasi quisquam libero reprehenderit cumque amet exercitationem accusamus, ullam quam quae nostrum dolorem laboriosam ratione molestias aut earum.</p>
-                        <div class="cta">
-                            <button class="btn btn-primary btn-outline btn-small">Read more</button>
+                    <div class="testimonial fade">
+                        <div class="testimonial-content">
+                            <div>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Ut elit tellus, luctus nec ullamcorper mattis, pulvinar
+                                dapibus leo. 
+                            </div>
+                        </div>
+                        <div class="testimonial-footer">
+                            <div class="testimonial-image">
+                                <img src="http://jns.zizonsolutions.com/wp-content/plugins/elementor/assets/images/placeholder.png"
+                                    alt="Other">
+                            </div>
+                            <cite class="testimonial-cite">
+                                <span class="testimonial-name">Other</span>
+                                <span class="testimonial-title">CEO</span>
+                            </cite>
                         </div>
                     </div>
+                            
+                    <div class="next">
+                        <i class="fas fa-chevron-right" aria-hidden="true" onclick="plusSlides(1)"></i>
+                        <span class="screen-only">Next</span>
+                    </div>
+                </section>
+                <!-- END TESTIMONIAL -->
 
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
                 </div>
-                <i class="fas fa-chevron-right fa-2x"></i>
-            </div>
-        </div>
 
-        <div class="locations">
-            <h1 class="text-center">Locations</h1>
-            <!-- <img src="assets/images//1149X257.png" alt="maps"> -->
-            <!-- <div class="gmap_canvas">
-                <iframe height="300" id="gmap_canvas" src="https://maps.google.com/maps?q=JS%20GUN&t=&z=9&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                <a href=""></a><br>
-                <style>.mapouter{position:relative;text-align:right;height:300px;width:1200px;}</style>
-                <style>.gmap_canvas {overflow:hidden;background:none!important;height:300px;width:1200px;}</style></div></div>
-                 -->
-        </div>
-
-        <footer>
-            <h1 class="text-center text-title">Footer</h1>
-            <div class="footer-links">
-                <div class="col col1"></div>
-                <div class="col col2"></div>
-                <div class="col col3"></div>
+                <div class="spacer"></div>
             </div>
+        </section>
+        <!-- END REVIEWS -->
+
+        <section class="items">
+            <div class="spacer"></div>
+            
+            <h2 class="minititle">Top Categories You May Find at J & S Pawn & Gun</h2>
+                
+            <section class="categories">
+                <div class="category">
+                    
+                    <div class="image-container">
+                        <img width="323" height="323"
+                            src="http://jns.zizonsolutions.com/wp-content/uploads/2021/02/lespaul.png"
+                            class="attachment-large size-large" alt="" loading="lazy"
+                            srcset="http://jns.zizonsolutions.com/wp-content/uploads/2021/02/lespaul.png 323w, http://jns.zizonsolutions.com/wp-content/uploads/2021/02/lespaul-300x300.png 300w, http://jns.zizonsolutions.com/wp-content/uploads/2021/02/lespaul-150x150.png 150w"
+                            sizes="(max-width: 323px) 100vw, 323px" /> 
+                    </div>
+                                
+                    <div class="tinysubtitle"><p>Music Instruments</p></div>
+                </div>
+
+                <div class="category">
+                    
+                    <div class="image-container">
+                        <img width="323" height="323" src="http://jns.zizonsolutions.com/wp-content/uploads/2021/02/tools.png" class="attachment-large size-large" alt="" loading="lazy" srcset="http://jns.zizonsolutions.com/wp-content/uploads/2021/02/tools.png 286w, http://jns.zizonsolutions.com/wp-content/uploads/2021/02/tools-150x150.png 150w" sizes="(max-width: 286px) 100vw, 286px">
+                    </div>
+                                
+                    <div class="tinysubtitle"><p>Tools</p></div>
+                </div>
+
+                <div class="category">
+                    
+                    <div class="image-container">
+                        <img width="323" height="323" src="http://jns.zizonsolutions.com/wp-content/uploads/2021/02/ps4.png" class="attachment-large size-large" alt="" loading="lazy" srcset="http://jns.zizonsolutions.com/wp-content/uploads/2021/02/ps4.png 500w, http://jns.zizonsolutions.com/wp-content/uploads/2021/02/ps4-300x300.png 300w, http://jns.zizonsolutions.com/wp-content/uploads/2021/02/ps4-150x150.png 150w" sizes="(max-width: 500px) 100vw, 500px">
+                    </div>
+                                
+                    <div class="tinysubtitle"><p>Gaming Systems</p></div>
+                </div>
+
+                <div class="category">
+                    
+                    <div class="image-container">
+                        <img width="323" height="323" src="http://jns.zizonsolutions.com/wp-content/uploads/2021/02/we.jpg" class="attachment-large size-large" alt="" loading="lazy" srcset="http://jns.zizonsolutions.com/wp-content/uploads/2021/02/we.jpg 292w, http://jns.zizonsolutions.com/wp-content/uploads/2021/02/we-150x150.jpg 150w" sizes="(max-width: 292px) 100vw, 292px">
+                    </div>
+                                
+                    <div class="tinysubtitle"><p>Jewelry</p></div>
+                </div>
+                
+                <div class="category">
+                    
+                    <div class="image-container">
+                        <img width="323" height="323" src="http://jns.zizonsolutions.com/wp-content/uploads/2021/02/guns.png" class="attachment-large size-large" alt="" loading="lazy" srcset="http://jns.zizonsolutions.com/wp-content/uploads/2021/02/guns.png 500w, http://jns.zizonsolutions.com/wp-content/uploads/2021/02/guns-300x300.png 300w, http://jns.zizonsolutions.com/wp-content/uploads/2021/02/guns-150x150.png 150w" sizes="(max-width: 500px) 100vw, 500px">
+                    </div>
+                                
+                    <div class="tinysubtitle"><p>Firearms</p></div>
+                </div>
+
+            </section>
+            <!-- END CATEGORY -->
+            
+            <div class="button-container category-button-container">
+                <a href="#" class="btn-success" role="button">
+                    <span>SHOP BY CATEGORY</span>
+                </a>
+            </div>
+            <div class="spacer"></div>
+                            
+        </section>
+        <!-- END CATEGORIES -->
+
+        <section class="brands">
+            <div class="spacer"></div>
+            
+            <h2 class="minititle">Brands You May Find here</h2>
+                            
+            <div class="brand-logos">
+                
+                <div class="swiper-slide">
+                    <figure class="swiper-slide-inner">
+                        <img class="swiper-slide-image" src="http://jns.zizonsolutions.com/wp-content/uploads/2021/02/remington_grey.png" alt="remington_grey">
+                    </figure>
+                </div>
+            </div>
+            <!-- END BRAN LOGOS -->    
+            <div class="spacer"></div>            
+        </section>
+        <!-- END BRANDS -->
+
+        <section class="subscriptions">
+            <div class="bg-container image-1">
+                <div class="spacer"></div>
+            
+                <div class="newsletters">
+                    <div class="newsletter-item">
+                        <h2 class="subtitle">LOVE THAT FREE STUFF FEELING?</h2>
+                                        
+                        <div>
+                            <p>Get Special Discounts and Free Stuff</p>
+                        </div>
+                                            
+                        <div>
+                            <form method="post">
+                                <input type="email" placeholder="Email" required="required" aria-required="true">
+
+                                <span class="button-container">
+                                    <button type="submit" class="btn-dark">
+                                        <span>SIGN UP</span>
+                                    </button>
+                                </span>
+                            </form>
+                        </div>
+                    </div>
+                        
+                    <div class="newsletter-item">
+                        
+                        <h2 class="subtitle">CAN'T FIND WHAT YOU'RE LOOKING FOR?</h2>
+                    
+                        <div class="elementor-text-editor elementor-clearfix">
+                            <p>Add Your Name To Our Wishlist</p>
+                        </div>
+
+                        <div class="elementor-widget-container">
+                            <form class="elementor-form" method="post" name="New Form">
+                                <input type="email" placeholder="Email" required="required" aria-required="true">
+                                <input type="text" placeholder="Product Name?">
+                                <span class="button-container">
+                                    <button type="submit" class="btn-dark">
+                                        <span>SUBMIT</span>
+                                    </button>
+                                </span>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- END FORMS -->
+                <div class="spacer"></div>
+            </div>
+        </section>
+        <!-- END SUBSCRIPTIONS -->
+
+        <section class="items">
+            <div class="spacer"></div>
+            <h2 class="minititle">Latest News from J & S Gun and Pawn</h2>
+            <section class="news">
+                
+                <article class="post">
+                    <a class="post-thumbnail-link" href="http://jns.zizonsolutions.com/uncategorized/considering-a-pawn-shop-loan-read-this-8-tips/">
+                        <div class="post-thumbnail">
+                            <img width="373"
+                                height="373"
+                                src="http://jns.zizonsolutions.com/wp-content/uploads/2021/02/announcement-300x198.jpg"
+                                class="attachment-medium size-medium" alt=""
+                                loading="lazy"
+                                srcset="http://jns.zizonsolutions.com/wp-content/uploads/2021/02/announcement-300x198.jpg 300w, http://jns.zizonsolutions.com/wp-content/uploads/2021/02/announcement.jpg 500w"
+                                sizes="(max-width: 300px) 100vw, 300px" />
+                        </div>
+                    </a>
+                    <div class="post-text">
+                        <h3 class="post-title">
+                            <a
+                                href="http://jns.zizonsolutions.com/uncategorized/considering-a-pawn-shop-loan-read-this-8-tips/">
+                                Considering a Pawn Shop Loan? Read this 8
+                                tips&#8230; </a>
+                        </h3>
+                        <div class="post-meta-data">
+                            <span class="post-date">
+                                February 22, 2021 </span>
+                            <span class="post-avatar">
+                                No Comments </span>
+                        </div>
+                        <div class="post-excerpt">
+                        </div>
+                        <a class="post-read-more"
+                            href="http://jns.zizonsolutions.com/uncategorized/considering-a-pawn-shop-loan-read-this-8-tips/">
+                            Read More » </a>
+                    </div>
+                </article>
+
+                <article class="post">
+                    <a class="post-thumbnail-link" href="http://jns.zizonsolutions.com/uncategorized/considering-a-pawn-shop-loan-read-this-8-tips/">
+                        <div class="post-thumbnail">
+                            <img width="373"
+                                height="373"
+                                src="http://jns.zizonsolutions.com/wp-content/uploads/2021/02/announcement-300x198.jpg"
+                                class="attachment-medium size-medium" alt=""
+                                loading="lazy"
+                                srcset="http://jns.zizonsolutions.com/wp-content/uploads/2021/02/announcement-300x198.jpg 300w, http://jns.zizonsolutions.com/wp-content/uploads/2021/02/announcement.jpg 500w"
+                                sizes="(max-width: 300px) 100vw, 300px" />
+                        </div>
+                    </a>
+                    <div class="post-text">
+                        <h3 class="post-title">
+                            <a
+                                href="http://jns.zizonsolutions.com/uncategorized/considering-a-pawn-shop-loan-read-this-8-tips/">
+                                Considering a Pawn Shop Loan? Read this 8
+                                tips&#8230; </a>
+                        </h3>
+                        <div class="post-meta-data">
+                            <span class="post-date">
+                                February 22, 2021 </span>
+                            <span class="post-avatar">
+                                No Comments </span>
+                        </div>
+                        <div class="post-excerpt">
+                        </div>
+                        <a class="post-read-more"
+                            href="http://jns.zizonsolutions.com/uncategorized/considering-a-pawn-shop-loan-read-this-8-tips/">
+                            Read More » </a>
+                    </div>
+                </article>
+
+                <article class="post">
+                    <a class="post-thumbnail-link" href="http://jns.zizonsolutions.com/uncategorized/considering-a-pawn-shop-loan-read-this-8-tips/">
+                        <div class="post-thumbnail">
+                            <img width="373"
+                                height="373"
+                                src="http://jns.zizonsolutions.com/wp-content/uploads/2021/02/announcement-300x198.jpg"
+                                class="attachment-medium size-medium" alt=""
+                                loading="lazy"
+                                srcset="http://jns.zizonsolutions.com/wp-content/uploads/2021/02/announcement-300x198.jpg 300w, http://jns.zizonsolutions.com/wp-content/uploads/2021/02/announcement.jpg 500w"
+                                sizes="(max-width: 300px) 100vw, 300px" />
+                        </div>
+                    </a>
+                    <div class="post-text">
+                        <h3 class="post-title">
+                            <a
+                                href="http://jns.zizonsolutions.com/uncategorized/considering-a-pawn-shop-loan-read-this-8-tips/">
+                                Considering a Pawn Shop Loan? Read this 8
+                                tips&#8230; </a>
+                        </h3>
+                        <div class="post-meta-data">
+                            <span class="post-date">
+                                February 22, 2021 </span>
+                            <span class="post-avatar">
+                                No Comments </span>
+                        </div>
+                        <div class="post-excerpt">
+                        </div>
+                        <a class="post-read-more"
+                            href="http://jns.zizonsolutions.com/uncategorized/considering-a-pawn-shop-loan-read-this-8-tips/">
+                            Read More » </a>
+                    </div>
+                </article>
+                                                
+            </section>
+            <!-- END NEWS -->
+            <div class="spacer"></div>
+        </section>
+        <!-- END NEWS CONTAINER -->
+
+        <section class="locations">
+            
+            <h2 class="minititle text-center">Locations</h2>
+                            
+            <div class="elementor-element elementor-element-a6bf310 elementor-widget elementor-widget-google-maps"
+                data-id="a6bf310" data-element-type="widget" data-widget-type="google-maps.default">
+                <div class="elementor-widget-container">
+                    <div class="elementor-custom-embed">
+                        <iframe frameborder="0" scrolling="no"
+                            marginheight="0" marginwidth="0"
+                            src="https://maps.google.com/maps?q=64%20Potomac%20Street%20%20Ridgeley%20WV.%2026753%20&amp;t=m&amp;z=13&amp;output=embed&amp;iwloc=near"
+                            title="64 Potomac Street  Ridgeley WV. 26753 "
+                            aria-label="64 Potomac Street  Ridgeley WV. 26753 ">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END LOCATIONS -->
+
+        <section class="footer-nav bg-container image-1">
+            <div class="elementor-background-overlay"></div>
             <div class="footer-items">
-                <p><span>&copy; </span>Copyright All Rights Reserved | J&S Pawn and Gun | Privacy Policy | Terms of Service | Powered by PawnMate</p>
-            </div>
-            
-        </footer>
+                
+                <div class="footer-item">
+                    <h2>Navigation</h2>
+                
+                    <nav role="navigation">
+                        <ul id="menu-1-5b51058" class="elementor-nav-menu sm-vertical">
+                            
+                            <li>
+                                <a href="#">About Us</a>
+                            </li>
+                            <li>
+                                <a href="#">Get a Loan</a>
+                            </li>
+                            <li>
+                                <a href="#">Sell Your Stuff</a>
+                            </li>
+                            <li>
+                                <a href="#">Make YourPayments</a>
+                            </li>
+                            <li>
+                                <a href="#">Blog</a>
+                            </li>
+                        </ul>
+                    </nav>
+                                
+                </div>
 
+                <div class="footer-item">
+                    <h2>Important Links</h2>
+                
+                    <nav role="navigation">
+                        <ul id="menu-1-5b51058" class="elementor-nav-menu sm-vertical">
+                            
+                            <li>
+                                <a href="#">About Us</a>
+                            </li>
+                            <li>
+                                <a href="#">Get a Loan</a>
+                            </li>
+                            <li>
+                                <a href="#">Sell Your Stuff</a>
+                            </li>
+                            <li>
+                                <a href="#">Make YourPayments</a>
+                            </li>
+                            <li>
+                                <a href="#">Blog</a>
+                            </li>
+                        </ul>
+                    </nav>
+                                
+                </div>
+
+                
+                <div class="footer-item">
+                    <h2>Company Info</h2>
+                            
+                    <div>
+                        <p>We are a unique and inventive retailer that offers an expansive selection of
+                            new and gently used merchandise. We seek to tap into and help enrich a
+                            community spirit with a compassionate and involved business model.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- END FOOTER ITEMS -->
+        </section>
+        <!-- END FOOTER NAV -->
     </main>
 
-    <script>
-    </script>
-    
+    <footer id="site-footer" class="site-footer" role="contentinfo">
+        <div>
+            © Copyright All Rights Reserved | J&#038;S Pawn and Gun | Privacy Policy | Terms of Service | Powered by PawnMate
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="assets/js/slider.js"></script>
+
 </body>
+
 </html>
