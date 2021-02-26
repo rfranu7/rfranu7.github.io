@@ -1,0 +1,770 @@
+.css-zhqc4g div+div {
+    margin-left: 4px;
+}
+
+.css-1u730df {
+    height: 8px;
+    width: 100%;
+    border-radius: 4px 0px 0px 4px;
+    background-color: rgb(37, 161, 161);
+}
+
+.css-16qa7tr {
+    height: 8px;
+    width: 100%;
+    background-color: rgb(37, 161, 161);
+}
+
+.css-wnmndn {
+    height: 8px;
+    width: 100%;
+    background-color: #dee0e3;
+}
+
+.css-7yjlzj {
+    height: 8px;
+    width: 100%;
+    border-radius: 0 4px 4px 0;
+    background-color: #dee0e3;
+}
+
+.css-stfzd9 {
+    border: 1px solid transparent;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    padding: 8px 16px;
+    display: inline-block;
+    line-height: 1.6;
+    user-select: none;
+    vertical-align: middle;
+    transition: color 0.2s ease-out 0s, background-color 0.2s ease-out 0s;
+    font-family: Lato;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 155px;
+    white-space: normal;
+}
+
+.css-stfzd9,
+button.css-stfzd9 {
+    color: rgb(255, 255, 255);
+    background-color: rgb(24, 97, 191);
+    padding: 7px 16px;
+}
+
+.css-1trcyo,
+button.css-1trcyo {
+    color: rgb(32, 38, 46);
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(196, 199, 204);
+    padding: 7px 16px;
+}
+
+.css-1trcyo {
+    border: 1px solid transparent;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    padding: 8px 16px;
+    display: inline-block;
+    line-height: 1.6;
+    user-select: none;
+    vertical-align: middle;
+    transition: color 0.2s ease-out 0s, background-color 0.2s ease-out 0s;
+    font-family: Lato;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 155px;
+    white-space: normal;
+}
+
+.css-1trcyo:hover,
+button.css-1trcyo:hover {
+    background-color: rgb(222, 224, 227);
+    color: rgb(32, 38, 46);
+}
+
+.css-stfzd9:hover,
+button.css-stfzd9:hover {
+    background-color: rgb(12, 64, 133);
+    color: rgb(255, 255, 255);
+}
+
+.css-1k0a5ru {
+    display: grid;
+    grid-template-columns: minmax(0px, 1fr);
+    grid-auto-rows: 1fr;
+}
+
+.css-1wh1oc8 {
+    cursor: pointer;
+    transition: box-shadow 240ms cubic-bezier(0.2, 0, 0.38, 0.9) 0s;
+}
+
+.css-poeuz4 {
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    border-radius: 3px;
+    box-shadow: rgb(196 199 204) 0px 0px 2px;
+    height: 100%;
+}
+
+.css-1k0a5ru p, .css-1k0a5ru span {
+    line-height: 20px;
+}
+
+.css-16d1ee2 {
+    border-radius: 1px;
+    border: 1px solid rgb(222, 224, 227);
+}
+
+.css-1k9ek97 {
+    background-color: rgb(255, 255, 255);
+}
+
+.css-1xznj1f {
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.css-56kyx5 {
+    color: #505863;
+}
+
+.css-x3wokz {
+    width: 32px;
+    height: 32px;
+}
+
+.css-forujw {
+    color: rgb(32, 38, 46);
+}
+
+.css-1wk59ve {
+    color: rgb(24, 97, 191);
+    font-size: 15px;
+    line-height: 1.6;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+    padding: 0px;
+    z-index: 1;
+}
+
+.css-25qyin svg {
+    width: 24px;
+    height: 24px;
+}
+
+.css-1c3h18e {
+    flex: 1 0 auto;
+}
+
+.css-v91a6a {
+    flex: 1 0 100%;
+}
+
+.css-8jm638 {
+    flex-basis: 100%;
+}
+
+.css-120nkvx {
+    white-space: nowrap;
+    word-break: keep-all;
+}
+
+.css-poeuz4 {
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    border-radius: 3px;
+    box-shadow: rgb(196 199 204) 0px 0px 2px;
+    height: 100%;
+}
+
+.css-1sy0xge {
+    height: fit-content;
+}
+
+.css-14cm01z {
+    color: rgb(32, 38, 46);
+}
+
+.css-14408u9 {
+    display: flex;
+    flex-direction: column;
+}
+
+.css-xwfp7p {
+    padding-bottom: 4px;
+    transform-origin: 0px 50%;
+    transition: transform 0.2s ease 0s;
+    position: relative;
+    z-index: 1;
+    color: rgb(80, 88, 99);
+    font-size: 12px;
+    white-space: normal;
+}
+
+.css-1htgz7a {
+    position: relative;
+}
+
+.css-1ohf0ui {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.css-q444d9 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    position: relative;
+}
+
+.css-1etjok6.css-1etjok6 {
+    height: 40px;
+}
+
+.css-1htgz7a ul.suggestions {
+    position: absolute;
+    width: 100%;
+    border-radius: 3px;
+    box-shadow: rgb(196 199 204) 0px 0px 2px;
+    background-color: rgb(255, 255, 255);
+    list-style: none;
+    display: none;
+    padding: 0px;
+    margin-top: 8px;
+    z-index: 8000;
+}
+
+.css-1vkuk21 {
+    border: 1px solid transparent;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    padding: 8px 16px;
+    display: inline-block;
+    line-height: 1.6;
+    user-select: none;
+    vertical-align: middle;
+    transition: color 0.2s ease-out 0s, background-color 0.2s ease-out 0s;
+    font-family: Lato;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 88px;
+}
+
+.css-1vkuk21, button.css-1vkuk21 {
+    color: rgb(24, 97, 191);
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(24, 97, 191);
+    padding: 7px 16px;
+}
+
+.css-1pmrkm6 {
+    display: grid;
+    grid-template-columns: minmax(0px, 1fr);
+    grid-auto-rows: 1fr;
+}
+
+.css-poeuz4 {
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    border-radius: 3px;
+    box-shadow: rgb(196 199 204) 0px 0px 2px;
+    height: 100%;
+}
+
+.css-1wh1oc8 {
+    cursor: pointer;
+    transition: box-shadow 240ms cubic-bezier(0.2, 0, 0.38, 0.9) 0s;
+}
+
+.css-25qyin {
+    width: 24px;
+    height: 24px;
+}
+
+.css-25qyin svg {
+    width: 24px;
+    height: 24px;
+}
+
+.css-166s9hg {
+    text-transform: capitalize;
+}
+
+.css-56kyx5 {
+    color: #505863;
+}
+
+.css-3a6kai {
+    color: rgb(234, 118, 0);
+}
+
+.css-gfv214 {
+    color: rgb(24, 97, 191);
+    font-size: 15px;
+    line-height: 1.6;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+    padding: 0px;
+    z-index: 1;
+}
+
+.css-gfv214 .job-alert-icon {
+    transition: transform 110ms cubic-bezier(0.2, 0, 0.38, 0.9) 0s;
+    transform: rotate(0deg);
+}
+
+.css-gfv214:hover .job-alert-icon {
+    transform: rotate(-23deg);
+}
+
+.css-25qyin {
+    width: 24px;
+    height: 24px;
+}
+
+.css-19fg6t0 {
+    width: 36px;
+    height: 36px;
+}
+
+.css-19fg6t0 svg {
+    width: 36px;
+    height: 36px;
+}
+
+.css-y1gt6f {
+    margin-top: 40px;
+}
+
+.css-56kyx5 {
+    color: #505863;
+}
+
+.css-1c3h18e {
+    flex: 1 0 auto;
+}
+
+.css-atsgx3 a {
+    font-weight: bold;
+}
+
+.css-56kyx5 {
+    color: #505863;
+}
+
+.css-lkti23 {
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 36px;
+}
+
+.css-56kyx5 {
+    color: #505863;
+}
+
+.css-10klw3m {
+    height: 100%;
+}
+
+.css-143dizy {
+    min-height: 75px;
+}
+
+.css-1sk49qk {
+    line-height: 30px;
+}
+
+.css-1hjgaef {
+    width: 16px;
+    height: 16px;
+}
+
+.css-1hjgaef svg {
+    width: 16px;
+    height: 16px;
+}
+
+.css-1wh1oc8 {
+    cursor: pointer;
+    transition: box-shadow 240ms cubic-bezier(0.2, 0, 0.38, 0.9) 0s;
+}
+
+.css-66ul5h {
+    background-color: rgb(222, 224, 227);
+    border-radius: 3px;
+    height: 0px;
+    transition: height 0.5s ease-out 0s;
+}
+
+.css-1js7q50 {
+    background-color: rgb(12, 170, 65);
+    box-shadow: none;
+}
+
+.css-2w4kf1 {
+    position: relative;
+}
+
+.css-1175b9p {
+    position: absolute;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 0px;
+    top: calc(50% - 18px);
+    width: 36px;
+    height: 36px;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(222, 224, 227);
+    z-index: 8000;
+    cursor: pointer;
+    transition: all 150ms cubic-bezier(0.2, 0, 0.38, 0.9) 0s;
+    visibility: hidden;
+    left: -15px;
+    right: auto;
+}
+
+.css-1175b9p:hover {
+    background: rgb(245, 246, 247);
+    box-shadow: rgb(133 140 148) 0px 8px 10px 0px;
+}
+
+.css-1ukpv4h {
+    height: 24px;
+}
+
+.css-rackb3 {
+    width: 100%;
+    margin-left: -10px;
+    overflow-x: auto;
+    z-index: 5000;
+}
+
+.css-ndevt0 {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-left: 10px;
+}
+
+.css-1ux1i4j {
+    border-radius: 3px;
+    border: 1px solid rgb(222, 224, 227);
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    margin-left: 0px;
+    transition: box-shadow 240ms ease 0s;
+    margin-right: 16px;
+    margin-top: 8px !important;
+}
+
+.css-1uoi0ng {
+    cursor: pointer;
+    min-width: 255px;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    border-radius: 3px;
+    box-shadow: rgb(196 199 204) 0px 0px 2px;
+    height: 100%;
+}
+
+.css-1c3h18e {
+    flex: 1 0 auto;
+}
+
+.css-1jz7qgo {
+    width: 100%;
+    max-height: 48px;
+    object-fit: cover;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    border-radius: 3px 3px 0px 0px;
+}
+
+.css-kw8hpj {
+    border-radius: 4px;
+    border: 1px solid rgb(222, 224, 227);
+    z-index: 1;
+}
+
+.css-kn46u7 {
+    width: 48px;
+    height: 48px;
+}
+
+.css-b63kyi {
+    color: rgb(12, 170, 65);
+}
+
+.css-rewl60 {
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.css-xi606m {
+    text-align: center;
+}
+
+.css-forujw {
+    color: rgb(32, 38, 46);
+}
+
+.css-3bj4g7 {
+    width: 100%;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-image: initial;
+    border-bottom: 1px solid rgb(222, 224, 227);
+}
+
+.css-1s26z8e {
+    flex: 0 1 auto;
+}
+
+.css-dw2hg9 {
+    overflow: hidden;
+    height: 40px;
+}
+
+.css-1c3h18e {
+    flex: 1 0 auto;
+}
+
+.css-1xhghzz {
+    z-index: 1;
+}
+
+.css-19xv72s {
+    color: rgb(32, 38, 46);
+    line-height: 20px;
+}
+
+.css-forujw {
+    color: rgb(32, 38, 46);
+}
+
+.css-ontv1z {
+    border: 1px solid transparent;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    padding: 8px 16px;
+    display: inline-block;
+    line-height: 1.6;
+    user-select: none;
+    vertical-align: middle;
+    transition: color 0.2s ease-out 0s, background-color 0.2s ease-out 0s;
+    font-family: Lato;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 88px;
+    z-index: 1;
+}
+
+.css-ontv1z, button.css-ontv1z {
+    color: rgb(24, 97, 191);
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(24, 97, 191);
+    padding: 3px 16px;
+}
+
+.css-s0bm8u {
+    border-radius: 3px;
+    border: 1px solid rgb(222, 224, 227);
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    margin-left: 0px;
+    transition: box-shadow 240ms ease 0s;
+    margin-right: 0px;
+    margin-top: 8px !important;
+}
+
+.css-173q5ht {
+    position: absolute;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 0px;
+    top: calc(50% - 18px);
+    width: 36px;
+    height: 36px;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(222, 224, 227);
+    z-index: 8000;
+    cursor: pointer;
+    transition: all 150ms cubic-bezier(0.2, 0, 0.38, 0.9) 0s;
+    visibility: visible;
+    left: auto;
+    right: -15px;
+}
+
+.css-173q5ht:hover {
+    background: rgb(245, 246, 247);
+    box-shadow: rgb(133 140 148) 0px 8px 10px 0px;
+}
+
+.css-nakzet {
+    cursor: pointer;
+    border: none;
+    background: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.css-1hjgaef {
+    width: 16px;
+    height: 16px;
+}
+
+.css-1hjgaef svg {
+    width: 16px;
+    height: 16px;
+}
+
+.css-qa6u5m {
+    border-radius: 3px 3px 0px 0px;
+    height: 104px;
+    object-fit: cover;
+}
+
+.css-1k9e9dw {
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.css-1c3h18e {
+    flex: 1 0 auto;
+}
+
+.css-120nkvx {
+    white-space: nowrap;
+    word-break: keep-all;
+}
+
+.css-1ux1i4j:hover {
+    box-shadow: rgb(133 140 148 / 40%) 0px 8px 10px;
+}
+
+.css-1ux1i4j {
+    border-radius: 3px;
+    border: 1px solid rgb(222, 224, 227);
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    margin-left: 0px;
+    transition: box-shadow 240ms ease 0s;
+    margin-right: 16px;
+    margin-top: 8px !important;
+}
+
+.css-s0bm8u:hover {
+    box-shadow: rgb(133 140 148 / 40%) 0px 8px 10px;
+}
+
+@media not all and (pointer: coarse) {
+    .css-1vkuk21:hover, button.css-1vkuk21:hover {
+        background-color: rgb(24, 97, 191);
+        color: rgb(255, 255, 255);
+    }
+
+    .css-ontv1z:hover, button.css-ontv1z:hover {
+        background-color: rgb(24, 97, 191);
+        color: rgb(255, 255, 255);
+    }
+}
+
+@media (min-width: 576px) {
+    .css-1k0a5ru {
+        gap: 16px;
+        grid-template-columns: minmax(0px, 1fr) minmax(0px, 1fr);
+    }
+
+    .css-1wh1oc8:hover {
+        box-shadow: rgb(133 140 148 / 40%) 0px 8px 10px, rgb(196 199 204) 0px 0px 2px;
+    }
+
+    .css-m2m9ow:hover {
+        position: relative;
+    }
+
+    .css-m2m9ow:hover::before {
+        content: "";
+        display: block;
+        border-radius: 50%;
+        position: absolute;
+        z-index: 0;
+        inset: -4px -3px -2px;
+        box-shadow: rgb(133 140 148 / 30%) 0px 4px 5px;
+    }
+
+    .css-1pmrkm6 {
+        gap: 16px;
+        grid-template-columns: minmax(0px, 1fr) minmax(0px, 1fr);
+    }
+}
+
+@media (min-width: 767px) {
+    .css-scol1z {
+        margin-left: 44px;
+    }
+
+    .css-14408u9 {
+        max-width: 240px;
+    }
+
+    .css-143dizy {
+        min-height: 140px;
+    }
+
+    .css-19ke1dp {
+        max-width: 255px;
+        width: 255px;
+    }
+}
+
+div, p, h1, h2, h3, h4, h5, h6 {
+    color: #20262e;
+}

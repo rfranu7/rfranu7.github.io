@@ -1,0 +1,44 @@
+
+div, p, .p {
+    color: rgb(64, 64, 64);
+    font-size: 15px;
+}
+
+div {
+    border-width: 0px;
+    line-height: 15px;
+}
+
+#JobSearch {
+    margin-top: 16px;
+}
+
+.css-1o0f1e0 {
+    background-color: #fff;
+    border-bottom: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin: 0;
+    max-width: 1280px;
+    padding: 12px 8px;
+    position: relative;
+}
+
+
+@media screen and (min-width: 768px) {
+    .pageContentWrapper {
+        -webkit-box-flex: 1;
+        flex-grow: 1;
+        height: 0px;
+    }
+
+    #PageContent, #PageBodyContents, #JobSearch {
+        height: 100%;
+    }
+}

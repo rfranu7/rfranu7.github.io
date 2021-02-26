@@ -1,0 +1,843 @@
+.css-46svko {
+    width: 368px;
+}
+
+.css-56kyx5 {
+    color: #505863;
+}
+
+.css-g8phqm-ldcModuleActive-ldcModuleActive {
+    max-height: 768px;
+    overflow: visible;
+    position: relative;
+    transition: max-height 240ms cubic-bezier(0, 0, 0.38, 0.9) 0s, opacity 400ms cubic-bezier(0, 0, 0.38, 0.9) 400ms, padding 240ms cubic-bezier(0, 0, 0.38, 0.9) 240ms;
+    width: 100%;
+}
+
+.css-15fzyz8-Meter {
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
+
+.css-15fzyz8-Meter > #meter {
+    height: 2px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
+
+.css-15fzyz8-Meter > #meter #progress-path {
+    transition: stroke-dasharray 240ms cubic-bezier(0, 0, 0.3, 1) 0s;
+}
+
+.css-165opv8-formStyle {
+    position: relative;
+}
+
+.ldc-fade-enter-done {
+    opacity: 1;
+    transition: opacity 700ms cubic-bezier(0, 0, 0.3, 1) 110ms, visibility 700ms cubic-bezier(0, 0, 0.3, 1) 110ms;
+    visibility: visible;
+}
+
+.ldc-fade-appear-done {
+    opacity: 1;
+    transition: opacity 700ms cubic-bezier(0, 0, 0.3, 1) 400ms;
+}
+
+.css-1dukac7-QuestionNavigationWrapper {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 1;
+}
+
+.css-hlijrl-QuestionNavigationButton.nav:disabled {
+    cursor: default;
+}
+
+.css-hlijrl-QuestionNavigationButton.nav {
+    border-radius: 12px;
+    height: 24px;
+    line-height: 0.6;
+    min-width: auto;
+    width: 24px;
+}
+
+.css-hlijrl-QuestionNavigationButton, button.css-hlijrl-QuestionNavigationButton {
+    color: rgb(80, 88, 99);
+    background-color: transparent;
+    padding: 7px 16px;
+}
+
+.css-hlijrl-QuestionNavigationButton {
+    border: 1px solid transparent;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    padding: 8px 16px;
+    display: inline-block;
+    line-height: 1.6;
+    user-select: none;
+    vertical-align: middle;
+    transition: color 0.2s ease-out 0s, background-color 0.2s ease-out 0s;
+    font-family: Lato;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 88px;
+}
+
+.css-1xvimqf-catIconStyle-catIconStyle {
+    color: rgb(12, 170, 65);
+}
+
+.css-1xvimqf-catIconStyle-catIconStyle {
+    color: rgb(12, 170, 65);
+}
+
+.css-1ag58tl-categoryHeadingStyle-categoryHeadingStyle {
+    color: rgb(80, 88, 99);
+    line-height: 24px;
+}
+
+.css-1pvn9py-FormFactory {
+    width: 100%;
+}
+
+.css-1uf9q66-titleStyle {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 28px;
+}
+
+.css-148ssp6-InputContainer {
+    margin-left: -8px;
+    width: 100%;
+}
+
+.css-eyvxi1-StyledChoiceChipContainer {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.css-zomrfc {
+    display: inline-flex;
+    font-size: 15px;
+    margin-bottom: 8px;
+    margin-right: 8px;
+    max-width: 288px;
+    min-width: 80px;
+}
+
+.css-eyvxi1-StyledChoiceChipContainer span {
+    background-color: rgb(222, 224, 227);
+    color: rgb(80, 88, 99);
+    transition: background-color 240ms cubic-bezier(0.4, 0.14, 0.3, 1) 0s;
+}
+
+.css-1p0oo7a {
+    background-color: rgb(182, 232, 252);
+    border-radius: 16px 0px 0px 16px;
+    color: rgb(1, 103, 143);
+    display: inline-block;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    line-height: 32px;
+    overflow: hidden;
+    padding: 0px 4px 0px 16px;
+    text-align: center;
+    text-overflow: ellipsis;
+    user-select: none;
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+.css-rttb2k {
+    background-color: rgb(182, 232, 252);
+    border: none;
+    border-radius: 0px 16px 16px 0px;
+    margin: 0px;
+    padding: 0px 10px 0px 8px;
+}
+
+.css-1esivap-legalStyle-legalStyle div {
+    color: rgb(133, 140, 148);
+    font-size: 12px;
+    line-height: 24px;
+}
+
+.css-eiil5p-visibilityIconStyle-visibilityIconStyle {
+    color: rgb(133, 140, 148);
+    height: 20px;
+    width: 20px;
+}
+
+.css-1esivap-legalStyle-legalStyle div {
+    color: rgb(133, 140, 148);
+    font-size: 12px;
+    line-height: 24px;
+}
+
+.css-bsmx6e-TooltipContainer {
+    bottom: 40px;
+    display: none;
+    margin-left: -10px;
+    position: absolute;
+    overflow-wrap: break-word;
+}
+
+.css-1esivap-legalStyle-legalStyle div {
+    color: rgb(133, 140, 148);
+    font-size: 12px;
+    line-height: 24px;
+}
+
+.css-1gu3hsp {
+    position: relative;
+    inset: auto;
+    z-index: 300;
+}
+
+.css-1esivap-legalStyle-legalStyle div {
+    color: rgb(133, 140, 148);
+    font-size: 12px;
+    line-height: 24px;
+}
+
+.css-1gu3hsp .tooltipContainer {
+    position: relative;
+    width: 420px;
+    max-width: 100%;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(222, 224, 227);
+    box-shadow: rgb(69 77 87 / 32%) 0px 4px 6px 0px;
+    padding: 24px;
+}
+
+.css-1gu3hsp .tooltipContainer .pointer {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    transform: rotate(45deg) scale(0.707);
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgb(69 77 87 / 32%) 4px 4px 4px 0px;
+    inset: auto auto -9px 50%;
+}
+
+.css-1gu3hsp .tooltipContainer .content {
+    font-weight: 400;
+    color: rgb(80, 88, 99);
+    font-size: 15px;
+    line-height: 24px;
+}
+
+.css-eiil5p-visibilityIconStyle-visibilityIconStyle svg {
+    width: 20px;
+    height: 20px;
+}
+
+.css-eyvxi1-StyledChoiceChipContainer:hover span {
+    background-color: rgb(196, 199, 204);
+}
+
+.css-u3dpx3-TooltipContainer {
+    bottom: 40px;
+    display: block;
+    margin-left: -10px;
+    position: absolute;
+    overflow-wrap: break-word;
+}
+
+.css-13mgca9 strong {
+    color: #1861bf;
+}
+
+.css-poeuz4 {
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    border-radius: 3px;
+    box-shadow: rgb(196 199 204) 0px 0px 2px;
+    height: 100%;
+}
+
+.css-1wh1oc8 {
+    cursor: pointer;
+    transition: box-shadow 240ms cubic-bezier(0.2, 0, 0.38, 0.9) 0s;
+}
+
+.css-110j3aq {
+    background-image: url(https://media.glassdoor.com/banner/bh/4138/accenture-banner-1612433045184.jpg);
+    background-size: cover;
+    border-radius: 3px 3px 0px 0px;
+}
+
+.css-19jw3tk {
+    background-image: url(https://media.glassdoor.com/banner/bh/8418/amdocs-banner-1612939451319.jpg);
+    background-size: cover;
+    border-radius: 3px 3px 0px 0px;
+}
+
+.css-1nrncw4 {
+    background-image: url(https://media.glassdoor.com/banner/bh/354/ibm-banner-1578582751550.jpg);
+    background-size: cover;
+    border-radius: 3px 3px 0px 0px;
+}
+
+.css-rp345r {
+    background-color: rgb(255, 255, 255);
+    border-radius: 3px 3px 0px 0px;
+    height: 52px;
+    width: 56px;
+}
+
+.css-115etvu {
+    border: 1px solid rgb(222, 224, 227);
+    border-radius: 3px;
+    height: 48px;
+    width: 48px;
+}
+
+.css-1s91m8l {
+    border: 1px solid transparent;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    padding: 8px 16px;
+    display: inline-block;
+    line-height: 1.6;
+    user-select: none;
+    vertical-align: middle;
+    transition: color 0.2s ease-out 0s, background-color 0.2s ease-out 0s;
+    font-family: Lato;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 88px;
+}
+
+.css-1s91m8l, button.css-1s91m8l {
+    color: rgb(32, 38, 46);
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(196, 199, 204);
+    padding: 3px 16px;
+}
+
+.css-1c3h18e {
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+}
+
+.css-rjm0jh {
+    background-color: rgb(133, 140, 148);
+    border-radius: 50%;
+    height: 4px;
+    vertical-align: middle;
+    width: 4px;
+}
+
+.css-rewl60 {
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.css-1h49lgr {
+    border-top: 1px solid rgb(222, 224, 227);
+}
+
+.css-nakzet {
+    cursor: pointer;
+    border: none;
+    background: none;
+    margin: 0;
+    padding: 0;
+}
+
+.css-1hjgaef {
+    width: 16px;
+    height: 16px;
+}
+
+.css-1hjgaef svg {
+    width: 16px;
+    height: 16px;
+}
+
+.css-13tm486 svg {
+    transition: transform 110ms cubic-bezier(0.2, 0, 0.38, 0.9) 0s;
+    transform: rotate(90deg);
+}
+
+.css-y1gt6f {
+    margin-top: 40px;
+}
+
+.css-kimkb6 {
+    background: #f5f6f7;
+}
+
+.css-1wzgr39 {
+    position: relative;
+}
+
+.css-1175b9p {
+    position: absolute;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 0;
+    top: calc(50% - 18px);
+    width: 36px;
+    height: 36px;
+    background: #fff;
+    border: 1px solid #dee0e3;
+    z-index: 8000;
+    cursor: pointer;
+    -webkit-transition: all 150ms cubic-bezier(0.2,0,0.38,0.9);
+    transition: all 150ms cubic-bezier(0.2,0,0.38,0.9);
+    visibility: hidden;
+    left: -15px;
+    right: auto;
+}
+
+.css-1175b9p:hover {
+    background: #f5f6f7;
+    box-shadow: 0px 8px 10px 0px rgb(133 140 148);
+}
+
+.css-1ukpv4h {
+    height: 24px;
+}
+
+.css-vpv3tf {
+    width: 100%;
+    overflow-x: auto;
+    z-index: 5000;
+    -webkit-scrollbar-width: none;
+    -moz-scrollbar-width: none;
+    -ms-scrollbar-width: none;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+}
+
+.css-1foyi6f {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+}
+
+.css-1ai2uaz {
+    border-radius: 3px;
+    border: 1px solid rgb(222, 224, 227);
+    box-sizing: border-box;
+    margin: 16px 16px 16px 0px;
+    transition: box-shadow 240ms ease 0s;
+}
+
+.css-1ai2uaz:hover {
+    box-shadow: rgb(133 140 148 / 40%) 0px 8px 10px;
+}
+
+.css-xjz20y {
+    background-color: #fff;
+    border-radius: 3px;
+    height: 100%;
+    max-width: 319px;
+    width: 319px;
+}
+
+.css-ek6fyn {
+    border-top: 1px solid #dee0e3;
+    height: 177px;
+}
+
+.css-1xznj1f {
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.css-1dc0bv4 {
+    display: inline-block;
+    line-height: 1;
+    letter-spacing: 3px;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    background: linear-gradient(90deg, rgb(12, 170, 65) 100%, rgb(222, 224, 227) 100%) text;
+}
+
+.css-1q1d43g {
+    font-size: 22px;
+    color: #0caa41;
+}
+
+.css-forujw {
+    color: rgb(32, 38, 46);
+}
+
+.css-rewl60 {
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.css-4ofn42 {
+    border-radius: 3px;
+    border: 1px solid #dee0e3;
+    box-sizing: border-box;
+    margin: 16px 0;
+    -webkit-transition: box-shadow 240ms;
+    transition: box-shadow 240ms;
+    margin-right: 0px;
+}
+
+.css-4ofn42:hover {
+    box-shadow: 0px 8px 10px rgb(133 140 148 / 40%);
+}
+
+.css-1ihykkv {
+    display: inline-block;
+    line-height: 1;
+    background: linear-gradient(90deg,#0caa41 60%,#dee0e3 60%);
+    -webkit-letter-spacing: 3px;
+    -moz-letter-spacing: 3px;
+    -ms-letter-spacing: 3px;
+    letter-spacing: 3px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+}
+
+.css-ek6fyn {
+    border-top: 1px solid #dee0e3;
+    height: 177px;
+}
+
+.css-glrvaa {
+    border: 1px solid transparent;
+    border-radius: 3px;
+    border-color: transparent;
+    font-weight: bold;
+    font-size: 15px;
+    color: #fff;
+    cursor: pointer;
+    padding: 8px 16px;
+    display: inline-block;
+    line-height: 1.6;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    vertical-align: middle;
+    -webkit-transition: color 0.2s ease-out,background-color 0.2s ease-out;
+    transition: color 0.2s ease-out,background-color 0.2s ease-out;
+    font-family: 'Lato';
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 88px;
+}
+
+.css-glrvaa, button.css-glrvaa {
+    color: #1861bf;
+    background-color: #fff;
+    border-color: #1861bf;
+    padding: 3px 16px;
+}
+
+.css-v2gu3x {
+    display: none;
+}
+
+.css-173q5ht, .css-1o9q7qg {
+    position: absolute;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 0px;
+    top: calc(50% - 18px);
+    width: 36px;
+    height: 36px;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(222, 224, 227);
+    z-index: 8000;
+    cursor: pointer;
+    transition: all 150ms cubic-bezier(0.2, 0, 0.38, 0.9) 0s;
+    visibility: visible;
+    left: auto;
+    right: -15px;
+}
+
+.css-173q5ht:hover, .css-1o9q7qg:hover {
+    background: rgb(245, 246, 247);
+    box-shadow: rgb(133 140 148) 0px 8px 10px 0px;
+}
+
+.css-1jke4yk {
+    position: relative;
+    width: 100%;
+}
+
+.css-260zpl {
+    left: 0px;
+}
+
+.css-10xgz0l {
+    position: absolute;
+    top: 0px;
+    z-index: -1;
+}
+
+.css-19tr788 {
+    border-radius: 3px 3px 0px 0px;
+}
+
+.css-1k9ek97 {
+    background-color: rgb(255, 255, 255);
+}
+
+.css-10jjtfi {
+    box-shadow: rgb(222 224 227) 1px 0px 0px 0px, rgb(222 224 227) 0px 1px 0px 0px, rgb(222 224 227) 1px 1px 0px 0px, rgb(222 224 227) 1px 0px 0px 0px inset, rgb(222 224 227) 0px 1px 0px 0px inset;
+}
+
+.css-1uyte9r {
+    color: rgb(133, 140, 148);
+}
+
+.css-115etvu {
+    border: 1px solid rgb(222, 224, 227);
+    border-radius: 3px;
+    height: 48px;
+    width: 48px;
+}
+
+.css-b63kyi {
+    color: rgb(12, 170, 65);
+}
+
+.css-19zs6va {
+    right: 0px;
+}
+
+.css-poeuz4 {
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    border-radius: 3px;
+    box-shadow: rgb(196 199 204) 0px 0px 2px;
+    height: 100%;
+}
+
+.css-1wh1oc8 {
+    cursor: pointer;
+    transition: box-shadow 240ms cubic-bezier(0.2, 0, 0.38, 0.9) 0s;
+}
+
+.css-1bdib2w {
+    display: grid;
+    grid-template-columns: 1fr 32px 1fr;
+}
+
+.css-kn46u7 {
+    width: 48px;
+    height: 48px;
+}
+
+.css-l2f1ub {
+    background: linear-gradient(rgb(222, 224, 227), rgb(222, 224, 227)) center center / 1px 100% no-repeat;
+}
+
+.css-1uth6w7 {
+    background-color: rgb(245, 246, 247);
+    border-radius: 10px;
+    height: 20px;
+    outline: rgb(255, 255, 255) solid 4px;
+    width: 32px;
+}
+
+.css-1wzgr39 {
+    position: relative;
+}
+
+.css-npo31k {
+    background-color: rgb(255, 255, 255);
+    border-radius: 3px;
+    height: 100%;
+    max-width: 220px;
+    width: 220px;
+}
+
+.css-dk0of {
+    height: 30px;
+    width: 30px;
+}
+
+.css-dk0of svg {
+    height: 30px;
+    width: 30px;
+}
+
+.css-2w4kf1 {
+    position: relative;
+}
+
+.css-rackb3 {
+    width: 100%;
+    margin-left: -10px;
+    overflow-x: scroll;
+    z-index: 5000;
+}
+
+.css-ndevt0 {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-left: 10px;
+}
+
+.css-1ux1i4j {
+    border-radius: 3px;
+    border: 1px solid rgb(222, 224, 227);
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    margin-left: 0px;
+    transition: box-shadow 240ms ease 0s;
+    margin-right: 16px;
+    margin-top: 8px !important;
+}
+
+.css-1ux1i4j:hover {
+    box-shadow: rgb(133 140 148 / 40%) 0px 8px 10px;
+}
+
+.css-6vuo2j {
+    background-color: rgb(255, 255, 255);
+    border-radius: 3px;
+    height: 100%;
+    max-width: 294px;
+    width: 294px;
+}
+
+.css-10klw3m {
+    height: 100%;
+}
+
+.css-qa6u5m {
+    border-radius: 3px 3px 0px 0px;
+    height: 104px;
+    object-fit: cover;
+}
+
+.css-1k9e9dw {
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.css-120nkvx {
+    white-space: nowrap;
+    word-break: keep-all;
+}
+
+.css-s0bm8u {
+    border-radius: 3px;
+    border: 1px solid rgb(222, 224, 227);
+    box-sizing: border-box;
+    margin-bottom: 16px;
+    margin-left: 0px;
+    transition: box-shadow 240ms ease 0s;
+    margin-right: 0px;
+    margin-top: 8px !important;
+}
+
+.css-s0bm8u:hover {
+    box-shadow: rgb(133 140 148 / 40%) 0px 8px 10px;
+}
+
+@media not all and (pointer: coarse) {
+    .css-hlijrl-QuestionNavigationButton:hover, button.css-hlijrl-QuestionNavigationButton:hover {
+        background-color: rgb(222, 224, 227);
+        color: rgb(64, 64, 64);
+    }
+
+    .css-hlijrl-QuestionNavigationButton[disabled], button.css-hlijrl-QuestionNavigationButton[disabled] {
+        color: rgb(184, 187, 191);
+        background-color: transparent;
+        cursor: not-allowed;
+    }
+
+    .css-1s91m8l:hover, button.css-1s91m8l:hover {
+        background-color: rgb(222, 224, 227);
+        color: rgb(32, 38, 46);
+    }
+
+    .css-glrvaa:hover, button.css-glrvaa:hover {
+        background-color: #1861bf;
+        color: #fff;
+    }
+}
+
+@media (min-width: 992px) {
+    .css-10xgz0l {
+        top: unset;
+    }
+}
+
+@media (min-width: 767px) {
+    .css-xjz20y {
+        max-width: 398px;
+        width: 398px;
+    }
+
+    .css-npo31k {
+        max-width: 231px;
+        width: 231px;
+    }
+
+    .css-6vuo2j {
+        max-width: 294px;
+        width: 294px;
+    }
+}
+
+@media (min-width: 576px) {
+    .css-1wh1oc8:hover {
+        box-shadow: rgb(133 140 148 / 40%) 0px 8px 10px, rgb(196 199 204) 0px 0px 2px;
+    }
+
+    .css-18jh0th {
+        height: 318px;
+    }
+}
