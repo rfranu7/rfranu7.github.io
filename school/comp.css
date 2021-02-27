@@ -617,6 +617,31 @@ body div.flex-aside, div.pageContentWrapper div.flex-aside, #PageContent div.fle
     color: #505863 !important;
 }
 
+.css-1ogmbml {
+    border: 1px solid transparent;
+    border-radius: 3px;
+    border-color: transparent;
+    font-weight: bold;
+    font-size: 15px;
+    color: #fff;
+    cursor: pointer;
+    padding: 8px 16px;
+    display: inline-block;
+    line-height: 1.6;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    vertical-align: middle;
+    -webkit-transition: color 0.2s ease-out,background-color 0.2s ease-out;
+    transition: color 0.2s ease-out,background-color 0.2s ease-out;
+    font-family: 'Lato';
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 88px;
+}
+
 .css-1ogmbml, button.css-1ogmbml {
     color: #20262e;
     background-color: #fff;
