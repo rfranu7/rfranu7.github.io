@@ -1,0 +1,195 @@
+.css-o9yci5 {
+    display: flex;
+    width: 100%;
+    font-family: Lato;
+    font-size: 15px;
+    line-height: 24px;
+    color: rgb(80, 88, 99);
+}
+
+.css-o9yci5 ul {
+    box-sizing: border-box;
+    width: 100%;
+    border-bottom: 1px solid rgb(196, 199, 204);
+    padding: 0px;
+    height: 100%;
+}
+
+.css-1h7a53u {
+    box-sizing: border-box;
+    display: inline-block;
+    cursor: pointer;
+    height: 100%;
+    position: relative;
+}
+
+.css-1h7a53u.active {
+    font-weight: bold;
+    border-bottom: 4px solid rgb(42, 171, 222);
+    z-index: 5000;
+}
+
+.css-1h7a53u:hover {
+    background: rgb(245, 246, 247);
+    border-bottom: 4px solid rgb(222, 224, 227);
+}
+
+.css-1c2vj07 {
+    border: 1px solid transparent;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 1.6;
+    user-select: none;
+    vertical-align: middle;
+    transition: color 0.2s ease-out 0s, background-color 0.2s ease-out 0s;
+    font-family: Lato;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 88px;
+    color: rgb(80, 88, 99);
+    background-color: transparent;
+    padding: 7px 16px;
+}
+
+.css-1ohf0ui {
+    display: flex;
+    flex-direction: column;
+}
+
+.css-1yd5hg8 {
+    font-size: 15px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 3px;
+    border: 1px solid rgb(196, 199, 204);
+    padding: 0px 12px;
+    color: rgb(133, 140, 148);
+    position: relative;
+    user-select: none;
+}
+
+.css-1yd5hg8.css-1yd5hg8 {
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    color: rgb(80, 88, 99);
+}
+
+.css-1yd5hg8 div.selectedLabel {
+    margin-right: 30px;
+    line-height: 40px;
+}
+
+.css-1yd5hg8 div.selectedLabel, .css-1yd5hg8 span.dropdownOptionLabel {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.css-1yd5hg8 .arrowDown, .css-1yd5hg8 .arrowUp {
+    position: absolute;
+    right: 14px;
+    top: 0px;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.css-1yd5hg8 .arrowDown svg, .css-1yd5hg8 .arrowUp svg {
+    height: 16px;
+    width: 16px;
+}
+
+.css-1yd5hg8 .dropdownOptions {
+    position: absolute;
+    user-select: none;
+    top: calc(100% + 8px);
+    left: -1px;
+    background: white;
+    border-radius: 3px;
+    border: 1px solid rgb(196, 199, 204);
+    min-width: 100%;
+    padding: 0px;
+    margin: 0px;
+    z-index: 999;
+    overflow: auto;
+    width: 200px;
+}
+
+.css-1yd5hg8 .dropdownCollapsed {
+    border: none;
+    overflow: hidden;
+    max-height: 0px;
+}
+
+.css-1yd5hg8 .dropDownOptionsContainer {
+    display: flex;
+}
+
+.css-1yd5hg8 .dropdownOptions ul {
+    padding: 0px;
+    margin: 0px;
+    overflow: auto;
+    max-height: 200px;
+    width: 100%;
+}
+
+.css-1yd5hg8 .dropdownOptions li.dropdownOption {
+    list-style: none;
+    width: 100%;
+    cursor: pointer;
+    height: 40px;
+    line-height: normal;
+    min-width: 100%;
+}
+
+.css-1yd5hg8 li.dropdownOption.checked {
+    font-weight: bold;
+}
+
+.css-1yd5hg8 .checkmark {
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    margin-left: 13px;
+    margin-right: 13px;
+    height: 100%;
+    width: 15px;
+    visibility: hidden;
+}
+
+.css-1yd5hg8 li.dropdownOption.checked .checkmark span {
+    visibility: visible;
+}
+
+.css-1yd5hg8 li.dropdownOption.checked .checkmark span svg {
+    margin-top: 2px;
+    width: 36px;
+    height: 36px;
+}
+
+.css-1ln3gi6 {
+    display: inline-block;
+}
+
+.css-1ln3gi6 svg {
+    width: 48px;
+    height: 48px;
+    color: rgb(12, 170, 65);
+    animation: 700ms linear 0s infinite normal none running spin;
+}
+
+.css-1ln3gi6 svg g {
+    stroke-width: 2;
+}
+
+.css-1c2vj07 .mt-xsm {
+    margin-top: 0 !important;
+}
