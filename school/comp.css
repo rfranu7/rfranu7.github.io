@@ -813,7 +813,124 @@ body div.flex-aside, div.pageContentWrapper div.flex-aside, #PageContent div.fle
     line-height: 24px;
 }
 
+.css-1ohf0ui {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
 
+.css-qo68e2 {
+    font-size: 15px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 3px;
+    border: 1px solid rgb(196, 199, 204);
+    padding: 0px 12px;
+    color: rgb(133, 140, 148);
+    position: relative;
+    user-select: none;
+}
+
+.css-qo68e2.css-qo68e2 {
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    color: rgb(80, 88, 99);
+}
+
+.css-qo68e2 div.selectedLabel {
+    margin-right: 30px;
+    line-height: 40px;
+}
+
+.css-qo68e2 div.selectedLabel, .css-qo68e2 span.dropdownOptionLabel {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.css-qo68e2 .arrowDown, .css-qo68e2 .arrowUp {
+    position: absolute;
+    right: 14px;
+    top: 0px;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.css-qo68e2 .arrowDown svg, .css-qo68e2 .arrowUp svg {
+    height: 16px;
+    width: 16px;
+}
+
+.css-qo68e2 .dropdownOptions {
+    position: absolute;
+    user-select: none;
+    top: calc(100% + 8px);
+    left: -1px;
+    background: white;
+    border-radius: 3px;
+    border: 1px solid rgb(196, 199, 204);
+    min-width: 100%;
+    padding: 0px;
+    margin: 0px;
+    z-index: 999;
+    overflow: auto;
+    width: 0px;
+}
+
+.css-qo68e2 .dropdownCollapsed {
+    border: none;
+    overflow: hidden;
+    max-height: 0px;
+}
+
+.css-qo68e2 .dropdownOptions.above {
+    top: auto;
+    bottom: calc(100% + 8px);
+}
+
+.css-qo68e2 .dropDownOptionsContainer {
+    display: flex;
+}
+
+.css-qo68e2 .dropdownOptions ul {
+    padding: 0px;
+    margin: 0px;
+    overflow: auto;
+    max-height: 200px;
+    width: 100%;
+}
+
+.css-qo68e2 .dropdownOptions li.dropdownOption {
+    list-style: none;
+    width: 100%;
+    cursor: pointer;
+    height: 40px;
+    line-height: normal;
+    min-width: 100%;
+}
+
+.css-qo68e2 .scrollBar {
+    flex: 1 1 0%;
+    padding-left: 4px;
+    padding-right: 4px;
+    height: 100%;
+    background: rgb(255, 255, 255);
+    min-width: 8px;
+}
+
+.css-qo68e2 .scrollThumb {
+    width: 8px;
+    background: rgb(196, 199, 204);
+    border-radius: 8px;
+    cursor: default;
+}
 
 
 @media not all and (pointer: coarse) {
