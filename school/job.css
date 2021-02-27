@@ -1,7 +1,25 @@
+body {
+    height:100%;
+    background: #eaeaea none;
+}
+
+#SiteNav {
+    background: #fff;
+}
 
 div, p, .p {
     color: rgb(64, 64, 64);
     font-size: 15px;
+}
+
+div.pageContentWrapper {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+}
+
+#pageContent {
+    background: #fff;
 }
 
 div {
@@ -11,6 +29,10 @@ div {
 
 #JobSearch {
     margin-top: 16px;
+}
+
+.css-10klw3m {
+    height: 100%;
 }
 
 .css-1o0f1e0 {
@@ -30,15 +52,967 @@ div {
     position: relative;
 }
 
+.css-13yhjdi {
+    display: block;
+    height: 41px;
+    width: 100%;
+    z-index: 90;
+}
+
+.css-8atqhb {
+    width: 100%;
+}
+
+.css-es3bq4 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 904px;
+}
+
+.css-mjpnsu {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    overflow: hidden;
+    height: 40px;
+}
+
+.css-mjpnsu .e16st97e2:first-child {
+    margin-left: 0;
+}
+
+.css-1k7zuqd {
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: -2px;
+}
+
+.css-nn6wiw {
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #1861bf;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    font-size: 14px;
+    line-height: 1.5em;
+    margin-left: 8px;
+    margin-right: 8px;
+    white-space: nowrap;
+    visibility: hidden;
+    z-index: 2;
+}
+
+.css-1a6i0xd {
+    border: none;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    margin-right: 0;
+    min-width: 138px;
+    padding: 0;
+    position: relative;
+    right: 0;
+}
+
+.css-1a6i0xd .filterIcons.outline {
+    fill: #1861bf;
+}
+
+.css-1a6i0xd .filterIcons {
+    margin-right: 7px;
+    padding: 2px;
+    vertical-align: middle;
+}
+
+.css-1a6i0xd span {
+    color: #1861bf;
+}
+
+.css-680xkn {
+    box-shadow: 0 1px 0 0 rgb(0 0 0 / 15%);
+}
+
+.css-4ik2ye {
+    background-color: #fff;
+    border-top: 1px solid #f5f6f7;
+    -webkit-flex-basis: 40%;
+    -ms-flex-preferred-size: 40%;
+    flex-basis: 40%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding-bottom: 50px;
+    position: initial;
+    -webkit-transition: flex 0.3s ease-out;
+    transition: flex 0.3s ease-out;
+}
+
+.css-zdpt2t {
+    margin-left: auto;
+}
+
+.css-xxp4m1 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 4px;
+}
+
+.css-8atqhb {
+    width: 100%;
+}
+
+.css-1530je5 {
+    margin: 4px;
+    position: relative;
+    width: calc(100% - 16px);
+}
+
+.css-e0vuny {
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+
+.css-150lexj {
+    border: 1px solid transparent;
+    color: #505863;
+    cursor: pointer;
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    padding: 4px;
+}
+
+.css-150lexj > .SVGInline {
+    padding: 0 4px;
+}
+
+.css-zga872 {
+    color: #505863;
+    font-size: 12px;
+    line-height: 2;
+    margin: 0;
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.css-7ry9k1 {
+    padding: 0;
+    width: 100%;
+}
+
+.css-7x0jr {
+    box-shadow: transparent 0px 0px 0px 0px;
+    border-radius: 3px;
+    border-top: 1px solid rgb(222, 224, 227);
+    cursor: pointer;
+    display: flex;
+    margin: 0px;
+    padding: 12px 16px;
+    position: relative;
+}
+
+.css-7x0jr > div {
+    padding: 0px 12px;
+}
+
+.css-7x0jr > div:first-child {
+    padding-left: 0px;
+    flex-basis: 44px;
+}
+
+.css-9ujsbx {
+    background: #fff;
+    border: 1px solid #dee0e3;
+    border-radius: 3px;
+    display: inline-block;
+    line-height: 0;
+    padding: 2px;
+    position: relative;
+}
+
+.css-9ujsbx img {
+    height: 32px;
+    width: 32px;
+}
+
+.css-19pjha7 {
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #0caa41;
+    border: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 12px;
+    font-weight: 700;
+    height: 20px;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    padding: 0 4px;
+    top: 0;
+}
+
+.css-x75kgh .e1cjmv6j1 {
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border: 0;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 0 4px;
+}
+
+.css-19pjha7 .e1cjmv6j0 {
+    margin-left: 2px;
+    -webkit-transform: scale(0.75);
+    -ms-transform: scale(0.75);
+    transform: scale(0.75);
+}
+
+.css-19pjha7 .e1cjmv6j0:before {
+    content: "★";
+}
+
+.css-7x0jr > div:last-child {
+    padding-right: 0px;
+    flex: 2 1 0%;
+    -webkit-box-flex: 2;
+}
+
+.css-1d3xmk8 .e1n63ojh0 {
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.css-l2wjgv span {
+    color: #505863;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.css-9th5vf {
+    color: #1861bf;
+}
+
+.css-1rd3saf span {
+    color: #505863;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.css-1d3xmk8 .e1rrn5ka0 {
+    height: 20px;
+    line-height: 20px;
+}
+
+.css-1d3xmk8 .e1rrn5ka0 {
+    font-size: 12px;
+}
+
+.css-1fjcg6i {
+    width: 100%;
+    -webkit-box-flex: 1 !important;
+    flex-grow: 1 !important;
+}
+
+.css-1qtdns2 {
+    -webkit-box-flex: 1 !important;
+    -webkit-flex-grow: 1 !important;
+    -ms-flex-positive: 1 !important;
+    flex-grow: 1 !important;
+}
+
+.css-15ja3jn {
+    margin: 0 -4px !important;
+}
+
+.css-wp148e {
+    box-shadow: 0 0 0 0 transparent;
+    border-radius: 3px;
+    border-top: 1px solid #dee0e3;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0;
+    padding: 12px 16px;
+    position: relative;
+}
+
+.css-wp148e > div {
+    padding: 0 12px;
+}
+
+.css-wp148e > div:first-child {
+    padding-left: 0;
+    -webkit-flex-basis: 44px;
+    -ms-flex-preferred-size: 44px;
+    flex-basis: 44px;
+}
+
+.css-wp148e > div:last-child {
+    padding-right: 0;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    -webkit-box-flex: 2;
+    -webkit-flex-grow: 2;
+    -ms-flex-positive: 2;
+    flex-grow: 2;
+}
+
+.css-1h49lgr {
+    border-top: 1px solid #dee0e3;
+}
+
+.css-xc3evw {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-bottom: 12px;
+}
+
+.css-ui9tic {
+    font-weight: 700;
+}
+
+.css-xc3evw > div {
+    line-height: 1.4;
+}
+
+.css-xc3evw > div {
+    display: table-cell;
+}
+
+.css-5pai5s {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    margin: 0;
+}
+
+.css-1yu1g9v {
+    color: #858c94;
+    display: inline-block;
+    margin: 0;
+    margin-right: 12px;
+    background: #fff none;
+    color: #c4c7cc;
+    cursor: default;
+}
+
+.css-1yu1g9v a, .css-1yu1g9v a:link, .css-1yu1g9v span {
+    height: 35px;
+}
+
+.css-1yu1g9v a, .css-1yu1g9v a:link {
+    background-color: #fff;
+    border: 1px solid #c4c7cc;
+    border-radius: 2px;
+    color: #1861bf;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 15px;
+    height: 35px;
+    line-height: 34px;
+    min-width: 35px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.css-1yu1g9v a, .css-1yu1g9v a:link {
+    color: #c4c7cc;
+    cursor: default;
+}
+
+.css-1yu1g9v .SVGInline {
+    display: block;
+}
+
+.css-1yu1g9v .SVGInline-svg {
+    margin-top: 9px;
+}
+
+.css-1slzun1 {
+    color: #858c94;
+    display: inline-block;
+    margin: 0;
+    background: #2aabde none;
+    cursor: default;
+}
+
+.css-1slzun1 a, .css-1slzun1 a:link, .css-1slzun1 span {
+    height: 35px;
+}
+
+.css-1slzun1 a, .css-1slzun1 a:link {
+    background-color: #fff;
+    border: 1px solid #c4c7cc;
+    border-radius: 2px;
+    color: #1861bf;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 15px;
+    height: 35px;
+    line-height: 34px;
+    min-width: 35px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.css-1slzun1 a, .css-1slzun1 a:link, .css-1slzun1 span {
+    border-radius: 0;
+    border-right-width: 0;
+    color: #1861bf;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+}
+
+.css-1slzun1 a, .css-1slzun1 a:link {
+    background: #2aabde none;
+    color: #fff;
+    cursor: default;
+    font-weight: bold;
+}
+
+.css-1slzun1 a, .css-1slzun1 a:link, .css-1slzun1 span {
+    border-bottom-left-radius: 2px;
+    border-left-width: 1px;
+    border-top-left-radius: 2px;
+}
+
+.css-frga68 {
+    color: #858c94;
+    display: inline-block;
+    margin: 0;
+}
+
+.css-frga68 a, .css-frga68 a:link, .css-frga68 span {
+    height: 35px;
+}
+
+.css-frga68 a, .css-frga68 a:link {
+    background-color: #fff;
+    border: 1px solid #c4c7cc;
+    border-radius: 2px;
+    color: #1861bf;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 15px;
+    height: 35px;
+    line-height: 34px;
+    min-width: 35px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.css-frga68 a, .css-frga68 a:link, .css-frga68 span {
+    border-radius: 0;
+    border-right-width: 0;
+    color: #1861bf;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+}
+
+.css-1518mck {
+    color: #858c94;
+    display: inline-block;
+    margin: 0;
+}
+
+.css-1518mck a, .css-1518mck a:link, .css-1518mck span {
+    height: 35px;
+}
+
+.css-1518mck a, .css-1518mck a:link {
+    background-color: #fff;
+    border: 1px solid #c4c7cc;
+    border-radius: 2px;
+    color: #1861bf;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 15px;
+    height: 35px;
+    line-height: 34px;
+    min-width: 35px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.css-1518mck a, .css-1518mck a:link, .css-1518mck span {
+    border-radius: 0;
+    border-right-width: 0;
+    color: #1861bf;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+}
+
+.css-1518mck a, .css-1518mck a:link, .css-1518mck span {
+    border-bottom-right-radius: 2px;
+    border-right-width: 1px;
+    border-top-right-radius: 2px;
+}
+
+.css-1yshuyv {
+    color: #858c94;
+    display: inline-block;
+    margin: 0;
+    margin-left: 12px;
+}
+
+.css-1yshuyv a, .css-1yshuyv a:link, .css-1yshuyv span {
+    height: 35px;
+}
+
+.css-1yshuyv a, .css-1yshuyv a:link {
+    background-color: #fff;
+    border: 1px solid #c4c7cc;
+    border-radius: 2px;
+    color: #1861bf;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 15px;
+    height: 35px;
+    line-height: 34px;
+    min-width: 35px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.css-1yshuyv .SVGInline {
+    display: block;
+}
+
+.css-1yshuyv .SVGInline-svg {
+    margin-top: 9px;
+}
+
+.css-1efvhw7 {
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.css-3ssibl {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 14px;
+    -webkit-box-pack: space-around;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: space-around;
+    justify-content: space-around;
+    list-style: none;
+    margin: 24px auto;
+    padding: 0;
+    width: 90%;
+}
+
+.css-1ohf0ui {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.css-qo68e2 {
+    font-size: 15px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 3px;
+    border: 1px solid rgb(196, 199, 204);
+    padding: 0px 12px;
+    color: rgb(133, 140, 148);
+    position: relative;
+    user-select: none;
+}
+
+.css-qo68e2.css-qo68e2 {
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    color: rgb(80, 88, 99);
+}
+
+.css-qo68e2 div.selectedLabel {
+    margin-right: 30px;
+    line-height: 40px;
+}
+
+.css-qo68e2 div.selectedLabel, .css-qo68e2 span.dropdownOptionLabel {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.css-qo68e2 .arrowDown, .css-qo68e2 .arrowUp {
+    position: absolute;
+    right: 14px;
+    top: 0px;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.css-qo68e2 .arrowDown svg, .css-qo68e2 .arrowUp svg {
+    height: 16px;
+    width: 16px;
+}
+
+.css-qo68e2 .dropdownOptions {
+    position: absolute;
+    user-select: none;
+    top: calc(100% + 8px);
+    left: -1px;
+    background: white;
+    border-radius: 3px;
+    border: 1px solid rgb(196, 199, 204);
+    min-width: 100%;
+    padding: 0px;
+    margin: 0px;
+    z-index: 999;
+    overflow: auto;
+    width: 0px;
+}
+
+.css-qo68e2 .dropdownCollapsed {
+    border: none;
+    overflow: hidden;
+    max-height: 0px;
+}
+
+.css-qo68e2 .dropdownOptions.above {
+    top: auto;
+    bottom: calc(100% + 8px);
+}
+
+.css-qo68e2 .dropDownOptionsContainer {
+    display: flex;
+}
+
+.css-qo68e2 .dropdownOptions ul {
+    padding: 0px;
+    margin: 0px;
+    overflow: auto;
+    max-height: 200px;
+    width: 100%;
+}
+
+.css-qo68e2 .dropdownOptions li.dropdownOption {
+    list-style: none;
+    width: 100%;
+    cursor: pointer;
+    height: 40px;
+    line-height: normal;
+    min-width: 100%;
+}
+
+.css-qo68e2 .checkmark {
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    margin-left: 13px;
+    margin-right: 13px;
+    height: 100%;
+    width: 15px;
+    visibility: hidden;
+}
+
+.css-qo68e2 .scrollBar {
+    flex: 1 1 0%;
+    padding-left: 4px;
+    padding-right: 4px;
+    height: 100%;
+    background: rgb(255, 255, 255);
+    min-width: 8px;
+}
+
+.css-qo68e2 .scrollThumb {
+    width: 8px;
+    background: rgb(196, 199, 204);
+    border-radius: 8px;
+    cursor: default;
+}
+
+.css-1sovgbt {
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+}
+
+.css-1vhihr3 {
+    background-color: #fff;
+    -webkit-flex-basis: 60%;
+    -ms-flex-preferred-size: 60%;
+    flex-basis: 60%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+}
+
+.css-1g23azu {
+    flex: 0 0 100%;
+    height: 100%;
+    margin-top: 0px;
+}
+
+.css-nkxhwa {
+    display: inline-block;
+    height: 18px;
+    position: relative;
+    vertical-align: bottom;
+    width: 18px;
+}
 
 @media screen and (min-width: 768px) {
     .pageContentWrapper {
         -webkit-box-flex: 1;
         flex-grow: 1;
-        height: 0px;
     }
 
     #PageContent, #PageBodyContents, #JobSearch {
         height: 100%;
+    }
+
+    .css-864rvs {
+        background-color: #fff;
+        border: 1px solid #c4c7cc;
+        border-radius: 3px;
+        color: #505863;
+        cursor: pointer;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-flex: 1;
+        -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        height: 40px;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        margin: 0 8px;
+        padding: 12px;
+        position: relative;
+        min-width: 160px;
+        -webkit-box-flex: 1;
+        z-index: 3;
+    }
+
+    .css-2o4v7t {
+        background-color: #fff;
+        border: 1px solid #c4c7cc;
+        border-radius: 3px;
+        color: #505863;
+        cursor: pointer;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-flex: 1;
+        -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        height: 40px;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        margin: 0 8px;
+        padding: 12px;
+        position: relative;
+        min-width: 160px;
+        -webkit-box-flex: 1;
+        z-index: 3;
+    }
+
+    .css-1paokg3 {
+        min-width: 120px;
+    }
+
+    .css-1paokg3 {
+        background-color: #fff;
+        border: 1px solid #c4c7cc;
+        border-radius: 3px;
+        color: #505863;
+        cursor: pointer;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-flex: 1;
+        -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        height: 40px;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        margin: 0 8px;
+        padding: 12px;
+        position: relative;
+        min-width: 160px;
+        -webkit-box-flex: 1;
+        z-index: 3;
+    }
+
+    .css-4kzoj2 {
+        background-color: rgb(255, 255, 255);
+        border: 1px solid rgb(196, 199, 204);
+        border-radius: 3px;
+        color: rgb(80, 88, 99);
+        cursor: pointer;
+        display: flex;
+        flex-grow: 1;
+        height: 40px;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+        margin: 0px 8px;
+        padding: 12px;
+        position: relative;
+        min-width: 160px;
+        -webkit-box-flex: 1;
+        z-index: 3;
+    }
+
+    .css-1d8tv35 {
+        -webkit-align-self: center;
+        -ms-flex-item-align: center;
+        align-self: center;
+        font-weight: normal;
+        margin-right: 20px;
+        max-width: 90%;
+        overflow: hidden;
+        padding-bottom: 0;
+        text-overflow: ellipsis;
+    }
+
+    .css-1aiqqux {
+        -webkit-box-flex: 1;
+        -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        height: 100%;
+        position: relative;
+    }
+
+    body:not(.hasFilters) .exy0tjh3 {
+        box-shadow: none;
+    }
+
+    .css-7x0jr {
+        background-color: transparent;
+        border: 1.5px solid rgb(42, 171, 222);
+        border-radius: 3px;
+    }
+
+    .css-7x0jr::before {
+        background-color: rgb(42, 171, 222);
+        border-radius: 1px;
+        content: "";
+        height: 100%;
+        left: 0px;
+        position: absolute;
+        top: 0px;
+        width: 8px;
+    }
+
+    .css-ui9tic {
+        display: block;
+        float: none;
+        margin-bottom: 6px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .css-680xkn {
+        height: 100%;
+        position: absolute;
+        width: 100%;
+    }
+
+    .css-101kha3 {
+        display: none;
     }
 }
