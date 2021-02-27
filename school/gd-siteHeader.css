@@ -73,7 +73,7 @@
 }
 
 .siteHeader__HeaderStyles__navigationItem.siteHeader__HeaderStyles__activeNavigationItem:after {
-    background: #0caa41
+    background: #C50219
 }
 
 .siteHeader__HeaderStyles__primaryNavigation .siteHeader__HeaderStyles__navigationItem {
@@ -623,7 +623,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     min-width: 88px;
-    background-color: #0caa41;
+    background-color: #C50219;
     padding: 7px 16px
 }
 
@@ -639,7 +639,7 @@
 }
 
 .search__SearchStyles__searchIcon {
-    color: #0caa41
+    color: #C50219
 }
 
 .search__SearchStyles__searchFormInputContainer input {
@@ -792,7 +792,7 @@
 
 .search__SearchStyles__searchFormContainer {
     position: relative;
-    background-color: #0caa41
+    background-color: #C50219
 }
 
 .search__SearchStyles__searchFormTitle {
@@ -1247,7 +1247,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     min-width: 88px;
-    background-color: #0caa41;
+    background-color: #C50219;
     padding: 7px 16px
 }
 
@@ -1436,7 +1436,7 @@
 }
 
 .careerOverviewNav__CareerOverviewNavStyles__navigationItem.careerOverviewNav__CareerOverviewNavStyles__activeNavigationItem:after {
-    background: #0caa41
+    background: #C50219
 }
 
 .careerOverviewNav__CareerOverviewNavStyles__navigationScroll {
