@@ -989,3 +989,75 @@ body div.flex-aside, div.pageContentWrapper div.flex-aside, #PageContent div.fle
         display: table-cell !important;
     }
 }
+
+@media (max-width: 767px) {
+
+    #PageContent {
+        width: 100% !important;
+    }
+
+    div.flex-aside > *{
+        max-width: 100% !important;
+    }
+
+    #MainCol .gdGrid, #FEAPromoBanner, .featuredJobsAdSlot, .bucket.module.exploreCareers, #EIHdrModule, #EI #WideCol  {
+        width: calc(100vw - 32px);
+    }
+
+    iframe {
+        width: calc(100vw - 48px);
+    }
+
+    #EIProductHeaders {
+        margin: 0 auto;
+    }
+
+    #EIProductHeaders .row {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .eiCell.cell.overviews.switchLogo.active {
+        grid-column: 1 / span 5;
+    }
+}
+
+@media (min-width: 768px) {
+
+    #PageContent {
+        width: unset;
+    }
+
+    div.flex-aside {
+        margin: 16px auto;
+    }
+
+    div.flex-aside > *{
+        max-width: unset;
+    }
+
+    #MainCol .gdGrid, #FEAPromoBanner, .featuredJobsAdSlot, .bucket.module.exploreCareers, #EI #WideCol  {
+        width: unset;
+    }
+
+    #EIHdrModule {
+        width: 992px;
+    }
+
+    #EIProductHeaders .row {
+        display: table-row;
+        justify-content: unset;
+        align-items: unset;
+        grid-template-columns: unset;
+    }
+
+    .eiCell.cell.overviews.switchLogo.active {
+        grid-column: unset;
+    }
+
+    iframe {
+        width: 640px;
+    }
+}
