@@ -1,3 +1,37 @@
+/* .css-15tlzbt {
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    touch-action: pan-y;
+    padding-bottom: 24px;
+} */
+
+/* .css-1epmwjq {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    overflow-x: hidden;
+} */
+
+.css-1caarva {
+    display: flex;
+    -webkit-box-align: stretch;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    transform: translateX(0px);
+    flex: 0 0 auto;
+    position: relative;
+    transition: transform 250ms ease 0s;
+}
+
+.css-15tlzbt * {
+    touch-action: pan-y;
+}
+
 .css-o9yci5 {
     display: flex;
     width: 100%;
@@ -301,4 +335,15 @@
     background: rgb(196, 199, 204);
     border-radius: 8px;
     cursor: default;
+}
+
+@media only screen and (max-width: 1024px) {    
+    body.flex * {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    .gdGrid .SectionHeaderStyles__sectionHeader___3b_50.d-flex.align-items-center.no-gutters {
+        display: unset;
+    }
 }
